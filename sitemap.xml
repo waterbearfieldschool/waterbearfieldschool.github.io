@@ -17,7 +17,7 @@
   </url>
   
   <url>
-    <loc>https://example.com/posts/fourthpost/</loc>
+    <loc>https://example.com/posts/water/</loc>
     <lastmod>2018-09-30</lastmod>
   </url>
   
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://example.com/tags/second-tag/</loc>
+    <loc>https://example.com/tags/another-tag/</loc>
     <lastmod>2024-11-13</lastmod>
   </url>
   
@@ -57,7 +57,7 @@
   </url>
   
   <url>
-    <loc>https://example.com/tags/another-tag/</loc>
+    <loc>https://example.com/tags/second-tag/</loc>
     <lastmod>2024-11-13</lastmod>
   </url>
 </urlset>
