@@ -1,34 +1,34 @@
 {
   "version": "https://jsonfeed.org/version/1",
   "title": "Waterbear Field School",
-  "home_page_url": "https://example.com/",
+  "home_page_url": "https://waterbearfieldschool.org/",
   "feed_url": "https://example.com/feed/feed.json",
-  "description": "Yoho, mateys! I&#39;ve been sailing the seven seas, and this is my story!",
+  "description": "Skill sharing and community building.",
   "author": {
     "name": "Your Name Here",
     "url": "https://example.com/about-me/"
   },
   "items": [{
-      "id": "https://example.com/posts/water/",
-      "url": "https://example.com/posts/water/",
+      "id": "https://waterbearfieldschool.org/posts/water/",
+      "url": "https://waterbearfieldschool.org/posts/water/",
       "title": "Water",
       "content_html": "<p>Water, water, everywhere.</p>\n",
       "date_published": "2018-09-30T00:00:00Z"
     },{
-      "id": "https://example.com/posts/wood/",
-      "url": "https://example.com/posts/wood/",
+      "id": "https://waterbearfieldschool.org/posts/wood/",
+      "url": "https://waterbearfieldschool.org/posts/wood/",
       "title": "Woodworking",
       "content_html": "<p>Hammer hammer saw saw.</p>\n",
       "date_published": "2018-08-24T00:00:00Z"
     },{
-      "id": "https://example.com/posts/radio/",
-      "url": "https://example.com/posts/radio/",
+      "id": "https://waterbearfieldschool.org/posts/radio/",
+      "url": "https://waterbearfieldschool.org/posts/radio/",
       "title": "Radio",
       "content_html": "<p>Beep beep.</p>\n",
       "date_published": "2018-07-04T00:00:00Z"
     },{
-      "id": "https://example.com/posts/maps/",
-      "url": "https://example.com/posts/maps/",
+      "id": "https://waterbearfieldschool.org/posts/maps/",
+      "url": "https://waterbearfieldschool.org/posts/maps/",
       "title": "Maps",
       "content_html": "<p>Where am i?</p>\n",
       "date_published": "2018-05-01T00:00:00Z"

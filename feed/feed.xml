@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Waterbear Field School</title>
-	<subtitle>Yoho, mateys! I&#39;ve been sailing the seven seas, and this is my story!</subtitle>
+	<subtitle>Skill sharing and community building.</subtitle>
 	
-	<link href="https://example.com/feed/feed.xml" rel="self"/>
-	<link href="https://example.com/"/>
+	<link href="https://waterbearfieldschool.org/feed/feed.xml" rel="self"/>
+	<link href="https://waterbearfieldschool.org/"/>
 	<updated>2018-09-30T00:00:00Z</updated>
 	<id>https://example.com/</id>
 	<author>
@@ -14,36 +14,36 @@
 	
 	<entry>
 		<title>Water</title>
-		<link href="https://example.com/posts/water/"/>
+		<link href="https://waterbearfieldschool.org/posts/water/"/>
 		<updated>2018-09-30T00:00:00Z</updated>
-		<id>https://example.com/posts/water/</id>
+		<id>https://waterbearfieldschool.org/posts/water/</id>
 		<content type="html">&lt;p&gt;Water, water, everywhere.&lt;/p&gt;
 </content>
 	</entry>
 	
 	<entry>
 		<title>Woodworking</title>
-		<link href="https://example.com/posts/wood/"/>
+		<link href="https://waterbearfieldschool.org/posts/wood/"/>
 		<updated>2018-08-24T00:00:00Z</updated>
-		<id>https://example.com/posts/wood/</id>
+		<id>https://waterbearfieldschool.org/posts/wood/</id>
 		<content type="html">&lt;p&gt;Hammer hammer saw saw.&lt;/p&gt;
 </content>
 	</entry>
 	
 	<entry>
 		<title>Radio</title>
-		<link href="https://example.com/posts/radio/"/>
+		<link href="https://waterbearfieldschool.org/posts/radio/"/>
 		<updated>2018-07-04T00:00:00Z</updated>
-		<id>https://example.com/posts/radio/</id>
+		<id>https://waterbearfieldschool.org/posts/radio/</id>
 		<content type="html">&lt;p&gt;Beep beep.&lt;/p&gt;
 </content>
 	</entry>
 	
 	<entry>
 		<title>Maps</title>
-		<link href="https://example.com/posts/maps/"/>
+		<link href="https://waterbearfieldschool.org/posts/maps/"/>
 		<updated>2018-05-01T00:00:00Z</updated>
-		<id>https://example.com/posts/maps/</id>
+		<id>https://waterbearfieldschool.org/posts/maps/</id>
 		<content type="html">&lt;p&gt;Where am i?&lt;/p&gt;
 </content>
 	</entry>
