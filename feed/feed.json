@@ -9,29 +9,35 @@
     "url": "https://example.com/about-me/"
   },
   "items": [{
-      "id": "https://waterbearfieldschool.org/posts/water/",
-      "url": "https://waterbearfieldschool.org/posts/water/",
-      "title": "Water",
-      "content_html": "<p>Water, water, everywhere.</p>\n",
-      "date_published": "2018-09-30T00:00:00Z"
+      "id": "https://waterbearfieldschool.org/posts/natural/",
+      "url": "https://waterbearfieldschool.org/posts/natural/",
+      "title": "Harvard Museum of Natural History",
+      "content_html": "<p><img src=\"/img/natural_small.jpg\" alt=\"\"></p>\n<p>More photos <a href=\"https://photos.app.goo.gl/pw7Jq4vezx1nzqpq9\">here</a>!</p>\n",
+      "date_published": "2024-11-26T00:00:00Z"
     },{
-      "id": "https://waterbearfieldschool.org/posts/wood/",
-      "url": "https://waterbearfieldschool.org/posts/wood/",
-      "title": "Woodworking",
-      "content_html": "<p>Hammer hammer saw saw.</p>\n",
-      "date_published": "2018-08-24T00:00:00Z"
+      "id": "https://waterbearfieldschool.org/posts/loom/",
+      "url": "https://waterbearfieldschool.org/posts/loom/",
+      "title": "DIY Looms",
+      "content_html": "<p><img src=\"/img/loom_table_s.jpg\" alt=\"\"></p>\n<p><img src=\"/img/loom_closeup_s.jpg\" alt=\"\"></p>\n<p>More photos <a href=\"https://photos.app.goo.gl/cGC2JCqqXthxd7sJ6\">here</a>!</p>\n",
+      "date_published": "2024-11-26T00:00:00Z"
     },{
-      "id": "https://waterbearfieldschool.org/posts/radio/",
-      "url": "https://waterbearfieldschool.org/posts/radio/",
-      "title": "Radio",
-      "content_html": "<p>Beep beep.</p>\n",
-      "date_published": "2018-07-04T00:00:00Z"
+      "id": "https://waterbearfieldschool.org/posts/brickbottom/",
+      "url": "https://waterbearfieldschool.org/posts/brickbottom/",
+      "title": "Brickbottom Open Studios",
+      "content_html": "<p><img src=\"/img/diy_music_small.png\" alt=\"\"></p>\n<p>More photos <a href=\"https://photos.app.goo.gl/jBvyLwXetR3LLi1s8\">here</a>!</p>\n",
+      "date_published": "2024-11-24T00:00:00Z"
     },{
-      "id": "https://waterbearfieldschool.org/posts/maps/",
-      "url": "https://waterbearfieldschool.org/posts/maps/",
-      "title": "Maps",
-      "content_html": "<p>Where am i?</p>\n",
-      "date_published": "2018-05-01T00:00:00Z"
+      "id": "https://waterbearfieldschool.org/posts/schwamb/",
+      "url": "https://waterbearfieldschool.org/posts/schwamb/",
+      "title": "Old Schwamb Mill",
+      "content_html": "<p><img src=\"/img/schwamb_small.jpg\" alt=\"\"></p>\n<p>More photos <a href=\"https://photos.app.goo.gl/rEPRyerka5YhmDGn6\">here</a>!</p>\n",
+      "date_published": "2024-11-23T00:00:00Z"
+    },{
+      "id": "https://waterbearfieldschool.org/posts/industry/",
+      "url": "https://waterbearfieldschool.org/posts/industry/",
+      "title": "Charles River Museum",
+      "content_html": "<p><a href=\"https://photos.app.goo.gl/3pAmomSRcNiE9FSV9\">Photo album</a></p>\n",
+      "date_published": "2024-11-22T00:00:00Z"
     }
   ]
 }

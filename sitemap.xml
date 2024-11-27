@@ -2,26 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://waterbearfieldschool.org/posts/maps/</loc>
-    <lastmod>2018-05-01</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://waterbearfieldschool.org/posts/radio/</loc>
-    <lastmod>2018-07-04</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://waterbearfieldschool.org/posts/wood/</loc>
-    <lastmod>2018-08-24</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://waterbearfieldschool.org/posts/water/</loc>
-    <lastmod>2018-09-30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://waterbearfieldschool.org/about/</loc>
     <lastmod>2024-11-13</lastmod>
   </url>
@@ -47,17 +27,37 @@
   </url>
   
   <url>
-    <loc>https://waterbearfieldschool.org/tags/number-2/</loc>
+    <loc>https://waterbearfieldschool.org/tags/museum/</loc>
     <lastmod>2024-11-13</lastmod>
   </url>
   
   <url>
-    <loc>https://waterbearfieldschool.org/tags/another-tag/</loc>
+    <loc>https://waterbearfieldschool.org/tags/looms/</loc>
     <lastmod>2024-11-13</lastmod>
   </url>
   
   <url>
-    <loc>https://waterbearfieldschool.org/tags/second-tag/</loc>
-    <lastmod>2024-11-13</lastmod>
+    <loc>https://waterbearfieldschool.org/posts/industry/</loc>
+    <lastmod>2024-11-22</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://waterbearfieldschool.org/posts/schwamb/</loc>
+    <lastmod>2024-11-23</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://waterbearfieldschool.org/posts/brickbottom/</loc>
+    <lastmod>2024-11-24</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://waterbearfieldschool.org/posts/loom/</loc>
+    <lastmod>2024-11-26</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://waterbearfieldschool.org/posts/natural/</loc>
+    <lastmod>2024-11-26</lastmod>
   </url>
 </urlset>

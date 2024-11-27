@@ -5,7 +5,7 @@
 	
 	<link href="https://waterbearfieldschool.org/feed/feed.xml" rel="self"/>
 	<link href="https://waterbearfieldschool.org/"/>
-	<updated>2018-09-30T00:00:00Z</updated>
+	<updated>2024-11-26T00:00:00Z</updated>
 	<id>https://example.com/</id>
 	<author>
 		<name>Your Name Here</name>
@@ -13,38 +13,52 @@
 	</author>
 	
 	<entry>
-		<title>Water</title>
-		<link href="https://waterbearfieldschool.org/posts/water/"/>
-		<updated>2018-09-30T00:00:00Z</updated>
-		<id>https://waterbearfieldschool.org/posts/water/</id>
-		<content type="html">&lt;p&gt;Water, water, everywhere.&lt;/p&gt;
+		<title>Harvard Museum of Natural History</title>
+		<link href="https://waterbearfieldschool.org/posts/natural/"/>
+		<updated>2024-11-26T00:00:00Z</updated>
+		<id>https://waterbearfieldschool.org/posts/natural/</id>
+		<content type="html">&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/natural_small.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;More photos &lt;a href=&quot;https://photos.app.goo.gl/pw7Jq4vezx1nzqpq9&quot;&gt;here&lt;/a&gt;!&lt;/p&gt;
 </content>
 	</entry>
 	
 	<entry>
-		<title>Woodworking</title>
-		<link href="https://waterbearfieldschool.org/posts/wood/"/>
-		<updated>2018-08-24T00:00:00Z</updated>
-		<id>https://waterbearfieldschool.org/posts/wood/</id>
-		<content type="html">&lt;p&gt;Hammer hammer saw saw.&lt;/p&gt;
+		<title>DIY Looms</title>
+		<link href="https://waterbearfieldschool.org/posts/loom/"/>
+		<updated>2024-11-26T00:00:00Z</updated>
+		<id>https://waterbearfieldschool.org/posts/loom/</id>
+		<content type="html">&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/loom_table_s.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/loom_closeup_s.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;More photos &lt;a href=&quot;https://photos.app.goo.gl/cGC2JCqqXthxd7sJ6&quot;&gt;here&lt;/a&gt;!&lt;/p&gt;
 </content>
 	</entry>
 	
 	<entry>
-		<title>Radio</title>
-		<link href="https://waterbearfieldschool.org/posts/radio/"/>
-		<updated>2018-07-04T00:00:00Z</updated>
-		<id>https://waterbearfieldschool.org/posts/radio/</id>
-		<content type="html">&lt;p&gt;Beep beep.&lt;/p&gt;
+		<title>Brickbottom Open Studios</title>
+		<link href="https://waterbearfieldschool.org/posts/brickbottom/"/>
+		<updated>2024-11-24T00:00:00Z</updated>
+		<id>https://waterbearfieldschool.org/posts/brickbottom/</id>
+		<content type="html">&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/diy_music_small.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;More photos &lt;a href=&quot;https://photos.app.goo.gl/jBvyLwXetR3LLi1s8&quot;&gt;here&lt;/a&gt;!&lt;/p&gt;
 </content>
 	</entry>
 	
 	<entry>
-		<title>Maps</title>
-		<link href="https://waterbearfieldschool.org/posts/maps/"/>
-		<updated>2018-05-01T00:00:00Z</updated>
-		<id>https://waterbearfieldschool.org/posts/maps/</id>
-		<content type="html">&lt;p&gt;Where am i?&lt;/p&gt;
+		<title>Old Schwamb Mill</title>
+		<link href="https://waterbearfieldschool.org/posts/schwamb/"/>
+		<updated>2024-11-23T00:00:00Z</updated>
+		<id>https://waterbearfieldschool.org/posts/schwamb/</id>
+		<content type="html">&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/schwamb_small.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;More photos &lt;a href=&quot;https://photos.app.goo.gl/rEPRyerka5YhmDGn6&quot;&gt;here&lt;/a&gt;!&lt;/p&gt;
+</content>
+	</entry>
+	
+	<entry>
+		<title>Charles River Museum</title>
+		<link href="https://waterbearfieldschool.org/posts/industry/"/>
+		<updated>2024-11-22T00:00:00Z</updated>
+		<id>https://waterbearfieldschool.org/posts/industry/</id>
+		<content type="html">&lt;p&gt;&lt;a href=&quot;https://photos.app.goo.gl/3pAmomSRcNiE9FSV9&quot;&gt;Photo album&lt;/a&gt;&lt;/p&gt;
 </content>
 	</entry>
 </feed>
