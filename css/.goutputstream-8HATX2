@@ -91,7 +91,7 @@ img {
   border-radius: 0.3rem;
   padding: 2rem;
   position: relative;
-  box-sizing: border-box;
+  //box-sizing: border-box;
 }
 
 .paper::after {
