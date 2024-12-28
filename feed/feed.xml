@@ -5,12 +5,29 @@
 	
 	<link href="https://waterbearfieldschool.org/feed/feed.xml" rel="self"/>
 	<link href="https://waterbearfieldschool.org/"/>
-	<updated>2024-11-26T00:00:00Z</updated>
+	<updated>2024-12-28T23:42:37Z</updated>
 	<id>https://example.com/</id>
 	<author>
 		<name>Your Name Here</name>
 		<email>youremailaddress@example.com</email>
 	</author>
+	
+	<entry>
+		<title>Magic Garden Playground Redesign</title>
+		<link href="https://waterbearfieldschool.org/posts/magic/"/>
+		<updated>2024-12-28T23:42:37Z</updated>
+		<id>https://waterbearfieldschool.org/posts/magic/</id>
+		<content type="html">&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/magic_small.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;More photos &lt;a href=&quot;https://photos.app.goo.gl/1Sp1f7trnnLTzTzNA&quot;&gt;here&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fri Dec  6 08:08:02 PM EST 2024&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Site visit and brainstorm ...&lt;/p&gt;
+&lt;p&gt;Posts at corners of hexagon are 4x6&amp;quot;, should be 6&#39; long;&lt;/p&gt;
+&lt;p&gt;Looks like 4x6&amp;quot;x12&#39; are $30 ea at home depot &lt;a href=&quot;https://www.homedepot.com/pep/4-in-x-6-in-x-12-ft-2-Pressure-Treated-Ground-Contact-Southern-Pine-Timber-260430/100062638&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;So that&#39;s 3x$30 = $90 for six posts of 6&#39; each ...&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sat Dec 28 06:39:37 PM EST 2024&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Compare -- a fence from Home depot, get 2-panels for $90, would likely need 2 of them so ~ $180 materials (reference &lt;a href=&quot;https://www.homedepot.com/p/Zippity-Outdoor-Products-Portable-Puppy-1-9-ft-H-x-3-6-ft-W-Slatted-Panel-Flat-Top-WoodTek-Vinyl-Cedar-Color-Fence-Kit-2-Pack-ZP19072/323870979&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+</content>
+	</entry>
 	
 	<entry>
 		<title>Harvard Museum of Natural History</title>
@@ -19,21 +36,6 @@
 		<id>https://waterbearfieldschool.org/posts/natural/</id>
 		<content type="html">&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/natural_small.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;More photos &lt;a href=&quot;https://photos.app.goo.gl/pw7Jq4vezx1nzqpq9&quot;&gt;here&lt;/a&gt;!&lt;/p&gt;
-</content>
-	</entry>
-	
-	<entry>
-		<title>Magic Garden Playground Redesign</title>
-		<link href="https://waterbearfieldschool.org/posts/magic/"/>
-		<updated>2024-11-26T00:00:00Z</updated>
-		<id>https://waterbearfieldschool.org/posts/magic/</id>
-		<content type="html">&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/magic_small.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;More photos &lt;a href=&quot;https://photos.app.goo.gl/1Sp1f7trnnLTzTzNA&quot;&gt;here&lt;/a&gt;!&lt;/p&gt;
-&lt;h1 id=&quot;fri-dec-6-08%3A08%3A02-pm-est-2024&quot;&gt;Fri Dec  6 08:08:02 PM EST 2024 &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/magic/#fri-dec-6-08%3A08%3A02-pm-est-2024&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;Site visit and brainstorm ...&lt;/p&gt;
-&lt;p&gt;Posts at corners of hexagon are 4x6&amp;quot;, should be 6&#39; long;&lt;/p&gt;
-&lt;p&gt;Looks like 4x6&amp;quot;x12&#39; are $30 ea at home depot &lt;a href=&quot;https://www.homedepot.com/pep/4-in-x-6-in-x-12-ft-2-Pressure-Treated-Ground-Contact-Southern-Pine-Timber-260430/100062638&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;So that&#39;s 3x$30 = $90 for six posts of 6&#39; each ...&lt;/p&gt;
 </content>
 	</entry>
 	

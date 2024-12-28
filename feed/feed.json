@@ -9,16 +9,16 @@
     "url": "https://example.com/about-me/"
   },
   "items": [{
+      "id": "https://waterbearfieldschool.org/posts/magic/",
+      "url": "https://waterbearfieldschool.org/posts/magic/",
+      "title": "Magic Garden Playground Redesign",
+      "content_html": "<p><img src=\"/img/magic_small.jpg\" alt=\"\"></p>\n<p>More photos <a href=\"https://photos.app.goo.gl/1Sp1f7trnnLTzTzNA\">here</a>!</p>\n<p><strong>Fri Dec  6 08:08:02 PM EST 2024</strong></p>\n<p>Site visit and brainstorm ...</p>\n<p>Posts at corners of hexagon are 4x6&quot;, should be 6' long;</p>\n<p>Looks like 4x6&quot;x12' are $30 ea at home depot <a href=\"https://www.homedepot.com/pep/4-in-x-6-in-x-12-ft-2-Pressure-Treated-Ground-Contact-Southern-Pine-Timber-260430/100062638\">here</a></p>\n<p>So that's 3x$30 = $90 for six posts of 6' each ...</p>\n<p><strong>Sat Dec 28 06:39:37 PM EST 2024</strong></p>\n<p>Compare -- a fence from Home depot, get 2-panels for $90, would likely need 2 of them so ~ $180 materials (reference <a href=\"https://www.homedepot.com/p/Zippity-Outdoor-Products-Portable-Puppy-1-9-ft-H-x-3-6-ft-W-Slatted-Panel-Flat-Top-WoodTek-Vinyl-Cedar-Color-Fence-Kit-2-Pack-ZP19072/323870979\">here</a></p>\n",
+      "date_published": "2024-12-28T23:42:37Z"
+    },{
       "id": "https://waterbearfieldschool.org/posts/natural/",
       "url": "https://waterbearfieldschool.org/posts/natural/",
       "title": "Harvard Museum of Natural History",
       "content_html": "<p><img src=\"/img/natural_small.jpg\" alt=\"\"></p>\n<p>More photos <a href=\"https://photos.app.goo.gl/pw7Jq4vezx1nzqpq9\">here</a>!</p>\n",
-      "date_published": "2024-11-26T00:00:00Z"
-    },{
-      "id": "https://waterbearfieldschool.org/posts/magic/",
-      "url": "https://waterbearfieldschool.org/posts/magic/",
-      "title": "Magic Garden Playground Redesign",
-      "content_html": "<p><img src=\"/img/magic_small.jpg\" alt=\"\"></p>\n<p>More photos <a href=\"https://photos.app.goo.gl/1Sp1f7trnnLTzTzNA\">here</a>!</p>\n<h1 id=\"fri-dec-6-08%3A08%3A02-pm-est-2024\">Fri Dec  6 08:08:02 PM EST 2024 <a class=\"direct-link\" href=\"#fri-dec-6-08%3A08%3A02-pm-est-2024\">#</a></h1>\n<p>Site visit and brainstorm ...</p>\n<p>Posts at corners of hexagon are 4x6&quot;, should be 6' long;</p>\n<p>Looks like 4x6&quot;x12' are $30 ea at home depot <a href=\"https://www.homedepot.com/pep/4-in-x-6-in-x-12-ft-2-Pressure-Treated-Ground-Contact-Southern-Pine-Timber-260430/100062638\">here</a></p>\n<p>So that's 3x$30 = $90 for six posts of 6' each ...</p>\n",
       "date_published": "2024-11-26T00:00:00Z"
     },{
       "id": "https://waterbearfieldschool.org/posts/loom/",
