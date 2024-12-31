@@ -75,4 +75,14 @@
     <loc>https://waterbearfieldschool.org/posts/magic/</loc>
     <lastmod>2024-12-28</lastmod>
   </url>
+  
+  <url>
+    <loc>https://waterbearfieldschool.org/map/</loc>
+    <lastmod>2024-12-31</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://waterbearfieldschool.org/gridmap/</loc>
+    <lastmod>2024-12-31</lastmod>
+  </url>
 </urlset>
