@@ -9,6 +9,12 @@
     "url": "https://example.com/about-me/"
   },
   "items": [{
+      "id": "https://waterbearfieldschool.org/posts/ham/",
+      "url": "https://waterbearfieldschool.org/posts/ham/",
+      "title": "Radio Experiments",
+      "content_html": "<h1 id=\"meeting-agenda-for-monday%2C-jan-6th-2025\">Meeting Agenda for Monday, Jan 6th 2025 <a class=\"direct-link\" href=\"#meeting-agenda-for-monday%2C-jan-6th-2025\">#</a></h1>\n<h2 id=\"round-of-introductions-...\">Round of introductions ... <a class=\"direct-link\" href=\"#round-of-introductions-...\">#</a></h2>\n<ul>\n<li>Who are you? :)</li>\n<li>How did you find your way to this group? :)</li>\n<li>What are your interests and goals in radio / alternative communications systems?</li>\n<li>What would you like this group to be for you?</li>\n</ul>\n<h2 id=\"miscellaneous-topics-we-might-discuss\">Miscellaneous topics we might discuss <a class=\"direct-link\" href=\"#miscellaneous-topics-we-might-discuss\">#</a></h2>\n<ul>\n<li>Ham licensing -- what it might be useful for, what is required</li>\n<li>Do folks want to study together for a next ham exam?</li>\n<li>Based on where folks are located, might we try to regularly communicate long-distance via ham radios?  What hardware / licenses would be required?</li>\n<li>Might we organize a regular monthly 'check-in' to get in habit of maintaining contact via alternative channel ... could be a fun social event ... and good preparation for a 'grid-down' event</li>\n<li>Local backup comms via walkie-talkies ... what range? What are the options?  APRS as a wide-range local digital logistics comm option (requires ham license)</li>\n<li>Meshtastic -- no license required for radio, low-costs, local (1 km to 5 km) range (but with internet hops), leverages phone for interface -- easy place to begin experimenting</li>\n<li>TD-H3 from Tidradio as a great starter radio</li>\n<li>Software-defined radio (SDR) dongles as a great way to start receiving radio signals, learning</li>\n<li><a href=\"https://www.broadcastify.com/listen/\">Broadcastify</a> as a way to listen to various radio bands online</li>\n<li>GMRS as nice place to start -- wider range, repeaters available, license is $35 and covers household for 10 years</li>\n</ul>\n",
+      "date_published": "2025-01-05T01:20:55Z"
+    },{
       "id": "https://waterbearfieldschool.org/posts/magic/",
       "url": "https://waterbearfieldschool.org/posts/magic/",
       "title": "Magic Garden Playground Redesign",
