@@ -5,7 +5,7 @@
 	
 	<link href="https://waterbearfieldschool.org/feed/feed.xml" rel="self"/>
 	<link href="https://waterbearfieldschool.org/"/>
-	<updated>2025-01-05T01:20:55Z</updated>
+	<updated>2025-01-05T01:24:00Z</updated>
 	<id>https://example.com/</id>
 	<author>
 		<name>Your Name Here</name>
@@ -13,9 +13,9 @@
 	</author>
 	
 	<entry>
-		<title>Radio Experiments</title>
+		<title>Radio Experiments with EcoGather</title>
 		<link href="https://waterbearfieldschool.org/posts/ham/"/>
-		<updated>2025-01-05T01:20:55Z</updated>
+		<updated>2025-01-05T01:24:00Z</updated>
 		<id>https://waterbearfieldschool.org/posts/ham/</id>
 		<content type="html">&lt;h1 id=&quot;meeting-agenda-for-monday%2C-jan-6th-2025&quot;&gt;Meeting Agenda for Monday, Jan 6th 2025 &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/ham/#meeting-agenda-for-monday%2C-jan-6th-2025&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
 &lt;h2 id=&quot;round-of-introductions-...&quot;&gt;Round of introductions ... &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/ham/#round-of-introductions-...&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
