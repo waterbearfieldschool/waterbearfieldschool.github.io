@@ -77,11 +77,6 @@
   </url>
   
   <url>
-    <loc>https://waterbearfieldschool.org/posts/ham/</loc>
-    <lastmod>2025-01-05</lastmod>
-  </url>
-  
-  <url>
     <loc>https://waterbearfieldschool.org/posts/boats/</loc>
     <lastmod>2025-01-10</lastmod>
   </url>
@@ -89,5 +84,10 @@
   <url>
     <loc>https://waterbearfieldschool.org/posts/magic/</loc>
     <lastmod>2025-01-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://waterbearfieldschool.org/posts/radio/</loc>
+    <lastmod>2025-01-13</lastmod>
   </url>
 </urlset>
