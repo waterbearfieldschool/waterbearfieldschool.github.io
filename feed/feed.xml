@@ -5,7 +5,7 @@
 	
 	<link href="https://waterbearfieldschool.org/feed/feed.xml" rel="self"/>
 	<link href="https://waterbearfieldschool.org/"/>
-	<updated>2025-01-13T23:33:46Z</updated>
+	<updated>2025-01-16T12:24:20Z</updated>
 	<id>https://example.com/</id>
 	<author>
 		<name>Your Name Here</name>
@@ -15,9 +15,22 @@
 	<entry>
 		<title>Radio Experiments with EcoGather</title>
 		<link href="https://waterbearfieldschool.org/posts/radio/"/>
-		<updated>2025-01-13T23:33:46Z</updated>
+		<updated>2025-01-16T12:24:20Z</updated>
 		<id>https://waterbearfieldschool.org/posts/radio/</id>
-		<content type="html">&lt;h1 id=&quot;meeting-agenda-for-monday%2C-jan-6th-2025&quot;&gt;Meeting Agenda for Monday, Jan 6th 2025 &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#meeting-agenda-for-monday%2C-jan-6th-2025&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
+		<content type="html">&lt;h1 id=&quot;upcoming-comms-workshop-series&quot;&gt;Upcoming Comms Workshop Series &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#upcoming-comms-workshop-series&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;We might choose various topics that we collectively research.  Some of us can offer brief presentations to the group on a given topic; we can also ask folks with relevant knowledge to present to us.&lt;/p&gt;
+&lt;p&gt;Some possible topics:&lt;br /&gt;
+- GMRS, and GMRS repeaters&lt;br /&gt;
+- scanners&lt;br /&gt;
+- meshtastic&lt;br /&gt;
+- NVIS&lt;br /&gt;
+- asychronous&lt;br /&gt;
+- Bulletin Board System / Mail / Winlink&lt;br /&gt;
+- Meshtastic BBS&lt;br /&gt;
+- js8call / keyboard / chat comms&lt;br /&gt;
+- varac&lt;br /&gt;
+- LoRaWAN / LPWAN&lt;/p&gt;
+&lt;h1 id=&quot;meeting-agenda-for-monday%2C-jan-6th-2025&quot;&gt;Meeting Agenda for Monday, Jan 6th 2025 &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#meeting-agenda-for-monday%2C-jan-6th-2025&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
 &lt;h2 id=&quot;round-of-introductions-...&quot;&gt;Round of introductions ... &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#round-of-introductions-...&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Who are you? :)&lt;/li&gt;
@@ -38,34 +51,13 @@
 &lt;li&gt;&lt;a href=&quot;https://www.broadcastify.com/listen/&quot;&gt;Broadcastify&lt;/a&gt; as a way to listen to various radio bands online&lt;/li&gt;
 &lt;li&gt;GMRS as nice place to start -- wider range, repeaters available, license is $35 and covers household for 10 years&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;grid-down-comm-options&quot;&gt;Grid-down comm options &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#grid-down-comm-options&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Sat 11 Jan 2025 07:54:13 PM EST&lt;/p&gt;
-&lt;p&gt;All things considered, though, I&#39;m tending (based on a lot of awesome collective brainstorming in the first session) to lean towards something like Meshtastic as one project to begin with (among others) ...&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;it allows grid-down communication with a range of 1 km pretty easily, and 5 or 10 km if you put some elbow grease in (put a node up on a mountain / building)&lt;/li&gt;
-&lt;li&gt;it&#39;s a fairly inexpensive ($30 ish) add-on to a smart phone&lt;/li&gt;
-&lt;li&gt;it is text-based, so it&#39;s more or less like using another text-based app&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;(tr)usdx-off-grid&quot;&gt;(tr)uSDX off-grid &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#(tr)usdx-off-grid&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/vfqVPSUn2JU?si=FusDXaVp60ZjTWB8&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;Nice youtube channel with ham info &lt;a href=&quot;https://www.youtube.com/@R4NCU/shorts&quot;&gt;https://www.youtube.com/@R4NCU/shorts&lt;/a&gt;&lt;/p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/B5h0TDW8jHg?si=1TAYcwE2uRD3AEpZ&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;h2 id=&quot;off-grid-ham-radio-solutions&quot;&gt;Off-grid ham radio solutions &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#off-grid-ham-radio-solutions&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/kdslE4r8VyY?si=oVUC-x4rYQF9fu8y&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;Related blog post: &lt;a href=&quot;https://oh8stn.org/blog/2023/03/24/qrp-nvis-data-modes-go-kit-trusdx/&quot;&gt;https://oh8stn.org/blog/2023/03/24/qrp-nvis-data-modes-go-kit-trusdx/&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;portable-antenna-radio-strategy&quot;&gt;Portable antenna radio strategy &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#portable-antenna-radio-strategy&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/OEpFwZhSdMo?si=-R3Nd9AAxHs-ltKM&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;h1 id=&quot;hip-bag-portable-radio&quot;&gt;Hip-bag portable radio &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#hip-bag-portable-radio&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/s3KHSPTLllI?si=hDahuyvQKznpTeBZ&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;h2 id=&quot;digirig-mobile&quot;&gt;Digirig Mobile &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#digirig-mobile&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Digirig is $70 &lt;a href=&quot;https://www.amazon.com/Digirig-Mobile-Integrated-Digital-Interface/dp/B095B9C15R&quot;&gt;on Amazon&lt;/a&gt;&lt;/p&gt;
 </content>
 	</entry>
 	
 	<entry>
 		<title>Magic Garden Playground Redesign</title>
 		<link href="https://waterbearfieldschool.org/posts/magic/"/>
-		<updated>2025-01-11T03:41:27Z</updated>
+		<updated>2025-01-14T00:00:29Z</updated>
 		<id>https://waterbearfieldschool.org/posts/magic/</id>
 		<content type="html">&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/magic_small.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;More photos of the site visit &lt;a href=&quot;https://photos.app.goo.gl/1Sp1f7trnnLTzTzNA&quot;&gt;here&lt;/a&gt;!&lt;/p&gt;
@@ -181,6 +173,16 @@ Materials pricing:
 &lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/mg/romanian.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/mg/simple.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/mg/sturdy_waddle.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;building-a-mesh-fence&quot;&gt;Building a Mesh Fence &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/magic/#building-a-mesh-fence&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Mon 13 Jan 2025 06:38:26 PM EST&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.homedepot.com/c/ah/how-to-build-a-wire-fence/9ba683603be9fa5395fab90589a08d9&quot;&gt;Home Depot guide to building a mesh fence&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.stuffsethmakes.com/redwood-fence-with-hogwire-mesh/&quot;&gt;Hogwire mesh design&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;with video &lt;a href=&quot;https://youtu.be/AJFf6boY8LE&quot;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://rogueengineer.com/diy-welded-wire-garden-fence/&quot;&gt;Welded-wire garden fence&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://buckhorncliffs.com/diy-garden-fence-gate/&quot;&gt;DIY Garden fence gate&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://gardens.theownerbuildernetwork.co/2019/04/13/how-to-make-a-removable-raised-garden-bed-fence/&quot;&gt;Removable raised garden bed fence&lt;/a&gt;&lt;/p&gt;
 </content>
 	</entry>
 	
