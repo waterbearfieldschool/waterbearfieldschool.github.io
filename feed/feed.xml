@@ -5,7 +5,7 @@
 	
 	<link href="https://waterbearfieldschool.org/feed/feed.xml" rel="self"/>
 	<link href="https://waterbearfieldschool.org/"/>
-	<updated>2025-01-16T12:24:20Z</updated>
+	<updated>2025-01-17T03:03:10Z</updated>
 	<id>https://example.com/</id>
 	<author>
 		<name>Your Name Here</name>
@@ -15,41 +15,29 @@
 	<entry>
 		<title>Radio Experiments with EcoGather</title>
 		<link href="https://waterbearfieldschool.org/posts/radio/"/>
-		<updated>2025-01-16T12:24:20Z</updated>
+		<updated>2025-01-17T03:03:10Z</updated>
 		<id>https://waterbearfieldschool.org/posts/radio/</id>
-		<content type="html">&lt;h1 id=&quot;upcoming-comms-workshop-series&quot;&gt;Upcoming Comms Workshop Series &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#upcoming-comms-workshop-series&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;We might choose various topics that we collectively research.  Some of us can offer brief presentations to the group on a given topic; we can also ask folks with relevant knowledge to present to us.&lt;/p&gt;
-&lt;p&gt;Some possible topics:&lt;br /&gt;
-- GMRS, and GMRS repeaters&lt;br /&gt;
-- scanners&lt;br /&gt;
-- meshtastic&lt;br /&gt;
-- NVIS&lt;br /&gt;
-- asychronous&lt;br /&gt;
-- Bulletin Board System / Mail / Winlink&lt;br /&gt;
-- Meshtastic BBS&lt;br /&gt;
-- js8call / keyboard / chat comms&lt;br /&gt;
-- varac&lt;br /&gt;
-- LoRaWAN / LPWAN&lt;/p&gt;
-&lt;h1 id=&quot;meeting-agenda-for-monday%2C-jan-6th-2025&quot;&gt;Meeting Agenda for Monday, Jan 6th 2025 &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#meeting-agenda-for-monday%2C-jan-6th-2025&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
-&lt;h2 id=&quot;round-of-introductions-...&quot;&gt;Round of introductions ... &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#round-of-introductions-...&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+		<content type="html">&lt;h1 id=&quot;winter-2025-seminar-topics&quot;&gt;Winter 2025 Seminar Topics &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#winter-2025-seminar-topics&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;We&#39;re planning a series of short, informal presentations and discussions around topics of interest to the group. Below is a rough, to-be-refined categorization of technologies that seem to be of interest:&lt;/p&gt;
+&lt;h2 id=&quot;listening-only-(short-and-long-range%2C-no-license-required)&quot;&gt;Listening-only (short and long range, no license required) &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#listening-only-(short-and-long-range%2C-no-license-required)&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In general, it is often useful in a grid-down scenario to be able to listen into ambient broadcasts (news, fire, police, emergency services).  There are various inexpensive approaches to this, including:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Who are you? :)&lt;/li&gt;
-&lt;li&gt;How did you find your way to this group? :)&lt;/li&gt;
-&lt;li&gt;What are your interests and goals in radio / alternative communications systems?&lt;/li&gt;
-&lt;li&gt;What would you like this group to be for you?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scanners&lt;/strong&gt; -- small radios that can receive local police, fire, and other broadcasts&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Software-defined radios&lt;/strong&gt; -- inexpensive dongles that, when connected to a laptop, can provide an intuitive graphical way of exploring received radio signals&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Short-wave radios&lt;/strong&gt; -- radios optimized for receiving broadcasts from around the globe&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;miscellaneous-topics-we-might-discuss&quot;&gt;Miscellaneous topics we might discuss &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#miscellaneous-topics-we-might-discuss&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;short-range-transceivers-(several-miles)%2C-no-ham-license&quot;&gt;Short-range transceivers (several miles), no ham license &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#short-range-transceivers-(several-miles)%2C-no-ham-license&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;These are relatively inexpensive radio technologies that allow for off-grid communication within a range of a few miles (or tens of miles, with repeater nodes).   This would be useful for folks on a homestead, or perhpas within a relatively small town, to stay in touch.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Ham licensing -- what it might be useful for, what is required&lt;/li&gt;
-&lt;li&gt;Do folks want to study together for a next ham exam?&lt;/li&gt;
-&lt;li&gt;Based on where folks are located, might we try to regularly communicate long-distance via ham radios?  What hardware / licenses would be required?&lt;/li&gt;
-&lt;li&gt;Might we organize a regular monthly &#39;check-in&#39; to get in habit of maintaining contact via alternative channel ... could be a fun social event ... and good preparation for a &#39;grid-down&#39; event&lt;/li&gt;
-&lt;li&gt;Local backup comms via walkie-talkies ... what range? What are the options?  APRS as a wide-range local digital logistics comm option (requires ham license)&lt;/li&gt;
-&lt;li&gt;Meshtastic -- no license required for radio, low-costs, local (1 km to 5 km) range (but with internet hops), leverages phone for interface -- easy place to begin experimenting&lt;/li&gt;
-&lt;li&gt;TD-H3 from Tidradio as a great starter radio&lt;/li&gt;
-&lt;li&gt;Software-defined radio (SDR) dongles as a great way to start receiving radio signals, learning&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.broadcastify.com/listen/&quot;&gt;Broadcastify&lt;/a&gt; as a way to listen to various radio bands online&lt;/li&gt;
-&lt;li&gt;GMRS as nice place to start -- wider range, repeaters available, license is $35 and covers household for 10 years&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Meshtastic&lt;/strong&gt; (enables phone to do off-grid, mesh-networked texting via an inexpensive add-on module; unlicensed)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GMRS&lt;/strong&gt; (audio communication; a $35, no-exam license is required)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Walkie Talkies&lt;/strong&gt; (audio communication; no license required)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;medium-range-transceivers-(100s-of-miles)%2C-ham-license-req&#39;d&quot;&gt;Medium-range transceivers (100s of miles), ham license req&#39;d &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#medium-range-transceivers-(100s-of-miles)%2C-ham-license-req&#39;d&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;For off-grid coordination of logistics (food, water, transport) -- e.g. after or during a storm, flood, or fire -- it seems often to be useful to communicate within a range of a few hundred miles.  A typical approach to this is to a technique (&lt;a href=&quot;https://en.wikipedia.org/wiki/Near_vertical_incidence_skywave&quot;&gt;NVIS&lt;/a&gt;) that bounces radio signals off the atmosphere nearly directly above the broadcasting site, so that signals land within the desired range.  The relevant bands (typically, HF), require a ham license (typically, the higher-level, &#39;General&#39; license).   Example technologies include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;js8call; varac&lt;/strong&gt; -- keyboard-to-keyboard live chat, with store-and-forward capability&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;winlink&lt;/strong&gt; -- ham radio-based email program&lt;/li&gt;
 &lt;/ul&gt;
 </content>
 	</entry>
