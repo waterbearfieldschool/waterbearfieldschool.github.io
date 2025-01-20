@@ -52,11 +52,6 @@
   </url>
   
   <url>
-    <loc>https://waterbearfieldschool.org/posts/loom/</loc>
-    <lastmod>2024-11-26</lastmod>
-  </url>
-  
-  <url>
     <loc>https://waterbearfieldschool.org/posts/natural/</loc>
     <lastmod>2024-11-26</lastmod>
   </url>
@@ -82,17 +77,22 @@
   </url>
   
   <url>
-    <loc>https://waterbearfieldschool.org/posts/magic/</loc>
-    <lastmod>2025-01-14</lastmod>
-  </url>
-  
-  <url>
     <loc>https://waterbearfieldschool.org/workshops/radio/</loc>
     <lastmod>2025-01-17</lastmod>
   </url>
   
   <url>
+    <loc>https://waterbearfieldschool.org/posts/magic/</loc>
+    <lastmod>2025-01-19</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://waterbearfieldschool.org/posts/loom/</loc>
+    <lastmod>2025-01-20</lastmod>
+  </url>
+  
+  <url>
     <loc>https://waterbearfieldschool.org/posts/radio/</loc>
-    <lastmod>2025-01-17</lastmod>
+    <lastmod>2025-01-20</lastmod>
   </url>
 </urlset>
