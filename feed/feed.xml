@@ -5,7 +5,7 @@
 	
 	<link href="https://waterbearfieldschool.org/feed/feed.xml" rel="self"/>
 	<link href="https://waterbearfieldschool.org/"/>
-	<updated>2025-01-22T23:11:22Z</updated>
+	<updated>2025-01-22T23:33:48Z</updated>
 	<id>https://example.com/</id>
 	<author>
 		<name>Your Name Here</name>
@@ -15,7 +15,7 @@
 	<entry>
 		<title>Magic Garden Playground Redesign</title>
 		<link href="https://waterbearfieldschool.org/posts/magic/"/>
-		<updated>2025-01-22T23:11:22Z</updated>
+		<updated>2025-01-22T23:33:48Z</updated>
 		<id>https://waterbearfieldschool.org/posts/magic/</id>
 		<content type="html">&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/magic_small.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;More photos of the site visit &lt;a href=&quot;https://photos.app.goo.gl/1Sp1f7trnnLTzTzNA&quot;&gt;here&lt;/a&gt;!&lt;/p&gt;
@@ -192,6 +192,30 @@ Materials pricing:
 &lt;h2 id=&quot;hiding-the-support-posts&quot;&gt;Hiding the support posts &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/magic/#hiding-the-support-posts&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/mg/hidden_post.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/mg/hidden_post_2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/mg/jan22_panel_front.png&quot; alt=&quot;&quot; /&gt; &lt;img src=&quot;https://waterbearfieldschool.org/img/mg/jan22_panel_front_close.png&quot; alt=&quot;&quot; /&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Front of panel&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/mg/jan22_panel_back.png&quot; alt=&quot;&quot; /&gt; &lt;img src=&quot;https://waterbearfieldschool.org/img/mg/jan22_panel_back_close.png&quot; alt=&quot;&quot; /&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Back of panel&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </content>
 	</entry>
 	
