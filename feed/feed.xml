@@ -5,7 +5,7 @@
 	
 	<link href="https://waterbearfieldschool.org/feed/feed.xml" rel="self"/>
 	<link href="https://waterbearfieldschool.org/"/>
-	<updated>2025-01-20T15:36:14Z</updated>
+	<updated>2025-01-22T05:54:45Z</updated>
 	<id>https://example.com/</id>
 	<author>
 		<name>Your Name Here</name>
@@ -13,57 +13,9 @@
 	</author>
 	
 	<entry>
-		<title>Radio Experiments with EcoGather</title>
-		<link href="https://waterbearfieldschool.org/posts/radio/"/>
-		<updated>2025-01-20T15:36:14Z</updated>
-		<id>https://waterbearfieldschool.org/posts/radio/</id>
-		<content type="html">&lt;h1 id=&quot;winter-2025-seminar-topics&quot;&gt;Winter 2025 Seminar Topics &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#winter-2025-seminar-topics&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;We&#39;re planning a series of short, informal presentations and discussions around topics of interest to the group. Below is a rough, to-be-refined categorization of technologies that seem to be of interest:&lt;/p&gt;
-&lt;h2 id=&quot;listening-only-(short-and-long-range%2C-no-license-required)&quot;&gt;Listening-only (short and long range, no license required) &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#listening-only-(short-and-long-range%2C-no-license-required)&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;In general, it is often useful in a grid-down scenario to be able to listen into ambient broadcasts (news, fire, police, emergency services).  There are various inexpensive approaches to this, including:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Scanners&lt;/strong&gt; -- small radios that can receive local police, fire, and other broadcasts&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Software-defined radios&lt;/strong&gt; -- inexpensive dongles that, when connected to a laptop, can provide an intuitive graphical way of exploring received radio signals&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Short-wave radios&lt;/strong&gt; -- radios optimized for receiving broadcasts from around the globe&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;short-range-transceivers-(several-miles)%2C-no-ham-license&quot;&gt;Short-range transceivers (several miles), no ham license &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#short-range-transceivers-(several-miles)%2C-no-ham-license&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;These are relatively inexpensive radio technologies that allow for off-grid communication within a range of a few miles (or tens of miles, with repeater nodes).   This would be useful for folks on a homestead, or perhpas within a relatively small town, to stay in touch.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Meshtastic&lt;/strong&gt; (enables phone to do off-grid, mesh-networked texting via an inexpensive add-on module; unlicensed)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GMRS&lt;/strong&gt; (audio communication; a $35, no-exam license is required)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Walkie Talkies&lt;/strong&gt; (audio communication; no license required)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;medium-range-transceivers-(100s-of-miles)%2C-ham-license-req&#39;d&quot;&gt;Medium-range transceivers (100s of miles), ham license req&#39;d &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#medium-range-transceivers-(100s-of-miles)%2C-ham-license-req&#39;d&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;For off-grid coordination of logistics (food, water, transport) -- e.g. after or during a storm, flood, or fire -- it seems often to be useful to communicate within a range of a few hundred miles.  A typical approach to this is to a technique (&lt;a href=&quot;https://en.wikipedia.org/wiki/Near_vertical_incidence_skywave&quot;&gt;NVIS&lt;/a&gt;) that bounces radio signals off the atmosphere nearly directly above the broadcasting site, so that signals land within the desired range.  The relevant bands (typically, HF), require a ham license (typically, the higher-level, &#39;General&#39; license).   Example technologies include:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;js8call; varac&lt;/strong&gt; -- keyboard-to-keyboard live chat, with store-and-forward capability&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;winlink&lt;/strong&gt; -- ham radio-based email program&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-	</entry>
-	
-	<entry>
-		<title>DIY Looms</title>
-		<link href="https://waterbearfieldschool.org/posts/loom/"/>
-		<updated>2025-01-20T15:34:07Z</updated>
-		<id>https://waterbearfieldschool.org/posts/loom/</id>
-		<content type="html">&lt;p&gt;On Tuesday we met with Pete at Artisan&#39;s Asylum, where he showed us his &#39;DIY Loom&#39; project.  It&#39;s part of a 5-day &#39;Fiber to Fabric&#39; class that he is helping to create that will take students through the process of making textiles, from raw cotton to woven cloth.&lt;/p&gt;
-&lt;p&gt;Another class in this vein, which Pete has already helped create and run once, is &#39;Dirt to Machine&#39;, which involves melting down aluminum (eventually, they hope to start by smelting iron) and then building a small machine using metalworking tools in the machine shop.&lt;/p&gt;
-&lt;p&gt;The current DIY loom design is a Dutch design that doesn&#39;t quite fit the planned class activities;  Pete is working on a re-design now.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/loom_table_s.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/loom_closeup_s.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;More photos &lt;a href=&quot;https://photos.app.goo.gl/cGC2JCqqXthxd7sJ6&quot;&gt;here&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;Wed 08 Jan 2025 05:45:17 PM EST&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.simplyhandmadestudios.com/blog/the-loom-how-to-make-a-weaving-loom&quot;&gt;How to make a homemade loom&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.simplyhandmadestudios.com/blog/learn-to-weave-3-basic-weaving-patterns-for-beginners&quot;&gt;Basic weaving for beginners&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Flying_shuttle&quot;&gt;Flying shuttle&lt;/a&gt;&lt;/p&gt;
-</content>
-	</entry>
-	
-	<entry>
 		<title>Magic Garden Playground Redesign</title>
 		<link href="https://waterbearfieldschool.org/posts/magic/"/>
-		<updated>2025-01-19T02:30:51Z</updated>
+		<updated>2025-01-22T05:54:45Z</updated>
 		<id>https://waterbearfieldschool.org/posts/magic/</id>
 		<content type="html">&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/magic_small.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;More photos of the site visit &lt;a href=&quot;https://photos.app.goo.gl/1Sp1f7trnnLTzTzNA&quot;&gt;here&lt;/a&gt;!&lt;/p&gt;
@@ -179,7 +131,8 @@ Materials pricing:
 &lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/mg/romanian.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/mg/simple.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/mg/sturdy_waddle.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2 id=&quot;building-a-mesh-fence&quot;&gt;Building a Mesh Fence &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/magic/#building-a-mesh-fence&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;mesh-fence-research&quot;&gt;Mesh Fence research &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/magic/#mesh-fence-research&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Picket option &amp;quot;B&amp;quot; above was selected;  now researching some example mesh fence designs.&lt;/p&gt;
 &lt;p&gt;Mon 13 Jan 2025 06:38:26 PM EST&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.homedepot.com/c/ah/how-to-build-a-wire-fence/9ba683603be9fa5395fab90589a08d9&quot;&gt;Home Depot guide to building a mesh fence&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.stuffsethmakes.com/redwood-fence-with-hogwire-mesh/&quot;&gt;Hogwire mesh design&lt;/a&gt;&lt;/p&gt;
@@ -189,7 +142,6 @@ Materials pricing:
 &lt;p&gt;&lt;a href=&quot;https://rogueengineer.com/diy-welded-wire-garden-fence/&quot;&gt;Welded-wire garden fence&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://buckhorncliffs.com/diy-garden-fence-gate/&quot;&gt;DIY Garden fence gate&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://gardens.theownerbuildernetwork.co/2019/04/13/how-to-make-a-removable-raised-garden-bed-fence/&quot;&gt;Removable raised garden bed fence&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;fence-design-%233&quot;&gt;Fence Design #3 &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/magic/#fence-design-%233&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Sat 18 Jan 2025 09:03:48 PM EST&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.etsy.com/listing/1293622707/pdf-download-diy-fence-and-gate-plans?gpla=1&amp;amp;gao=1&amp;amp;&amp;amp;utm_source=google&amp;amp;utm_medium=cpc&amp;amp;utm_campaign=shopping_us_ps-a-craft_supplies_and_tools&amp;amp;utm_custom1=_k_Cj0KCQiAv628BhC2ARIsAIJIiK9GPbJnKLjemWYZSbk_uO7qqrDZcp1kqhEDzLXHsod4ZzvrEzXKaekaAky7EALw_wcB_k_&amp;amp;utm_content=go_21500568222_167985818119_716809480255_aud-2007167693509:pla-295462056867_c__1293622707_539666034&amp;amp;utm_custom2=21500568222&amp;amp;gad_source=1&amp;amp;gclid=Cj0KCQiAv628BhC2ARIsAIJIiK9GPbJnKLjemWYZSbk_uO7qqrDZcp1kqhEDzLXHsod4ZzvrEzXKaekaAky7EALw_wcB&quot;&gt;Etsy plan for welded wire fence&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/mg/tropical_fence.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -209,6 +161,72 @@ Materials pricing:
 &lt;p&gt;Recommends 3/4&amp;quot; staples.&lt;/p&gt;
 &lt;p&gt;Recall -- we need fence openings that are less than 3.5&amp;quot;.  1&amp;quot; x 2&amp;quot; seemed like an option.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.thisoldhouse.com/pest-control/21016450/install-a-critter-proof-garden-fence&quot;&gt;This Old House -- install a critter-proof garden fence&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.stuffsethmakes.com/redwood-fence-with-hogwire-mesh/&quot;&gt;Hogwire mesh design&lt;/a&gt;&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/J3KDhN3bAug?si=npYZ-9cjgl8BzlS2&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/mg/simple_diy.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Making 2x2s from 2x4s &lt;a href=&quot;https://www.youtube.com/watch?v=Oyi8O28Rg-M&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Building a Paulk Smart Bench &lt;a href=&quot;https://blog.ktz.me/building-a-modified-paulk-smart-workbench/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;fence-design-%233&quot;&gt;Fence Design #3 &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/magic/#fence-design-%233&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Considerations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The outer fence frame needs to be sufficiently rigid&lt;/li&gt;
+&lt;li&gt;The fence should be made of easy-to-transport panels that disassemble&lt;/li&gt;
+&lt;li&gt;The wire mesh will need to be stapled to the fence, requiring a flat surface&lt;/li&gt;
+&lt;li&gt;The edges of the wire mesh are sharp, and should be protected behind a wooden barrier&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;basic-panel-pattern&quot;&gt;Basic Panel Pattern &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/magic/#basic-panel-pattern&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/mg/sketch_panel_front.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/mg/sketch_panel_back.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/mg/panel_mesh_front.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/mg/panel_mesh_back.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</content>
+	</entry>
+	
+	<entry>
+		<title>Radio Experiments with EcoGather</title>
+		<link href="https://waterbearfieldschool.org/posts/radio/"/>
+		<updated>2025-01-20T15:37:15Z</updated>
+		<id>https://waterbearfieldschool.org/posts/radio/</id>
+		<content type="html">&lt;h1 id=&quot;winter-2025-seminar-topics&quot;&gt;Winter 2025 Seminar Topics &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#winter-2025-seminar-topics&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;We&#39;re planning a series of short, informal presentations and discussions around topics of interest to the group. Below is a rough, to-be-refined categorization of technologies that seem to be of interest:&lt;/p&gt;
+&lt;h2 id=&quot;listening-only-(short-and-long-range%2C-no-license-required)&quot;&gt;Listening-only (short and long range, no license required) &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#listening-only-(short-and-long-range%2C-no-license-required)&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In general, it is often useful in a grid-down scenario to be able to listen into ambient broadcasts (news, fire, police, emergency services).  There are various inexpensive approaches to this, including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Scanners&lt;/strong&gt; -- small radios that can receive local police, fire, and other broadcasts&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Software-defined radios&lt;/strong&gt; -- inexpensive dongles that, when connected to a laptop, can provide an intuitive graphical way of exploring received radio signals&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Short-wave radios&lt;/strong&gt; -- radios optimized for receiving broadcasts from around the globe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;short-range-transceivers-(several-miles)%2C-no-ham-license&quot;&gt;Short-range transceivers (several miles), no ham license &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#short-range-transceivers-(several-miles)%2C-no-ham-license&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;These are relatively inexpensive radio technologies that allow for off-grid communication within a range of a few miles (or tens of miles, with repeater nodes).   This would be useful for folks on a homestead, or perhpas within a relatively small town, to stay in touch.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Meshtastic&lt;/strong&gt; (enables phone to do off-grid, mesh-networked texting via an inexpensive add-on module; unlicensed)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GMRS&lt;/strong&gt; (audio communication; a $35, no-exam license is required)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Walkie Talkies&lt;/strong&gt; (audio communication; no license required)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;medium-range-transceivers-(100s-of-miles)%2C-ham-license-req&#39;d&quot;&gt;Medium-range transceivers (100s of miles), ham license req&#39;d &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#medium-range-transceivers-(100s-of-miles)%2C-ham-license-req&#39;d&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;For off-grid coordination of logistics (food, water, transport) -- e.g. after or during a storm, flood, or fire -- it seems often to be useful to communicate within a range of a few hundred miles.  A typical approach to this is to a technique (&lt;a href=&quot;https://en.wikipedia.org/wiki/Near_vertical_incidence_skywave&quot;&gt;NVIS&lt;/a&gt;) that bounces radio signals off the atmosphere nearly directly above the broadcasting site, so that signals land within the desired range.  The relevant bands (typically, HF), require a ham license (typically, the higher-level, &#39;General&#39; license).   Example technologies include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;js8call; varac&lt;/strong&gt; -- keyboard-to-keyboard live chat, with store-and-forward capability&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;winlink&lt;/strong&gt; -- ham radio-based email program&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+	</entry>
+	
+	<entry>
+		<title>DIY Looms</title>
+		<link href="https://waterbearfieldschool.org/posts/loom/"/>
+		<updated>2025-01-20T15:34:07Z</updated>
+		<id>https://waterbearfieldschool.org/posts/loom/</id>
+		<content type="html">&lt;p&gt;On Tuesday we met with Pete at Artisan&#39;s Asylum, where he showed us his &#39;DIY Loom&#39; project.  It&#39;s part of a 5-day &#39;Fiber to Fabric&#39; class that he is helping to create that will take students through the process of making textiles, from raw cotton to woven cloth.&lt;/p&gt;
+&lt;p&gt;Another class in this vein, which Pete has already helped create and run once, is &#39;Dirt to Machine&#39;, which involves melting down aluminum (eventually, they hope to start by smelting iron) and then building a small machine using metalworking tools in the machine shop.&lt;/p&gt;
+&lt;p&gt;The current DIY loom design is a Dutch design that doesn&#39;t quite fit the planned class activities;  Pete is working on a re-design now.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/loom_table_s.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/loom_closeup_s.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;More photos &lt;a href=&quot;https://photos.app.goo.gl/cGC2JCqqXthxd7sJ6&quot;&gt;here&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Wed 08 Jan 2025 05:45:17 PM EST&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.simplyhandmadestudios.com/blog/the-loom-how-to-make-a-weaving-loom&quot;&gt;How to make a homemade loom&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.simplyhandmadestudios.com/blog/learn-to-weave-3-basic-weaving-patterns-for-beginners&quot;&gt;Basic weaving for beginners&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Flying_shuttle&quot;&gt;Flying shuttle&lt;/a&gt;&lt;/p&gt;
 </content>
 	</entry>
 	
