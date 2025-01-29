@@ -5,12 +5,42 @@
 	
 	<link href="https://waterbearfieldschool.org/feed/feed.xml" rel="self"/>
 	<link href="https://waterbearfieldschool.org/"/>
-	<updated>2025-01-22T23:33:48Z</updated>
+	<updated>2025-01-29T23:08:26Z</updated>
 	<id>https://example.com/</id>
 	<author>
 		<name>Your Name Here</name>
 		<email>youremailaddress@example.com</email>
 	</author>
+	
+	<entry>
+		<title>Radio Experiments with EcoGather</title>
+		<link href="https://waterbearfieldschool.org/posts/radio/"/>
+		<updated>2025-01-29T23:08:26Z</updated>
+		<id>https://waterbearfieldschool.org/posts/radio/</id>
+		<content type="html">&lt;h1 id=&quot;winter-2025-seminar-topics&quot;&gt;Winter 2025 Seminar Topics &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#winter-2025-seminar-topics&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;We&#39;re planning a series of short, informal presentations and discussions around topics of interest to the group. Below is a rough, to-be-refined categorization of technologies that seem to be of interest:&lt;/p&gt;
+&lt;h2 id=&quot;receiveers-(listen-only)----short-and-long-range%2C-no-license-required&quot;&gt;Receiveers (Listen-only) -- Short and long range, no license required &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#receiveers-(listen-only)----short-and-long-range%2C-no-license-required&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In general, it is often useful in a grid-down scenario to be able to listen into ambient broadcasts (news, fire, police, emergency services).  There are various inexpensive approaches to this, including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Scanners&lt;/strong&gt; -- small radios that can receive local police, fire, and other broadcasts&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Software-defined radios&lt;/strong&gt; -- inexpensive dongles that, when connected to a laptop, can provide an intuitive graphical way of exploring received radio signals&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Short-wave radios&lt;/strong&gt; -- radios optimized for receiving broadcasts from around the globe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;short-range-transceivers-(send-and-receive)----(several-miles)%2C-no-exam-based-license-required&quot;&gt;Short-range transceivers (Send and receive) -- (several miles), no exam-based license required &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#short-range-transceivers-(send-and-receive)----(several-miles)%2C-no-exam-based-license-required&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;These are relatively inexpensive radio technologies that allow for off-grid communication within a range of a few miles (or tens of miles, with repeater nodes).   This would be useful for folks on a homestead, or perhpas within a relatively small town, to stay in touch.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Meshtastic&lt;/strong&gt; (enables phone to do off-grid, mesh-networked texting via an inexpensive add-on module; unlicensed)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GMRS&lt;/strong&gt; (audio communication; a $35, no-exam license is required)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Walkie Talkies&lt;/strong&gt; (audio communication; no license required)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;medium-range-transceivers-(100s-of-miles)----(send-and-receive)%2C-ham-license-required&quot;&gt;Medium-range transceivers (100s of miles) -- (Send and receive), ham license required &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#medium-range-transceivers-(100s-of-miles)----(send-and-receive)%2C-ham-license-required&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;For off-grid coordination of logistics (food, water, transport) -- e.g. after or during a storm, flood, or fire -- it seems often to be useful to communicate within a range of a few hundred miles.  A typical approach to this is to a technique (&lt;a href=&quot;https://en.wikipedia.org/wiki/Near_vertical_incidence_skywave&quot;&gt;NVIS&lt;/a&gt;) that bounces radio signals off the atmosphere nearly directly above the broadcasting site, so that signals land within the desired range.  The relevant bands (typically, HF), require a ham license (typically, the higher-level, &#39;General&#39; license).   Example technologies include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;js8call; varac&lt;/strong&gt; -- keyboard-to-keyboard live chat, with store-and-forward capability&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;winlink&lt;/strong&gt; -- ham radio-based email program&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+	</entry>
 	
 	<entry>
 		<title>Magic Garden Playground Redesign</title>
@@ -216,36 +246,6 @@ Materials pricing:
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-</content>
-	</entry>
-	
-	<entry>
-		<title>Radio Experiments with EcoGather</title>
-		<link href="https://waterbearfieldschool.org/posts/radio/"/>
-		<updated>2025-01-20T15:37:15Z</updated>
-		<id>https://waterbearfieldschool.org/posts/radio/</id>
-		<content type="html">&lt;h1 id=&quot;winter-2025-seminar-topics&quot;&gt;Winter 2025 Seminar Topics &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#winter-2025-seminar-topics&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;We&#39;re planning a series of short, informal presentations and discussions around topics of interest to the group. Below is a rough, to-be-refined categorization of technologies that seem to be of interest:&lt;/p&gt;
-&lt;h2 id=&quot;listening-only-(short-and-long-range%2C-no-license-required)&quot;&gt;Listening-only (short and long range, no license required) &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#listening-only-(short-and-long-range%2C-no-license-required)&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;In general, it is often useful in a grid-down scenario to be able to listen into ambient broadcasts (news, fire, police, emergency services).  There are various inexpensive approaches to this, including:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Scanners&lt;/strong&gt; -- small radios that can receive local police, fire, and other broadcasts&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Software-defined radios&lt;/strong&gt; -- inexpensive dongles that, when connected to a laptop, can provide an intuitive graphical way of exploring received radio signals&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Short-wave radios&lt;/strong&gt; -- radios optimized for receiving broadcasts from around the globe&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;short-range-transceivers-(several-miles)%2C-no-ham-license&quot;&gt;Short-range transceivers (several miles), no ham license &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#short-range-transceivers-(several-miles)%2C-no-ham-license&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;These are relatively inexpensive radio technologies that allow for off-grid communication within a range of a few miles (or tens of miles, with repeater nodes).   This would be useful for folks on a homestead, or perhpas within a relatively small town, to stay in touch.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Meshtastic&lt;/strong&gt; (enables phone to do off-grid, mesh-networked texting via an inexpensive add-on module; unlicensed)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GMRS&lt;/strong&gt; (audio communication; a $35, no-exam license is required)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Walkie Talkies&lt;/strong&gt; (audio communication; no license required)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;medium-range-transceivers-(100s-of-miles)%2C-ham-license-req&#39;d&quot;&gt;Medium-range transceivers (100s of miles), ham license req&#39;d &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#medium-range-transceivers-(100s-of-miles)%2C-ham-license-req&#39;d&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;For off-grid coordination of logistics (food, water, transport) -- e.g. after or during a storm, flood, or fire -- it seems often to be useful to communicate within a range of a few hundred miles.  A typical approach to this is to a technique (&lt;a href=&quot;https://en.wikipedia.org/wiki/Near_vertical_incidence_skywave&quot;&gt;NVIS&lt;/a&gt;) that bounces radio signals off the atmosphere nearly directly above the broadcasting site, so that signals land within the desired range.  The relevant bands (typically, HF), require a ham license (typically, the higher-level, &#39;General&#39; license).   Example technologies include:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;js8call; varac&lt;/strong&gt; -- keyboard-to-keyboard live chat, with store-and-forward capability&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;winlink&lt;/strong&gt; -- ham radio-based email program&lt;/li&gt;
-&lt;/ul&gt;
 </content>
 	</entry>
 	
