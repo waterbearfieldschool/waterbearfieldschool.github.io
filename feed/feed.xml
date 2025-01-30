@@ -5,7 +5,7 @@
 	
 	<link href="https://waterbearfieldschool.org/feed/feed.xml" rel="self"/>
 	<link href="https://waterbearfieldschool.org/"/>
-	<updated>2025-01-29T23:28:08Z</updated>
+	<updated>2025-01-30T02:57:05Z</updated>
 	<id>https://example.com/</id>
 	<author>
 		<name>Your Name Here</name>
@@ -13,45 +13,9 @@
 	</author>
 	
 	<entry>
-		<title>Radio Experiments with EcoGather</title>
-		<link href="https://waterbearfieldschool.org/posts/radio/"/>
-		<updated>2025-01-29T23:28:08Z</updated>
-		<id>https://waterbearfieldschool.org/posts/radio/</id>
-		<content type="html">&lt;h1 id=&quot;winter-2025-seminar-topics&quot;&gt;Winter 2025 Seminar Topics &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#winter-2025-seminar-topics&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;We&#39;re planning a series of short, informal presentations and discussions around topics of interest to the group. In order to guide our exploration, there here are some basic characteristics of radio systems that can impact how a radio is used and what it might be useful for:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Send / Recieve?&lt;/strong&gt; Can you both send and receive information?  For example, it can often be useful in an emergency to use a cheap, receive-only radio to monitor for news or announcements; while in other cases, two-way communication can be useful.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Range?&lt;/strong&gt; Over what range can the communication be achieved?  Some radios have a range of a few miles;  others can bounce signals off the atmosphere and travel around the globe.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;License Required?&lt;/strong&gt; Can this type of radio be used without a license?  If a license is required, can it simply be purchased for a small fee, or does the user need to pass an official exam?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Below are some examples of radios that fit in certain combinations of these categories:&lt;/p&gt;
-&lt;h2 id=&quot;receive-only-%2F%2F-long-range-%2F%2F-no-license-required&quot;&gt;Receive-only // Long-range // No license required &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#receive-only-%2F%2F-long-range-%2F%2F-no-license-required&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;In general, it is often useful in a grid-down scenario to be able to listen into ambient broadcasts (news, fire, police, emergency services).  There are various inexpensive approaches to this, including:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Scanners&lt;/strong&gt; -- small radios that can receive local police, fire, and other broadcasts&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Software-defined radios&lt;/strong&gt; -- inexpensive dongles that, when connected to a laptop, can provide an intuitive graphical way of exploring received radio signals&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Short-wave radios&lt;/strong&gt; -- radios optimized for receiving broadcasts from around the globe&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;send-%26-receive-%2F%2F-short-range-%2F%2F-easy-license-required&quot;&gt;Send &amp;amp; Receive // Short-range // Easy license required &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#send-%26-receive-%2F%2F-short-range-%2F%2F-easy-license-required&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;These are relatively inexpensive radio technologies that allow for off-grid communication within a range of a few miles (or tens of miles, with repeater nodes).   This would be useful for folks on a homestead, or perhpas within a relatively small town, to stay in touch.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Meshtastic&lt;/strong&gt; (enables phone to do off-grid, mesh-networked texting via an inexpensive add-on module; unlicensed)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GMRS&lt;/strong&gt; (audio communication; a $35, no-exam license is required)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Walkie Talkies&lt;/strong&gt; (audio communication; no license required)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;send-%26-receive-%2F%2F-100s-of-miles-%2F%2F-exam-based-license-required&quot;&gt;Send &amp;amp; Receive // 100s of miles // Exam-based license required &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#send-%26-receive-%2F%2F-100s-of-miles-%2F%2F-exam-based-license-required&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;For off-grid coordination of logistics (food, water, transport) -- e.g. after or during a storm, flood, or fire -- it seems often to be useful to communicate within a range of a few hundred miles.  A typical approach to this is to a technique (&lt;a href=&quot;https://en.wikipedia.org/wiki/Near_vertical_incidence_skywave&quot;&gt;NVIS&lt;/a&gt;) that bounces radio signals off the atmosphere nearly directly above the broadcasting site, so that signals land within the desired range.  The relevant bands (typically, HF), require a ham license (typically, the higher-level, &#39;General&#39; license).   Example technologies include:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;js8call; varac&lt;/strong&gt; -- keyboard-to-keyboard live chat, with store-and-forward capability&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;winlink&lt;/strong&gt; -- ham radio-based email program&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-	</entry>
-	
-	<entry>
 		<title>Magic Garden Playground Redesign</title>
 		<link href="https://waterbearfieldschool.org/posts/magic/"/>
-		<updated>2025-01-22T23:33:48Z</updated>
+		<updated>2025-01-30T02:57:05Z</updated>
 		<id>https://waterbearfieldschool.org/posts/magic/</id>
 		<content type="html">&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/magic_small.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;More photos of the site visit &lt;a href=&quot;https://photos.app.goo.gl/1Sp1f7trnnLTzTzNA&quot;&gt;here&lt;/a&gt;!&lt;/p&gt;
@@ -252,6 +216,45 @@ Materials pricing:
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h2 id=&quot;fence-prototyping&quot;&gt;Fence Prototyping &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/magic/#fence-prototyping&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Initial fence panel prototype portrayed in video below, demonstrating design for encapsulating rough mesh edges and fence support posts.&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/eibalFkdzAs?si=sgygqi0m-Xv9XaTB&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+</content>
+	</entry>
+	
+	<entry>
+		<title>Radio Experiments with EcoGather</title>
+		<link href="https://waterbearfieldschool.org/posts/radio/"/>
+		<updated>2025-01-30T02:52:15Z</updated>
+		<id>https://waterbearfieldschool.org/posts/radio/</id>
+		<content type="html">&lt;h1 id=&quot;winter-2025-seminar-topics&quot;&gt;Winter 2025 Seminar Topics &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#winter-2025-seminar-topics&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;We&#39;re planning a series of short, informal presentations and discussions around topics of interest to the group. In order to guide our exploration, there here are some basic characteristics of radio systems that can impact how a radio is used and what it might be useful for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Send / Recieve?&lt;/strong&gt; Can you both send and receive information?  For example, it can often be useful in an emergency to use a cheap, receive-only radio to monitor for news or announcements; while in other cases, two-way communication can be useful.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Range?&lt;/strong&gt; Over what range can the communication be achieved?  Some radios have a range of a few miles;  others can bounce signals off the atmosphere and travel around the globe.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;License Required?&lt;/strong&gt; Can this type of radio be used without a license?  If a license is required, can it simply be purchased for a small fee, or does the user need to pass an official exam?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Below are some examples of radios that fit in certain combinations of these categories:&lt;/p&gt;
+&lt;h2 id=&quot;receive-only-%2F%2F-long-range-%2F%2F-no-license-required&quot;&gt;Receive-only // Long-range // No license required &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#receive-only-%2F%2F-long-range-%2F%2F-no-license-required&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In general, it is often useful in a grid-down scenario to be able to listen into ambient broadcasts (news, fire, police, emergency services).  There are various inexpensive approaches to this, including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Scanners&lt;/strong&gt; -- small radios that can receive local police, fire, and other broadcasts&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Software-defined radios&lt;/strong&gt; -- inexpensive dongles that, when connected to a laptop, can provide an intuitive graphical way of exploring received radio signals&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Short-wave radios&lt;/strong&gt; -- radios optimized for receiving broadcasts from around the globe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;send-%26-receive-%2F%2F-short-range-%2F%2F-easy-license-required&quot;&gt;Send &amp;amp; Receive // Short-range // Easy license required &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#send-%26-receive-%2F%2F-short-range-%2F%2F-easy-license-required&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;These are relatively inexpensive radio technologies that allow for off-grid communication within a range of a few miles (or tens of miles, with repeater nodes).   This would be useful for folks on a homestead, or perhpas within a relatively small town, to stay in touch.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Meshtastic&lt;/strong&gt; (enables phone to do off-grid, mesh-networked texting via an inexpensive add-on module; unlicensed)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GMRS&lt;/strong&gt; (audio communication; a $35, no-exam license is required)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Walkie Talkies&lt;/strong&gt; (audio communication; no license required)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;send-%26-receive-%2F%2F-100s-of-miles-%2F%2F-exam-based-license-required&quot;&gt;Send &amp;amp; Receive // 100s of miles // Exam-based license required &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#send-%26-receive-%2F%2F-100s-of-miles-%2F%2F-exam-based-license-required&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;For off-grid coordination of logistics (food, water, transport) -- e.g. after or during a storm, flood, or fire -- it seems often to be useful to communicate within a range of a few hundred miles.  A typical approach to this is to a technique (&lt;a href=&quot;https://en.wikipedia.org/wiki/Near_vertical_incidence_skywave&quot;&gt;NVIS&lt;/a&gt;) that bounces radio signals off the atmosphere nearly directly above the broadcasting site, so that signals land within the desired range.  The relevant bands (typically, HF), require a ham license (typically, the higher-level, &#39;General&#39; license).   Example technologies include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;js8call; varac&lt;/strong&gt; -- keyboard-to-keyboard live chat, with store-and-forward capability&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;winlink&lt;/strong&gt; -- ham radio-based email program&lt;/li&gt;
+&lt;/ul&gt;
 </content>
 	</entry>
 	
