@@ -5,12 +5,58 @@
 	
 	<link href="https://waterbearfieldschool.org/feed/feed.xml" rel="self"/>
 	<link href="https://waterbearfieldschool.org/"/>
-	<updated>2025-02-08T03:54:58Z</updated>
+	<updated>2025-02-15T03:15:59Z</updated>
 	<id>https://example.com/</id>
 	<author>
 		<name>Your Name Here</name>
 		<email>youremailaddress@example.com</email>
 	</author>
+	
+	<entry>
+		<title>Designing a Lower-Tech Phone</title>
+		<link href="https://waterbearfieldschool.org/posts/phone/"/>
+		<updated>2025-02-15T03:15:59Z</updated>
+		<id>https://waterbearfieldschool.org/posts/phone/</id>
+		<content type="html">&lt;h1 id=&quot;phone-ingredients&quot;&gt;Phone ingredients &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#phone-ingredients&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id=&quot;screen-options&quot;&gt;Screen Options &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#screen-options&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Large Sharp display, $45 &lt;a href=&quot;https://www.adafruit.com/product/4694&quot;&gt;https://www.adafruit.com/product/4694&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Smaller Sharp display, $25 &lt;a href=&quot;https://www.adafruit.com/product/3502&quot;&gt;https://www.adafruit.com/product/3502&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;OLED display, $3 ea (by 5 at a time) &lt;a href=&quot;https://www.amazon.com/Hosyond-Display-Self-Luminous-Compatible-Raspberry/dp/B09T6SJBV5&quot;&gt;https://www.amazon.com/Hosyond-Display-Self-Luminous-Compatible-Raspberry/dp/B09T6SJBV5&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;cellular-modem-options&quot;&gt;Cellular Modem options &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#cellular-modem-options&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;(Generally looking at the SIM7600 modules)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Text + voice, $75 &lt;a href=&quot;https://www.digikey.com/en/products/detail/dfrobot/TEL0162/23028625&quot;&gt;https://www.digikey.com/en/products/detail/dfrobot/TEL0162/23028625&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Text-only, $72 (smaller form factor) &lt;a href=&quot;https://www.amazon.com/SIM7600G-H-4G-Communication-Module-Positioning-Standard/dp/B0BTP93H8H&quot;&gt;https://www.amazon.com/SIM7600G-H-4G-Communication-Module-Positioning-Standard/dp/B0BTP93H8H&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;keyboard&quot;&gt;Keyboard &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#keyboard&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;CardKB, $8 &lt;a href=&quot;https://www.digikey.com/en/products/detail/m5stack-technology-co-ltd/U035-B/16679766&quot;&gt;https://www.digikey.com/en/products/detail/m5stack-technology-co-ltd/U035-B/16679766&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;battery&quot;&gt;Battery &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#battery&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;[TBD -- need to figure out whether &#39;boost&#39; approach works]&lt;/p&gt;
+&lt;h2 id=&quot;microcontroller&quot;&gt;Microcontroller &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#microcontroller&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Itsy Bitsy M4, $15 &lt;a href=&quot;https://www.adafruit.com/product/3800&quot;&gt;https://www.adafruit.com/product/3800&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Itsy Bitys nRF52840, $20 &lt;a href=&quot;https://www.adafruit.com/product/4481&quot;&gt;https://www.adafruit.com/product/4481&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+	</entry>
 	
 	<entry>
 		<title>Magic Garden Playground Redesign</title>
