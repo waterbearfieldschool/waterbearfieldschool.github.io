@@ -5,7 +5,7 @@
 	
 	<link href="https://waterbearfieldschool.org/feed/feed.xml" rel="self"/>
 	<link href="https://waterbearfieldschool.org/"/>
-	<updated>2025-02-15T03:15:59Z</updated>
+	<updated>2025-02-17T02:56:59Z</updated>
 	<id>https://example.com/</id>
 	<author>
 		<name>Your Name Here</name>
@@ -13,55 +13,64 @@
 	</author>
 	
 	<entry>
-		<title>Designing a Lower-Tech Phone</title>
-		<link href="https://waterbearfieldschool.org/posts/phone/"/>
-		<updated>2025-02-15T03:15:59Z</updated>
-		<id>https://waterbearfieldschool.org/posts/phone/</id>
-		<content type="html">&lt;h1 id=&quot;phone-ingredients&quot;&gt;Phone ingredients &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#phone-ingredients&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
-&lt;h2 id=&quot;screen-options&quot;&gt;Screen Options &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#screen-options&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+		<title>Radio Experiments with EcoGather</title>
+		<link href="https://waterbearfieldschool.org/posts/radio/"/>
+		<updated>2025-02-17T02:56:59Z</updated>
+		<id>https://waterbearfieldschool.org/posts/radio/</id>
+		<content type="html">&lt;h1 id=&quot;winter-2025-seminar-topics&quot;&gt;Winter 2025 Seminar Topics &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#winter-2025-seminar-topics&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;We&#39;re planning a series of short, informal presentations and discussions around topics of interest to the group. In order to guide our exploration, there here are some basic characteristics of radio systems that can impact how a radio is used and what it might be useful for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Send / Recieve?&lt;/strong&gt; Can you both send and receive information?  For example, it can often be useful in an emergency to use a cheap, receive-only radio to monitor for news or announcements; while in other cases, two-way communication can be useful.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Range?&lt;/strong&gt; Over what range can the communication be achieved?  Some radios have a range of a few miles;  others can bounce signals off the atmosphere and travel around the globe.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;License Required?&lt;/strong&gt; Can this type of radio be used without a license?  If a license is required, can it simply be purchased for a small fee, or does the user need to pass an official exam?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Below are some examples of radios that fit in certain combinations of these categories:&lt;/p&gt;
+&lt;h2 id=&quot;receive-only-%2F%2F-long-range-%2F%2F-no-license-required&quot;&gt;Receive-only // Long-range // No license required &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#receive-only-%2F%2F-long-range-%2F%2F-no-license-required&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In general, it is often useful in a grid-down scenario to be able to listen into ambient broadcasts (news, fire, police, emergency services).  There are various inexpensive approaches to this, including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Scanners&lt;/strong&gt; -- small radios that can receive local police, fire, and other broadcasts&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Software-defined radios&lt;/strong&gt; -- inexpensive dongles that, when connected to a laptop, can provide an intuitive graphical way of exploring received radio signals&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Short-wave radios&lt;/strong&gt; -- radios optimized for receiving broadcasts from around the globe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;send-%26-receive-%2F%2F-short-range-%2F%2F-easy-license-required&quot;&gt;Send &amp;amp; Receive // Short-range // Easy license required &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#send-%26-receive-%2F%2F-short-range-%2F%2F-easy-license-required&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;These are relatively inexpensive radio technologies that allow for off-grid communication within a range of a few miles (or tens of miles, with repeater nodes).   This would be useful for folks on a homestead, or perhpas within a relatively small town, to stay in touch.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Meshtastic&lt;/strong&gt; (enables phone to do off-grid, mesh-networked texting via an inexpensive add-on module; unlicensed)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GMRS&lt;/strong&gt; (audio communication; a $35, no-exam license is required)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Walkie Talkies&lt;/strong&gt; (audio communication; no license required)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;send-%26-receive-%2F%2F-100s-of-miles-%2F%2F-exam-based-license-required&quot;&gt;Send &amp;amp; Receive // 100s of miles // Exam-based license required &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#send-%26-receive-%2F%2F-100s-of-miles-%2F%2F-exam-based-license-required&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;For off-grid coordination of logistics (food, water, transport) -- e.g. after or during a storm, flood, or fire -- it seems often to be useful to communicate within a range of a few hundred miles.  A typical approach to this is to a technique (&lt;a href=&quot;https://en.wikipedia.org/wiki/Near_vertical_incidence_skywave&quot;&gt;NVIS&lt;/a&gt;) that bounces radio signals off the atmosphere nearly directly above the broadcasting site, so that signals land within the desired range.  The relevant bands (typically, HF), require a ham license (typically, the higher-level, &#39;General&#39; license).   Example technologies include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;js8call; varac&lt;/strong&gt; -- keyboard-to-keyboard live chat, with store-and-forward capability&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;winlink&lt;/strong&gt; -- ham radio-based email program&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Sun 16 Feb 2025 05:53:50 PM EST&lt;/p&gt;
+&lt;h1 id=&quot;meshtastic-notes&quot;&gt;Meshtastic notes &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#meshtastic-notes&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Link to a &amp;lt; $150 meshtastic repeater node &lt;a href=&quot;https://www.etsy.com/listing/1048791528/all-in-one-waterproof-solar-powered-off?ga_order=most_relevant&amp;amp;ga_search_type=all&amp;amp;ga_view_type=gallery&amp;amp;ga_search_query=meshtastic+repeater&amp;amp;ref=sr_gallery-1-8&amp;amp;content_source=e68961fa5a3916425776b486a8a0ff245709ec82%253A1048791528&amp;amp;organic_search_click=1&amp;amp;logging_key=f91e8779bceeca494505119a19c287f6d8615e38%3A1048791528&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Standalone meshtastic nodes &lt;a href=&quot;https://www.etsy.com/market/meshtastic_repeater&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Wireless paper &lt;a href=&quot;https://heltec.org/project/wireless-paper/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;device-test&quot;&gt;Device test &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#device-test&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/trio.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Large Sharp display, $45 &lt;a href=&quot;https://www.adafruit.com/product/4694&quot;&gt;https://www.adafruit.com/product/4694&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Lilygo T-Beam (v 1.2) $52 &lt;a href=&quot;https://www.amazon.com/LILYGO-Meshtastic-Development-CH9102F-Soldered/dp/B0B63FV7FR&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Smaller Sharp display, $25 &lt;a href=&quot;https://www.adafruit.com/product/3502&quot;&gt;https://www.adafruit.com/product/3502&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Heltec V3 $25 &lt;a href=&quot;https://www.amazon.com/HiLetgo-Display-Development-Bluetooth-Unsoldered/dp/B07WHRS2XG&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;OLED display, $3 ea (by 5 at a time) &lt;a href=&quot;https://www.amazon.com/Hosyond-Display-Self-Luminous-Compatible-Raspberry/dp/B09T6SJBV5&quot;&gt;https://www.amazon.com/Hosyond-Display-Self-Luminous-Compatible-Raspberry/dp/B09T6SJBV5&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Rak Wireless $35 &lt;a href=&quot;https://www.amazon.com/RAKwireless-WisBlock-Meshtastic-Starter-RAK19007/dp/B0CHKZJK9C&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;cellular-modem-options&quot;&gt;Cellular Modem options &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#cellular-modem-options&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;(Generally looking at the SIM7600 modules)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Text + voice, $75 &lt;a href=&quot;https://www.digikey.com/en/products/detail/dfrobot/TEL0162/23028625&quot;&gt;https://www.digikey.com/en/products/detail/dfrobot/TEL0162/23028625&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Text-only, $72 (smaller form factor) &lt;a href=&quot;https://www.amazon.com/SIM7600G-H-4G-Communication-Module-Positioning-Standard/dp/B0BTP93H8H&quot;&gt;https://www.amazon.com/SIM7600G-H-4G-Communication-Module-Positioning-Standard/dp/B0BTP93H8H&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;keyboard&quot;&gt;Keyboard &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#keyboard&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;CardKB, $8 &lt;a href=&quot;https://www.digikey.com/en/products/detail/m5stack-technology-co-ltd/U035-B/16679766&quot;&gt;https://www.digikey.com/en/products/detail/m5stack-technology-co-ltd/U035-B/16679766&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;battery&quot;&gt;Battery &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#battery&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;[TBD -- need to figure out whether &#39;boost&#39; approach works]&lt;/p&gt;
-&lt;h2 id=&quot;microcontroller&quot;&gt;Microcontroller &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#microcontroller&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Itsy Bitsy M4, $15 &lt;a href=&quot;https://www.adafruit.com/product/3800&quot;&gt;https://www.adafruit.com/product/3800&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Itsy Bitys nRF52840, $20 &lt;a href=&quot;https://www.adafruit.com/product/4481&quot;&gt;https://www.adafruit.com/product/4481&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Explanatory / demo video &lt;a href=&quot;https://www.youtube.com/watch?v=2pHxxf_e4e0&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 </content>
 	</entry>
 	
 	<entry>
 		<title>Magic Garden Playground Redesign</title>
 		<link href="https://waterbearfieldschool.org/posts/magic/"/>
-		<updated>2025-02-08T03:54:58Z</updated>
+		<updated>2025-02-16T18:43:05Z</updated>
 		<id>https://waterbearfieldschool.org/posts/magic/</id>
 		<content type="html">&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/magic_small.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;More photos of the site visit &lt;a href=&quot;https://photos.app.goo.gl/1Sp1f7trnnLTzTzNA&quot;&gt;here&lt;/a&gt;!&lt;/p&gt;
@@ -287,41 +296,122 @@ Materials pricing:
 &lt;h3 id=&quot;gate&quot;&gt;Gate &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/magic/#gate&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/mg/f4_dim_gate_base.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/mg/f4_dim_gate_outer.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Sun 16 Feb 2025 01:23:56 PM EST&lt;/p&gt;
+&lt;h1 id=&quot;mg-fence-calcs&quot;&gt;MG Fence calcs &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/magic/#mg-fence-calcs&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;idea: use &#39;spare&#39; parts as &#39;legs&#39; to support fence&lt;/p&gt;
+&lt;h2 id=&quot;bases&quot;&gt;bases &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/magic/#bases&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;have finished four long-panel bases = (approx $240)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;material for another base, minus one long board (approx $70)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;so for the rest of the long bases (2)&lt;br /&gt;
+each long base is 6 boards, so need&lt;br /&gt;
+2*6 + 1 = &lt;strong&gt;13 boards&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;for the (2) short-panel bases,&lt;br /&gt;
+each short base is 4 boards,&lt;br /&gt;
+so need &lt;strong&gt;8 boards&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;then the gate base is &lt;strong&gt;2 boards&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[so for all the remaining bases, need&lt;br /&gt;
+13 + 8 + 2 = &lt;strong&gt;23 boards&lt;/strong&gt; = approx $230&lt;/p&gt;
+&lt;h2 id=&quot;coverings&quot;&gt;coverings &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/magic/#coverings&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;then, each long panel covering is 5 boards&lt;br /&gt;
+so that&#39;s 6*5 = &lt;strong&gt;30 boards&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;each short panel covering is 4 boards&lt;br /&gt;
+so that&#39;s 4*2 = &lt;strong&gt;8 boards&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;the gate covering is &lt;strong&gt;4 boards&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;so that&#39;s &lt;strong&gt;42 boards&lt;/strong&gt; = $420&lt;/p&gt;
+&lt;p&gt;Total estimated wood cost:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;previous:  $240+$70 = $310&lt;/li&gt;
+&lt;li&gt;todo: $230+$420 = $650&lt;br /&gt;
+= $960 total, just for wood&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(actually, the boards are $9.25 ea, not $10 ea, so that&#39;s $888)&lt;/p&gt;
+&lt;p&gt;using remainders ...&lt;/p&gt;
+&lt;p&gt;Structurally, can use likely stitched-together remainders for the side panels, and perhaps for the fence tops.&lt;/p&gt;
+&lt;h2 id=&quot;remainders-from-the-bases&quot;&gt;remainders from the bases &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/magic/#remainders-from-the-bases&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;each long panel long piece cut leaves 62 cm.  there are 4 long pieces per long panel.  there are 6 long panels.  so that&#39;s &lt;strong&gt;24 remainders at 62 cm ea&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;each vertical piece pair leaves 56 cm.  there are two pairs per long panel, and 6 long panels, so 12 remainders.  there are 2 pairs per short panel, and 2 short panels, so 4 remainders.  so that&#39;s &lt;strong&gt;6 remainders at 56 cm ea&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;that&#39;s at least &lt;strong&gt;1824 cm remainder&lt;/strong&gt; from the bases alone.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note: we have not included remainders from the front paneling or the tops&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;needed-material-for-the-side-panels&quot;&gt;needed material for the side panels &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/magic/#needed-material-for-the-side-panels&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;each side panel is 101 cm.  there are 2 side panels per long panel, and 6 long panels, so that&#39;s &lt;strong&gt;12 side panels at 101 cm ea&lt;/strong&gt;.  There are 2 side panels per short panel, and two short panels, so that&#39;s &lt;strong&gt;4 side panels at 101 cm ea&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;the gate has &lt;strong&gt;2 side panels at 101 cm ea&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;so the side panels are &lt;strong&gt;1818 cm&lt;/strong&gt; total.&lt;/p&gt;
+&lt;h2 id=&quot;cost-reduction-if-using-remainders-for-side-panels&quot;&gt;cost reduction if using remainders for side panels &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/magic/#cost-reduction-if-using-remainders-for-side-panels&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;So, theoretically, we can cover the side paneling (1818 cm) with the remainders (1824 cm).&lt;/p&gt;
+&lt;p&gt;Redoing the covering calculation without side panels:&lt;/p&gt;
+&lt;p&gt;then, each long panel covering is 4 boards&lt;br /&gt;
+so that&#39;s 6*4 = &lt;strong&gt;24 boards&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;each short panel covering is 3 boards&lt;br /&gt;
+so that&#39;s 3*2 = &lt;strong&gt;6 boards&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;the gate covering is &lt;strong&gt;2 boards&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;so that&#39;s &lt;strong&gt;32 boards&lt;/strong&gt; = $320, $100 savings&lt;/p&gt;
+&lt;p&gt;so that&#39;s $860 just for wood.&lt;/p&gt;
+&lt;h2 id=&quot;joinery-methods&quot;&gt;joinery methods &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/magic/#joinery-methods&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.woodmagazine.com/woodworking-tips/techniques/joinery/dowel&quot;&gt;https://www.woodmagazine.com/woodworking-tips/techniques/joinery/dowel&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.thesprucecrafts.com/wood-joinery-types-3536631&quot;&gt;https://www.thesprucecrafts.com/wood-joinery-types-3536631&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.woodmagazine.com/woodworking-tips/techniques/joinery/end-to-end&quot;&gt;https://www.woodmagazine.com/woodworking-tips/techniques/joinery/end-to-end&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/BeginnerWoodWorking/comments/16cmqzn/dowel_jig_advice_or_junk/?rdt=51976&quot;&gt;https://www.reddit.com/r/BeginnerWoodWorking/comments/16cmqzn/dowel_jig_advice_or_junk/?rdt=51976&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Tips on using dowel jigs &lt;a href=&quot;https://www.youtube.com/watch?v=zTj_hiEVfvw&amp;amp;t=714s&quot;&gt;https://www.youtube.com/watch?v=zTj_hiEVfvw&amp;amp;t=714s&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Dowel joinery with a cheap jig &lt;a href=&quot;https://www.youtube.com/watch?v=wgxwojt3vAo&quot;&gt;https://www.youtube.com/watch?v=wgxwojt3vAo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Dowel alignment without a jig &lt;a href=&quot;https://www.youtube.com/watch?v=EffXrNhJtKI&quot;&gt;https://www.youtube.com/watch?v=EffXrNhJtKI&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Overview of woodworker joinery methods, including clamps &lt;a href=&quot;https://www.youtube.com/watch?v=j-jVst7CEMw&quot;&gt;https://www.youtube.com/watch?v=j-jVst7CEMw&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/mg/joint_choice.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/mg/wood_joinery.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </content>
 	</entry>
 	
 	<entry>
-		<title>Radio Experiments with EcoGather</title>
-		<link href="https://waterbearfieldschool.org/posts/radio/"/>
-		<updated>2025-01-30T02:52:15Z</updated>
-		<id>https://waterbearfieldschool.org/posts/radio/</id>
-		<content type="html">&lt;h1 id=&quot;winter-2025-seminar-topics&quot;&gt;Winter 2025 Seminar Topics &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#winter-2025-seminar-topics&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;We&#39;re planning a series of short, informal presentations and discussions around topics of interest to the group. In order to guide our exploration, there here are some basic characteristics of radio systems that can impact how a radio is used and what it might be useful for:&lt;/p&gt;
+		<title>Designing a Lower-Tech Phone</title>
+		<link href="https://waterbearfieldschool.org/posts/phone/"/>
+		<updated>2025-02-15T03:15:59Z</updated>
+		<id>https://waterbearfieldschool.org/posts/phone/</id>
+		<content type="html">&lt;h1 id=&quot;phone-ingredients&quot;&gt;Phone ingredients &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#phone-ingredients&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id=&quot;screen-options&quot;&gt;Screen Options &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#screen-options&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Send / Recieve?&lt;/strong&gt; Can you both send and receive information?  For example, it can often be useful in an emergency to use a cheap, receive-only radio to monitor for news or announcements; while in other cases, two-way communication can be useful.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Range?&lt;/strong&gt; Over what range can the communication be achieved?  Some radios have a range of a few miles;  others can bounce signals off the atmosphere and travel around the globe.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;License Required?&lt;/strong&gt; Can this type of radio be used without a license?  If a license is required, can it simply be purchased for a small fee, or does the user need to pass an official exam?&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Large Sharp display, $45 &lt;a href=&quot;https://www.adafruit.com/product/4694&quot;&gt;https://www.adafruit.com/product/4694&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Smaller Sharp display, $25 &lt;a href=&quot;https://www.adafruit.com/product/3502&quot;&gt;https://www.adafruit.com/product/3502&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;OLED display, $3 ea (by 5 at a time) &lt;a href=&quot;https://www.amazon.com/Hosyond-Display-Self-Luminous-Compatible-Raspberry/dp/B09T6SJBV5&quot;&gt;https://www.amazon.com/Hosyond-Display-Self-Luminous-Compatible-Raspberry/dp/B09T6SJBV5&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Below are some examples of radios that fit in certain combinations of these categories:&lt;/p&gt;
-&lt;h2 id=&quot;receive-only-%2F%2F-long-range-%2F%2F-no-license-required&quot;&gt;Receive-only // Long-range // No license required &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#receive-only-%2F%2F-long-range-%2F%2F-no-license-required&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;In general, it is often useful in a grid-down scenario to be able to listen into ambient broadcasts (news, fire, police, emergency services).  There are various inexpensive approaches to this, including:&lt;/p&gt;
+&lt;h2 id=&quot;cellular-modem-options&quot;&gt;Cellular Modem options &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#cellular-modem-options&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;(Generally looking at the SIM7600 modules)&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Scanners&lt;/strong&gt; -- small radios that can receive local police, fire, and other broadcasts&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Software-defined radios&lt;/strong&gt; -- inexpensive dongles that, when connected to a laptop, can provide an intuitive graphical way of exploring received radio signals&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Short-wave radios&lt;/strong&gt; -- radios optimized for receiving broadcasts from around the globe&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Text + voice, $75 &lt;a href=&quot;https://www.digikey.com/en/products/detail/dfrobot/TEL0162/23028625&quot;&gt;https://www.digikey.com/en/products/detail/dfrobot/TEL0162/23028625&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Text-only, $72 (smaller form factor) &lt;a href=&quot;https://www.amazon.com/SIM7600G-H-4G-Communication-Module-Positioning-Standard/dp/B0BTP93H8H&quot;&gt;https://www.amazon.com/SIM7600G-H-4G-Communication-Module-Positioning-Standard/dp/B0BTP93H8H&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;send-%26-receive-%2F%2F-short-range-%2F%2F-easy-license-required&quot;&gt;Send &amp;amp; Receive // Short-range // Easy license required &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#send-%26-receive-%2F%2F-short-range-%2F%2F-easy-license-required&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;These are relatively inexpensive radio technologies that allow for off-grid communication within a range of a few miles (or tens of miles, with repeater nodes).   This would be useful for folks on a homestead, or perhpas within a relatively small town, to stay in touch.&lt;/p&gt;
+&lt;h2 id=&quot;keyboard&quot;&gt;Keyboard &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#keyboard&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Meshtastic&lt;/strong&gt; (enables phone to do off-grid, mesh-networked texting via an inexpensive add-on module; unlicensed)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GMRS&lt;/strong&gt; (audio communication; a $35, no-exam license is required)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Walkie Talkies&lt;/strong&gt; (audio communication; no license required)&lt;/li&gt;
+&lt;li&gt;CardKB, $8 &lt;a href=&quot;https://www.digikey.com/en/products/detail/m5stack-technology-co-ltd/U035-B/16679766&quot;&gt;https://www.digikey.com/en/products/detail/m5stack-technology-co-ltd/U035-B/16679766&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;send-%26-receive-%2F%2F-100s-of-miles-%2F%2F-exam-based-license-required&quot;&gt;Send &amp;amp; Receive // 100s of miles // Exam-based license required &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#send-%26-receive-%2F%2F-100s-of-miles-%2F%2F-exam-based-license-required&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;For off-grid coordination of logistics (food, water, transport) -- e.g. after or during a storm, flood, or fire -- it seems often to be useful to communicate within a range of a few hundred miles.  A typical approach to this is to a technique (&lt;a href=&quot;https://en.wikipedia.org/wiki/Near_vertical_incidence_skywave&quot;&gt;NVIS&lt;/a&gt;) that bounces radio signals off the atmosphere nearly directly above the broadcasting site, so that signals land within the desired range.  The relevant bands (typically, HF), require a ham license (typically, the higher-level, &#39;General&#39; license).   Example technologies include:&lt;/p&gt;
+&lt;h2 id=&quot;battery&quot;&gt;Battery &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#battery&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;[TBD -- need to figure out whether &#39;boost&#39; approach works]&lt;/p&gt;
+&lt;h2 id=&quot;microcontroller&quot;&gt;Microcontroller &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#microcontroller&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;js8call; varac&lt;/strong&gt; -- keyboard-to-keyboard live chat, with store-and-forward capability&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;winlink&lt;/strong&gt; -- ham radio-based email program&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Itsy Bitsy M4, $15 &lt;a href=&quot;https://www.adafruit.com/product/3800&quot;&gt;https://www.adafruit.com/product/3800&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Itsy Bitys nRF52840, $20 &lt;a href=&quot;https://www.adafruit.com/product/4481&quot;&gt;https://www.adafruit.com/product/4481&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </content>
 	</entry>
