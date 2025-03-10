@@ -5,7 +5,7 @@
 	
 	<link href="https://waterbearfieldschool.org/feed/feed.xml" rel="self"/>
 	<link href="https://waterbearfieldschool.org/"/>
-	<updated>2025-03-09T02:19:51Z</updated>
+	<updated>2025-03-10T17:41:14Z</updated>
 	<id>https://example.com/</id>
 	<author>
 		<name>Your Name Here</name>
@@ -15,7 +15,7 @@
 	<entry>
 		<title>Designing a Lower-Tech Phone</title>
 		<link href="https://waterbearfieldschool.org/posts/phone/"/>
-		<updated>2025-03-09T02:19:51Z</updated>
+		<updated>2025-03-10T17:41:14Z</updated>
 		<id>https://waterbearfieldschool.org/posts/phone/</id>
 		<content type="html">&lt;h1 id=&quot;phone-ingredients&quot;&gt;Phone ingredients &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#phone-ingredients&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
 &lt;h2 id=&quot;screen-options&quot;&gt;Screen Options &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#screen-options&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
@@ -60,10 +60,11 @@
 &lt;h1 id=&quot;initial-run----text-only&quot;&gt;Initial run -- text-only &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#initial-run----text-only&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Module -- &lt;a href=&quot;https://www.amazon.com/SIM7600G-H-4G-Communication-Module-Positioning-Standard/dp/B0BTP93H8H/ref=asc_df_B0BTP93H8H&quot;&gt;sim7600 text module for $73 on Amazon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Screen -- &lt;a href=&quot;https://www.amazon.com/DIYmall-Serial-128x64-Display-Arduino/dp/B00O2KDQBE?th=1&quot;&gt;ssd1306 oled for $8 on Amazon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Small Screen -- &lt;a href=&quot;https://www.amazon.com/DIYmall-Serial-128x64-Display-Arduino/dp/B00O2KDQBE?th=1&quot;&gt;ssd1306 oled for $8 on Amazon&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;SIM card -- &lt;a href=&quot;https://www.amazon.com/gp/aw/d/B0741FV7ZV/?_encoding=UTF8&quot;&gt;$45 Mint Mobile $15/month plan on Amazon&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Microcontroller -- &lt;a href=&quot;https://www.digikey.com/en/products/detail/adafruit-industries-llc/4481/11497502&quot;&gt;nrf express itsy bitsy for $20 on Digikey&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Keyboard -- &lt;a href=&quot;https://www.digikey.com/en/products/detail/m5stack-technology-co-ltd/U035-B/16679766&quot;&gt;m5 keyboard for $8 on Digikey&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Large Screen -- &lt;a href=&quot;https://www.digikey.com/en/products/detail/adafruit-industries-llc/4694/13157994&quot;&gt;adafruit sharp display for $44 on Digikey&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Boost (already purchased)&lt;/li&gt;
 &lt;li&gt;Antenna (already purchased)&lt;/li&gt;
 &lt;li&gt;PCB (to design)&lt;/li&gt;
