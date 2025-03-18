@@ -5,7 +5,7 @@
 	
 	<link href="https://waterbearfieldschool.org/feed/feed.xml" rel="self"/>
 	<link href="https://waterbearfieldschool.org/"/>
-	<updated>2025-03-18T01:44:08Z</updated>
+	<updated>2025-03-18T01:45:44Z</updated>
 	<id>https://example.com/</id>
 	<author>
 		<name>Your Name Here</name>
@@ -13,9 +13,78 @@
 	</author>
 	
 	<entry>
+		<title>Designing a Lower-Tech Phone</title>
+		<link href="https://waterbearfieldschool.org/posts/phone/"/>
+		<updated>2025-03-18T01:45:44Z</updated>
+		<id>https://waterbearfieldschool.org/posts/phone/</id>
+		<content type="html">&lt;h1 id=&quot;phone-ingredients&quot;&gt;Phone ingredients &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#phone-ingredients&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id=&quot;screen-options&quot;&gt;Screen Options &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#screen-options&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Large Sharp display, $45 &lt;a href=&quot;https://www.adafruit.com/product/4694&quot;&gt;https://www.adafruit.com/product/4694&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Smaller Sharp display, $25 &lt;a href=&quot;https://www.adafruit.com/product/3502&quot;&gt;https://www.adafruit.com/product/3502&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;OLED display, $3 ea (by 5 at a time) &lt;a href=&quot;https://www.amazon.com/Hosyond-Display-Self-Luminous-Compatible-Raspberry/dp/B09T6SJBV5&quot;&gt;https://www.amazon.com/Hosyond-Display-Self-Luminous-Compatible-Raspberry/dp/B09T6SJBV5&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(note: for meshtastic RAK modules, proper SSD1306 pinout is: ssd1306 -- VCC GND SCL SDA)&lt;/p&gt;
+&lt;h2 id=&quot;cellular-modem-options&quot;&gt;Cellular Modem options &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#cellular-modem-options&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;(Generally looking at the SIM7600 modules)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Text + voice, $75 &lt;a href=&quot;https://www.digikey.com/en/products/detail/dfrobot/TEL0162/23028625&quot;&gt;https://www.digikey.com/en/products/detail/dfrobot/TEL0162/23028625&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Text-only, $72 (smaller form factor) &lt;a href=&quot;https://www.amazon.com/SIM7600G-H-4G-Communication-Module-Positioning-Standard/dp/B0BTP93H8H&quot;&gt;https://www.amazon.com/SIM7600G-H-4G-Communication-Module-Positioning-Standard/dp/B0BTP93H8H&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;keyboard&quot;&gt;Keyboard &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#keyboard&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;CardKB, $8 &lt;a href=&quot;https://www.digikey.com/en/products/detail/m5stack-technology-co-ltd/U035-B/16679766&quot;&gt;https://www.digikey.com/en/products/detail/m5stack-technology-co-ltd/U035-B/16679766&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;battery&quot;&gt;Battery &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#battery&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;[TBD -- need to figure out whether &#39;boost&#39; approach works]&lt;/p&gt;
+&lt;h2 id=&quot;microcontroller&quot;&gt;Microcontroller &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#microcontroller&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Itsy Bitsy M4, $15 &lt;a href=&quot;https://www.adafruit.com/product/3800&quot;&gt;https://www.adafruit.com/product/3800&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Itsy Bitys nRF52840, $20 &lt;a href=&quot;https://www.adafruit.com/product/4481&quot;&gt;https://www.adafruit.com/product/4481&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Sat 08 Mar 2025 08:39:40 PM EST&lt;/p&gt;
+&lt;h1 id=&quot;phone-repo&quot;&gt;phone repo &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#phone-repo&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;This is where the phone code lives &lt;a href=&quot;https://gitlab.com/edgecollective/neighborhood-mesh&quot;&gt;https://gitlab.com/edgecollective/neighborhood-mesh&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Wed 19 Feb 2025 08:14:21 PM EST&lt;/p&gt;
+&lt;p&gt;Testing power req&#39;s ....&lt;/p&gt;
+&lt;p&gt;Page for audio + text module is &lt;a href=&quot;https://www.dfrobot.com/product-2801.html&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;And wiki &lt;a href=&quot;https://wiki.dfrobot.com/SKU_TEL0162_SIM7600G_H_CAT4_4G_Communication_Module&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;initial-run----text-only&quot;&gt;Initial run -- text-only &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#initial-run----text-only&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Module -- &lt;a href=&quot;https://www.amazon.com/SIM7600G-H-4G-Communication-Module-Positioning-Standard/dp/B0BTP93H8H/ref=asc_df_B0BTP93H8H&quot;&gt;sim7600 text module for $73 on Amazon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Small Screen -- &lt;a href=&quot;https://www.amazon.com/DIYmall-Serial-128x64-Display-Arduino/dp/B00O2KDQBE?th=1&quot;&gt;ssd1306 oled for $8 on Amazon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;SIM card -- &lt;a href=&quot;https://www.amazon.com/gp/aw/d/B0741FV7ZV/?_encoding=UTF8&quot;&gt;$45 Mint Mobile $15/month plan on Amazon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Microcontroller -- &lt;a href=&quot;https://www.digikey.com/en/products/detail/adafruit-industries-llc/4481/11497502&quot;&gt;nrf express itsy bitsy for $20 on Digikey&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Keyboard -- &lt;a href=&quot;https://www.digikey.com/en/products/detail/m5stack-technology-co-ltd/U035-B/16679766&quot;&gt;m5 keyboard for $8 on Digikey&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Large Screen -- &lt;a href=&quot;https://www.digikey.com/en/products/detail/adafruit-industries-llc/4694/13157994&quot;&gt;adafruit sharp display for $44 on Digikey&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Boost (already purchased)&lt;/li&gt;
+&lt;li&gt;Antenna (already purchased)&lt;/li&gt;
+&lt;li&gt;PCB (to design)&lt;/li&gt;
+&lt;li&gt;Case (to design)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/phone/sim7600_module.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;What are the specs on the BAT pin?&lt;/p&gt;
+</content>
+	</entry>
+	
+	<entry>
 		<title>Radio Experiments with EcoGather</title>
 		<link href="https://waterbearfieldschool.org/posts/radio/"/>
-		<updated>2025-03-18T01:44:08Z</updated>
+		<updated>2025-03-18T01:45:38Z</updated>
 		<id>https://waterbearfieldschool.org/posts/radio/</id>
 		<content type="html">&lt;h1 id=&quot;winter-2025-seminar-topics&quot;&gt;Winter 2025 Seminar Topics &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#winter-2025-seminar-topics&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;We&#39;re planning a series of short, informal presentations and discussions around topics of interest to the group. In order to guide our exploration, there here are some basic characteristics of radio systems that can impact how a radio is used and what it might be useful for:&lt;/p&gt;
@@ -74,78 +143,9 @@
 &lt;h2 id=&quot;meshtastic-on-itsy-bitsy-nrf&quot;&gt;meshtastic on itsy bitsy nrf &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#meshtastic-on-itsy-bitsy-nrf&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://gitlab.com/edgecollective/meshtastic-firmware-itsybitsy-nrf52-oled&quot;&gt;https://gitlab.com/edgecollective/meshtastic-firmware-itsybitsy-nrf52-oled&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;still possible to diy a device -- bluetooth module for $13, radio module for $15, screen for $3, pcb + spare parts for $5 -- approx $36 in parts&lt;/p&gt;
-&lt;h1 id=&quot;phone-repo&quot;&gt;phone repo &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#phone-repo&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;This is where the phone code lives &lt;a href=&quot;https://gitlab.com/edgecollective/neighborhood-mesh&quot;&gt;https://gitlab.com/edgecollective/neighborhood-mesh&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Wed 19 Feb 2025 08:14:21 PM EST&lt;/p&gt;
-&lt;p&gt;Testing power req&#39;s ....&lt;/p&gt;
-&lt;p&gt;Page for audio + text module is &lt;a href=&quot;https://www.dfrobot.com/product-2801.html&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;And wiki &lt;a href=&quot;https://wiki.dfrobot.com/SKU_TEL0162_SIM7600G_H_CAT4_4G_Communication_Module&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;meshtastic-depth-sensor&quot;&gt;meshtastic depth sensor &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#meshtastic-depth-sensor&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Arduino tutorial for maxbotix sensor &lt;a href=&quot;https://www.makerguides.com/maxbotix-mb7389-arduino-tutorial/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Maxbotix 7388 &lt;a href=&quot;https://maxbotix.com/products/mb7388&quot;&gt;landing page&lt;/a&gt; and &lt;a href=&quot;https://waterbearfieldschool.org/img/11500.pdf&quot;&gt;data sheet&lt;/a&gt;&lt;/p&gt;
-</content>
-	</entry>
-	
-	<entry>
-		<title>Designing a Lower-Tech Phone</title>
-		<link href="https://waterbearfieldschool.org/posts/phone/"/>
-		<updated>2025-03-10T17:52:38Z</updated>
-		<id>https://waterbearfieldschool.org/posts/phone/</id>
-		<content type="html">&lt;h1 id=&quot;phone-ingredients&quot;&gt;Phone ingredients &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#phone-ingredients&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
-&lt;h2 id=&quot;screen-options&quot;&gt;Screen Options &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#screen-options&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Large Sharp display, $45 &lt;a href=&quot;https://www.adafruit.com/product/4694&quot;&gt;https://www.adafruit.com/product/4694&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Smaller Sharp display, $25 &lt;a href=&quot;https://www.adafruit.com/product/3502&quot;&gt;https://www.adafruit.com/product/3502&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;OLED display, $3 ea (by 5 at a time) &lt;a href=&quot;https://www.amazon.com/Hosyond-Display-Self-Luminous-Compatible-Raspberry/dp/B09T6SJBV5&quot;&gt;https://www.amazon.com/Hosyond-Display-Self-Luminous-Compatible-Raspberry/dp/B09T6SJBV5&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;(note: for meshtastic RAK modules, proper SSD1306 pinout is: ssd1306 -- VCC GND SCL SDA)&lt;/p&gt;
-&lt;h2 id=&quot;cellular-modem-options&quot;&gt;Cellular Modem options &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#cellular-modem-options&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;(Generally looking at the SIM7600 modules)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Text + voice, $75 &lt;a href=&quot;https://www.digikey.com/en/products/detail/dfrobot/TEL0162/23028625&quot;&gt;https://www.digikey.com/en/products/detail/dfrobot/TEL0162/23028625&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Text-only, $72 (smaller form factor) &lt;a href=&quot;https://www.amazon.com/SIM7600G-H-4G-Communication-Module-Positioning-Standard/dp/B0BTP93H8H&quot;&gt;https://www.amazon.com/SIM7600G-H-4G-Communication-Module-Positioning-Standard/dp/B0BTP93H8H&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;keyboard&quot;&gt;Keyboard &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#keyboard&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;CardKB, $8 &lt;a href=&quot;https://www.digikey.com/en/products/detail/m5stack-technology-co-ltd/U035-B/16679766&quot;&gt;https://www.digikey.com/en/products/detail/m5stack-technology-co-ltd/U035-B/16679766&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;battery&quot;&gt;Battery &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#battery&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;[TBD -- need to figure out whether &#39;boost&#39; approach works]&lt;/p&gt;
-&lt;h2 id=&quot;microcontroller&quot;&gt;Microcontroller &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#microcontroller&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Itsy Bitsy M4, $15 &lt;a href=&quot;https://www.adafruit.com/product/3800&quot;&gt;https://www.adafruit.com/product/3800&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Itsy Bitys nRF52840, $20 &lt;a href=&quot;https://www.adafruit.com/product/4481&quot;&gt;https://www.adafruit.com/product/4481&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Sat 08 Mar 2025 08:39:40 PM EST&lt;/p&gt;
-&lt;h1 id=&quot;initial-run----text-only&quot;&gt;Initial run -- text-only &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/phone/#initial-run----text-only&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Module -- &lt;a href=&quot;https://www.amazon.com/SIM7600G-H-4G-Communication-Module-Positioning-Standard/dp/B0BTP93H8H/ref=asc_df_B0BTP93H8H&quot;&gt;sim7600 text module for $73 on Amazon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Small Screen -- &lt;a href=&quot;https://www.amazon.com/DIYmall-Serial-128x64-Display-Arduino/dp/B00O2KDQBE?th=1&quot;&gt;ssd1306 oled for $8 on Amazon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;SIM card -- &lt;a href=&quot;https://www.amazon.com/gp/aw/d/B0741FV7ZV/?_encoding=UTF8&quot;&gt;$45 Mint Mobile $15/month plan on Amazon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Microcontroller -- &lt;a href=&quot;https://www.digikey.com/en/products/detail/adafruit-industries-llc/4481/11497502&quot;&gt;nrf express itsy bitsy for $20 on Digikey&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Keyboard -- &lt;a href=&quot;https://www.digikey.com/en/products/detail/m5stack-technology-co-ltd/U035-B/16679766&quot;&gt;m5 keyboard for $8 on Digikey&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Large Screen -- &lt;a href=&quot;https://www.digikey.com/en/products/detail/adafruit-industries-llc/4694/13157994&quot;&gt;adafruit sharp display for $44 on Digikey&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Boost (already purchased)&lt;/li&gt;
-&lt;li&gt;Antenna (already purchased)&lt;/li&gt;
-&lt;li&gt;PCB (to design)&lt;/li&gt;
-&lt;li&gt;Case (to design)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/phone/sim7600_module.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;What are the specs on the BAT pin?&lt;/p&gt;
 </content>
 	</entry>
 	
