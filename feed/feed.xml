@@ -5,12 +5,141 @@
 	
 	<link href="https://waterbearfieldschool.org/feed/feed.xml" rel="self"/>
 	<link href="https://waterbearfieldschool.org/"/>
-	<updated>2025-03-18T01:45:44Z</updated>
+	<updated>2025-03-20T00:58:10Z</updated>
 	<id>https://example.com/</id>
 	<author>
 		<name>Your Name Here</name>
 		<email>youremailaddress@example.com</email>
 	</author>
+	
+	<entry>
+		<title>Radio Experiments with EcoGather</title>
+		<link href="https://waterbearfieldschool.org/posts/radio/"/>
+		<updated>2025-03-20T00:58:10Z</updated>
+		<id>https://waterbearfieldschool.org/posts/radio/</id>
+		<content type="html">&lt;h1 id=&quot;winter-2025-seminar-topics&quot;&gt;Winter 2025 Seminar Topics &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#winter-2025-seminar-topics&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;We&#39;re planning a series of short, informal presentations and discussions around topics of interest to the group. In order to guide our exploration, there here are some basic characteristics of radio systems that can impact how a radio is used and what it might be useful for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Send / Recieve?&lt;/strong&gt; Can you both send and receive information?  For example, it can often be useful in an emergency to use a cheap, receive-only radio to monitor for news or announcements; while in other cases, two-way communication can be useful.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Range?&lt;/strong&gt; Over what range can the communication be achieved?  Some radios have a range of a few miles;  others can bounce signals off the atmosphere and travel around the globe.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;License Required?&lt;/strong&gt; Can this type of radio be used without a license?  If a license is required, can it simply be purchased for a small fee, or does the user need to pass an official exam?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Below are some examples of radios that fit in certain combinations of these categories:&lt;/p&gt;
+&lt;h2 id=&quot;receive-only-%2F%2F-long-range-%2F%2F-no-license-required&quot;&gt;Receive-only // Long-range // No license required &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#receive-only-%2F%2F-long-range-%2F%2F-no-license-required&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In general, it is often useful in a grid-down scenario to be able to listen into ambient broadcasts (news, fire, police, emergency services).  There are various inexpensive approaches to this, including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Scanners&lt;/strong&gt; -- small radios that can receive local police, fire, and other broadcasts&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Software-defined radios&lt;/strong&gt; -- inexpensive dongles that, when connected to a laptop, can provide an intuitive graphical way of exploring received radio signals&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Short-wave radios&lt;/strong&gt; -- radios optimized for receiving broadcasts from around the globe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;send-%26-receive-%2F%2F-short-range-%2F%2F-easy-license-required&quot;&gt;Send &amp;amp; Receive // Short-range // Easy license required &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#send-%26-receive-%2F%2F-short-range-%2F%2F-easy-license-required&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;These are relatively inexpensive radio technologies that allow for off-grid communication within a range of a few miles (or tens of miles, with repeater nodes).   This would be useful for folks on a homestead, or perhpas within a relatively small town, to stay in touch.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Meshtastic&lt;/strong&gt; (enables phone to do off-grid, mesh-networked texting via an inexpensive add-on module; unlicensed)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GMRS&lt;/strong&gt; (audio communication; a $35, no-exam license is required)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Walkie Talkies&lt;/strong&gt; (audio communication; no license required)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;send-%26-receive-%2F%2F-100s-of-miles-%2F%2F-exam-based-license-required&quot;&gt;Send &amp;amp; Receive // 100s of miles // Exam-based license required &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#send-%26-receive-%2F%2F-100s-of-miles-%2F%2F-exam-based-license-required&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;For off-grid coordination of logistics (food, water, transport) -- e.g. after or during a storm, flood, or fire -- it seems often to be useful to communicate within a range of a few hundred miles.  A typical approach to this is to a technique (&lt;a href=&quot;https://en.wikipedia.org/wiki/Near_vertical_incidence_skywave&quot;&gt;NVIS&lt;/a&gt;) that bounces radio signals off the atmosphere nearly directly above the broadcasting site, so that signals land within the desired range.  The relevant bands (typically, HF), require a ham license (typically, the higher-level, &#39;General&#39; license).   Example technologies include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;js8call; varac&lt;/strong&gt; -- keyboard-to-keyboard live chat, with store-and-forward capability&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;winlink&lt;/strong&gt; -- ham radio-based email program&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Sun 16 Feb 2025 05:53:50 PM EST&lt;/p&gt;
+&lt;h1 id=&quot;meshtastic-notes&quot;&gt;Meshtastic notes &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#meshtastic-notes&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Link to a &amp;lt; $150 meshtastic repeater node &lt;a href=&quot;https://www.etsy.com/listing/1048791528/all-in-one-waterproof-solar-powered-off?ga_order=most_relevant&amp;amp;ga_search_type=all&amp;amp;ga_view_type=gallery&amp;amp;ga_search_query=meshtastic+repeater&amp;amp;ref=sr_gallery-1-8&amp;amp;content_source=e68961fa5a3916425776b486a8a0ff245709ec82%253A1048791528&amp;amp;organic_search_click=1&amp;amp;logging_key=f91e8779bceeca494505119a19c287f6d8615e38%3A1048791528&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Standalone meshtastic nodes &lt;a href=&quot;https://www.etsy.com/market/meshtastic_repeater&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Wireless paper &lt;a href=&quot;https://heltec.org/project/wireless-paper/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;device-test&quot;&gt;Device test &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#device-test&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/trio.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Lilygo T-Beam (v 1.2) $52 &lt;a href=&quot;https://www.amazon.com/LILYGO-Meshtastic-Development-CH9102F-Soldered/dp/B0B63FV7FR&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Heltec V3 $25 &lt;a href=&quot;https://www.amazon.com/HiLetgo-Display-Development-Bluetooth-Unsoldered/dp/B07WHRS2XG&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Rak Wireless $35 &lt;a href=&quot;https://www.amazon.com/RAKwireless-WisBlock-Meshtastic-Starter-RAK19007/dp/B0CHKZJK9C&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Explanatory / demo video &lt;a href=&quot;https://www.youtube.com/watch?v=2pHxxf_e4e0&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Rak wisblock starter kit info &lt;a href=&quot;https://www.reddit.com/r/meshtastic/comments/1am0s30/noob_question_what_kind_of_battery_should_i_get/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;What is the best device for meshtastic? &lt;a href=&quot;https://adrelien.com/blog/what-is-the-best-device-for-meshtastic/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Mon 17 Feb 2025 06:45:12 PM EST&lt;/p&gt;
+&lt;h2 id=&quot;setting-up-rak-wisblock-starter-kit&quot;&gt;Setting up Rak wisblock starter kit &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#setting-up-rak-wisblock-starter-kit&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://forum.rakwireless.com/t/physical-placement-of-oled-screen-on-wisblock-19007/11161&quot;&gt;https://forum.rakwireless.com/t/physical-placement-of-oled-screen-on-wisblock-19007/11161&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;RAK Wisblock mini datasheet &lt;a href=&quot;https://docs.rakwireless.com/product-categories/wisblock/rak19003/datasheet/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;RAK 4631 datasheet &lt;a href=&quot;https://docs.rakwireless.com/product-categories/wisblock/rak4631/sidewalk/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;meshtastic-on-itsy-bitsy-nrf&quot;&gt;meshtastic on itsy bitsy nrf &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#meshtastic-on-itsy-bitsy-nrf&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://gitlab.com/edgecollective/meshtastic-firmware-itsybitsy-nrf52-oled&quot;&gt;https://gitlab.com/edgecollective/meshtastic-firmware-itsybitsy-nrf52-oled&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;still possible to diy a device -- bluetooth module for $13, radio module for $15, screen for $3, pcb + spare parts for $5 -- approx $36 in parts&lt;/p&gt;
+&lt;h1 id=&quot;meshtastic-depth-sensor&quot;&gt;meshtastic depth sensor &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#meshtastic-depth-sensor&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Arduino tutorial for maxbotix sensor &lt;a href=&quot;https://www.makerguides.com/maxbotix-mb7389-arduino-tutorial/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Maxbotix 7388 &lt;a href=&quot;https://maxbotix.com/products/mb7388&quot;&gt;landing page&lt;/a&gt; and &lt;a href=&quot;https://waterbearfieldschool.org/img/11500.pdf&quot;&gt;data sheet&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Example Arduino code for software serial &lt;a href=&quot;https://forum.arduino.cc/t/maxbotix-7066_serial-comunication_mega2560/682435/2&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Rough code working for parsing:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/parsing.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Good tutorial on additional uarts for Circuitpython &lt;a href=&quot;https://learn.adafruit.com/circuitpython-essentials/circuitpython-uart-serial&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/uart_pin_pairs.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/qt_py_m0_pinout.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;RX: D3&lt;br /&gt;
+TX: D2&lt;/p&gt;
+&lt;p&gt;works on qt py&lt;/p&gt;
+&lt;p&gt;Using the Meshtastic cli &lt;a href=&quot;https://meshtastic.org/docs/software/python/cli/usage/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Meshtastic serial module docs &lt;a href=&quot;https://meshtastic.org/docs/configuration/module/serial/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/heltec_v3_pinout.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;A nice guide to setting up serial on Meshtastic &lt;a href=&quot;https://teelsys.com/meshtastic-serial/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;specs on 7388 maxbotix (datasheet &lt;a href=&quot;http://localhost:8080/img/11500.pdf&quot;&gt;here&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/7388_specs.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;The 1.5-meter sensors (MB7375 and MB7395) and 10-meter sensors (MB7363, MB7366, MB7368, MB7383, MB7386, and MB7388) use a scale factor of (Vcc/10240) per 1-mm. The distance is output with a 10-mm resolution. The analog voltage output is typically within ±10-mm of the serial output.&amp;quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Wed 19 Mar 2025 03:28:43 PM EDT&lt;/p&gt;
+&lt;p&gt;RAK 19007 pinout &lt;a href=&quot;https://docs.rakwireless.com/product-categories/wisblock/rak19007/datasheet/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Looks like we can access RX1 and RX2 on the Wisblock module as per &lt;a href=&quot;https://forum.rakwireless.com/t/wisblock-starter-kit-19007-rak4630-rx1-and-tx1-pin-number-in-arduino/10668/2&quot;&gt;this forum post&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;/*&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Serial interfaces&lt;br /&gt;
+*/&lt;br /&gt;
+// TXD1 RXD1 on Base Board&lt;br /&gt;
+#define PIN_SERIAL1_RX (15)&lt;br /&gt;
+#define PIN_SERIAL1_TX (16)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;// TXD0 RXD0 on Base Board&lt;br /&gt;
+#define PIN_SERIAL2_RX (19)&lt;br /&gt;
+#define PIN_SERIAL2_TX (20)&lt;/p&gt;
+&lt;h1 id=&quot;meshtastic-command-line-setup&quot;&gt;meshtastic command line setup &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#meshtastic-command-line-setup&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(meshty) dwblair@xps13:~/Documents/meshty/venv2/bin$ ./meshtastic --ch-index 0 --sendtext &#39;test data!&#39;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/wisblock_pinout.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Note:  need to make sure that we&#39;ve set the baud rate on the input&lt;/p&gt;
+&lt;h2 id=&quot;setting-up-the-sensor-meshtastic-node&quot;&gt;setting up the sensor meshtastic node &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#setting-up-the-sensor-meshtastic-node&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;baud rate 115200&lt;/li&gt;
+&lt;li&gt;rxd 15 and rx 16 on the RAK 4631&lt;/li&gt;
+&lt;li&gt;serial.mode TEXTMSG&lt;/li&gt;
+&lt;li&gt;default channel to &#39;depth&#39; or somesuch&lt;/li&gt;
+&lt;li&gt;serial.enabled 1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;possible uart pin pairs for itsybitsy m4:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/uart_pin_pairs_itsybitsy_m4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Setting up MQTT guide &lt;a href=&quot;https://meshtastic.org/docs/configuration/module/mqtt/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/depth_data_online.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/water_level_demo.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Wed 19 Mar 2025 08:27:15 PM EDT&lt;/p&gt;
+&lt;p&gt;Updated firmware and script repo, today&#39;s snapshot&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/edgecollective/mesh-depth/tree/6beac499442d1c69f761b0be1974393b7c57c208&quot;&gt;https://github.com/edgecollective/mesh-depth/tree/6beac499442d1c69f761b0be1974393b7c57c208&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;double_uart_itbm4_mesh_send.py -- code that runs on itsy bitsy m4 which reads uart from maxbotix sensor, then sends via another uart to RAK meshtastic node in TEXTMSG mode&lt;/li&gt;
+&lt;li&gt;serial_gateway.py -- code for qt py m0 which gets data from a heltec and prints it to the serial port&lt;/li&gt;
+&lt;li&gt;serial_read_bayou_post_generic.py -- python script for terminal, reads data from serial port and posts to bayou&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Wed 19 Mar 2025 08:58:09 PM EDT&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/montpelier_hubbard.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</content>
+	</entry>
 	
 	<entry>
 		<title>Designing a Lower-Tech Phone</title>
@@ -78,74 +207,6 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/phone/sim7600_module.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;What are the specs on the BAT pin?&lt;/p&gt;
-</content>
-	</entry>
-	
-	<entry>
-		<title>Radio Experiments with EcoGather</title>
-		<link href="https://waterbearfieldschool.org/posts/radio/"/>
-		<updated>2025-03-18T01:45:38Z</updated>
-		<id>https://waterbearfieldschool.org/posts/radio/</id>
-		<content type="html">&lt;h1 id=&quot;winter-2025-seminar-topics&quot;&gt;Winter 2025 Seminar Topics &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#winter-2025-seminar-topics&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;We&#39;re planning a series of short, informal presentations and discussions around topics of interest to the group. In order to guide our exploration, there here are some basic characteristics of radio systems that can impact how a radio is used and what it might be useful for:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Send / Recieve?&lt;/strong&gt; Can you both send and receive information?  For example, it can often be useful in an emergency to use a cheap, receive-only radio to monitor for news or announcements; while in other cases, two-way communication can be useful.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Range?&lt;/strong&gt; Over what range can the communication be achieved?  Some radios have a range of a few miles;  others can bounce signals off the atmosphere and travel around the globe.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;License Required?&lt;/strong&gt; Can this type of radio be used without a license?  If a license is required, can it simply be purchased for a small fee, or does the user need to pass an official exam?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Below are some examples of radios that fit in certain combinations of these categories:&lt;/p&gt;
-&lt;h2 id=&quot;receive-only-%2F%2F-long-range-%2F%2F-no-license-required&quot;&gt;Receive-only // Long-range // No license required &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#receive-only-%2F%2F-long-range-%2F%2F-no-license-required&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;In general, it is often useful in a grid-down scenario to be able to listen into ambient broadcasts (news, fire, police, emergency services).  There are various inexpensive approaches to this, including:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Scanners&lt;/strong&gt; -- small radios that can receive local police, fire, and other broadcasts&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Software-defined radios&lt;/strong&gt; -- inexpensive dongles that, when connected to a laptop, can provide an intuitive graphical way of exploring received radio signals&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Short-wave radios&lt;/strong&gt; -- radios optimized for receiving broadcasts from around the globe&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;send-%26-receive-%2F%2F-short-range-%2F%2F-easy-license-required&quot;&gt;Send &amp;amp; Receive // Short-range // Easy license required &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#send-%26-receive-%2F%2F-short-range-%2F%2F-easy-license-required&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;These are relatively inexpensive radio technologies that allow for off-grid communication within a range of a few miles (or tens of miles, with repeater nodes).   This would be useful for folks on a homestead, or perhpas within a relatively small town, to stay in touch.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Meshtastic&lt;/strong&gt; (enables phone to do off-grid, mesh-networked texting via an inexpensive add-on module; unlicensed)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GMRS&lt;/strong&gt; (audio communication; a $35, no-exam license is required)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Walkie Talkies&lt;/strong&gt; (audio communication; no license required)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;send-%26-receive-%2F%2F-100s-of-miles-%2F%2F-exam-based-license-required&quot;&gt;Send &amp;amp; Receive // 100s of miles // Exam-based license required &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#send-%26-receive-%2F%2F-100s-of-miles-%2F%2F-exam-based-license-required&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;For off-grid coordination of logistics (food, water, transport) -- e.g. after or during a storm, flood, or fire -- it seems often to be useful to communicate within a range of a few hundred miles.  A typical approach to this is to a technique (&lt;a href=&quot;https://en.wikipedia.org/wiki/Near_vertical_incidence_skywave&quot;&gt;NVIS&lt;/a&gt;) that bounces radio signals off the atmosphere nearly directly above the broadcasting site, so that signals land within the desired range.  The relevant bands (typically, HF), require a ham license (typically, the higher-level, &#39;General&#39; license).   Example technologies include:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;js8call; varac&lt;/strong&gt; -- keyboard-to-keyboard live chat, with store-and-forward capability&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;winlink&lt;/strong&gt; -- ham radio-based email program&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Sun 16 Feb 2025 05:53:50 PM EST&lt;/p&gt;
-&lt;h1 id=&quot;meshtastic-notes&quot;&gt;Meshtastic notes &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#meshtastic-notes&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;Link to a &amp;lt; $150 meshtastic repeater node &lt;a href=&quot;https://www.etsy.com/listing/1048791528/all-in-one-waterproof-solar-powered-off?ga_order=most_relevant&amp;amp;ga_search_type=all&amp;amp;ga_view_type=gallery&amp;amp;ga_search_query=meshtastic+repeater&amp;amp;ref=sr_gallery-1-8&amp;amp;content_source=e68961fa5a3916425776b486a8a0ff245709ec82%253A1048791528&amp;amp;organic_search_click=1&amp;amp;logging_key=f91e8779bceeca494505119a19c287f6d8615e38%3A1048791528&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Standalone meshtastic nodes &lt;a href=&quot;https://www.etsy.com/market/meshtastic_repeater&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Wireless paper &lt;a href=&quot;https://heltec.org/project/wireless-paper/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;device-test&quot;&gt;Device test &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#device-test&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/trio.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Lilygo T-Beam (v 1.2) $52 &lt;a href=&quot;https://www.amazon.com/LILYGO-Meshtastic-Development-CH9102F-Soldered/dp/B0B63FV7FR&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Heltec V3 $25 &lt;a href=&quot;https://www.amazon.com/HiLetgo-Display-Development-Bluetooth-Unsoldered/dp/B07WHRS2XG&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Rak Wireless $35 &lt;a href=&quot;https://www.amazon.com/RAKwireless-WisBlock-Meshtastic-Starter-RAK19007/dp/B0CHKZJK9C&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Explanatory / demo video &lt;a href=&quot;https://www.youtube.com/watch?v=2pHxxf_e4e0&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Rak wisblock starter kit info &lt;a href=&quot;https://www.reddit.com/r/meshtastic/comments/1am0s30/noob_question_what_kind_of_battery_should_i_get/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;What is the best device for meshtastic? &lt;a href=&quot;https://adrelien.com/blog/what-is-the-best-device-for-meshtastic/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Mon 17 Feb 2025 06:45:12 PM EST&lt;/p&gt;
-&lt;h2 id=&quot;setting-up-rak-wisblock-starter-kit&quot;&gt;Setting up Rak wisblock starter kit &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#setting-up-rak-wisblock-starter-kit&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://forum.rakwireless.com/t/physical-placement-of-oled-screen-on-wisblock-19007/11161&quot;&gt;https://forum.rakwireless.com/t/physical-placement-of-oled-screen-on-wisblock-19007/11161&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;RAK Wisblock mini datasheet &lt;a href=&quot;https://docs.rakwireless.com/product-categories/wisblock/rak19003/datasheet/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;RAK 4631 datasheet &lt;a href=&quot;https://docs.rakwireless.com/product-categories/wisblock/rak4631/sidewalk/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;meshtastic-on-itsy-bitsy-nrf&quot;&gt;meshtastic on itsy bitsy nrf &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#meshtastic-on-itsy-bitsy-nrf&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://gitlab.com/edgecollective/meshtastic-firmware-itsybitsy-nrf52-oled&quot;&gt;https://gitlab.com/edgecollective/meshtastic-firmware-itsybitsy-nrf52-oled&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;still possible to diy a device -- bluetooth module for $13, radio module for $15, screen for $3, pcb + spare parts for $5 -- approx $36 in parts&lt;/p&gt;
-&lt;h1 id=&quot;meshtastic-depth-sensor&quot;&gt;meshtastic depth sensor &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#meshtastic-depth-sensor&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;Arduino tutorial for maxbotix sensor &lt;a href=&quot;https://www.makerguides.com/maxbotix-mb7389-arduino-tutorial/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Maxbotix 7388 &lt;a href=&quot;https://maxbotix.com/products/mb7388&quot;&gt;landing page&lt;/a&gt; and &lt;a href=&quot;https://waterbearfieldschool.org/img/11500.pdf&quot;&gt;data sheet&lt;/a&gt;&lt;/p&gt;
 </content>
 	</entry>
 	

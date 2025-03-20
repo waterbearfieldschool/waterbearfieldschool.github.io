@@ -88,10 +88,71 @@
 <h1 id="meshtastic-depth-sensor">meshtastic depth sensor <a class="direct-link" href="#meshtastic-depth-sensor">#</a></h1>
 <p>Arduino tutorial for maxbotix sensor <a href="https://www.makerguides.com/maxbotix-mb7389-arduino-tutorial/">here</a></p>
 <p>Maxbotix 7388 <a href="https://maxbotix.com/products/mb7388">landing page</a> and <a href="/img/11500.pdf">data sheet</a></p>
+<p>Example Arduino code for software serial <a href="https://forum.arduino.cc/t/maxbotix-7066_serial-comunication_mega2560/682435/2">here</a></p>
+<p>Rough code working for parsing:</p>
+<p><img src="/img/radio/parsing.png" alt=""></p>
+<p>Good tutorial on additional uarts for Circuitpython <a href="https://learn.adafruit.com/circuitpython-essentials/circuitpython-uart-serial">here</a></p>
+<p><img src="/img/radio/uart_pin_pairs.png" alt=""></p>
+<p><img src="/img/radio/qt_py_m0_pinout.png" alt=""></p>
+<p>RX: D3<br>
+TX: D2</p>
+<p>works on qt py</p>
+<p>Using the Meshtastic cli <a href="https://meshtastic.org/docs/software/python/cli/usage/">here</a></p>
+<p>Meshtastic serial module docs <a href="https://meshtastic.org/docs/configuration/module/serial/">here</a></p>
+<p><img src="/img/radio/heltec_v3_pinout.webp" alt=""></p>
+<p>A nice guide to setting up serial on Meshtastic <a href="https://teelsys.com/meshtastic-serial/">here</a></p>
+<p>specs on 7388 maxbotix (datasheet <a href="http://localhost:8080/img/11500.pdf">here</a>)</p>
+<p><img src="/img/radio/7388_specs.png" alt=""></p>
+<blockquote>
+<p>&quot;The 1.5-meter sensors (MB7375 and MB7395) and 10-meter sensors (MB7363, MB7366, MB7368, MB7383, MB7386, and MB7388) use a scale factor of (Vcc/10240) per 1-mm. The distance is output with a 10-mm resolution. The analog voltage output is typically within ±10-mm of the serial output.&quot;</p>
+</blockquote>
+<p>Wed 19 Mar 2025 03:28:43 PM EDT</p>
+<p>RAK 19007 pinout <a href="https://docs.rakwireless.com/product-categories/wisblock/rak19007/datasheet/">here</a></p>
+<p>Looks like we can access RX1 and RX2 on the Wisblock module as per <a href="https://forum.rakwireless.com/t/wisblock-starter-kit-19007-rak4630-rx1-and-tx1-pin-number-in-arduino/10668/2">this forum post</a></p>
+<p>/*</p>
+<ul>
+<li>Serial interfaces<br>
+*/<br>
+// TXD1 RXD1 on Base Board<br>
+#define PIN_SERIAL1_RX (15)<br>
+#define PIN_SERIAL1_TX (16)</li>
+</ul>
+<p>// TXD0 RXD0 on Base Board<br>
+#define PIN_SERIAL2_RX (19)<br>
+#define PIN_SERIAL2_TX (20)</p>
+<h1 id="meshtastic-command-line-setup">meshtastic command line setup <a class="direct-link" href="#meshtastic-command-line-setup">#</a></h1>
+<blockquote>
+<p>(meshty) dwblair@xps13:~/Documents/meshty/venv2/bin$ ./meshtastic --ch-index 0 --sendtext 'test data!'</p>
+</blockquote>
+<p><img src="/img/radio/wisblock_pinout.png" alt=""></p>
+<p>Note:  need to make sure that we've set the baud rate on the input</p>
+<h2 id="setting-up-the-sensor-meshtastic-node">setting up the sensor meshtastic node <a class="direct-link" href="#setting-up-the-sensor-meshtastic-node">#</a></h2>
+<ul>
+<li>baud rate 115200</li>
+<li>rxd 15 and rx 16 on the RAK 4631</li>
+<li>serial.mode TEXTMSG</li>
+<li>default channel to 'depth' or somesuch</li>
+<li>serial.enabled 1</li>
+</ul>
+<p>possible uart pin pairs for itsybitsy m4:</p>
+<p><img src="/img/radio/uart_pin_pairs_itsybitsy_m4.png" alt=""></p>
+<p>Setting up MQTT guide <a href="https://meshtastic.org/docs/configuration/module/mqtt/">here</a></p>
+<p><img src="/img/radio/depth_data_online.png" alt=""></p>
+<p><img src="/img/radio/water_level_demo.png" alt=""></p>
+<p>Wed 19 Mar 2025 08:27:15 PM EDT</p>
+<p>Updated firmware and script repo, today's snapshot</p>
+<p><a href="https://github.com/edgecollective/mesh-depth/tree/6beac499442d1c69f761b0be1974393b7c57c208">https://github.com/edgecollective/mesh-depth/tree/6beac499442d1c69f761b0be1974393b7c57c208</a></p>
+<ul>
+<li>double_uart_itbm4_mesh_send.py -- code that runs on itsy bitsy m4 which reads uart from maxbotix sensor, then sends via another uart to RAK meshtastic node in TEXTMSG mode</li>
+<li>serial_gateway.py -- code for qt py m0 which gets data from a heltec and prints it to the serial port</li>
+<li>serial_read_bayou_post_generic.py -- python script for terminal, reads data from serial port and posts to bayou</li>
+</ul>
+<p>Wed 19 Mar 2025 08:58:09 PM EDT</p>
+<p><img src="/img/radio/montpelier_hubbard.png" alt=""></p>
 
 </article>
 
-<!--<div class="prev-next"><a href="/posts/phone/"><img alt="Left arrow" class="arrow left" src="/img/arrow.svg"/>Designing a Lower-Tech Phone</a><a href="/posts/magic/">Magic Garden Playground Redesign<img alt="Right arrow" class="arrow right" src="/img/arrow.svg"/></a>
+<!--<div class="prev-next"><a href="/posts/phone/">Designing a Lower-Tech Phone<img alt="Right arrow" class="arrow right" src="/img/arrow.svg"/></a>
 </div>-->
 
     </main>
