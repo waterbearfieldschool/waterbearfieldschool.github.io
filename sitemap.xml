@@ -57,11 +57,6 @@
   </url>
   
   <url>
-    <loc>https://waterbearfieldschool.org/readings/</loc>
-    <lastmod>2024-12-02</lastmod>
-  </url>
-  
-  <url>
     <loc>https://waterbearfieldschool.org/essays/</loc>
     <lastmod>2024-12-03</lastmod>
   </url>
@@ -97,7 +92,27 @@
   </url>
   
   <url>
-    <loc>https://waterbearfieldschool.org/posts/radio/</loc>
+    <loc>https://waterbearfieldschool.org/todo/</loc>
     <lastmod>2025-03-20</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://waterbearfieldschool.org/posts/radio/</loc>
+    <lastmod>2025-03-26</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://waterbearfieldschool.org/readings/</loc>
+    <lastmod>2025-03-31</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://waterbearfieldschool.org/guides/</loc>
+    <lastmod>2025-03-31</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://waterbearfieldschool.org/guides/meshtastic/</loc>
+    <lastmod>2025-03-31</lastmod>
   </url>
 </urlset>

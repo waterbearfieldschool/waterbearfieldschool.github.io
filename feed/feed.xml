@@ -5,7 +5,7 @@
 	
 	<link href="https://waterbearfieldschool.org/feed/feed.xml" rel="self"/>
 	<link href="https://waterbearfieldschool.org/"/>
-	<updated>2025-03-20T00:58:10Z</updated>
+	<updated>2025-03-26T23:42:30Z</updated>
 	<id>https://example.com/</id>
 	<author>
 		<name>Your Name Here</name>
@@ -15,7 +15,7 @@
 	<entry>
 		<title>Radio Experiments with EcoGather</title>
 		<link href="https://waterbearfieldschool.org/posts/radio/"/>
-		<updated>2025-03-20T00:58:10Z</updated>
+		<updated>2025-03-26T23:42:30Z</updated>
 		<id>https://waterbearfieldschool.org/posts/radio/</id>
 		<content type="html">&lt;h1 id=&quot;winter-2025-seminar-topics&quot;&gt;Winter 2025 Seminar Topics &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#winter-2025-seminar-topics&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;We&#39;re planning a series of short, informal presentations and discussions around topics of interest to the group. In order to guide our exploration, there here are some basic characteristics of radio systems that can impact how a radio is used and what it might be useful for:&lt;/p&gt;
@@ -138,6 +138,30 @@ TX: D2&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;Wed 19 Mar 2025 08:58:09 PM EDT&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/montpelier_hubbard.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Sat 22 Mar 2025 09:33:06 AM EDT&lt;/p&gt;
+&lt;p&gt;RAK12500 WisBlock GPS module &lt;a href=&quot;https://docs.rakwireless.com/Product-Categories/WisBlock/RAK12500/Datasheet/&quot;&gt;https://docs.rakwireless.com/Product-Categories/WisBlock/RAK12500/Datasheet/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;RAK19007 datasheet &lt;a href=&quot;https://docs.rakwireless.com/Product-Categories/WisBlock/RAK19007/Datasheet/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Upshot:  if place GPS module on Slot C, use i2c only, no UART conflict&lt;/p&gt;
+&lt;p&gt;can maybe also place on Slot A, which allows both uart and i2c?  but then potential conflict, as the uart is listening on RX1 and transmitting on TX1&lt;/p&gt;
+&lt;p&gt;RX1 is the pin we&#39;re using to receive UART data and send on the RAK&lt;/p&gt;
+&lt;p&gt;So: hope for i2c mode for GPS module&lt;/p&gt;
+&lt;p&gt;Sun 23 Mar 2025 02:53:25 PM EDT&lt;/p&gt;
+&lt;p&gt;Okay, going to just to the MVP -- not worry about different battery chemistries or microcontrollers, yet.&lt;/p&gt;
+&lt;p&gt;I&#39;ve determined that we can use an itsy bitsy m4 and an itsy bitsy nrf5280 with the same custom uart pins.  Likely a rp2040 as well (I imagine the mux is v flexible on that chip).  That&#39;s enough to start.&lt;/p&gt;
+&lt;p&gt;If not too complicated, will try to add the timer circuit, with option to have controlling micro + sensor sleep, or also entire circuit sleep.&lt;/p&gt;
+&lt;p&gt;base it on the sweet-p ...&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://shop.marcomweb.it/images/virtuemart/product/RAK19007%20Datasheet.pdf&quot;&gt;RAK19007 datasheet&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/rak19007_mechanical.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Power consumption on RAK19007 + RAK4631 &lt;a href=&quot;https://forum.rakwireless.com/t/rak4631-rak19007-ads1115-power-consumption/12361/5&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;-- from this discussion, looks like we shouldn&#39;t currently mess with the rak power input -- just use regular 3.7 rated lipos.  meanwhile we can use a timer on the BAT pin from meshtastic to power the sensor and the micro separately.&lt;/p&gt;
+&lt;p&gt;should prototype this circuit first, though&lt;/p&gt;
+&lt;p&gt;discussion on how to power the rak4631 &lt;a href=&quot;https://forum.rakwireless.com/t/rak4631-without-baseboard/10177/19&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/water_mesh.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Video explaning the timer: &lt;a href=&quot;https://photos.app.goo.gl/C4hNUPwVMvn81FZs8&quot;&gt;https://photos.app.goo.gl/C4hNUPwVMvn81FZs8&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/heltec_feather_base.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Wed 26 Mar 2025 07:42:07 PM EDT&lt;/p&gt;
+&lt;p&gt;rak 19007 -- can use USB or solar input to charge battery -- nice!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/rak_19007_input_options.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </content>
 	</entry>
 	

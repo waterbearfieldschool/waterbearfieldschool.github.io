@@ -17,10 +17,11 @@
 
 <h1 class="title"><a href="/">Waterbear Field School</a></h1>
       <ul class="nav">
-        <li class="nav-item"><a href="/">Home</a></li>
-        <li class="nav-item"><a href="/readings/">Readings</a></li>
         <li class="nav-item"><a href="/about/">About</a></li>
+        <li class="nav-item"><a href="/">Home</a></li>
         <li class="nav-item"><a href="/posts/">Archive</a></li>
+        <li class="nav-item"><a href="/readings/">Readings</a></li>
+        <li class="nav-item"><a href="/guides/">Guides</a></li>
       </ul>
     </header>
 
@@ -149,6 +150,30 @@ TX: D2</p>
 </ul>
 <p>Wed 19 Mar 2025 08:58:09 PM EDT</p>
 <p><img src="/img/radio/montpelier_hubbard.png" alt=""></p>
+<p>Sat 22 Mar 2025 09:33:06 AM EDT</p>
+<p>RAK12500 WisBlock GPS module <a href="https://docs.rakwireless.com/Product-Categories/WisBlock/RAK12500/Datasheet/">https://docs.rakwireless.com/Product-Categories/WisBlock/RAK12500/Datasheet/</a></p>
+<p>RAK19007 datasheet <a href="https://docs.rakwireless.com/Product-Categories/WisBlock/RAK19007/Datasheet/">here</a></p>
+<p>Upshot:  if place GPS module on Slot C, use i2c only, no UART conflict</p>
+<p>can maybe also place on Slot A, which allows both uart and i2c?  but then potential conflict, as the uart is listening on RX1 and transmitting on TX1</p>
+<p>RX1 is the pin we're using to receive UART data and send on the RAK</p>
+<p>So: hope for i2c mode for GPS module</p>
+<p>Sun 23 Mar 2025 02:53:25 PM EDT</p>
+<p>Okay, going to just to the MVP -- not worry about different battery chemistries or microcontrollers, yet.</p>
+<p>I've determined that we can use an itsy bitsy m4 and an itsy bitsy nrf5280 with the same custom uart pins.  Likely a rp2040 as well (I imagine the mux is v flexible on that chip).  That's enough to start.</p>
+<p>If not too complicated, will try to add the timer circuit, with option to have controlling micro + sensor sleep, or also entire circuit sleep.</p>
+<p>base it on the sweet-p ...</p>
+<p><a href="https://shop.marcomweb.it/images/virtuemart/product/RAK19007%20Datasheet.pdf">RAK19007 datasheet</a></p>
+<p><img src="/img/radio/rak19007_mechanical.png" alt=""></p>
+<p>Power consumption on RAK19007 + RAK4631 <a href="https://forum.rakwireless.com/t/rak4631-rak19007-ads1115-power-consumption/12361/5">here</a></p>
+<p>-- from this discussion, looks like we shouldn't currently mess with the rak power input -- just use regular 3.7 rated lipos.  meanwhile we can use a timer on the BAT pin from meshtastic to power the sensor and the micro separately.</p>
+<p>should prototype this circuit first, though</p>
+<p>discussion on how to power the rak4631 <a href="https://forum.rakwireless.com/t/rak4631-without-baseboard/10177/19">here</a></p>
+<p><img src="/img/radio/water_mesh.png" alt=""></p>
+<p>Video explaning the timer: <a href="https://photos.app.goo.gl/C4hNUPwVMvn81FZs8">https://photos.app.goo.gl/C4hNUPwVMvn81FZs8</a></p>
+<p><img src="/img/radio/heltec_feather_base.png" alt=""></p>
+<p>Wed 26 Mar 2025 07:42:07 PM EDT</p>
+<p>rak 19007 -- can use USB or solar input to charge battery -- nice!</p>
+<p><img src="/img/radio/rak_19007_input_options.png" alt=""></p>
 
 </article>
 
