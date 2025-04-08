@@ -174,6 +174,45 @@ TX: D2</p>
 <p>Wed 26 Mar 2025 07:42:07 PM EDT</p>
 <p>rak 19007 -- can use USB or solar input to charge battery -- nice!</p>
 <p><img src="/img/radio/rak_19007_input_options.png" alt=""></p>
+<p>Sat 05 Apr 2025 09:07:42 AM EDT</p>
+<p>Seeed studio has some low-cost nordic and lora chips ...</p>
+<p>Lora chip avail (WIO-SX1262) for $5 on digikey <a href="https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/114993390/25835823?gclsrc=aw.ds&amp;&amp;utm_adgroup=&amp;utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=PMax%20Shopping_Product_Medium%20ROAS%20Categories&amp;utm_term=&amp;utm_content=&amp;utm_id=go_cmp-20223376311_adg-_ad-__dev-c_ext-_prd-25835823_sig-Cj0KCQjwqcO_BhDaARIsACz62vNfDThNDcsb3GchfTfYWVYZFPQbMCCs0-PB9Blc6l7CuHdvaE6UV38aAs1jEALw_wcB&amp;gad_source=1&amp;gclid=Cj0KCQjwqcO_BhDaARIsACz62vNfDThNDcsb3GchfTfYWVYZFPQbMCCs0-PB9Blc6l7CuHdvaE6UV38aAs1jEALw_wcB&amp;gclsrc=aw.ds">here</a></p>
+<p>Here's the description at Seeed of the module: <a href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html">link</a></p>
+<p>Here's a TRACO power DC-DC that outputs 3.3V and 1A with max 36V and min 4.7V input <a href="https://www.digikey.com/en/products/detail/traco-power/TSR-1-2433/9383776">link</a></p>
+<p>Looks like the nordic has built-in power converters, see forum <a href="https://forums.adafruit.com/viewtopic.php?t=149285">here</a></p>
+<p>So: what about a board that allows for different battery chemistries, so that the system can be a repeater in cold weather / take different batteries?</p>
+<p>Meshtastic nrf diy <a href="https://adrelien.com/meshtastic-diy-how-to-build-your-own-meshtastic-node-nrf52840-lora-radio/">here</a></p>
+<p>NRF52840 pro micro <a href="https://www.amazon.com/AITRIP-Development-Bluetooth-Management-Module%EF%BC%8CNano/dp/B0DCZJKYL1/ref=asc_df_B0DCZJKYL1?mcid=6d520dc732973935be59a08863d25919&amp;tag=hyprod-20&amp;linkCode=df0&amp;hvadid=726893313099&amp;hvpos=&amp;hvnetw=g&amp;hvrand=575833733904072902&amp;hvpone=&amp;hvptwo=&amp;hvqmt=&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9002061&amp;hvtargid=pla-2391501835569&amp;psc=1">here</a></p>
+<p>Ah!  The proper term for it is the 'super mini' -- and Adafruit has Circuitpython for it! <a href="https://circuitpython.org/board/supermini_nrf52840/">here</a></p>
+<p>super mini pinout <a href="https://holykeebs.com/products/supermini-nrf52840">here</a></p>
+<p>it's a clone of the nice!nano v2 <a href="https://nicekeyboards.com/docs/nice-nano/pinout-schematic/">here</a></p>
+<p>meshtastic 'rak killer' <a href="https://www.reddit.com/r/meshtastic/comments/1f48w9a/the_rak_killer_meshtastic_diy_how_to_build_your/">here</a></p>
+<p>Sun 06 Apr 2025 10:17:05 PM EDT</p>
+<p>build your own meshtastic node <a href="https://adrelien.com/meshtastic-diy-how-to-build-your-own-meshtastic-node-nrf52840-lora-radio/">here</a></p>
+<p><img src="/img/radio/nice_bootloader.png" alt=""></p>
+<p>waveshare module <a href="https://www.amazon.com/Waveshare-Core1262-868M-Module-Support-Anti-Interference/dp/B09LV2W64R/ref=asc_df_B09LV2W64R?mcid=237f9ac3c2d8340b8e22a833b9f4bad8&amp;tag=hyprod-20&amp;linkCode=df0&amp;hvadid=693310954762&amp;hvpos=&amp;hvnetw=g&amp;hvrand=1644473740976195916&amp;hvpone=&amp;hvptwo=&amp;hvqmt=&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9002061&amp;hvtargid=pla-2211744334922&amp;th=1">here</a><br>
+<img src="/img/radio/waveshare_sx1262.png" alt=""></p>
+<p>NOTE:</p>
+<p>Busy &lt;--&gt; DIO0</p>
+<p>NSS &lt;--&gt; CS</p>
+<p>Mon 07 Apr 2025 05:47:34 PM EDT</p>
+<p>kicad footprint and symbol for nice! nano <a href="https://github.com/bstiq/nice-nano-kicad">here</a></p>
+<p>schematic for nice! nano board <a href="https://nicekeyboards.com/docs/nice-nano/pinout-schematic/">here</a>  -- hopefully same as supermini</p>
+<p>more docs for the nice! nano, explaining the pinout <a href="https://nicekeyboards.com/docs/nice-nano/">here</a></p>
+<p>bluetooth module itself via adafruit is $13 <a href="https://www.adafruit.com/product/4078">here</a></p>
+<p>or $8 via adafruit <a href="https://www.sparkfun.com/nordic-nrf52840-ble-module-mdbt50q-1mv2.html?gad_source=4&amp;gclid=Cj0KCQjw782_BhDjARIsABTv_JD-_A8b365Q-NyWo-z70TH1elR2sc6kaUUQSGBJwbLr_wVn2AKl6ocaAitXEALw_wcB">here</a></p>
+<p>cold weather battery options <a href="https://www.reddit.com/r/meshtastic/comments/1bdgt04/any_cold_weather_battery_options/">here</a></p>
+<p>cold weather node forum <a href="https://www.reddit.com/r/meshtastic/comments/1i0a1lg/how_big_a_battery_do_i_need_for_a_meshtastic_node/">here</a></p>
+<p>another meshtastic solar thread <a href="https://www.reddit.com/r/meshtastic/comments/1gqyovj/solarbattery_controller/">here</a></p>
+<p>adafruit usb c plug breakout <a href="https://www.adafruit.com/product/5978">here</a></p>
+<p>5V 1A output min 7V in max 36V DC DC Traco Power on digikey <a href="https://www.digikey.com/en/products/detail/traco-power/TSR-1-2450E/12171283?gclsrc=aw.ds&amp;&amp;utm_adgroup=&amp;utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=PMax%20Shopping_Product_Low%20ROAS%20Categories&amp;utm_term=&amp;utm_content=&amp;utm_id=go_cmp-20243063506_adg-_ad-__dev-c_ext-_prd-12171283_sig-Cj0KCQjw782_BhDjARIsABTv_JCGDi6U76zVR1xbmbXUHnCMqujL7Y9YssBkjvhjdyd8rvPfI3f8JgYaAqWFEALw_wcB&amp;gad_source=1&amp;gclid=Cj0KCQjw782_BhDjARIsABTv_JCGDi6U76zVR1xbmbXUHnCMqujL7Y9YssBkjvhjdyd8rvPfI3f8JgYaAqWFEALw_wcB&amp;gclsrc=aw.ds">here</a></p>
+<p>molex 10544 connector on digikey <a href="https://www.digikey.com/en/products/detail/molex/1054440001/5843889">here</a></p>
+<p>Mon 07 Apr 2025 08:17:59 PM EDT</p>
+<p>I installed platformio as per <a href="https://docs.platformio.org/en/latest/core/installation/methods/installer-script.html">this guide</a></p>
+<p>The platformio quickstart is <a href="https://docs.platformio.org/en/latest/core/quickstart.html">here</a></p>
+<p>Meshtastic guide to building the firmware is <a href="https://meshtastic.org/docs/development/firmware/build/">here</a></p>
+<p>how to connect the itsybitsy to the waveshare lora module:</p>
+<p><img src="/img/radio/ib_waveshare.png" alt=""></p>
 
 </article>
 

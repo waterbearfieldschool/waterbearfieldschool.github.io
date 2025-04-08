@@ -5,7 +5,7 @@
 	
 	<link href="https://waterbearfieldschool.org/feed/feed.xml" rel="self"/>
 	<link href="https://waterbearfieldschool.org/"/>
-	<updated>2025-03-26T23:42:30Z</updated>
+	<updated>2025-04-08T01:10:12Z</updated>
 	<id>https://example.com/</id>
 	<author>
 		<name>Your Name Here</name>
@@ -15,7 +15,7 @@
 	<entry>
 		<title>Radio Experiments with EcoGather</title>
 		<link href="https://waterbearfieldschool.org/posts/radio/"/>
-		<updated>2025-03-26T23:42:30Z</updated>
+		<updated>2025-04-08T01:10:12Z</updated>
 		<id>https://waterbearfieldschool.org/posts/radio/</id>
 		<content type="html">&lt;h1 id=&quot;winter-2025-seminar-topics&quot;&gt;Winter 2025 Seminar Topics &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#winter-2025-seminar-topics&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;We&#39;re planning a series of short, informal presentations and discussions around topics of interest to the group. In order to guide our exploration, there here are some basic characteristics of radio systems that can impact how a radio is used and what it might be useful for:&lt;/p&gt;
@@ -162,6 +162,45 @@ TX: D2&lt;/p&gt;
 &lt;p&gt;Wed 26 Mar 2025 07:42:07 PM EDT&lt;/p&gt;
 &lt;p&gt;rak 19007 -- can use USB or solar input to charge battery -- nice!&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/rak_19007_input_options.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Sat 05 Apr 2025 09:07:42 AM EDT&lt;/p&gt;
+&lt;p&gt;Seeed studio has some low-cost nordic and lora chips ...&lt;/p&gt;
+&lt;p&gt;Lora chip avail (WIO-SX1262) for $5 on digikey &lt;a href=&quot;https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/114993390/25835823?gclsrc=aw.ds&amp;amp;&amp;amp;utm_adgroup=&amp;amp;utm_source=google&amp;amp;utm_medium=cpc&amp;amp;utm_campaign=PMax%20Shopping_Product_Medium%20ROAS%20Categories&amp;amp;utm_term=&amp;amp;utm_content=&amp;amp;utm_id=go_cmp-20223376311_adg-_ad-__dev-c_ext-_prd-25835823_sig-Cj0KCQjwqcO_BhDaARIsACz62vNfDThNDcsb3GchfTfYWVYZFPQbMCCs0-PB9Blc6l7CuHdvaE6UV38aAs1jEALw_wcB&amp;amp;gad_source=1&amp;amp;gclid=Cj0KCQjwqcO_BhDaARIsACz62vNfDThNDcsb3GchfTfYWVYZFPQbMCCs0-PB9Blc6l7CuHdvaE6UV38aAs1jEALw_wcB&amp;amp;gclsrc=aw.ds&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Here&#39;s the description at Seeed of the module: &lt;a href=&quot;https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Here&#39;s a TRACO power DC-DC that outputs 3.3V and 1A with max 36V and min 4.7V input &lt;a href=&quot;https://www.digikey.com/en/products/detail/traco-power/TSR-1-2433/9383776&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Looks like the nordic has built-in power converters, see forum &lt;a href=&quot;https://forums.adafruit.com/viewtopic.php?t=149285&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;So: what about a board that allows for different battery chemistries, so that the system can be a repeater in cold weather / take different batteries?&lt;/p&gt;
+&lt;p&gt;Meshtastic nrf diy &lt;a href=&quot;https://adrelien.com/meshtastic-diy-how-to-build-your-own-meshtastic-node-nrf52840-lora-radio/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;NRF52840 pro micro &lt;a href=&quot;https://www.amazon.com/AITRIP-Development-Bluetooth-Management-Module%EF%BC%8CNano/dp/B0DCZJKYL1/ref=asc_df_B0DCZJKYL1?mcid=6d520dc732973935be59a08863d25919&amp;amp;tag=hyprod-20&amp;amp;linkCode=df0&amp;amp;hvadid=726893313099&amp;amp;hvpos=&amp;amp;hvnetw=g&amp;amp;hvrand=575833733904072902&amp;amp;hvpone=&amp;amp;hvptwo=&amp;amp;hvqmt=&amp;amp;hvdev=c&amp;amp;hvdvcmdl=&amp;amp;hvlocint=&amp;amp;hvlocphy=9002061&amp;amp;hvtargid=pla-2391501835569&amp;amp;psc=1&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Ah!  The proper term for it is the &#39;super mini&#39; -- and Adafruit has Circuitpython for it! &lt;a href=&quot;https://circuitpython.org/board/supermini_nrf52840/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;super mini pinout &lt;a href=&quot;https://holykeebs.com/products/supermini-nrf52840&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;it&#39;s a clone of the nice!nano v2 &lt;a href=&quot;https://nicekeyboards.com/docs/nice-nano/pinout-schematic/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;meshtastic &#39;rak killer&#39; &lt;a href=&quot;https://www.reddit.com/r/meshtastic/comments/1f48w9a/the_rak_killer_meshtastic_diy_how_to_build_your/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Sun 06 Apr 2025 10:17:05 PM EDT&lt;/p&gt;
+&lt;p&gt;build your own meshtastic node &lt;a href=&quot;https://adrelien.com/meshtastic-diy-how-to-build-your-own-meshtastic-node-nrf52840-lora-radio/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/nice_bootloader.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;waveshare module &lt;a href=&quot;https://www.amazon.com/Waveshare-Core1262-868M-Module-Support-Anti-Interference/dp/B09LV2W64R/ref=asc_df_B09LV2W64R?mcid=237f9ac3c2d8340b8e22a833b9f4bad8&amp;amp;tag=hyprod-20&amp;amp;linkCode=df0&amp;amp;hvadid=693310954762&amp;amp;hvpos=&amp;amp;hvnetw=g&amp;amp;hvrand=1644473740976195916&amp;amp;hvpone=&amp;amp;hvptwo=&amp;amp;hvqmt=&amp;amp;hvdev=c&amp;amp;hvdvcmdl=&amp;amp;hvlocint=&amp;amp;hvlocphy=9002061&amp;amp;hvtargid=pla-2211744334922&amp;amp;th=1&quot;&gt;here&lt;/a&gt;&lt;br /&gt;
+&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/waveshare_sx1262.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;NOTE:&lt;/p&gt;
+&lt;p&gt;Busy &amp;lt;--&amp;gt; DIO0&lt;/p&gt;
+&lt;p&gt;NSS &amp;lt;--&amp;gt; CS&lt;/p&gt;
+&lt;p&gt;Mon 07 Apr 2025 05:47:34 PM EDT&lt;/p&gt;
+&lt;p&gt;kicad footprint and symbol for nice! nano &lt;a href=&quot;https://github.com/bstiq/nice-nano-kicad&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;schematic for nice! nano board &lt;a href=&quot;https://nicekeyboards.com/docs/nice-nano/pinout-schematic/&quot;&gt;here&lt;/a&gt;  -- hopefully same as supermini&lt;/p&gt;
+&lt;p&gt;more docs for the nice! nano, explaining the pinout &lt;a href=&quot;https://nicekeyboards.com/docs/nice-nano/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;bluetooth module itself via adafruit is $13 &lt;a href=&quot;https://www.adafruit.com/product/4078&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;or $8 via adafruit &lt;a href=&quot;https://www.sparkfun.com/nordic-nrf52840-ble-module-mdbt50q-1mv2.html?gad_source=4&amp;amp;gclid=Cj0KCQjw782_BhDjARIsABTv_JD-_A8b365Q-NyWo-z70TH1elR2sc6kaUUQSGBJwbLr_wVn2AKl6ocaAitXEALw_wcB&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;cold weather battery options &lt;a href=&quot;https://www.reddit.com/r/meshtastic/comments/1bdgt04/any_cold_weather_battery_options/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;cold weather node forum &lt;a href=&quot;https://www.reddit.com/r/meshtastic/comments/1i0a1lg/how_big_a_battery_do_i_need_for_a_meshtastic_node/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;another meshtastic solar thread &lt;a href=&quot;https://www.reddit.com/r/meshtastic/comments/1gqyovj/solarbattery_controller/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;adafruit usb c plug breakout &lt;a href=&quot;https://www.adafruit.com/product/5978&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;5V 1A output min 7V in max 36V DC DC Traco Power on digikey &lt;a href=&quot;https://www.digikey.com/en/products/detail/traco-power/TSR-1-2450E/12171283?gclsrc=aw.ds&amp;amp;&amp;amp;utm_adgroup=&amp;amp;utm_source=google&amp;amp;utm_medium=cpc&amp;amp;utm_campaign=PMax%20Shopping_Product_Low%20ROAS%20Categories&amp;amp;utm_term=&amp;amp;utm_content=&amp;amp;utm_id=go_cmp-20243063506_adg-_ad-__dev-c_ext-_prd-12171283_sig-Cj0KCQjw782_BhDjARIsABTv_JCGDi6U76zVR1xbmbXUHnCMqujL7Y9YssBkjvhjdyd8rvPfI3f8JgYaAqWFEALw_wcB&amp;amp;gad_source=1&amp;amp;gclid=Cj0KCQjw782_BhDjARIsABTv_JCGDi6U76zVR1xbmbXUHnCMqujL7Y9YssBkjvhjdyd8rvPfI3f8JgYaAqWFEALw_wcB&amp;amp;gclsrc=aw.ds&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;molex 10544 connector on digikey &lt;a href=&quot;https://www.digikey.com/en/products/detail/molex/1054440001/5843889&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Mon 07 Apr 2025 08:17:59 PM EDT&lt;/p&gt;
+&lt;p&gt;I installed platformio as per &lt;a href=&quot;https://docs.platformio.org/en/latest/core/installation/methods/installer-script.html&quot;&gt;this guide&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The platformio quickstart is &lt;a href=&quot;https://docs.platformio.org/en/latest/core/quickstart.html&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Meshtastic guide to building the firmware is &lt;a href=&quot;https://meshtastic.org/docs/development/firmware/build/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;how to connect the itsybitsy to the waveshare lora module:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/ib_waveshare.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </content>
 	</entry>
 	
