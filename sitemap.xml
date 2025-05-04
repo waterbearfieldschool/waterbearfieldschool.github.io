@@ -2,11 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://waterbearfieldschool.org/about/</loc>
-    <lastmod>2024-11-13</lastmod>
-  </url>
-  
-  <url>
     <loc>https://waterbearfieldschool.org/posts/</loc>
     <lastmod>2024-11-13</lastmod>
   </url>
@@ -113,6 +108,11 @@
   
   <url>
     <loc>https://waterbearfieldschool.org/posts/radio/</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-15</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://waterbearfieldschool.org/about/</loc>
+    <lastmod>2025-05-04</lastmod>
   </url>
 </urlset>

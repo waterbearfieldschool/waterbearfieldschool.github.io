@@ -5,7 +5,7 @@
 	
 	<link href="https://waterbearfieldschool.org/feed/feed.xml" rel="self"/>
 	<link href="https://waterbearfieldschool.org/"/>
-	<updated>2025-04-08T01:10:12Z</updated>
+	<updated>2025-04-15T03:02:59Z</updated>
 	<id>https://example.com/</id>
 	<author>
 		<name>Your Name Here</name>
@@ -15,7 +15,7 @@
 	<entry>
 		<title>Radio Experiments with EcoGather</title>
 		<link href="https://waterbearfieldschool.org/posts/radio/"/>
-		<updated>2025-04-08T01:10:12Z</updated>
+		<updated>2025-04-15T03:02:59Z</updated>
 		<id>https://waterbearfieldschool.org/posts/radio/</id>
 		<content type="html">&lt;h1 id=&quot;winter-2025-seminar-topics&quot;&gt;Winter 2025 Seminar Topics &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#winter-2025-seminar-topics&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;We&#39;re planning a series of short, informal presentations and discussions around topics of interest to the group. In order to guide our exploration, there here are some basic characteristics of radio systems that can impact how a radio is used and what it might be useful for:&lt;/p&gt;
@@ -201,6 +201,35 @@ TX: D2&lt;/p&gt;
 &lt;p&gt;Meshtastic guide to building the firmware is &lt;a href=&quot;https://meshtastic.org/docs/development/firmware/build/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;how to connect the itsybitsy to the waveshare lora module:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/ib_waveshare.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Note that my schematic for connecting to the itsy bitsy came from lucciola_w&lt;/p&gt;
+&lt;p&gt;Note that the firmware for the supermini seems to be in the meshtastic variant:  firmware/variants/diy/nrf52_promicro_diy_tcxo&lt;/p&gt;
+&lt;p&gt;working repos on &lt;a href=&quot;http://github.com/edgecollective&quot;&gt;github.com/edgecollective&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;meshtastic-custom-firmware&lt;/p&gt;
+&lt;p&gt;super-mini-mesh&lt;/p&gt;
+&lt;p&gt;Mon 07 Apr 2025 11:01:45 PM EDT&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/sensor_bridge.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/mesh_sensor_battery_behavior.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Wed 09 Apr 2025 09:21:29 PM EDT&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/power_profile_supermini.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Thu 10 Apr 2025 07:47:54 PM EDT&lt;/p&gt;
+&lt;p&gt;JST connector orientation &lt;a href=&quot;https://www.amazon.com/EEMB-2000mAh-Battery-Rechargeable-Connector/dp/B08214DJLJ/ref=asc_df_B08214DJLJ?mcid=2499bb537f6030c1a060cd1662809b74&amp;amp;tag=hyprod-20&amp;amp;linkCode=df0&amp;amp;hvadid=693308325748&amp;amp;hvpos=&amp;amp;hvnetw=g&amp;amp;hvrand=15956326518424862066&amp;amp;hvpone=&amp;amp;hvptwo=&amp;amp;hvqmt=&amp;amp;hvdev=c&amp;amp;hvdvcmdl=&amp;amp;hvlocint=&amp;amp;hvlocphy=9002061&amp;amp;hvtargid=pla-952213741191&amp;amp;th=1&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Mon 14 Apr 2025 06:22:54 PM EDT&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/turkey_tufts.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/turkey_waterbear.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/lonetree_tufts.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/lonetree_detail.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/oaks_parking_lot.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;radio setttings for various modes in meshtastic &lt;a href=&quot;https://meshtastic.org/docs/overview/radio-settings/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/longfast_deets.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;adafruit rfm9x library details &lt;a href=&quot;https://docs.circuitpython.org/projects/rfm9x/en/2.2.0/api.html&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;library located on github &lt;a href=&quot;https://github.com/adafruit/Adafruit_CircuitPython_RFM9x&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;nice! nano pinout &lt;a href=&quot;https://nicekeyboards.com/docs/nice-nano/pinout-schematic/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/nicenano_pinmap.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://waterbearfieldschool.org/img/radio/supermini_lora.png&quot; height=&quot;300&quot; width=&quot;100&quot; /&gt;
+&lt;p&gt;sx126x driver for python &lt;a href=&quot;https://github.com/ehong-tl/micropySX126X&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;have it working!&lt;/p&gt;
+&lt;p&gt;todo:  need to generalize the constructor with respect to pins for other boards&lt;/p&gt;
+&lt;p&gt;link is &lt;a href=&quot;https://github.com/waterbearfieldschool/super-mini-mesh/tree/main/firmware&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 </content>
 	</entry>
 	
