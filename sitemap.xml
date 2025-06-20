@@ -7,11 +7,6 @@
   </url>
   
   <url>
-    <loc>https://waterbearfieldschool.org/</loc>
-    <lastmod>2024-11-13</lastmod>
-  </url>
-  
-  <url>
     <loc>https://waterbearfieldschool.org/page-list/</loc>
     <lastmod>2024-11-13</lastmod>
   </url>
@@ -28,6 +23,16 @@
   
   <url>
     <loc>https://waterbearfieldschool.org/tags/looms/</loc>
+    <lastmod>2024-11-13</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://waterbearfieldschool.org/tags/workshops/</loc>
+    <lastmod>2024-11-13</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://waterbearfieldschool.org/tags/draft/</loc>
     <lastmod>2024-11-13</lastmod>
   </url>
   
@@ -67,11 +72,6 @@
   </url>
   
   <url>
-    <loc>https://waterbearfieldschool.org/workshops/radio/</loc>
-    <lastmod>2025-01-17</lastmod>
-  </url>
-  
-  <url>
     <loc>https://waterbearfieldschool.org/posts/loom/</loc>
     <lastmod>2025-01-20</lastmod>
   </url>
@@ -108,11 +108,26 @@
   
   <url>
     <loc>https://waterbearfieldschool.org/posts/radio/</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-05-24</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://waterbearfieldschool.org/workshops/radio/</loc>
+    <lastmod>2025-06-20</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://waterbearfieldschool.org/workshops/loom/</loc>
+    <lastmod>2025-06-20</lastmod>
   </url>
   
   <url>
     <loc>https://waterbearfieldschool.org/about/</loc>
-    <lastmod>2025-05-04</lastmod>
+    <lastmod>2025-06-20</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://waterbearfieldschool.org/</loc>
+    <lastmod>2025-06-20</lastmod>
   </url>
 </urlset>

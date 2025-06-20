@@ -5,7 +5,7 @@
 	
 	<link href="https://waterbearfieldschool.org/feed/feed.xml" rel="self"/>
 	<link href="https://waterbearfieldschool.org/"/>
-	<updated>2025-04-15T03:02:59Z</updated>
+	<updated>2025-05-24T17:39:17Z</updated>
 	<id>https://example.com/</id>
 	<author>
 		<name>Your Name Here</name>
@@ -15,7 +15,7 @@
 	<entry>
 		<title>Radio Experiments with EcoGather</title>
 		<link href="https://waterbearfieldschool.org/posts/radio/"/>
-		<updated>2025-04-15T03:02:59Z</updated>
+		<updated>2025-05-24T17:39:17Z</updated>
 		<id>https://waterbearfieldschool.org/posts/radio/</id>
 		<content type="html">&lt;h1 id=&quot;winter-2025-seminar-topics&quot;&gt;Winter 2025 Seminar Topics &lt;a class=&quot;direct-link&quot; href=&quot;https://waterbearfieldschool.org/posts/radio/#winter-2025-seminar-topics&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;We&#39;re planning a series of short, informal presentations and discussions around topics of interest to the group. In order to guide our exploration, there here are some basic characteristics of radio systems that can impact how a radio is used and what it might be useful for:&lt;/p&gt;
@@ -230,6 +230,9 @@ TX: D2&lt;/p&gt;
 &lt;p&gt;have it working!&lt;/p&gt;
 &lt;p&gt;todo:  need to generalize the constructor with respect to pins for other boards&lt;/p&gt;
 &lt;p&gt;link is &lt;a href=&quot;https://github.com/waterbearfieldschool/super-mini-mesh/tree/main/firmware&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Sat 24 May 2025 12:06:23 PM EDT&lt;/p&gt;
+&lt;p&gt;note:  the design of the Thistle matches the diy promicro txco variant in meshtastic -- can just use latest firmware from there&lt;/p&gt;
+&lt;p&gt;might want to add explicity i2c pullups on next thistle so can use display&lt;/p&gt;
 </content>
 	</entry>
 	
