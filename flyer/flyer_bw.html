@@ -22,8 +22,8 @@
         }
         
         .invitation-card {
-            width: 1200px;
-            height: 630px;
+            width: 900px;
+            height: 700px   ;
             background: linear-gradient(145deg, #f0f9ff 0%, #e0f2fe 50%, #fef3c7 100%);
             border-radius: 30px;
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
@@ -42,6 +42,7 @@
             max-width: 900px;
         }
         
+        /*
         .decorative-elements {
             position: absolute;
             width: 100%;
@@ -73,7 +74,9 @@
         .tool1 { top: 15%; right: 10%; }
         .tool2 { bottom: 20%; left: 15%; animation-direction: reverse; }
         .tool3 { top: 60%; left: 8%; animation-delay: 3s; }
+        */
         
+        /*
         @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
             50% { transform: translateY(-20px) rotate(10deg); }
@@ -81,8 +84,9 @@
         
         @keyframes rotate {
             from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            to { transform: rotate(360deg); }   
         }
+        */
         
         h1 {
             font-size: 56px;
@@ -99,7 +103,7 @@
         }
         
         .tagline {
-            font-size: 28px;
+            font-size: 45px;
             color: #059669;
             font-weight: 600;
             margin-bottom: 30px;
@@ -112,14 +116,14 @@
         .description {
             background: rgba(255, 255, 255, 0.9);
             border-radius: 20px;
-            padding: 30px;
+            padding: 10px;
             margin-bottom: 30px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
         }
         
         .description p {
-            font-size: 20px;
+            font-size: 40px;
             color: #374151;
             line-height: 1.6;
             margin-bottom: 20px;
@@ -129,7 +133,7 @@
             display: flex;
             justify-content: space-around;
             gap: 20px;
-            margin-top: 20px;
+            margin-top: 10px;
         }
         
         .feature {
@@ -140,11 +144,11 @@
         }
         
         .feature-icon {
-            font-size: 30px;
+            font-size: 50px;
         }
         
         .feature-text {
-            font-size: 18px;
+            font-size: 35px;
             color: #1f2937;
             font-weight: 600;
             text-align: left;
@@ -152,9 +156,10 @@
         
         .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-            color: white;
-            font-size: 24px;
+            background: white;
+            //linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: black;
+            font-size: 35px;
             font-weight: 700;
             padding: 18px 50px;
             border-radius: 50px;
@@ -176,14 +181,16 @@
         
         .footer-text {
             margin-top: 20px;
-            font-size: 16px;
-            color: #6b7280;
+            font-size: 30px;
+            //color: #6b7280;
+            color: black;
             font-style: italic;
         }
     </style>
 </head>
 <body>
     <div class="invitation-card">
+    <!--
         <div class="decorative-elements">
             <div class="leaf leaf1">🍃</div>
             <div class="leaf leaf2">🌿</div>
@@ -193,41 +200,43 @@
             <div class="tool tool2">🔧</div>
             <div class="tool tool3">⚙️</div>
         </div>
+        -->
         
         <div class="content-wrapper">
             <h1>🌲 Waterbear Field School 🌲</h1>
-            <p class="tagline">Join Our Community Brainstorm!</p>
+            <p class="tagline">Outdoor Exploration & Skill Sharing</p>
             
             <div class="description">
-                <p><strong>Let's shape the future of outdoor learning together!</strong></p>
-                <p>We're building a homeschool community where families explore nature, create with their hands, and learn STEM through real-world projects.</p>
+                <p><strong>Nature • Science • Music • Storytelling</strong></p>
+                <!--<p>We're building a homeschool community where families explore nature, create with their hands, and learn STEM through real-world projects.</p>-->
                 
                 <div class="features">
                     <div class="feature">
                         <span class="feature-icon">🥾</span>
-                        <span class="feature-text">Nature<br>Exploration</span>
+                        <span class="feature-text">Outdoor<br>adventures</span>
                     </div>
                     <div class="feature">
                         <span class="feature-icon">🛠️</span>
-                        <span class="feature-text">Hands-on<br>Building</span>
+                        <span class="feature-text">Hands-on<br>building</span>
                     </div>
                     <div class="feature">
-                        <span class="feature-icon">🔬</span>
-                        <span class="feature-text">STEM<br>Learning</span>
+                        <span class="feature-icon">🪡</span>
+                        <span class="feature-text">Creative<br>play</span>
                     </div>
                 </div>
                 
                 <br>
+                
                 <div class="features">
-                                            <p><strong>Lincoln & Waltham, MA</strong> • <strong>10 AM–4 PM</strong> • <strong>Starting Fall 2025</strong></p>
-                                            </div>
+                <p><strong>Lincoln & Waltham, MA</strong> • <strong>Fall 2025</strong></p>
+                </div>
             </div>
             
 
             
             <a href="#" class="cta-button">info@waterbearfieldschool.org 💡</a>
             
-            <p class="footer-text">For homeschoolers, teens, adults, and anyone excited about resilience & community</p>
+            <p class="footer-text">For homeschoolers, after-schoolers, youth, adults -- <br>anyone excited about resilience & community</p>
         </div>
     </div>
 </body>
