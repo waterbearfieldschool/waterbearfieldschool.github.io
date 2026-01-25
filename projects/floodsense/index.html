@@ -3,25 +3,25 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bamboo Basketry</title>
-  <meta name="description" content="Create a hexagonal weave bamboo basket using traditional techniques and specialized tools" />
+  <title>Flood Sensing</title>
+  <meta name="description" content="DIY flood alert and water level monitoring systems" />
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://waterbearfieldschool.org/workshops/bamboo-basketry/">
-  <meta property="og:title" content="Bamboo Basketry">
-  <meta property="og:description" content="Create a hexagonal weave bamboo basket using traditional techniques and specialized tools">
+  <meta property="og:url" content="https://waterbearfieldschool.org/projects/floodsense/">
+  <meta property="og:title" content="Flood Sensing">
+  <meta property="og:description" content="DIY flood alert and water level monitoring systems">
   <meta property="og:site_name" content="Waterbear Field School">
-  <meta property="og:image" content="https://waterbearfieldschool.org/assets/images/bamboo-basketry/placeholder.png">
+  <meta property="og:image" content="https://waterbearfieldschool.org/assets/images/projects/floodsense.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://waterbearfieldschool.org/workshops/bamboo-basketry/">
-  <meta property="twitter:title" content="Bamboo Basketry">
-  <meta property="twitter:description" content="Create a hexagonal weave bamboo basket using traditional techniques and specialized tools">
-  <meta property="twitter:image" content="https://waterbearfieldschool.org/assets/images/bamboo-basketry/placeholder.png">
+  <meta property="twitter:url" content="https://waterbearfieldschool.org/projects/floodsense/">
+  <meta property="twitter:title" content="Flood Sensing">
+  <meta property="twitter:description" content="DIY flood alert and water level monitoring systems">
+  <meta property="twitter:image" content="https://waterbearfieldschool.org/assets/images/projects/floodsense.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -47,7 +47,7 @@
             </ul>
           </nav>
           <p style="margin: 12px 0 4px 0; font-size: 0.95rem; font-style: italic; color: var(--muted); text-align: center;">
-            We'd love to hear from you!
+            Want to take a class? Or teach a class? Please reach out!
           </p>
           <p class="contact-email" style="margin: 12px 0 0 0; font-size: 0.95rem;">
             <a href="mailto:info@waterbearfieldschool.org?subject=Waterbear%20Field%20School%20Inquiry">info@waterbearfieldschool.org</a>
@@ -60,22 +60,37 @@
     <main>
       
 <article class="prose">
-  <h1>Bamboo Basketry</h1>
+  <h1>Flood Sensing</h1>
   
-  <h2>Bamboo Basketry Workshop</h2>
-<p>Learn the art of bamboo basket weaving using traditional hexagonal weave techniques. In this hands-on workshop, you'll create a beautiful, functional basket while developing skills in fiber preparation, weaving patterns, and working with specialized basketry tools.</p>
-<h3>What You'll Learn</h3>
+  <img src="/assets/images/projects/floodsense.png" alt="Flood Sensor" class="float-right float-medium" style="max-width: 300px; margin: 0 0 1rem 1rem;" />
+<h2>Overview</h2>
+<p>This project develops DIY flood alert and water level monitoring systems, initially prototyped for use in New Orleans, Louisiana. The goal is to create affordable, community-deployable sensors that can detect rising water levels and provide early warning.</p>
+<h2>The Technology</h2>
+<p>The system uses:</p>
 <ul>
-<li>Identifying and preparing bamboo fibers for weaving</li>
-<li>Technical preparation stages for bamboo strips</li>
-<li>Hexagonal weaving patterns and techniques</li>
-<li>Using specialized basketry tools</li>
-<li>Understanding bamboo properties and selection</li>
-<li>Finishing techniques for durable, long-lasting baskets</li>
+<li><strong>Ultrasonic distance sensors</strong> (HC-SR04 or RCWL-1601) to measure water levels</li>
+<li><strong>LoRa radio modules</strong> for long-range, low-power wireless communication</li>
+<li><strong>Microcontrollers</strong> (Adafruit ItsyBitsy M4 or Feather boards)</li>
+<li><strong>Gateway nodes</strong> that relay data to the internet via WiFi</li>
 </ul>
-<h3>Workshop Details</h3>
-<p>Each participant will complete their own hexagonal weave bamboo basket to take home. The workshop covers both the traditional techniques passed down through generations and the practical skills needed to continue this craft independently.</p>
-<p>All tools and materials are provided. This workshop is suitable for beginners and experienced crafters alike.</p>
+<h2>How It Works</h2>
+<p>Sensor nodes are mounted above areas prone to flooding. The ultrasonic sensor measures the distance to the water surface. As water levels rise, the distance decreases, triggering alerts when thresholds are crossed.</p>
+<p>Data is transmitted via LoRa radio to gateway nodes, which post readings to online databases (like FarmOS) for monitoring and visualization.</p>
+<h2>Design Considerations</h2>
+<ul>
+<li><strong>Low power operation</strong> using timer circuits for solar-powered deployments</li>
+<li><strong>Weatherproof enclosures</strong> using PVC pipe and sealed fittings</li>
+<li><strong>Multiple sensing options</strong> including time-of-flight LIDAR sensors for greater accuracy</li>
+</ul>
+<h2>Applications</h2>
+<ul>
+<li>Street flooding detection</li>
+<li>Storm drain monitoring</li>
+<li>Creek and river level monitoring</li>
+<li>Basement flooding alerts</li>
+</ul>
+<hr>
+<p><strong>To find out more, visit:</strong> <a href="https://edgecollective.io/notes/floodsense">Edge Collective - Flood Sensing</a></p>
 
 </article>
 
