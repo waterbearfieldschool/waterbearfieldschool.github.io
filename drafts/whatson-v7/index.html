@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Waterbear Field School — what's on (v6)</title>
+<title>Waterbear Field School — what's on (v7)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -35,6 +35,10 @@
   .sec-meetup{background:#e9f2ec;border-color:#cbe2d4} .sec-meetup .grp{color:#2f6641}
   .cardimg{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#e5e6e0}
   .sec-journal{background:#eef1f4;border-color:#d6dee5}
+  .sec-august{background:#fbf3de;border-color:#f0e1ad}
+  .sec-august .grp{color:#9a6f14}
+  .seclead{text-align:center;color:var(--muted);max-width:640px;margin:2px auto 14px;font-size:.96rem;line-height:1.4}
+  .cancelnote{max-width:720px;margin:16px auto 0;text-align:center;font-size:.85rem;color:var(--muted);background:#fff;border:1px dashed #e0cf9a;border-radius:10px;padding:10px 16px}
   .sec-journal .grp{color:#3f5563}
   .morelink{text-align:center;margin-top:20px}
   .morelink a{display:inline-block;background:#4f6675;color:#fff;text-decoration:none;font-weight:700;padding:11px 22px;border-radius:9px}
@@ -82,7 +86,8 @@
   </header>
   <div class="chips">
     <button class="chip" data-t="journal">📓 Journal</button>
-    <button class="chip" data-t="program">🗓️ Programs</button>
+    <button class="chip" data-t="august">☀️ August</button>
+    <button class="chip" data-t="program">🗓️ Weekly</button>
     <button class="chip" data-t="workshop">🔧 Workshops</button>
     <button class="chip" data-t="project">🛠️ Projects</button>
     <button class="chip" data-t="meetup">🌲 Meetups</button>
@@ -102,8 +107,25 @@
     </div>
     <div class="morelink"><a href="/journal/">Read more journal entries &rarr;</a></div>
   </section>
-  <section class="sec sec-program" id="program" data-name="Programs" data-blurb="Sign up for a weekly meetup focused on a particular topic." data-accent="#a86f28" data-tint="#f7efe1" data-bd="#ecdcc2">
-    <h2 class="grp">🗓️ Monthly Programs</h2>
+  <section class="sec sec-august" id="august" data-name="August" data-blurb="Pick any individual days that fit your summer — adults + kids together, register in advance.">
+    <h2 class="grp">☀️ August — À la carte</h2>
+    <p class="seclead">Camp-schedule gaps? Sign up for just the days you want. A month of different crafts &amp; activities — adults stay with their kids. From September, we move to regular weekly programs (below).</p>
+    <div class="cards">
+      <article class="card"><img class="cardimg" src="v6img/pg-wood.jpg" alt=""><div class="band" style="background:#c8901f"><div class="day">Mon · Aug 3</div><div class="theme">Woodworking</div></div><div class="body"><div class="when">9 AM – 3 PM · adults + kids</div><div class="desc">Saw, drill, and build — start on the shop's own benches and stools.</div><div class="foot"><button class="btn-reg" onclick="m('r')">Register</button><button class="btn-info" onclick="m('i')">More info</button></div></div></article>
+      <article class="card"><img class="cardimg" src="v6img/pg-art.jpg" alt=""><div class="band" style="background:#c8901f"><div class="day">Wed · Aug 5</div><div class="theme">Painting &amp; Drawing</div></div><div class="body"><div class="when">9 AM – 3 PM · adults + kids</div><div class="desc">Drawing and painting from life, outdoors.</div><div class="foot"><button class="btn-reg" onclick="m('r')">Register</button><button class="btn-info" onclick="m('i')">More info</button></div></div></article>
+      <article class="card"><img class="cardimg" src="v6img/pg-music.jpg" alt=""><div class="band" style="background:#c8901f"><div class="day">Fri · Aug 7</div><div class="theme">Music &amp; Instruments</div></div><div class="body"><div class="when">9 AM – 3 PM · adults + kids</div><div class="desc">Make a simple instrument, then play together.</div><div class="foot"><button class="btn-reg" onclick="m('r')">Register</button><button class="btn-info" onclick="m('i')">More info</button></div></div></article>
+      <article class="card"><img class="cardimg" src="v6img/pg-fiber.jpg" alt=""><div class="band" style="background:#c8901f"><div class="day">Mon · Aug 10</div><div class="theme">Fiber Arts</div></div><div class="body"><div class="when">9 AM – 3 PM · adults + kids</div><div class="desc">Weaving, rope-making, and a bit of sewing.</div><div class="foot"><button class="btn-reg" onclick="m('r')">Register</button><button class="btn-info" onclick="m('i')">More info</button></div></div></article>
+      <article class="card"><img class="cardimg" src="v6img/pg-nature.jpg" alt=""><div class="band" style="background:#c8901f"><div class="day">Wed · Aug 12</div><div class="theme">Nature &amp; Plants</div></div><div class="body"><div class="when">9 AM – 3 PM · adults + kids</div><div class="desc">Plant walks, leaf prints, and seasonal foraging.</div><div class="foot"><button class="btn-reg" onclick="m('r')">Register</button><button class="btn-info" onclick="m('i')">More info</button></div></div></article>
+      <article class="card"><img class="cardimg" src="v6img/ws-solar.jpg" alt=""><div class="band" style="background:#c8901f"><div class="day">Fri · Aug 14</div><div class="theme">Intro to Solar</div></div><div class="body"><div class="when">9 AM – 3 PM · adults + kids</div><div class="desc">A hands-on intro to human-scale solar power.</div><div class="foot"><button class="btn-reg" onclick="m('r')">Register</button><button class="btn-info" onclick="m('i')">More info</button></div></div></article>
+      <article class="card"><img class="cardimg" src="v6img/pg-wood.jpg" alt=""><div class="band" style="background:#c8901f"><div class="day">Mon · Aug 17</div><div class="theme">Woodworking</div></div><div class="body"><div class="when">9 AM – 3 PM · adults + kids</div><div class="desc">More building — finish the benches for the farm.</div><div class="foot"><button class="btn-reg" onclick="m('r')">Register</button><button class="btn-info" onclick="m('i')">More info</button></div></div></article>
+      <article class="card"><img class="cardimg" src="v6img/pg-art.jpg" alt=""><div class="band" style="background:#c8901f"><div class="day">Wed · Aug 19</div><div class="theme">Clay &amp; Ceramics</div></div><div class="body"><div class="when">9 AM – 3 PM · adults + kids</div><div class="desc">Pinch-pots and hand-building with clay.</div><div class="foot"><button class="btn-reg" onclick="m('r')">Register</button><button class="btn-info" onclick="m('i')">More info</button></div></div></article>
+      <article class="card"><img class="cardimg" src="v6img/ws-mesh.jpg" alt=""><div class="band" style="background:#c8901f"><div class="day">Fri · Aug 21</div><div class="theme">Mesh Radio</div></div><div class="body"><div class="when">9 AM – 3 PM · adults + kids</div><div class="desc">Off-grid radio messaging you build yourself.</div><div class="foot"><button class="btn-reg" onclick="m('r')">Register</button><button class="btn-info" onclick="m('i')">More info</button></div></div></article>
+    </div>
+    <div class="cancelnote">Register in advance for any days. Full refund for cancellations 48+ hours ahead; within 48 hours, credit toward another day. Sessions run rain or shine (severe weather may reschedule).</div>
+  </section>
+  <section class="sec sec-program" id="program" data-name="Programs" data-blurb="In August, pick individual days; from September, register by weekday for the month." data-accent="#a86f28" data-tint="#f7efe1" data-bd="#ecdcc2">
+    <h2 class="grp">🗓️ Weekly Programs · from September</h2>
+    <p class="seclead">Starting September: register by weekday for the month — the same craft every week. (August is à la carte, above.)</p>
     <div class="cards">
       <article class="card"><img class="cardimg" src="v6img/pg-wood.jpg" alt=""><div class="band" style="background:#a86f28"><div class="day">Mondays 🪚</div><div class="theme">Woodworking</div></div><div class="body"><div class="when">Weekly on Mondays, 9 AM – 3 PM</div><div class="desc">Build the shop's own furniture over four weeks — sawhorse → bench → stool → toolbox.</div><div class="foot"><button class="btn-reg" onclick="m('r')">Register</button><button class="btn-info" onclick="m('i')">More info</button></div></div></article>
       <article class="card"><img class="cardimg" src="v6img/pg-fiber.jpg" alt=""><div class="band" style="background:#4f5aa6"><div class="day">Tuesdays 🧶</div><div class="theme">Fiber Arts</div></div><div class="body"><div class="when">Weekly on Tuesdays, 9 AM – 3 PM</div><div class="desc">Weaving, rope-making, lashing, and sewing — turning fiber into cordage and cloth.</div><div class="foot"><button class="btn-reg" onclick="m('r')">Register</button><button class="btn-info" onclick="m('i')">More info</button></div></div></article>
