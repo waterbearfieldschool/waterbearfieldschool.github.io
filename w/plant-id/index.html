@@ -4,6 +4,17 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Plant ID &amp; Mapping — Waterbear Field School</title>
 <meta name="description" content="Learn the names of some of the trees and plants around you, and how to read, use, and make maps.">
+<link rel="canonical" href="https://waterbearfieldschool.org/w/plant-id/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Plant ID &amp; Mapping — Waterbear Field School">
+<meta property="og:description" content="Learn the names of some of the trees and plants around you, and how to read, use, and make maps.">
+<meta property="og:url" content="https://waterbearfieldschool.org/w/plant-id/">
+<meta property="og:image" content="https://waterbearfieldschool.org/v6img/pg-nature.jpg">
+<meta property="og:site_name" content="Waterbear Field School">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Plant ID &amp; Mapping — Waterbear Field School">
+<meta name="twitter:description" content="Learn the names of some of the trees and plants around you, and how to read, use, and make maps.">
+<meta name="twitter:image" content="https://waterbearfieldschool.org/v6img/pg-nature.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>  :root{--ink:#1f241f;--bg:#f7f7f2;--muted:#6b7168;--accent:#1c4d3a;--accent-d:#123526;--sun:#e0a92b;--line:#e5e6e0;--card:#fff}
@@ -245,12 +256,14 @@
   @media(max-width:520px){.whero img{height:200px}.whero .wband h1{font-size:1.35rem}}
 
   /* ---- workshop per-day sections ---- */
+  .more-days:not(:has(a)){display:none}
   .daynav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
   .daychip{font-size:.84rem;font-weight:600;color:var(--accent-d);text-decoration:none;border:1px solid var(--line);border-left-width:4px;border-radius:8px;padding:7px 12px;background:var(--card)}
   .daychip:hover{background:#f0f3ee}
   .daycard{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:0 0 18px;background:var(--card);box-shadow:0 3px 12px rgba(0,0,0,.05);scroll-margin-top:90px}
   .daycard-band{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 16px;color:#fff}
-  .daycard-band .dc-when{font-weight:700;font-size:.92rem}
+  .daycard-band .dc-when{font-weight:700;font-size:.92rem;color:#fff;text-decoration:none}
+  .daycard-band a.dc-when:hover{text-decoration:underline}
   .daycard-band .dc-reg{flex:none;margin:0;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.5);color:#fff;font-size:.8rem;padding:6px 13px}
   .daycard-body{padding:18px 20px 22px}
   .daycard-body h2{font-size:1.35rem;color:var(--accent-d);margin:0 0 10px}
@@ -262,12 +275,17 @@
   .dc-facts dd{font-size:.9rem;line-height:1.4}
   .dc-facts .muted{color:var(--muted);font-size:.84rem}
   @media(max-width:520px){.dc-facts{grid-template-columns:1fr}}
+  .daycard.target,.daycard2.target{outline:2px solid #c8901f;box-shadow:0 0 0 4px #fdf3d6,0 3px 12px rgba(0,0,0,.05)}
+  .daycard-body h2 a{color:inherit;text-decoration:none}
+  .daycard-body h2 a:hover{text-decoration:underline}
+  .dc2-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .dc2-actions .btn-reg{margin:0;flex:none}
 </style>
 </head>
 <body>
   <div class="stickytop">
     <div class="top">
-      <div class="brand">Waterbear Field School<small>Hands-on learning &amp; building, near Lincoln, MA</small></div>
+      <a class="brand" href="/" style="text-decoration:none">Waterbear Field School<small>Hands-on learning &amp; building, near Lincoln, MA</small></a>
     </div>
   </div>
 
@@ -276,24 +294,24 @@
   <div class="wdetail">
     <div class="whero">
       <img src="/v6img/pg-nature.jpg" alt="Plant ID &amp; Mapping">
-      <div class="wband" style="background:linear-gradient(transparent,#3f7d54f2)"><h1>🌿 Plant ID &amp; Mapping</h1></div>
+      <div class="wband" style="background:linear-gradient(transparent,#3f7d54f2)"><h1>Plant ID &amp; Mapping</h1></div>
     </div>
 
     <p class="wblurb">Learn the names of some of the trees and plants around you, and how to read, use, and make maps.</p>
     <p style="color:var(--muted);margin:-10px 0 22px;font-size:.92rem">1 upcoming day — each is its own project. Jump to the one you want:</p>
 
     <div class="daynav">
-      <a href="#day-2026-08-27" class="daychip" style="border-color:#3f7d54">Thu · Aug 27 · Plant ID &amp; Mapping</a>
+      <a href="/w/plant-id/2026-08-27/" class="daychip" style="border-color:#3f7d54">Thu · Aug 27 · Plant ID &amp; Mapping</a>
     </div>
 
     
     <section class="daycard" id="day-2026-08-27">
       <div class="daycard-band" style="background:#3f7d54">
-        <span class="dc-when">📅 Thu · Aug 27 · 10 AM–1 PM</span>
+        <a class="dc-when" href="/w/plant-id/2026-08-27/">Thu · Aug 27 · 10 AM–1 PM</a>
         <a class="btn-reg dc-reg" href="/register/?day=2026-08-27">Register →</a>
       </div>
       <div class="daycard-body">
-        <h2>🌿 Plant ID &amp; Mapping</h2>
+        <h2><a href="/w/plant-id/2026-08-27/">Plant ID &amp; Mapping</a></h2>
         
         <p>A walking session: we learn the names of the trees and plants around us — how to tell them apart, and what people have used them for over time.</p><p>We&#39;ll also learn to read and use maps of where we are, and start making our own. Bring your curiosity and comfortable shoes.</p>
 
@@ -302,7 +320,7 @@
         <dl class="dc-facts">
           <div><dt>When</dt><dd>Thu · Aug 27 · 10 AM–1 PM</dd></div>
           <div><dt>Where</dt><dd>Umbrello Hay Field, Lincoln, MA<br><span class="muted">Meeting spot sent when you register.</span></dd></div>
-          <div><dt>Who</dt><dd>All ages welcome (an adult stays with under‑14s).</dd></div>
+          <div><dt>Who</dt><dd>All ages welcome (an adult caregiver needs to accompany kids under 14).</dd></div>
           <div><dt>Bring</dt><dd>Comfortable walking shoes, water, and weather‑appropriate clothing.</dd></div>
         </dl>
 
