@@ -661,7 +661,8 @@
     data-item-quantity="1">tix</button>
 </div>
 
-<div id="snipcart" data-api-key="MTA2ODIzNWItMjAyZi00ZThmLThiMDktNTNiOGVmMjJhNzU5NjM5MDczMTU2MTI1ODk3MDU1" data-config-modal-style="side" data-config-add-product-behavior="none" hidden></div>
+
+<div id="snipcart" data-api-key="YWMwMTNjOGItODA1MS00YmFlLWE0MWYtNmYyNzU3YTg3Y2Y5NjM5MDczMTU2MTI1ODk3MDU1" data-config-modal-style="side" data-config-add-product-behavior="none" hidden></div>
 <script async src="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -821,31 +822,61 @@
     Snipcart.store.subscribe(refresh);
     if(btn) btn.onclick=window.wfsOpenCart;
 
-    // In this variant checkout IS registration — write the roster from the order.
+    // In this variant checkout IS registration. Direct inserts are revoked, so
+    // the roster is written through register() — one call per day in the order,
+    // which also re-checks capacity at the moment of writing.
     Snipcart.events.on('order.completed', async function(order){
       if(!sb) return;
       try{
         var email=(order && (order.email || (order.user && order.user.email))) || '';
         var name='';
         try{ name=(order.billingAddress && order.billingAddress.fullName) || order.cardHolderName || ''; }catch(e){}
+        if(!email) return;
+
+        var token=(order && (order.token || order.invoiceNumber)) || null;
         var items=(order && order.items) || [];
-        var kitDates={};
-        items.forEach(function(it){ if(it.id && it.id.indexOf('kit-')===0) kitDates[it.id.slice(4)]=true; });
-        var rows=[];
+        var kitDates={}, byDate={}, amount={}, kitAmount={}, tier={};
+        items.forEach(function(it){
+          if(it.id && it.id.indexOf('kit-')===0){
+            var d=it.id.slice(4);
+            kitDates[d]=(kitDates[d]||0)+(it.quantity||1);
+          }
+        });
         items.forEach(function(it){
           var p=parseTix(it.id);
           if(!p) return;
-          var n=it.quantity||1;
-          for(var i=0;i<n;i++){
-            rows.push({ name:name, email:email, session:SESSIONS[p.date]||it.name,
-                        wants_updates:true, wants_materials:!!kitDates[p.date] });
+          var q=it.quantity||1, unit=parseFloat(it.unitPrice||it.price||0)||0;
+          byDate[p.date]=(byDate[p.date]||0)+q;
+          amount[p.date]=(amount[p.date]||0)+q*unit;
+          if(!tier[p.date] || unit>0) tier[p.date]=p.tier;
+        });
+        items.forEach(function(it){
+          if(it.id && it.id.indexOf('kit-')===0){
+            var d=it.id.slice(4), q=it.quantity||1;
+            var unit=parseFloat(it.unitPrice||it.price||0)||0;
+            kitAmount[d]=(kitAmount[d]||0)+q*unit;
           }
         });
-        if(rows.length && email){
-          var res=await sb.from('rsvps').insert(rows);
-          if(res.error) console.error('[wfs] rsvp insert failed', res.error, rows);
+
+        var dates=Object.keys(byDate);
+        for(var i=0;i<dates.length;i++){
+          var d=dates[i];
+          var res=await sb.rpc('register', {
+            p_date:d, p_name:name, p_email:email,
+            p_party:byDate[d],
+            p_kit:!!kitDates[d],
+            p_kits:kitDates[d]||0,
+            p_meta:{
+              tier:        tier[d] || 'free',
+              amount:      amount[d] || 0,
+              kit_amount:  kitAmount[d] || 0,
+              order_token: token
+            }
+          });
+          if(res.error) console.error('[wfs] register failed', d, res.error);
+          else if(!(res.data||{}).ok) console.error('[wfs] register refused', d, res.data);
         }
-      }catch(e){ console.error('[wfs] rsvp write threw', e); }
+      }catch(e){ console.error('[wfs] post-order register threw', e); }
     });
   });
 })();
