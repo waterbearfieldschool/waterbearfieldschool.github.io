@@ -801,6 +801,20 @@
   var SESSIONS={ "2026-08-19":"Wed · Aug 19 — Solar Power & Electronics Bench","2026-08-20":"Thu · Aug 20 — Build a Toolbox","2026-08-21":"Fri · Aug 21 — Music & Instrument Making","2026-08-25":"Tue · Aug 25 — Build a Workbench","2026-08-26":"Wed · Aug 26 — Solar Power & Electronics Bench","2026-08-27":"Thu · Aug 27 — Plant ID & Mapping","2026-08-28":"Fri · Aug 28 — Zines & Printmaking" };
   var KEY='wfs.basket.v1', WHO='wfs.who.v1';
 
+  /* ---------------- past days ----------------
+   * A static build bakes in the date it was built, so it cannot be trusted to
+   * know what "today" is. Decide in the browser instead, against the visitor's
+   * actual clock — and register() refuses past dates as well, because a clock
+   * in a browser is not a control.
+   */
+  window.wfsIsPast=function(date){
+    if(!date) return false;
+    var now=new Date();
+    var today=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+
+              '-'+String(now.getDate()).padStart(2,'0');
+    return date < today;
+  };
+
   /* ---------------- capacity ----------------
    * session_counts is a public view — capacity, how many are taken, how many
    * remain. Read for display only; the real enforcement is inside register(),
@@ -1200,7 +1214,8 @@
         rate_limited: 'That is a lot of registrations from one address. Email us and we will sort it out.',
         too_busy:     'Things are unusually busy — give it a minute and try again.',
         bad_details:  'Please check the name and email.',
-        bad_party:    'That number of people does not look right.'
+        bad_party:    'That number of people does not look right.',
+        past:         'That Field Day has already happened.'
       }[why];
       say(human || ('Sorry — ' + why), true);
       return;
@@ -1232,6 +1247,20 @@
   render();
 })();
 </script>
+  <script>
+  // A day that has already happened must not be registerable.
+  (function(){
+    if(!window.wfsIsPast || !window.wfsIsPast('2026-08-21')) return;
+    var tix=document.getElementById('tix'), bar=document.querySelector('.tixbar');
+    if(tix){
+      tix.innerHTML='<div class="tix-head"><h2>This Field Day has passed</h2></div>'+
+        '<div class="trow"><span class="tinfo"><b>Registration is closed</b>'+
+        '<small>Have a look at what is coming up instead.</small></span>'+
+        '<a class="btn-reg" href="/v3/" style="flex:none">Upcoming days &rarr;</a></div>';
+    }
+    if(bar) bar.remove();
+  })();
+  </script>
   <script>/* The per-day panel on /v3/: same shape as /v2/, but it fills our basket
    rather than Snipcart's cart. */
 (function(){
