@@ -4,19 +4,9 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Music &amp; Instrument Making · Fri · Aug 21 — Waterbear Field School</title>
 <meta name="description" content="Learn to build and play simple instruments together.">
-<link rel="canonical" href="https://waterbearfieldschool.org/w/music/2026-08-21/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Music &amp; Instrument Making · Fri · Aug 21 — Waterbear Field School">
-<meta property="og:description" content="Learn to build and play simple instruments together.">
-<meta property="og:url" content="https://waterbearfieldschool.org/w/music/2026-08-21/">
-<meta property="og:image" content="https://waterbearfieldschool.org/v6img/pg-music.jpg">
-<meta property="og:site_name" content="Waterbear Field School">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Music &amp; Instrument Making · Fri · Aug 21 — Waterbear Field School">
-<meta name="twitter:description" content="Learn to build and play simple instruments together.">
-<meta name="twitter:image" content="https://waterbearfieldschool.org/v6img/pg-music.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.css" />
 <style>  :root{--ink:#1f241f;--bg:#f7f7f2;--muted:#6b7168;--accent:#1c4d3a;--accent-d:#123526;--sun:#e0a92b;--line:#e5e6e0;--card:#fff}
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -280,16 +270,187 @@
   .daycard-body h2 a:hover{text-decoration:underline}
   .dc2-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
   .dc2-actions .btn-reg{margin:0;flex:none}
+
+  /* ---- /v2/ ticketed prototype (Eventbrite-ish) ---- */
+  .cartbtn{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:var(--sun);color:#123526;border:none;border-radius:999px;padding:8px 15px;font-weight:800;font-size:.84rem;cursor:pointer;display:inline-flex;gap:7px;align-items:center;box-shadow:0 3px 10px rgba(0,0,0,.24)}
+  .cartbtn[hidden]{display:none}
+  .cartbtn .cnum{background:#123526;color:#fff;border-radius:999px;min-width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-size:.74rem;padding:0 5px}
+
+  /* ticket panel */
+  .tix{border:1px solid var(--line);border-radius:14px;background:var(--card);overflow:hidden;margin:22px 0 8px;box-shadow:0 4px 14px rgba(0,0,0,.05)}
+  .tix-head{background:#f3f6f1;border-bottom:1px solid var(--line);padding:15px 18px 13px}
+  .tix-head h2{margin:0}
+  .tix-head p{font-size:.85rem;color:var(--muted);margin:3px 0 0}
+  .trow{display:flex;align-items:center;gap:16px;padding:15px 18px 15px 36px;border-bottom:1px solid var(--line)}
+  .trow:last-child{border-bottom:none}
+  .trow.on{background:#f6faf7}
+  .trow.tfree .tprice{color:var(--muted)}
+  .trow.tkit{background:#fbf9f4}
+  .tinfo{flex:1;min-width:0}
+  .tinfo b{display:block;color:var(--accent-d);font-size:.99rem;line-height:1.25}
+  .tinfo small{display:block;color:var(--muted);font-size:.84rem;line-height:1.4;margin-top:2px}
+  .tprice{flex:none;font-weight:800;font-size:1.05rem;color:var(--ink);min-width:62px;text-align:right}
+  .tprice small{display:block;font-weight:500;font-size:.72rem;color:var(--muted)}
+  .qctl{display:inline-flex;align-items:center;gap:4px;flex:none}
+  .qbtn{width:32px;height:32px;border:1.5px solid var(--line);background:#fff;border-radius:8px;font-size:1.15rem;line-height:1;font-weight:800;color:var(--accent);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+  .qbtn:hover:not(:disabled){border-color:var(--accent);background:#f2f7f3}
+  .qbtn:disabled{opacity:.3;cursor:default}
+  .qnum{min-width:30px;text-align:center;font-weight:800;font-size:1.02rem;font-variant-numeric:tabular-nums}
+
+  /* order summary bar */
+  .tixbar{position:sticky;bottom:0;z-index:20;transition:transform .22s ease,opacity .18s ease;background:#fff;border:1px solid var(--line);border-top:2px solid var(--accent);border-radius:0 0 14px 14px;padding:13px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px;box-shadow:0 -4px 16px rgba(0,0,0,.08);margin-bottom:22px}
+  .tixsum{font-size:.92rem;line-height:1.25;min-width:0}
+  .tixsum b{color:var(--accent-d);font-size:1.08rem;display:block}
+  .tixsum small{color:var(--muted);font-size:.82rem}
+  .tixgo{flex:none;background:var(--accent);color:#fff;border:none;border-radius:10px;font-weight:800;font-size:.98rem;padding:13px 26px;cursor:pointer;white-space:nowrap}
+  .tixgo:hover:not(:disabled){background:var(--accent-d)}
+  .tixgo:disabled{opacity:.45;cursor:default}
+  @media(max-width:520px){
+    .trow{flex-wrap:wrap;gap:8px 12px;padding:13px 14px 13px 24px}
+    .tinfo{flex:1 0 60%}
+    .tprice{min-width:0;text-align:left;order:3}
+    .qctl{margin-left:auto;order:4}
+    .tixbar{flex-direction:column;align-items:stretch;gap:10px}
+    .tixgo{width:100%}
+  }
+
+  .tixbar.away{transform:translateY(130%);opacity:0;pointer-events:none}
+  .tixnote{color:var(--muted);font-size:.87rem;line-height:1.5;max-width:620px;margin:0 0 22px}
+
+  .toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,20px);background:#123526;color:#fff;font-weight:700;font-size:.9rem;padding:12px 20px;border-radius:999px;box-shadow:0 8px 26px rgba(0,0,0,.3);opacity:0;pointer-events:none;transition:.25s;z-index:200;max-width:90vw;text-align:center}
+  .toast.show{opacity:1;transform:translate(-50%,0)}
+
+  /* listing cards on the /v2/ homepage */
+  .daycard2 .dc2-from{display:inline-block;font-weight:800;color:var(--accent-d);font-size:.92rem;margin:2px 0 6px}
+  .daycard2 .dc2-from span{font-weight:500;color:var(--muted);font-size:.85em}
+
+  /* compact Snipcart side cart — see wfs-register.css for the reasoning */
+  .snipcart-item-line{padding:8px 0 !important}
+  .snipcart-item-line__container{padding:0 !important;gap:8px !important}
+  .snipcart-item-line__media,.snipcart-item-line__image{display:none !important}
+  .snipcart-item-line__title{font-size:.92rem !important;line-height:1.25 !important}
+  .snipcart-item-line__variants,.snipcart-item-line__description{font-size:.76rem !important;line-height:1.3 !important}
+  .snipcart-item-quantity{transform:scale(.86);transform-origin:left center}
+  .tsub{background:#f3f6f1;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:15px 18px 13px}
+
+  /* Section labels sit in a serif so they read as a different voice from the
+     registration names below them, which stay in Inter. Both labels share a size. */
+  .tix-head h2,
+  .tsub{
+    font-family:Lora,Georgia,"Times New Roman",serif;
+    font-size:1.26rem;
+    font-weight:600;
+    font-style:normal;
+    letter-spacing:0;
+    text-transform:none;
+    color:var(--accent-d);
+    line-height:1.3;
+    position:relative;
+    padding-left:13px;
+  }
+  .tix-head h2::before,
+  .tsub::before{
+    content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);
+    height:1.05em;width:3px;border-radius:2px;background:var(--accent);
+  }
+  .tix-head p{padding-left:13px}
+
+  /* Snipcart's slide-in panel must always paint above our sticky order bar.
+     Its own stacking doesn't reliably beat a position:sticky element. */
+  #snipcart,
+  .snipcart-modal,
+  .snipcart-cart,
+  .snipcart__box{ z-index:9000 !important }
+
+  /* prototype notice — this variant is shared for feedback, not for real signups */
+  .protobar{background:#7a2f22;color:#fff;text-align:center;font-size:.83rem;font-weight:600;padding:8px 16px;line-height:1.4}
+  .protobar b{font-weight:800}
+  .protobar .protoreset{margin-left:10px;background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.45);border-radius:6px;font:inherit;font-size:.78rem;font-weight:700;padding:3px 9px;cursor:pointer}
+  .protobar .protoreset:hover:not(:disabled){background:rgba(255,255,255,.28)}
+
+  /* ---- /v3/ own basket ---- */
+  .cartbtn{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:var(--sun);color:#123526;border:none;border-radius:999px;padding:8px 15px;font-weight:800;font-size:.84rem;cursor:pointer;display:inline-flex;gap:7px;align-items:center;box-shadow:0 3px 10px rgba(0,0,0,.24)}
+  .cartbtn[hidden]{display:none}
+  .cartbtn .cnum{background:#123526;color:#fff;border-radius:999px;min-width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-size:.74rem;padding:0 5px}
+
+  .bk-ovl{position:fixed;inset:0;background:rgba(18,53,38,.42);z-index:8000;opacity:0;transition:opacity .2s}
+  .bk-ovl.on{opacity:1}
+  .bk-ovl[hidden]{display:none}
+  .bk{position:fixed;top:0;right:0;bottom:0;width:min(420px,92vw);background:var(--bg);z-index:8100;display:flex;flex-direction:column;box-shadow:-8px 0 30px rgba(0,0,0,.22);transform:translateX(100%);transition:transform .24s ease}
+  .bk.on{transform:none}
+  .bk[hidden]{display:none}
+  .bk-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 18px;background:#123526;color:#fff}
+  .bk-top h2{font-family:Lora,Georgia,serif;font-size:1.18rem;font-weight:600;margin:0}
+  .bk-x{background:none;border:none;color:#fff;font-size:1.7rem;line-height:1;cursor:pointer;padding:0 4px}
+  .bk-body{flex:1;overflow-y:auto;padding:6px 18px}
+
+  .bkline{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}
+  .bkline:last-child{border-bottom:none}
+  .bkline .bkl-x{flex:1;min-width:0}
+  .bkline .bkl-x b{display:block;color:var(--accent-d);font-size:.95rem;line-height:1.25}
+  .bkline .bkl-x small{display:block;color:var(--muted);font-size:.8rem;margin-top:1px}
+  .bkline .bkl-x b a{color:inherit;text-decoration:none}
+  .bkline .bkl-x b a:hover{text-decoration:underline}
+  .bkline .bkl-x .bkl-q{color:var(--accent);font-weight:800}
+  .bkline .bkl-p{flex:none;font-weight:800;font-size:.92rem;min-width:52px;text-align:right}
+  .bkline .bkl-p.free{color:var(--muted);font-weight:600}
+  .bkline .bkl-rm{flex:none;width:28px;height:28px;border:1px solid var(--line);background:#fff;border-radius:7px;color:var(--muted);font-size:1.15rem;line-height:1;cursor:pointer;padding:0;display:flex;align-items:center;justify-content:center}
+  .bkline .bkl-rm:hover{border-color:#b23;color:#b23;background:#fdf4f3}
+  .bk-empty{color:var(--muted);text-align:center;padding:40px 10px;font-size:.93rem;line-height:1.5}
+
+  .bk-foot{border-top:1px solid var(--line);background:var(--card);padding:14px 18px 18px}
+  .bk-tot{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:12px}
+  .bk-tot span{color:var(--muted);font-size:.88rem}
+  .bk-tot b{font-size:1.3rem;color:var(--accent-d)}
+  .bk-form[hidden]{display:none}
+  .bk-formlead{color:var(--muted);font-size:.86rem;line-height:1.45;margin:0 0 9px}
+  .bk-form .tin{display:block;width:100%;border:1.5px solid var(--line);border-radius:9px;padding:11px 13px;font:inherit;font-size:.95rem;background:#fff;margin-bottom:8px}
+  .bk-form .tin:focus{outline:none;border-color:var(--accent)}
+  .bk-msg{min-height:1.1em;font-size:.85rem;color:var(--muted);margin:2px 0 0;line-height:1.4}
+  .bk-msg.bad{color:#b23}
+  .bk-go{width:100%;background:var(--accent);color:#fff;border:none;border-radius:10px;font-weight:800;font-size:1rem;padding:14px;cursor:pointer;margin-top:4px}
+  .bk-go:hover:not(:disabled){background:var(--accent-d)}
+  .bk-go:disabled{opacity:.45;cursor:default}
+  .bk-go.ghost{background:none;color:var(--accent);border:1.5px solid var(--accent)}
+  .bk-note{color:var(--muted);font-size:.8rem;text-align:center;margin:9px 0 0;line-height:1.45}
+
+  .bk-done{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px 26px;gap:6px}
+  .bk-done[hidden]{display:none}
+  .bk-tick{width:52px;height:52px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.7rem;font-weight:800;margin-bottom:6px}
+  .bk-done h3{font-family:Lora,Georgia,serif;font-size:1.35rem;color:var(--accent-d);font-weight:600}
+  .bk-done p{color:var(--muted);font-size:.93rem;line-height:1.5;margin-bottom:14px}
+  .bk-done .bk-go{width:auto;padding:11px 26px}
+
+  /* prototype notice */
+  .protobar{background:#7a2f22;color:#fff;text-align:center;font-size:.83rem;font-weight:600;padding:8px 16px;line-height:1.4}
+  .protobar b{font-weight:800}
+
+  /* capacity */
+  .tixcap{font-size:.86rem;font-weight:700;color:var(--accent);margin:4px 0 0;padding-left:13px}
+  .tixcap.low{color:#a8551f}
+  .tixcap.full{color:#b23}
+  .tixcap:empty{display:none}
+  .trow.soldout{opacity:.5}
+  .trow.soldout .tprice{text-decoration:line-through}
+  .dc2-spots{margin-left:0}
+  .dc2-spots:empty{display:none}
+  .dc2-spots.low{color:#a8551f}
+  .dc2-spots.full{color:#b23}
+  .protobar .protoreset{margin-left:10px;background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.45);border-radius:6px;font:inherit;font-size:.78rem;font-weight:700;padding:3px 9px;cursor:pointer}
+  .protobar .protoreset:hover:not(:disabled){background:rgba(255,255,255,.28)}
+  .protobar .protoreset:disabled{opacity:.6;cursor:default}
+
 </style>
 </head>
 <body>
   <div class="stickytop">
     <div class="top">
       <a class="brand" href="/" style="text-decoration:none">Waterbear Field School<small>Hands-on learning &amp; building, near Lincoln, MA</small></a>
+      <button class="cartbtn" id="cartBtn" hidden>Cart <span class="cnum" id="cartNum">0</span></button>
     </div>
   </div>
 
-  <div class="backbar"><a href="/#day-2026-08-21">← All Field Days</a></div>
+  <div class="backbar"><a href="/">&larr; All Field Days</a></div>
 
   <div class="wdetail">
     <div class="whero">
@@ -303,12 +464,6 @@
       <p>Part jam session, part workshop: we build simple instruments from everyday materials, then play them together.</p><p>No musical background needed — the point is to make sound, make something, and have fun doing it as a group.</p>
     </div>
 
-    
-    
-    <p class="dc-mat" style="margin:16px 0">Free to learn!  If you&#39;d like to take home an instrument, please register in advance, and expect to pay $15 on-site.</p>
-    
-    
-
     <dl class="dc-facts">
       <div><dt>When</dt><dd>Fri · Aug 21 · 10 AM–1 PM</dd></div>
       <div><dt>Where</dt><dd>Lincoln Park, Somerville<br><span class="muted">Exact address sent when you register.</span></dd></div>
@@ -316,17 +471,873 @@
       <div><dt>Bring</dt><dd>An instrument if you have one — otherwise we&#39;ll make some.</dd></div>
     </dl>
 
-    <div class="dc2-actions" style="margin:8px 0 22px">
-      <a class="btn-reg" href="/register/?day=2026-08-21">Register for this day →</a>
+    <div class="tix" id="tix" data-date="2026-08-21" data-title="Music &amp; Instrument Making" data-label="Fri · Aug 21 — Music &amp; Instrument Making">
+      <div class="tix-head">
+        <h2>Choose a Registration Type:</h2>
+        <p class="tixcap" id="tixCap"></p>
+      </div>
+      <div class="trow"
+           data-def="def-tix-2026-08-21-standard"
+           data-pid="tix-2026-08-21-standard"
+           data-unit="20"
+           data-kind="reg"
+           data-line="Instrument Making · Aug 21"
+           data-sub="Standard">
+        <span class="tinfo"><b>Standard</b><small>Covers materials and keeps the day running.</small></span>
+        <span class="tprice">$20</span>
+        <span class="qctl">
+          <button type="button" class="qbtn" data-step="-1" aria-label="one fewer">&minus;</button>
+          <output class="qnum">0</output>
+          <button type="button" class="qbtn" data-step="1" aria-label="one more">+</button>
+        </span>
+      </div>
+      <div class="trow"
+           data-def="def-tix-2026-08-21-supporter"
+           data-pid="tix-2026-08-21-supporter"
+           data-unit="40"
+           data-kind="reg"
+           data-line="Instrument Making · Aug 21"
+           data-sub="Supporter">
+        <span class="tinfo"><b>Supporter</b><small>Covers your spot and quietly pays for someone else&#39;s.</small></span>
+        <span class="tprice">$40</span>
+        <span class="qctl">
+          <button type="button" class="qbtn" data-step="-1" aria-label="one fewer">&minus;</button>
+          <output class="qnum">0</output>
+          <button type="button" class="qbtn" data-step="1" aria-label="one more">+</button>
+        </span>
+      </div>
+      <div class="trow tfree"
+           data-def="def-tix-2026-08-21-free"
+           data-pid="tix-2026-08-21-free"
+           data-unit="0"
+           data-kind="reg"
+           data-line="Instrument Making · Aug 21"
+           data-sub="Pay what you can">
+        <span class="tinfo"><b>Pay what you can</b><small>No questions asked. Please take this one if the cost would keep you away.</small></span>
+        <span class="tprice">Free</span>
+        <span class="qctl">
+          <button type="button" class="qbtn" data-step="-1" aria-label="one fewer">&minus;</button>
+          <output class="qnum">0</output>
+          <button type="button" class="qbtn" data-step="1" aria-label="one more">+</button>
+        </span>
+      </div>
+      <div class="tsub">Take-home kit (optional):</div>
+      <div class="trow tkit"
+           data-def="def-kit-2026-08-21"
+           data-pid="kit-2026-08-21"
+           data-unit="15"
+           data-kind="kit"
+           data-line="Instrument Making · Aug 21"
+           data-sub="Take-home kit — Instrument">
+        <span class="tinfo"><b>Instrument</b><small>Pre-paid so we can prepare yours. Add one per thing you&rsquo;d like to take home.</small></span>
+        <span class="tprice">$15<small>each</small></span>
+        <span class="qctl">
+          <button type="button" class="qbtn" data-step="-1" aria-label="one fewer">&minus;</button>
+          <output class="qnum">0</output>
+          <button type="button" class="qbtn" data-step="1" aria-label="one more">+</button>
+        </span>
+      </div>
     </div>
+
+    <div class="tixbar">
+      <span class="tixsum" id="tixSum"><b>Nothing selected</b><small>Choose a registration above</small></span>
+      <button class="tixgo" id="tixGo" type="button" disabled>Add to my registrations</button>
+    </div>
+
+    <p class="tixnote">Add as many days as you like, then finish up in one go. <b>If nothing you picked costs money, there&rsquo;s no checkout and no card</b> &mdash; just your name and email.</p>
 
     <div class="more-days">
       <p style="color:var(--muted);margin:28px 0 10px;font-size:.92rem">Other Music days:</p>
       <div class="daynav"></div>
     </div>
 
-    <p style="margin:26px 0 0;color:var(--muted)"><b>Registration is always free.</b> If you'd like to take home a finished kit, we ask you to cover the materials and register in advance so we can have it ready for you.</p>
-    <p style="margin:10px 0 0;color:var(--muted)">Want to teach or host a session? <a href="mailto:info@waterbearfieldschool.org?subject=Field%20Days" style="color:#7b6bb5;font-weight:700;text-decoration:underline">Email us</a>.</p>
+    <p style="margin:26px 0 0;color:var(--muted)">Want to teach or host a session? <a href="mailto:info@waterbearfieldschool.org?subject=Field%20Days" style="color:#7b6bb5;font-weight:700;text-decoration:underline">Email us</a>.</p>
   </div>
+
+  <div class="toast" id="toast"></div>
+
+  
+<div hidden aria-hidden="true">
+  <button class="snipcart-add-item" id="def-tix-2026-08-19-standard"
+    data-item-id="tix-2026-08-19-standard"
+    data-item-name="Solar Bench · Aug 19 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers materials and keeps the day running."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-08-19-supporter"
+    data-item-id="tix-2026-08-19-supporter"
+    data-item-name="Solar Bench · Aug 19 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your spot and quietly pays for someone else&#39;s."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-kit-2026-08-19"
+    data-item-id="kit-2026-08-19"
+    data-item-name="Solar Bench · Aug 19 · Take-home kit"
+    data-item-price="25.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Materials for solar panel + motor kit, reserved for you on Wed · Aug 19."
+    data-item-shippable="false"
+    data-item-quantity="1">kit</button>
+  <button class="snipcart-add-item" id="def-tix-2026-08-20-standard"
+    data-item-id="tix-2026-08-20-standard"
+    data-item-name="Toolbox · Aug 20 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers materials and keeps the day running."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-08-20-supporter"
+    data-item-id="tix-2026-08-20-supporter"
+    data-item-name="Toolbox · Aug 20 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your spot and quietly pays for someone else&#39;s."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-kit-2026-08-20"
+    data-item-id="kit-2026-08-20"
+    data-item-name="Toolbox · Aug 20 · Take-home kit"
+    data-item-price="35.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Materials for a toolbox, reserved for you on Thu · Aug 20."
+    data-item-shippable="false"
+    data-item-quantity="1">kit</button>
+  <button class="snipcart-add-item" id="def-tix-2026-08-21-standard"
+    data-item-id="tix-2026-08-21-standard"
+    data-item-name="Instrument Making · Aug 21 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers materials and keeps the day running."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-08-21-supporter"
+    data-item-id="tix-2026-08-21-supporter"
+    data-item-name="Instrument Making · Aug 21 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your spot and quietly pays for someone else&#39;s."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-kit-2026-08-21"
+    data-item-id="kit-2026-08-21"
+    data-item-name="Instrument Making · Aug 21 · Take-home kit"
+    data-item-price="15.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Materials for an instrument, reserved for you on Fri · Aug 21."
+    data-item-shippable="false"
+    data-item-quantity="1">kit</button>
+  <button class="snipcart-add-item" id="def-tix-2026-08-25-standard"
+    data-item-id="tix-2026-08-25-standard"
+    data-item-name="Workbench · Aug 25 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers materials and keeps the day running."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-08-25-supporter"
+    data-item-id="tix-2026-08-25-supporter"
+    data-item-name="Workbench · Aug 25 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your spot and quietly pays for someone else&#39;s."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-kit-2026-08-25"
+    data-item-id="kit-2026-08-25"
+    data-item-name="Workbench · Aug 25 · Take-home kit"
+    data-item-price="35.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Materials for a workbench, reserved for you on Tue · Aug 25."
+    data-item-shippable="false"
+    data-item-quantity="1">kit</button>
+  <button class="snipcart-add-item" id="def-tix-2026-08-26-standard"
+    data-item-id="tix-2026-08-26-standard"
+    data-item-name="Solar Bench · Aug 26 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers materials and keeps the day running."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-08-26-supporter"
+    data-item-id="tix-2026-08-26-supporter"
+    data-item-name="Solar Bench · Aug 26 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your spot and quietly pays for someone else&#39;s."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-kit-2026-08-26"
+    data-item-id="kit-2026-08-26"
+    data-item-name="Solar Bench · Aug 26 · Take-home kit"
+    data-item-price="25.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Materials for solar panel + motor kit, reserved for you on Wed · Aug 26."
+    data-item-shippable="false"
+    data-item-quantity="1">kit</button>
+  <button class="snipcart-add-item" id="def-tix-2026-08-27-standard"
+    data-item-id="tix-2026-08-27-standard"
+    data-item-name="Plant ID · Aug 27 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers materials and keeps the day running."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-08-27-supporter"
+    data-item-id="tix-2026-08-27-supporter"
+    data-item-name="Plant ID · Aug 27 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your spot and quietly pays for someone else&#39;s."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-08-28-standard"
+    data-item-id="tix-2026-08-28-standard"
+    data-item-name="Zines · Aug 28 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers materials and keeps the day running."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-08-28-supporter"
+    data-item-id="tix-2026-08-28-supporter"
+    data-item-name="Zines · Aug 28 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your spot and quietly pays for someone else&#39;s."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+</div>
+
+
+<div id="snipcart" data-api-key="MTA2ODIzNWItMjAyZi00ZThmLThiMDktNTNiOGVmMjJhNzU5NjM5MDczMTU2MTI1ODk3MDU1" data-config-modal-style="side" data-config-add-product-behavior="none" hidden></div>
+<script async src="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.js"></script>
+
+  
+<div class="bk-ovl" id="bkOvl" hidden></div>
+<aside class="bk" id="bk" hidden aria-label="Your registrations">
+  <header class="bk-top">
+    <h2>Your registrations</h2>
+    <button type="button" class="bk-x" id="bkClose" aria-label="Close">&times;</button>
+  </header>
+
+  <div class="bk-body" id="bkBody"><!-- lines, by JS --></div>
+
+  <div class="bk-foot" id="bkFoot">
+    <div class="bk-tot" id="bkTot"></div>
+
+    <form class="bk-form" id="bkForm" hidden>
+      <p class="bk-formlead" id="bkFormLead">Nothing to pay &mdash; just tell us who&rsquo;s coming.</p>
+      <input type="text"  id="bkName"  class="tin" placeholder="Your name" autocomplete="name">
+      <input type="email" id="bkEmail" class="tin" placeholder="you@example.com" autocomplete="email">
+      <p class="bk-msg" id="bkMsg"></p>
+    </form>
+
+    <button type="button" class="bk-go" id="bkGo">Check out</button>
+    <p class="bk-note" id="bkNote"></p>
+  </div>
+
+  <div class="bk-done" id="bkDone" hidden>
+    <div class="bk-tick">&check;</div>
+    <h3 id="bkDoneH">You&rsquo;re registered</h3>
+    <p id="bkDoneP"></p>
+    <button type="button" class="bk-go ghost" id="bkDoneClose">Close</button>
+  </div>
+</aside>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>/* /v3/ — the basket is ours, Snipcart is only a payment step.
+ *
+ * Every line the visitor picks lives in localStorage. At checkout we look at the
+ * total: a basket with no money in it is written straight to Supabase behind a
+ * two-field form, and Snipcart is never loaded into the flow. A basket with any
+ * money in it is mirrored into Snipcart, and the Supabase rows are written from
+ * our basket when the order completes — so free lines riding along in a paid
+ * basket are recorded too.
+ */
+(function(){
+  var sb = window.supabase
+    ? supabase.createClient('https://jhgcnqmzbphzpxgtojti.supabase.co',
+                            'sb_publishable_VjYvl7U-fWJO0st6R6W7gg_ep7SNTn6')
+    : null;
+
+  var SESSIONS={ "2026-08-19":"Wed · Aug 19 — Solar Power & Electronics Bench","2026-08-20":"Thu · Aug 20 — Build a Toolbox","2026-08-21":"Fri · Aug 21 — Music & Instrument Making","2026-08-25":"Tue · Aug 25 — Build a Workbench","2026-08-26":"Wed · Aug 26 — Solar Power & Electronics Bench","2026-08-27":"Thu · Aug 27 — Plant ID & Mapping","2026-08-28":"Fri · Aug 28 — Zines & Printmaking" };
+  var KEY='wfs.basket.v1', WHO='wfs.who.v1';
+
+  /* ---------------- past days ----------------
+   * A static build bakes in the date it was built, so it cannot be trusted to
+   * know what "today" is. Decide in the browser instead, against the visitor's
+   * actual clock — and register() refuses past dates as well, because a clock
+   * in a browser is not a control.
+   */
+  window.wfsIsPast=function(date){
+    if(!date) return false;
+    var now=new Date();
+    var today=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+
+              '-'+String(now.getDate()).padStart(2,'0');
+    return date < today;
+  };
+
+  /* ---------------- capacity ----------------
+   * session_counts is a public view — capacity, how many are taken, how many
+   * remain. Read for display only; the real enforcement is inside register(),
+   * which counts and inserts atomically under a row lock. A number on a page
+   * can always be stale, so the UI treats this as a hint, not a gate.
+   */
+  var COUNTS={};
+  window.wfsCounts=function(){ return COUNTS; };
+  window.wfsRemaining=function(date){
+    var c=COUNTS[date];
+    return c ? c.remaining : null;      // null = unknown, don't block on it
+  };
+  window.wfsRefreshCounts=async function(){
+    if(!sb) return COUNTS;
+    try{
+      var r=await sb.from('session_counts').select('date,capacity,taken,remaining,min_to_run');
+      if(r.error){ console.error('[wfs] counts', r.error); return COUNTS; }
+      COUNTS={};
+      (r.data||[]).forEach(function(row){ COUNTS[row.date]=row; });
+      document.dispatchEvent(new CustomEvent('wfs.counts', {detail:COUNTS}));
+    }catch(e){ console.error('[wfs] counts threw', e); }
+    return COUNTS;
+  };
+
+  /* ---------------- store ---------------- */
+
+  function read(){
+    try{ var b=JSON.parse(localStorage.getItem(KEY)||'{}'); return (b && typeof b==='object') ? b : {}; }
+    catch(e){ return {}; }
+  }
+  function write(b){
+    try{ localStorage.setItem(KEY, JSON.stringify(b)); }catch(e){}
+    announce();
+  }
+  function announce(){
+    var b=read();
+    document.dispatchEvent(new CustomEvent('wfs.basket', {detail:{
+      lines: lines(b), count: count(b), total: total(b), qty: b
+    }}));
+  }
+
+  // basket is {lineId: {qty, kind, date, label, price, name}}
+  function lines(b){
+    b=b||read();
+    return Object.keys(b).map(function(k){ var l=b[k]; l.id=k; return l; })
+      .sort(function(x,y){ return (x.date+x.kind).localeCompare(y.date+y.kind); });
+  }
+  function count(b){ return lines(b).reduce(function(n,l){ return n+l.qty; },0); }
+  function total(b){ return lines(b).reduce(function(n,l){ return n+l.qty*l.price; },0); }
+
+  window.wfsBasket={
+    read:read, lines:lines, count:count, total:total,
+    qtyOf:function(id){ var l=read()[id]; return l?l.qty:0; },
+    set:function(id, qty, meta){
+      var b=read();
+      if(qty<=0) delete b[id];
+      else b[id]=Object.assign({}, meta||b[id]||{}, {qty:qty});
+      write(b);
+    },
+    clear:function(){ try{ localStorage.removeItem(KEY); }catch(e){} announce(); },
+    announce:announce
+  };
+
+  window.wfsWho=function(){
+    try{ return JSON.parse(localStorage.getItem(WHO)||'{}'); }catch(e){ return {}; }
+  };
+  function rememberWho(n,e){
+    try{ localStorage.setItem(WHO, JSON.stringify({name:n,email:e})); }catch(e){}
+  }
+
+  /* ---------------- writing the roster ---------------- */
+
+  // Registration goes through the register() function rather than a direct
+  // insert: it re-checks capacity and writes in one locked transaction, so two
+  // people can't both take the last spot. One call per day in the basket.
+  // "tix-2026-08-19-standard" -> "standard"
+  function tierOf(id){
+    var m=/^tix-\d{4}-\d{2}-\d{2}-(.+)$/.exec(id||'');
+    return m ? m[1] : null;
+  }
+
+  window.wfsCommit=async function(name, email, orderToken){
+    if(!sb) return {ok:false, error:'Supabase did not load.'};
+
+    // how many kits per day, not merely whether any
+    var kitCounts={};
+    lines().forEach(function(l){
+      if(l.kind==='kit' && l.qty>0) kitCounts[l.date]=(kitCounts[l.date]||0)+l.qty;
+    });
+
+    // per day: headcount, what the registrations cost, and which tier was picked
+    var byDate={}, amount={}, tier={};
+    lines().filter(function(l){ return l.kind==='reg'; })
+           .forEach(function(l){
+             byDate[l.date]=(byDate[l.date]||0)+l.qty;
+             amount[l.date]=(amount[l.date]||0)+l.qty*(l.price||0);
+             // if several tiers are mixed for one day, record the paid one
+             var tr=tierOf(l.id);
+             if(tr && (!tier[l.date] || l.price>0)) tier[l.date]=tr;
+           });
+    var kitAmount={};
+    lines().forEach(function(l){
+      if(l.kind==='kit' && l.qty>0)
+        kitAmount[l.date]=(kitAmount[l.date]||0)+l.qty*(l.price||0);
+    });
+
+    var dates=Object.keys(byDate).sort();
+    if(!dates.length) return {ok:true, placed:[], full:[], failed:[]};
+
+    var placed=[], full=[], failed=[];
+    for(var i=0;i<dates.length;i++){
+      var d=dates[i];
+      var res;
+      try{
+        res=await sb.rpc('register', {
+          p_date:d, p_name:name, p_email:email,
+          p_party:byDate[d],
+          p_kit:!!kitCounts[d],
+          p_kits:kitCounts[d]||0,
+          // mirrored so Supabase alone can answer "what is this person owed?"
+          p_meta:{
+            tier:        tier[d] || 'free',
+            amount:      amount[d] || 0,
+            kit_amount:  kitAmount[d] || 0,
+            order_token: orderToken || null
+          }
+        });
+      }catch(e){ failed.push({date:d, msg:String(e)}); continue; }
+
+      if(res.error){ failed.push({date:d, msg:res.error.message}); continue; }
+      var out=res.data||{};
+      if(out.ok) placed.push({date:d, party:byDate[d]});
+      else if(out.reason==='full') full.push({date:d, remaining:out.remaining});
+      else failed.push({date:d, msg:out.reason||'unknown'});
+    }
+
+    if(placed.length) rememberWho(name, email);
+    await window.wfsRefreshCounts();
+
+    return {
+      ok: placed.length>0 && !full.length && !failed.length,
+      placed: placed, full: full, failed: failed,
+      // lines to drop from the basket: the days that actually landed
+      placedDates: placed.map(function(p){ return p.date; })
+    };
+  };
+
+  /* ---------------- Snipcart, for paid baskets only ---------------- */
+
+  function snipItems(){
+    try{ return Snipcart.store.getState().cart.items.items || []; }catch(e){ return []; }
+  }
+  function defItem(defId){
+    var el=document.getElementById(defId);
+    if(!el) { console.error('[wfs] no product definition', defId); return null; }
+    var d=el.dataset;
+    // Everything on the button matters here, not just the obvious fields: we add
+    // through the JS API rather than clicking the button, so anything left out
+    // of this object simply isn't part of the item. data-item-shippable was
+    // being ignored for exactly that reason, and Snipcart kept asking for a
+    // shipping method.
+    return { id:d.itemId, name:d.itemName, price:parseFloat(d.itemPrice),
+             url:d.itemUrl, description:d.itemDescription||'',
+             shippable: d.itemShippable !== 'false',
+             quantity:1 };
+  }
+  async function setSnipQty(defId, qty){
+    var item=defItem(defId); if(!item) return false;
+    var hit=snipItems().filter(function(i){ return i.id===item.id; })[0];
+    try{
+      if(qty<=0){ if(hit) await Snipcart.api.cart.items.remove(hit.uniqueId); }
+      else if(hit){ await Snipcart.api.cart.items.update({uniqueId:hit.uniqueId, quantity:qty}); }
+      else { item.quantity=qty; await Snipcart.api.cart.items.add(item); }
+      return true;
+    }catch(e){ console.error('[wfs] snipcart write failed', defId, qty, e); return false; }
+  }
+
+  // Push the paid half of the basket into Snipcart and open its checkout.
+  window.wfsPay=async function(){
+    if(!window.Snipcart || !Snipcart.api){ return {ok:false, error:'Payment is still loading — try again in a moment.'}; }
+    var paid=lines().filter(function(l){ return l.price>0; });
+    // clear anything stale first, then mirror exactly what's in our basket
+    var wanted={}; paid.forEach(function(l){ wanted[l.id]=l.qty; });
+    var existing=snipItems();
+    for(var i=0;i<existing.length;i++){
+      if(!wanted[existing[i].id]){
+        try{ await Snipcart.api.cart.items.remove(existing[i].uniqueId); }catch(e){}
+      }
+    }
+    for(var j=0;j<paid.length;j++){
+      if(!(await setSnipQty('def-'+paid[j].id, paid[j].qty))){
+        return {ok:false, error:'Could not hand that to the payment step.'};
+      }
+    }
+    try{ Snipcart.api.theme.cart.open(); }catch(e){}
+    return {ok:true};
+  };
+
+  document.addEventListener('snipcart.ready', function(){
+    if(!window.Snipcart) return;
+
+    // Snipcart v3 fires cart.confirmed; order.completed is the v2 name and never
+    // fires here — which is why a completed order wrote nothing. Listen for both,
+    // and make the handler idempotent so a double-fire can't double-register.
+    function orderSeen(token){
+      if(!token) return false;
+      try{
+        var done=JSON.parse(localStorage.getItem('wfs.orders.done')||'[]');
+        if(done.indexOf(token)>=0) return true;
+        done.push(token);
+        localStorage.setItem('wfs.orders.done', JSON.stringify(done.slice(-50)));
+      }catch(e){}
+      return false;
+    }
+
+    // A paid order also carries whatever free lines were in the basket.
+    async function onOrder(order){
+      try{
+        var email=(order && (order.email || (order.user && order.user.email))) || '';
+        var name='';
+        try{ name=(order.billingAddress && order.billingAddress.fullName) || order.cardHolderName || ''; }catch(e){}
+        if(!email) return;
+        var token=(order && (order.token || order.invoiceNumber)) || null;
+        if(orderSeen(token)) return;
+        var res=await window.wfsCommit(name, email, token);
+        if(res.placed && res.placed.length) window.wfsBasket.clear();
+        if(res.full && res.full.length){
+          console.warn('[wfs] paid order completed but these days were full:', res.full);
+        }
+      }catch(e){ console.error('[wfs] post-order commit threw', e); }
+    }
+    // I have now guessed the event name twice. Bind every plausible candidate —
+    // the idempotency guard makes duplicates harmless — and log whatever fires,
+    // so the next diagnosis comes from evidence rather than from me reasoning
+    // about what the API probably does.
+    ['cart.confirmed','order.completed','order.placed','payment.succeeded',
+     'cart.checkout.completed','order.status.changed'].forEach(function(ev){
+      try{
+        Snipcart.events.on(ev, function(payload){
+          console.log('[wfs] snipcart event fired:', ev, payload);
+          try{ localStorage.setItem('wfs.lastEvent', ev + ' @ ' + new Date().toISOString()); }catch(e){}
+          return onOrder(payload);
+        });
+      }catch(e){ console.warn('[wfs] could not bind', ev, e); }
+    });
+
+    // Belt to the events: watch the store directly. Whatever Snipcart calls the
+    // moment of confirmation, the cart ends up carrying an order token — when we
+    // see one we haven't recorded, register from it.
+    try{
+      Snipcart.store.subscribe(function(){
+        var s; try{ s=Snipcart.store.getState(); }catch(e){ return; }
+        var c=s && s.cart;
+        var tok=c && (c.token || c.invoiceNumber);
+        var done=c && (c.status==='Processed' || c.confirmed || s.order);
+        if(tok && done) onOrder(c);
+      });
+    }catch(e){ console.warn('[wfs] could not subscribe to the store', e); }
+
+    // And say plainly in the console what this page is watching for.
+    console.log('[wfs] order handler armed. After a checkout, run:  ' +
+                'localStorage.getItem("wfs.lastEvent")');
+  });
+
+  announce();
+  if(sb) window.wfsRefreshCounts();
+})();
+</script>
+  <script>/* The basket drawer: review, edit, and finish. Present on every /v3/ page. */
+(function(){
+  var ovl=document.getElementById('bkOvl'), bk=document.getElementById('bk');
+  if(!bk) return;
+  var body=document.getElementById('bkBody'), foot=document.getElementById('bkFoot');
+  var totEl=document.getElementById('bkTot'), goBtn=document.getElementById('bkGo');
+  var form=document.getElementById('bkForm'), formLead=document.getElementById('bkFormLead');
+  var nameEl=document.getElementById('bkName'), emailEl=document.getElementById('bkEmail');
+  var msg=document.getElementById('bkMsg'), note=document.getElementById('bkNote');
+  var done=document.getElementById('bkDone'), doneH=document.getElementById('bkDoneH'), doneP=document.getElementById('bkDoneP');
+  var cartBtn=document.getElementById('cartBtn'), cartNum=document.getElementById('cartNum');
+
+  function open(){
+    done.hidden=true; foot.hidden=false; body.hidden=false;
+    bk.hidden=false; ovl.hidden=false;
+    requestAnimationFrame(function(){ bk.classList.add('on'); ovl.classList.add('on'); });
+    render();
+  }
+  function close(){
+    bk.classList.remove('on'); ovl.classList.remove('on');
+    setTimeout(function(){ bk.hidden=true; ovl.hidden=true; }, 240);
+  }
+  window.wfsOpenBasket=open;
+  document.getElementById('bkClose').onclick=close;
+  document.getElementById('bkDoneClose').onclick=close;
+  ovl.onclick=close;
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && !bk.hidden) close(); });
+  if(cartBtn) cartBtn.onclick=open;
+
+  function money(n){ return '$'+n; }
+
+  function render(){
+    var B=window.wfsBasket, ls=B.lines(), tot=B.total();
+
+    if(cartBtn){ cartBtn.hidden = !(B.count()>0); }
+    if(cartNum){ cartNum.textContent = B.count(); }
+
+    if(!ls.length){
+      body.innerHTML='<p class="bk-empty">Nothing here yet.<br>Open a Field Day to register.</p>';
+      totEl.innerHTML=''; form.hidden=true; goBtn.disabled=true;
+      goBtn.textContent='Check out'; note.textContent='';
+      return;
+    }
+
+    // The drawer reviews and removes; quantities are only ever set on the day
+    // page, so there is no way to add from here.
+    body.innerHTML = ls.map(function(l){
+      var title = l.href
+        ? '<a href="'+esc(l.href)+'">'+esc(l.name)+'</a>'
+        : esc(l.name);
+      // quantity leads the title — on the sub-line it wrapped in the narrow drawer
+      var q = l.qty>1 ? '<span class="bkl-q">'+l.qty+' &times;</span> ' : '';
+      return '<div class="bkline" data-id="'+l.id+'">'+
+        '<span class="bkl-x"><b>'+q+title+'</b><small>'+esc(l.sub||'')+'</small></span>'+
+        '<span class="bkl-p'+(l.price?'':' free')+'">'+
+          (l.price ? money(l.price*l.qty) : 'Free')+'</span>'+
+        '<button type="button" class="bkl-rm" data-id="'+l.id+'" '+
+          'aria-label="Remove '+esc(l.name)+'" title="Remove">&times;</button>'+
+        '</div>';
+    }).join('');
+
+    var free = tot===0;
+    totEl.innerHTML = free
+      ? '<span>Nothing to pay</span><b>Free</b>'
+      : '<span>Total</span><b>'+money(tot)+'</b>';
+
+    form.hidden = !free;
+    formLead.textContent = 'Nothing to pay — just tell us who’s coming.';
+    goBtn.disabled=false;
+    goBtn.textContent = free ? 'Register — free' : 'Continue to payment';
+    note.textContent = free
+      ? 'No card, no checkout. We’ll email you the address. To change numbers, open the day.'
+      : 'You’ll be asked for card details on the next step. To change numbers, open the day.';
+
+    if(free){
+      var who=window.wfsWho();
+      if(who.name && !nameEl.value)  nameEl.value=who.name;
+      if(who.email && !emailEl.value) emailEl.value=who.email;
+    }
+  }
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+  body.addEventListener('click', function(e){
+    var rm=e.target.closest('.bkl-rm'); if(!rm) return;
+    window.wfsBasket.set(rm.dataset.id, 0);
+  });
+
+  function say(t, bad){ msg.textContent=t||''; msg.className='bk-msg'+(bad?' bad':''); }
+
+  goBtn.onclick=async function(){
+    var B=window.wfsBasket;
+    if(!B.lines().length) return;
+
+    if(B.total()>0){
+      goBtn.disabled=true; goBtn.textContent='One moment…';
+      // Hand off to Snipcart's own cart — close ours first, or the two panels
+      // stack and Snipcart's opens underneath, obscured.
+      close();
+      var r=await window.wfsPay();
+      goBtn.disabled=false; goBtn.textContent='Continue to payment';
+      if(!r.ok){
+        // failed before payment could start — bring our panel back to say so
+        open();
+        say(r.error, true);
+      }
+      return;
+    }
+
+    // free basket: two fields, straight into Supabase, no Snipcart at all
+    var name=nameEl.value.trim(), email=emailEl.value.trim();
+    if(!name){ say('Please add a name so we know who to expect.', true); nameEl.focus(); return; }
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){
+      say('That email doesn’t look right — we need it to send you the address.', true);
+      emailEl.focus(); return;
+    }
+    goBtn.disabled=true; goBtn.textContent='Registering…'; say('');
+    var res=await window.wfsCommit(name, email);
+    goBtn.disabled=false; goBtn.textContent='Register — free';
+
+    if(res.error){ say('Sorry — '+res.error, true); return; }
+
+    // A day can fill between loading the page and pressing the button, so this
+    // has to cope with some days landing and others not.
+    if(res.failed && res.failed.length && !res.placed.length){
+      var why=res.failed[0].msg;
+      var human={
+        duplicate:    'Looks like that just went through — check your email before trying again.',
+        rate_limited: 'That is a lot of registrations from one address. Email us and we will sort it out.',
+        too_busy:     'Things are unusually busy — give it a minute and try again.',
+        bad_details:  'Please check the name and email.',
+        bad_party:    'That number of people does not look right.',
+        past:         'That Field Day has already happened.'
+      }[why];
+      say(human || ('Sorry — ' + why), true);
+      return;
+    }
+    if(!res.placed.length && res.full.length){
+      say(res.full.length===1
+        ? 'That day filled up just now — nothing was taken.'
+        : 'Those days filled up just now — nothing was taken.', true);
+      render(); return;
+    }
+
+    // drop only what actually landed; anything full stays in the basket
+    res.placedDates.forEach(function(d){
+      B.lines().forEach(function(l){ if(l.date===d) B.set(l.id, 0); });
+    });
+
+    var people=res.placed.reduce(function(n,p){ return n+p.party; },0);
+    doneH.textContent = people>1 ? 'You’re registered — '+people+' people' : 'You’re registered';
+    var msg='Confirmation going to '+email+'. We’ll send the exact address before the day.';
+    if(res.full.length){
+      msg += ' ' + (res.full.length===1 ? 'One day' : res.full.length+' days') +
+             ' filled up before we got there and stayed in your basket.';
+    }
+    doneP.textContent=msg;
+    body.hidden=true; foot.hidden=true; done.hidden=false;
+  };
+
+  document.addEventListener('wfs.basket', function(){ if(!bk.hidden) render(); else render(); });
+  render();
+})();
+</script>
+  <script>
+  // A day that has already happened must not be registerable.
+  (function(){
+    if(!window.wfsIsPast || !window.wfsIsPast('2026-08-21')) return;
+    var tix=document.getElementById('tix'), bar=document.querySelector('.tixbar');
+    if(tix){
+      tix.innerHTML='<div class="tix-head"><h2>This Field Day has passed</h2></div>'+
+        '<div class="trow"><span class="tinfo"><b>Registration is closed</b>'+
+        '<small>Have a look at what is coming up instead.</small></span>'+
+        '<a class="btn-reg" href="/" style="flex:none">Upcoming days &rarr;</a></div>';
+    }
+    if(bar) bar.remove();
+  })();
+  </script>
+  <script>/* The per-day panel on /v3/: same shape as /v2/, but it fills our basket
+   rather than Snipcart's cart. */
+(function(){
+  var panel=document.getElementById('tix');
+  if(!panel) return;
+  var rows=[].slice.call(panel.querySelectorAll('.trow'));
+  var sumEl=document.getElementById('tixSum'), goBtn=document.getElementById('tixGo');
+  var TITLE=panel.dataset.title, DATE=panel.dataset.date;
+
+  function qtyOf(r){ return parseInt(r.querySelector('.qnum').textContent,10)||0; }
+  function setQty(r,n){
+    n=Math.max(0,Math.min(30,n));
+    r.querySelector('.qnum').textContent=n;
+    r.classList.toggle('on', n>0);
+    r.querySelector('.qbtn[data-step="-1"]').disabled=(n===0);
+  }
+
+  function summarise(){
+    var regs=0, kits=0, money=0;
+    rows.forEach(function(r){
+      var n=qtyOf(r), unit=parseInt(r.dataset.unit,10)||0;
+      money+=n*unit;
+      if(r.dataset.kind==='kit') kits+=n; else regs+=n;
+    });
+    var bits=[];
+    if(regs) bits.push(regs+(regs===1?' registration':' registrations'));
+    if(kits) bits.push(kits+(kits===1?' kit':' kits'));
+    sumEl.innerHTML = (regs||kits)
+      ? '<b>'+bits.join(' · ')+' · '+(money>0?'$'+money:'Free')+'</b><small>Added to your registrations</small>'
+      : '<b>Nothing selected</b><small>Choose a registration above</small>';
+    goBtn.disabled = !regs && !kits;
+    return {regs:regs, kits:kits, money:money};
+  }
+
+  /* ---- capacity ----
+   * The number here is a hint from session_counts; register() re-checks it
+   * atomically at the moment of writing, so a stale page can't overbook.
+   */
+  var capEl=document.getElementById('tixCap');
+  function regRows(){ return rows.filter(function(r){ return r.dataset.kind!=='kit'; }); }
+  function regTotal(){ return regRows().reduce(function(n,r){ return n+qtyOf(r); },0); }
+
+  function showCapacity(){
+    var left=window.wfsRemaining(DATE);
+    if(!capEl) return left;
+    if(left===null){ capEl.textContent=''; capEl.className='tixcap'; return null; }
+    if(left<=0){
+      capEl.textContent='This day is full.';
+      capEl.className='tixcap full';
+    } else if(left<=3){
+      capEl.textContent='Only '+left+(left===1?' spot':' spots')+' left.';
+      capEl.className='tixcap low';
+    } else {
+      capEl.textContent=left+' spots left.';
+      capEl.className='tixcap';
+    }
+    rows.forEach(function(r){
+      if(r.dataset.kind==='kit') return;
+      r.classList.toggle('soldout', left<=0);
+      r.querySelector('.qbtn[data-step="1"]').disabled = (left<=0);
+    });
+    return left;
+  }
+  document.addEventListener('wfs.counts', function(){ showCapacity(); summarise(); });
+
+  panel.addEventListener('click', function(e){
+    var b=e.target.closest('.qbtn'); if(!b) return;
+    var r=b.closest('.trow');
+    var step=parseInt(b.dataset.step,10);
+
+    // don't let the page offer more spots than the day has left
+    if(step>0 && r.dataset.kind!=='kit'){
+      var left=window.wfsRemaining(DATE);
+      if(left!==null && regTotal()+1>left){
+        window.wfsToast && window.wfsToast(
+          left<=0 ? 'This day is full.' : 'Only '+left+' left for this day.');
+        return;
+      }
+    }
+    setQty(r, qtyOf(r)+step);
+    summarise();
+  });
+
+  goBtn.onclick=function(){
+    rows.forEach(function(r){
+      window.wfsBasket.set(r.dataset.pid, qtyOf(r), {
+        kind:  r.dataset.kind,
+        date:  DATE,
+        price: parseInt(r.dataset.unit,10)||0,
+        name:  r.dataset.line,
+        sub:   r.dataset.sub,
+        label: panel.dataset.label,
+        href:  location.pathname
+      });
+    });
+    window.wfsOpenBasket();
+  };
+
+  // reflect what the basket already holds for this day
+  function reflect(){
+    var b=window.wfsBasket.read();
+    var any=rows.some(function(r){ return (b[r.dataset.pid]||{}).qty>0; });
+    if(any) rows.forEach(function(r){ setQty(r, (b[r.dataset.pid]||{}).qty||0); });
+    summarise();
+  }
+  document.addEventListener('wfs.basket', reflect);
+
+  rows.forEach(function(r){ setQty(r,0); });
+  showCapacity();
+  reflect();
+})();
+</script>
 </body>
 </html>
