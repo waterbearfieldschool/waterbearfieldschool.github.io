@@ -1,0 +1,1222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Solar Power &amp; Electronics Bench · Wed · Aug 26 — Waterbear Field School</title>
+<meta name="description" content="Learn the basics of electricity by hooking up small solar panels, lights, batteries, and motors, and measuring voltage, current, and resistance with a multimeter.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.css" />
+<style>  :root{--ink:#1f241f;--bg:#f7f7f2;--muted:#6b7168;--accent:#1c4d3a;--accent-d:#123526;--sun:#e0a92b;--line:#e5e6e0;--card:#fff}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+  a{color:inherit}
+  .stickytop{position:sticky;top:0;z-index:50;background:#f7f7f2;border-bottom:1px solid var(--line);box-shadow:0 3px 10px rgba(0,0,0,.06)}
+  .top{display:flex;flex-direction:column;align-items:center;gap:5px;padding:10px 26px 13px;background:#f7f7f2}
+  .brand{font-weight:800;font-size:1.38rem;color:var(--accent);text-align:center;padding-left:28px}
+  .brand small{display:block;font-weight:500;font-size:.66rem;color:var(--muted)}
+  .top nav{display:flex;gap:16px;font-size:.9rem;font-weight:600}
+  .top nav a{text-decoration:none;color:var(--muted)}.top nav a:hover{color:var(--accent)}
+  .top .cta{background:var(--accent);color:#fff;padding:6px 13px;border-radius:8px}
+  .chips{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;max-width:900px;margin:0 auto;gap:5px;padding:2px 16px 7px}
+  
+  .chip{border:1px solid var(--line);background:#fff;color:var(--muted);font-weight:700;font-size:.77rem;padding:6px 11px;border-radius:999px;cursor:pointer;transition:.25s ease;white-space:nowrap;flex:none}
+  .chip.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+  /* the hovering section blurb */
+  .sind{background:#eef3ee;border-top:1px solid #dbe6de;padding:8px 20px;text-align:center;color:var(--accent-d);font-size:.9rem;line-height:1.35}
+  .sind b{font-weight:800}
+  .wrap{max-width:1080px;margin:0 auto;padding:22px 24px 40px}
+  section.sec{scroll-margin-top:104px;padding:14px 20px 26px;margin:0 0 20px;border-radius:18px;border:1px solid transparent;transition:background .2s}
+  .sec-about{background:#eef3ee;border-color:#dbe6de} .sec-about .grp{color:#1c4d3a}
+  .sec-program{background:#e9f0e4;border-color:#cfe0c8} .sec-program .grp{color:#46713e}
+  .sec-workshop{background:#e9f0f8;border-color:#cfe0f0} .sec-workshop .grp{color:#2f5a92}
+  .sec-project{background:#e6f2f5;border-color:#c6e2e9} .sec-project .grp{color:#22697d}
+  .sec-build{background:#f9ece5;border-color:#f0d5c6} .sec-build .grp{color:#a8471f}
+  .sec-meetup{background:#e9f2ec;border-color:#cbe2d4} .sec-meetup .grp{color:#2f6641}
+  .cardimg{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#e5e6e0}
+  .sec-journal{background:#eef1f4;border-color:#d6dee5}
+  .sec-journal .grp{color:#3f5563}
+  .morelink{text-align:center;margin-top:20px}
+  .morelink a{display:inline-block;background:#4f6675;color:#fff;text-decoration:none;font-weight:700;padding:11px 22px;border-radius:9px}
+  .morelink a:hover{background:#3f5563}
+  .seclead{text-align:center;color:var(--muted);max-width:660px;margin:2px auto 8px;font-size:.9rem;line-height:1.35}
+  #program .seclead{font-size:1.05rem;line-height:1.5;max-width:600px}
+  #fielddays .seclead{margin-bottom:22px}
+  .sec-august{background:#fdefc6;border-color:#eed99a} .sec-august .grp{color:#9a6f14}
+  .sec-september{background:#f7ddc8;border-color:#eec3a3} .sec-september .grp{color:#a85423}
+  .cal{max-width:720px;margin:8px auto 0}
+  .wk{margin:14px 0 0} .wklabel{font-weight:800;color:#9a6f14;font-size:.8rem;margin:0 0 6px;text-transform:uppercase;letter-spacing:.05em}
+  .dayrow{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 14px;margin:6px 0;cursor:pointer;font:inherit;transition:.12s}
+  .dayrow:hover{border-color:#c8901f} .dayrow.sel{background:#fdf3d6;border-color:#c8901f}
+  .dchk{width:20px;height:20px;border:2px solid #c9b16a;border-radius:5px;flex:none;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#fff}
+  .dayrow.sel .dchk{background:#c8901f;border-color:#c8901f} .dayrow.sel .dchk::after{content:"\2713"}
+  .ddate{font-weight:700;color:var(--ink);white-space:nowrap;flex:none;width:104px}
+  .dtime{font-weight:400;color:var(--muted)}
+  .dact{color:var(--ink);font-weight:600;display:flex;align-items:flex-start;gap:8px;flex:1;min-width:0} .dact::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--c);flex:none;margin-top:5px}
+  .calbar{position:sticky;bottom:8px;background:#fff;border:1px solid var(--line);border-radius:12px;margin:10px auto 0;max-width:720px;padding:8px 14px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 5px 16px rgba(0,0,0,.10)}
+  #calcount{font-size:.88rem;line-height:1.2}
+  .cancelnote{max-width:720px;margin:12px auto 0;text-align:center;font-size:.83rem;color:var(--muted)}
+  @media(max-width:560px){.wrap{padding-left:14px;padding-right:14px;padding-top:8px}section.sec{padding-left:10px;padding-right:10px}#september{padding-left:8px;padding-right:8px}section.sec:first-of-type{padding-top:2px}section.sec:first-of-type .grp{margin-top:12px}.dayrow{padding:11px 16px}}
+  .monthpick{max-width:640px;margin:8px auto 0}
+  .mprow{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#fff;border:1px solid var(--line);border-left:5px solid var(--c);border-radius:10px;padding:12px 16px;margin:8px 0}
+  .mpday{font-weight:700;color:var(--ink)} .mprow .btn-reg{flex:none;padding:8px 16px}
+  #rotgrid{overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch;border-radius:8px}
+  .rot{border-collapse:collapse;width:100%;min-width:560px;max-width:720px;margin:8px auto 0;font-size:.82rem}
+  @media(max-width:560px){.rot{font-size:.76rem} .rot th,.rot td{padding:7px 4px}}
+  .rot th,.rot td{border:2px solid #fff;padding:9px 5px;text-align:center}
+  .rot thead th{background:#efe7d3;color:#7a5a12;font-weight:800}
+  .rot tbody th{background:#f4f1e9;color:#333;font-weight:700;white-space:nowrap}
+  .rot td{color:#fff;font-weight:700;line-height:1.15}
+  .rot [data-wd].hl{outline:3px solid #123526;outline-offset:-3px}
+  .rot thead th.hl{background:#123526;color:#fff}
+  .rotcap{max-width:720px;margin:16px auto 4px;text-align:center;color:var(--muted);font-size:.9rem}
+  .mprow .mpday.btn{cursor:pointer;background:#fff;border:1px solid var(--line);border-left:5px solid #a85423;border-radius:9px;padding:10px 14px;font:inherit;font-weight:700;color:var(--ink);text-align:left;flex:1;transition:.12s}
+  .mprow .mpday.btn:hover{border-color:#a85423;background:#faf6ef}
+  .fdays{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:840px;margin:8px auto 0}
+  @media(max-width:760px){.fdays{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.fdays{grid-template-columns:1fr}}
+  .fday{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column}
+  .fday-h{font-weight:800;color:#a85423;font-size:1.05rem;margin-bottom:1px;text-align:center}
+  .fday-time{text-align:center;color:var(--muted);font-size:.8rem;font-weight:600;margin-bottom:9px}
+  .fweeks{list-style:none;margin:0 0 12px;padding:0;font-size:.88rem;flex:1}
+  .fweeks li{display:flex;align-items:center;gap:8px;padding:3px 0;color:var(--ink);line-height:1.25}
+  .fweeks .wlab{color:var(--muted);font-weight:700;min-width:52px}
+  .fdot{width:11px;height:11px;border-radius:50%;background:var(--c);flex:none}
+  .fday .btn-reg{width:100%;padding:9px;margin-top:auto}
+  .fbook{margin-top:auto}
+  .fbook-l{display:block;font-size:.8rem;color:var(--muted);font-weight:700;margin:6px 0 4px}
+  .blockbtn{display:block;width:100%;background:#fff;border:1.5px solid #a85423;color:#a85423;font-weight:700;font-size:.84rem;padding:8px;border-radius:8px;margin:5px 0;cursor:pointer}
+  .blockbtn:hover{background:#a85423;color:#fff}
+  .blockbtn.on{background:#a85423;color:#fff}
+  .blockbtn.on::after{content:" ✓"}
+  .sublabel{text-align:center;font-weight:800;color:var(--accent-d);margin:18px auto 2px;font-size:1rem}
+  .reglist{list-style:none;max-width:440px;margin:10px auto 6px;padding:0;text-align:left}
+  .reglist li{position:relative;padding:5px 0 5px 20px;color:var(--ink);font-size:.92rem;line-height:1.4}
+  .reglist li::before{content:"•";position:absolute;left:4px;color:var(--accent);font-weight:800}
+  .reglist .note{color:var(--muted);font-size:.85rem}
+  .cards.one{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto}
+  .picker{max-width:640px;margin:6px auto 0}
+  .prow{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:4px 0;padding:5px 2px;border-bottom:1px dashed #ecd7c4}
+  .plab{font-weight:800;min-width:78px;font-size:.9rem;display:flex;align-items:center;gap:6px}
+  .plab i{width:10px;height:10px;border-radius:3px;flex:none}
+  .picker .blockbtn{display:inline-block;width:auto;margin:0;font-size:.72rem;padding:5px 9px}
+  .leg2{display:flex;gap:16px;justify-content:center;margin:14px 0 2px;font-size:.82rem;color:var(--muted);font-weight:700}
+  .leg2 i{display:inline-block;width:12px;height:12px;border-radius:4px;margin-right:5px;vertical-align:middle}
+  .months{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:560px;margin:6px auto 0}
+  @media(max-width:560px){.months{grid-template-columns:repeat(3,1fr);gap:5px;margin:6px -6px 0}.month{padding:6px 2px 7px}.cg{gap:1px}.cg .dow{font-size:.5rem}.cg .cell{font-size:.6rem}.month h4{font-size:.7rem}}
+  .month{background:#fff;border:1px solid var(--line);border-radius:9px;padding:7px 6px 6px;min-width:0;overflow:hidden}
+  .month h4{text-align:center;color:var(--accent-d);font-size:.72rem;margin-bottom:4px}
+  .cg{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;min-width:0}
+  .cg .dow{font-size:.5rem;color:var(--muted);text-align:center;font-weight:800;padding:0}
+  .cg .cell{aspect-ratio:1;min-width:0;display:flex;align-items:center;justify-content:center;font-size:.58rem;border-radius:4px;color:var(--ink);overflow:hidden}
+  .cg .cell.hl{color:#fff;font-weight:800}
+  #september .grp{margin:10px 0 4px} #august .grp{margin:12px 0 6px} #program .grp{margin:12px 0 10px}
+  #segcount{font-size:.88rem;line-height:1.2}
+  .grp{font-weight:800;color:var(--accent-d);text-align:center;font-size:1.4rem;margin:26px 0 16px}
+  .about-lead{max-width:760px;margin:8px auto 0;text-align:center;color:var(--accent-d);font-size:clamp(1rem,2.4vw,1.18rem);font-weight:600;line-height:1.4}
+  .legend{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:840px;margin:16px auto 0}
+  @media(max-width:560px){.legend{grid-template-columns:1fr}}
+  .leg{display:block;text-decoration:none;background:#fff;border:1px solid var(--line);border-left:5px solid;border-radius:12px;padding:12px 15px;transition:.15s}
+  .leg:hover{box-shadow:0 5px 16px rgba(0,0,0,.09);transform:translateY(-1px)}
+  .leg-h{display:block;font-weight:800;font-size:1.02rem;margin-bottom:2px}
+  .leg-d{display:block;font-size:.89rem;color:var(--muted);line-height:1.38}
+  .about-foot{max-width:800px;margin:18px auto 0;text-align:center;color:var(--accent-d);font-size:.96rem;line-height:1.45}
+  .about-foot .muted{color:var(--muted);font-weight:400}
+  .policy{max-width:680px;margin:6px auto 0}
+  .policy h3{color:var(--accent-d);font-size:1.12rem;margin:18px 0 5px}
+  .policy p,.policy li{color:var(--ink);font-size:.95rem;line-height:1.55}
+  .policy ul{margin:6px 0;padding-left:20px}
+  .policy li{margin:5px 0}
+  .policy .em-accent{color:#1c6b4a;font-weight:700;text-decoration:none}
+  .policy .em-accent:hover{text-decoration:underline}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:820px){.cards{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.cards{grid-template-columns:1fr}.top nav{display:none}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:15px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 4px 14px rgba(0,0,0,.05)}
+  .card .band{color:#fff;padding:12px 16px 10px;text-align:center}
+  .card .band .day{font-size:1.28rem;font-weight:800;line-height:1.05}
+  .card .band .theme{font-weight:600;font-size:.9rem;opacity:.95;margin-top:2px}
+  .card .body{padding:13px 16px 15px;display:flex;flex-direction:column;flex:1}
+  .card .when{font-size:.82rem;color:var(--muted);font-weight:600;margin-bottom:8px}
+  .card .desc{font-size:.88rem;color:var(--ink);flex:1}
+  .card h3{font-size:1.1rem;color:var(--accent-d);margin:2px 0 4px}
+  .card .photo{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;font-size:3rem;color:rgba(255,255,255,.92)}
+  .card .foot{display:flex;gap:8px;margin-top:13px}
+  .btn-reg{flex:1;background:var(--accent);color:#fff;border:none;font-weight:700;font-size:.85rem;padding:9px 8px;border-radius:8px;cursor:pointer;display:block;text-align:center;text-decoration:none}
+  .btn-reg:hover{background:var(--accent-d)}
+  .btn-info{flex:1;background:#fff;color:var(--accent);border:1.5px solid var(--accent);font-weight:700;font-size:.85rem;padding:9px 8px;border-radius:8px;cursor:pointer}
+  footer{text-align:center;color:var(--muted);font-size:.85rem;padding:28px 24px}
+  footer a{color:var(--accent);font-weight:600;text-decoration:none}
+  .wb-ov{display:none;position:fixed;inset:0;background:rgba(20,30,22,.55);z-index:100;align-items:center;justify-content:center;padding:20px}
+  .wb-ov.on{display:flex}
+  .wb-modal{background:#fff;border-radius:16px;max-width:420px;padding:28px 26px;text-align:center;box-shadow:0 12px 44px rgba(0,0,0,.28)}
+  .wb-modal h3{color:var(--accent-d);font-size:1.3rem;margin-bottom:8px}.wb-modal p{color:var(--muted);margin-bottom:18px}
+  .wb-modal a.em{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:11px 22px;border-radius:9px}
+  .wb-modal button.cl{display:block;margin:14px auto 0;background:none;border:none;color:var(--muted);cursor:pointer;font-size:.88rem;text-decoration:underline}
+  /* dark branded header (variant A) */
+  .stickytop{background:#123526;border-bottom:3px solid #e0a92b;box-shadow:0 6px 18px rgba(0,0,0,.24)}
+  .top{background:#123526}
+  .brand{color:#ffffff}
+  .brand small{color:#c7d3c9}
+  .chip{background:rgba(255,255,255,.10);color:#eaf0eb;border-color:rgba(255,255,255,.30)}
+  .sellist{text-align:left;max-width:270px;margin:10px auto;padding-left:22px}
+  .sellist li{margin:5px 0;color:var(--ink);font-weight:600}
+  .bgrid{border-collapse:collapse;width:100%;max-width:560px;margin:8px auto 2px}
+  .bgrid th,.bgrid td{border:1px solid var(--line);padding:8px 6px;text-align:center}
+  .bgrid thead th{font-weight:800;font-size:.82rem}
+  @media(max-width:560px){.bgrid thead th{font-size:.72rem}.bgrid tbody th{font-size:.78rem}.bgrid th,.bgrid td{padding:8px 3px}}
+  .bgrid tbody th{font-weight:700;font-size:.8rem;color:var(--ink);text-align:right;padding-right:14px;white-space:nowrap}
+  .bgrid td{cursor:pointer}
+  .cbx{display:inline-block;width:24px;height:24px;border:3px solid #a5854f;border-radius:6px;vertical-align:middle;transition:.12s;position:relative}
+  .bcell.on .cbx{background:var(--cc);border-color:var(--cc)}
+  .bcell.on .cbx::after{content:"\2713";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:13px}
+  html{scroll-behavior:smooth}
+  .sec{scroll-margin-top:118px}
+  .hero{max-width:540px;margin:22px auto 10px;padding:0 18px;text-align:center}
+  .hero-tag{color:var(--accent-d);font-size:1.06rem;font-weight:600;line-height:1.42;margin:0 auto 18px;max-width:460px}
+  .hero-cta{display:flex;flex-direction:column;gap:12px}
+  .hbtn{display:block;text-decoration:none;font-weight:800;font-size:1.14rem;padding:17px 20px;border-radius:14px;color:#fff;box-shadow:0 5px 16px rgba(0,0,0,.10);transition:.15s}
+  .hbtn small{display:block;font-weight:600;font-size:.8rem;opacity:.92;margin-top:2px}
+  .hbtn:hover{transform:translateY(-2px);box-shadow:0 9px 24px rgba(0,0,0,.17)}
+  .hbtn-learn{background:#3f7d54}
+  .hbtn-sum{background:#c8891a}
+  .hbtn-fall{background:#a85423}
+  .hbtn-work{background:#3b6fb0}
+  .showcase{display:block;position:relative;max-width:680px;margin:12px auto 0;aspect-ratio:3/2;border-radius:16px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.16);text-decoration:none;background:#e9e5da}
+  .sc-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity .9s ease}
+  .sc-slide.on{opacity:1}
+  .sc-label{position:absolute;left:0;right:0;bottom:0;white-space:nowrap;text-align:center;color:#1f241f;font-weight:500;font-size:.9rem;letter-spacing:.01em;padding:6px 16px;background:rgba(255,255,255,.5);backdrop-filter:blur(6px) saturate(1.2);-webkit-backdrop-filter:blur(6px) saturate(1.2);border-top:1px solid rgba(255,255,255,.45)}
+  .hero{margin-bottom:20px}
+  .hdrnav{display:flex;gap:8px;justify-content:center;align-items:center;max-width:600px;margin:0 auto;max-height:0;overflow-x:auto;overflow-y:hidden;opacity:0;transition:max-height .28s ease,opacity .22s ease,padding .28s ease;padding:0 12px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .hdrnav::-webkit-scrollbar{display:none}
+  .stickytop.show-nav .hdrnav{max-height:64px;opacity:1;padding:4px 12px 9px}
+  .hbtn-mini{flex:0 0 auto;text-align:center;text-decoration:none;color:#fff;font-weight:800;font-size:.75rem;line-height:1;padding:8px 12px;border-radius:8px;white-space:nowrap;box-shadow:0 3px 9px rgba(0,0,0,.22)}
+  @media(max-width:480px){.hdrnav{gap:6px;justify-content:flex-start;padding-left:10px;padding-right:10px}.stickytop.show-nav .hdrnav{padding-left:10px;padding-right:10px}.hbtn-mini{font-size:.72rem;padding:8px 9px}}
+  .top{position:relative}
+  .hbtn-ham{flex:none;background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.32);border-radius:8px;font-size:1.1rem;line-height:1;padding:7px 12px;cursor:pointer}
+  .top .hbtn-ham{position:absolute;left:12px;top:50%;transform:translateY(-50%)}
+  .stickytop.show-nav .top .hbtn-ham{display:none}
+  .menudrop{position:absolute;top:100%;left:8px;z-index:60;background:#123526;border:1px solid rgba(255,255,255,.14);box-shadow:0 10px 26px rgba(0,0,0,.38);border-radius:12px;padding:8px;display:none;min-width:200px}
+  .menudrop.open{display:block}
+  .menudrop a{display:block;color:#eaf0eb;text-decoration:none;font-weight:700;font-size:.95rem;padding:10px 14px;border-radius:8px;white-space:nowrap}
+  .menudrop a:hover,.menudrop a:active{background:rgba(255,255,255,.13)}
+  @media(min-width:561px) and (max-width:959px){.wrap{padding-top:6px}.showcase{max-width:460px;aspect-ratio:2.7/1;margin:2px auto 0}.hero{max-width:460px;margin:8px auto 6px;padding:0}.hero-cta{gap:6px}.hbtn{padding:9px 22px;font-size:1.02rem}}
+  @media(max-width:560px){.showcase{aspect-ratio:16/9;margin:10px 18px 0}.hero{margin-top:14px}.hero-cta{gap:10px}.hbtn{padding:14px 20px;font-size:1.08rem}}
+  /* wide screens: rotating image left (larger), calls to action right */
+  @media(min-width:960px){
+    .herowrap{display:flex;align-items:center;justify-content:center;gap:48px;max-width:1120px;margin:22px auto 6px;padding:0 30px}
+    .showcase{flex:1 1 520px;max-width:640px;margin:0;aspect-ratio:3/2}
+    .hero{flex:0 0 380px;margin:0;padding:0}
+    .hero-cta{gap:12px}
+    .hbtn{padding:15px 22px;font-size:1.12rem}
+  }
+  .stickytop.show-nav .top{padding-bottom:2px}
+  .dayrow-item{display:flex;align-items:center;gap:12px;width:100%;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:6px 0}
+  .dayrow-item .ddate{font-weight:700;white-space:nowrap;flex:none;width:96px;color:var(--accent-d)}
+  .dayrow-item .dtopic{font-weight:600;flex:1;min-width:0;color:var(--ink);text-decoration:none}
+  .dayrow-item .dtopic:hover{text-decoration:underline;color:#9a6f14}
+  .dayrow-item .dloc{color:var(--muted);font-weight:400;font-size:.85em}
+  .dayrow-item .dreg{flex:none;background:#1c6b4a;color:#fff;font-weight:700;font-size:.8rem;padding:6px 12px;border-radius:7px;text-decoration:none;white-space:nowrap}
+  .dayrow-item .dreg:hover{background:#155239}
+  @media(max-width:560px){.dayrow-item{flex-wrap:wrap;gap:6px 10px;padding:10px 12px}.dayrow-item .ddate{width:auto;order:1}.dayrow-item .dreg{order:2;margin-left:auto}.dayrow-item .dtopic{order:3;flex:1 0 100%;font-size:.95rem}}
+  .sessdates{margin-top:8px;border-top:1px solid var(--line);padding-top:6px}
+  .sd{display:flex;align-items:center;gap:10px;justify-content:space-between;padding:4px 0}
+  .sd-when{font-size:.84rem;color:var(--accent-d);font-weight:600}
+  .sd .btn-reg{flex:none;font-size:.76rem;padding:5px 11px;margin:0}
+
+  /* ---- workshop detail pages ---- */
+  .backbar{max-width:820px;margin:0 auto;padding:14px 20px 0}
+  .backbar a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.9rem}
+  .backbar a:hover{color:var(--accent)}
+  .wdetail{max-width:820px;margin:0 auto;padding:8px 20px 60px}
+  .whero{position:relative;border-radius:16px;overflow:hidden;margin:10px 0 22px;box-shadow:0 6px 20px rgba(0,0,0,.10)}
+  .whero img{width:100%;height:280px;object-fit:cover;display:block}
+  .whero .wband{position:absolute;left:0;bottom:0;right:0;padding:16px 20px;background:linear-gradient(transparent,rgba(0,0,0,.72));color:#fff}
+  .whero .wband h1{font-size:1.7rem;font-weight:800;line-height:1.15}
+  .wblurb{font-size:1.08rem;color:var(--accent-d);font-weight:600;margin:0 0 26px;max-width:640px}
+  .wsec{margin:0 0 26px}
+  .wsec h2{font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+  .wsec p{margin:0 0 10px;max-width:640px}
+  .wsessions{display:flex;flex-direction:column;gap:10px;max-width:640px}
+  .wsess{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--card)}
+  .wsess .wswhen{font-weight:700;color:var(--accent-d)}
+  .wsess .wswhen small{display:block;font-weight:500;color:var(--muted);font-size:.82rem;margin-top:2px}
+  .wsess .btn-reg{flex:none;margin:0}
+  @media(max-width:520px){.whero img{height:200px}.whero .wband h1{font-size:1.35rem}}
+
+  /* ---- workshop per-day sections ---- */
+  .more-days:not(:has(a)){display:none}
+  .daynav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+  .daychip{font-size:.84rem;font-weight:600;color:var(--accent-d);text-decoration:none;border:1px solid var(--line);border-left-width:4px;border-radius:8px;padding:7px 12px;background:var(--card)}
+  .daychip:hover{background:#f0f3ee}
+  .daycard{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:0 0 18px;background:var(--card);box-shadow:0 3px 12px rgba(0,0,0,.05);scroll-margin-top:90px}
+  .daycard-band{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 16px;color:#fff}
+  .daycard-band .dc-when{font-weight:700;font-size:.92rem;color:#fff;text-decoration:none}
+  .daycard-band a.dc-when:hover{text-decoration:underline}
+  .daycard-band .dc-reg{flex:none;margin:0;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.5);color:#fff;font-size:.8rem;padding:6px 13px}
+  .daycard-body{padding:18px 20px 22px}
+  .daycard-body h2{font-size:1.35rem;color:var(--accent-d);margin:0 0 10px}
+  .daycard-body p{margin:0 0 10px;max-width:640px}
+  .dc-mat{background:#f3f6f1;border:1px dashed var(--line);border-radius:9px;padding:9px 13px;font-size:.92rem}
+  .dc-mat .dc-fee{color:var(--muted);font-weight:600}
+  .dc-facts{display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;margin:14px 0 18px}
+  .dc-facts dt{font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:2px}
+  .dc-facts dd{font-size:.9rem;line-height:1.4}
+  .dc-facts .muted{color:var(--muted);font-size:.84rem}
+  @media(max-width:520px){.dc-facts{grid-template-columns:1fr}}
+  .daycard.target,.daycard2.target{outline:2px solid #c8901f;box-shadow:0 0 0 4px #fdf3d6,0 3px 12px rgba(0,0,0,.05)}
+  .daycard-body h2 a{color:inherit;text-decoration:none}
+  .daycard-body h2 a:hover{text-decoration:underline}
+  .dc2-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .dc2-actions .btn-reg{margin:0;flex:none}
+
+  /* ---- /v2/ ticketed prototype (Eventbrite-ish) ---- */
+  .cartbtn{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:var(--sun);color:#123526;border:none;border-radius:999px;padding:8px 15px;font-weight:800;font-size:.84rem;cursor:pointer;display:inline-flex;gap:7px;align-items:center;box-shadow:0 3px 10px rgba(0,0,0,.24)}
+  .cartbtn[hidden]{display:none}
+  .cartbtn .cnum{background:#123526;color:#fff;border-radius:999px;min-width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-size:.74rem;padding:0 5px}
+
+  /* ticket panel */
+  .tix{border:1px solid var(--line);border-radius:14px;background:var(--card);overflow:hidden;margin:22px 0 8px;box-shadow:0 4px 14px rgba(0,0,0,.05)}
+  .tix-head{background:#f3f6f1;border-bottom:1px solid var(--line);padding:15px 18px 13px}
+  .tix-head h2{margin:0}
+  .tix-head p{font-size:.85rem;color:var(--muted);margin:3px 0 0}
+  .trow{display:flex;align-items:center;gap:16px;padding:15px 18px 15px 36px;border-bottom:1px solid var(--line)}
+  .trow:last-child{border-bottom:none}
+  .trow.on{background:#f6faf7}
+  .trow.tfree .tprice{color:var(--muted)}
+  .trow.tkit{background:#fbf9f4}
+  .tinfo{flex:1;min-width:0}
+  .tinfo b{display:block;color:var(--accent-d);font-size:.99rem;line-height:1.25}
+  .tinfo small{display:block;color:var(--muted);font-size:.84rem;line-height:1.4;margin-top:2px}
+  .tprice{flex:none;font-weight:800;font-size:1.05rem;color:var(--ink);min-width:62px;text-align:right}
+  .tprice small{display:block;font-weight:500;font-size:.72rem;color:var(--muted)}
+  .qctl{display:inline-flex;align-items:center;gap:4px;flex:none}
+  .qbtn{width:32px;height:32px;border:1.5px solid var(--line);background:#fff;border-radius:8px;font-size:1.15rem;line-height:1;font-weight:800;color:var(--accent);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+  .qbtn:hover:not(:disabled){border-color:var(--accent);background:#f2f7f3}
+  .qbtn:disabled{opacity:.3;cursor:default}
+  .qnum{min-width:30px;text-align:center;font-weight:800;font-size:1.02rem;font-variant-numeric:tabular-nums}
+
+  /* order summary bar */
+  .tixbar{position:sticky;bottom:0;z-index:20;transition:transform .22s ease,opacity .18s ease;background:#fff;border:1px solid var(--line);border-top:2px solid var(--accent);border-radius:0 0 14px 14px;padding:13px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px;box-shadow:0 -4px 16px rgba(0,0,0,.08);margin-bottom:22px}
+  .tixsum{font-size:.92rem;line-height:1.25;min-width:0}
+  .tixsum b{color:var(--accent-d);font-size:1.08rem;display:block}
+  .tixsum small{color:var(--muted);font-size:.82rem}
+  .tixgo{flex:none;background:var(--accent);color:#fff;border:none;border-radius:10px;font-weight:800;font-size:.98rem;padding:13px 26px;cursor:pointer;white-space:nowrap}
+  .tixgo:hover:not(:disabled){background:var(--accent-d)}
+  .tixgo:disabled{opacity:.45;cursor:default}
+  @media(max-width:520px){
+    .trow{flex-wrap:wrap;gap:8px 12px;padding:13px 14px 13px 24px}
+    .tinfo{flex:1 0 60%}
+    .tprice{min-width:0;text-align:left;order:3}
+    .qctl{margin-left:auto;order:4}
+    .tixbar{flex-direction:column;align-items:stretch;gap:10px}
+    .tixgo{width:100%}
+  }
+
+  .tixbar.away{transform:translateY(130%);opacity:0;pointer-events:none}
+  .tixnote{color:var(--muted);font-size:.87rem;line-height:1.5;max-width:620px;margin:0 0 22px}
+
+  .toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,20px);background:#123526;color:#fff;font-weight:700;font-size:.9rem;padding:12px 20px;border-radius:999px;box-shadow:0 8px 26px rgba(0,0,0,.3);opacity:0;pointer-events:none;transition:.25s;z-index:200;max-width:90vw;text-align:center}
+  .toast.show{opacity:1;transform:translate(-50%,0)}
+
+  /* listing cards on the /v2/ homepage */
+  .daycard2 .dc2-from{display:inline-block;font-weight:800;color:var(--accent-d);font-size:.92rem;margin:2px 0 6px}
+  .daycard2 .dc2-from span{font-weight:500;color:var(--muted);font-size:.85em}
+
+  /* compact Snipcart side cart — see wfs-register.css for the reasoning */
+  .snipcart-item-line{padding:8px 0 !important}
+  .snipcart-item-line__container{padding:0 !important;gap:8px !important}
+  .snipcart-item-line__media,.snipcart-item-line__image{display:none !important}
+  .snipcart-item-line__title{font-size:.92rem !important;line-height:1.25 !important}
+  .snipcart-item-line__variants,.snipcart-item-line__description{font-size:.76rem !important;line-height:1.3 !important}
+  .snipcart-item-quantity{transform:scale(.86);transform-origin:left center}
+  .tsub{background:#f3f6f1;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:15px 18px 13px}
+
+  /* Section labels sit in a serif so they read as a different voice from the
+     registration names below them, which stay in Inter. Both labels share a size. */
+  .tix-head h2,
+  .tsub{
+    font-family:Lora,Georgia,"Times New Roman",serif;
+    font-size:1.26rem;
+    font-weight:600;
+    font-style:normal;
+    letter-spacing:0;
+    text-transform:none;
+    color:var(--accent-d);
+    line-height:1.3;
+    position:relative;
+    padding-left:13px;
+  }
+  .tix-head h2::before,
+  .tsub::before{
+    content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);
+    height:1.05em;width:3px;border-radius:2px;background:var(--accent);
+  }
+  .tix-head p{padding-left:13px}
+
+  /* Snipcart's slide-in panel must always paint above our sticky order bar.
+     Its own stacking doesn't reliably beat a position:sticky element. */
+  #snipcart,
+  .snipcart-modal,
+  .snipcart-cart,
+  .snipcart__box{ z-index:9000 !important }
+
+  /* prototype notice — this variant is shared for feedback, not for real signups */
+  .protobar{background:#7a2f22;color:#fff;text-align:center;font-size:.83rem;font-weight:600;padding:8px 16px;line-height:1.4}
+  .protobar b{font-weight:800}
+
+  /* ---- /v3/ own basket ---- */
+  .cartbtn{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:var(--sun);color:#123526;border:none;border-radius:999px;padding:8px 15px;font-weight:800;font-size:.84rem;cursor:pointer;display:inline-flex;gap:7px;align-items:center;box-shadow:0 3px 10px rgba(0,0,0,.24)}
+  .cartbtn[hidden]{display:none}
+  .cartbtn .cnum{background:#123526;color:#fff;border-radius:999px;min-width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-size:.74rem;padding:0 5px}
+
+  .bk-ovl{position:fixed;inset:0;background:rgba(18,53,38,.42);z-index:8000;opacity:0;transition:opacity .2s}
+  .bk-ovl.on{opacity:1}
+  .bk-ovl[hidden]{display:none}
+  .bk{position:fixed;top:0;right:0;bottom:0;width:min(420px,92vw);background:var(--bg);z-index:8100;display:flex;flex-direction:column;box-shadow:-8px 0 30px rgba(0,0,0,.22);transform:translateX(100%);transition:transform .24s ease}
+  .bk.on{transform:none}
+  .bk[hidden]{display:none}
+  .bk-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 18px;background:#123526;color:#fff}
+  .bk-top h2{font-family:Lora,Georgia,serif;font-size:1.18rem;font-weight:600;margin:0}
+  .bk-x{background:none;border:none;color:#fff;font-size:1.7rem;line-height:1;cursor:pointer;padding:0 4px}
+  .bk-body{flex:1;overflow-y:auto;padding:6px 18px}
+
+  .bkline{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}
+  .bkline:last-child{border-bottom:none}
+  .bkline .bkl-x{flex:1;min-width:0}
+  .bkline .bkl-x b{display:block;color:var(--accent-d);font-size:.95rem;line-height:1.25}
+  .bkline .bkl-x small{display:block;color:var(--muted);font-size:.8rem;margin-top:1px}
+  .bkline .bkl-x b a{color:inherit;text-decoration:none}
+  .bkline .bkl-x b a:hover{text-decoration:underline}
+  .bkline .bkl-x .bkl-q{color:var(--accent);font-weight:800}
+  .bkline .bkl-p{flex:none;font-weight:800;font-size:.92rem;min-width:52px;text-align:right}
+  .bkline .bkl-p.free{color:var(--muted);font-weight:600}
+  .bkline .bkl-rm{flex:none;width:28px;height:28px;border:1px solid var(--line);background:#fff;border-radius:7px;color:var(--muted);font-size:1.15rem;line-height:1;cursor:pointer;padding:0;display:flex;align-items:center;justify-content:center}
+  .bkline .bkl-rm:hover{border-color:#b23;color:#b23;background:#fdf4f3}
+  .bk-empty{color:var(--muted);text-align:center;padding:40px 10px;font-size:.93rem;line-height:1.5}
+
+  .bk-foot{border-top:1px solid var(--line);background:var(--card);padding:14px 18px 18px}
+  .bk-tot{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:12px}
+  .bk-tot span{color:var(--muted);font-size:.88rem}
+  .bk-tot b{font-size:1.3rem;color:var(--accent-d)}
+  .bk-form[hidden]{display:none}
+  .bk-formlead{color:var(--muted);font-size:.86rem;line-height:1.45;margin:0 0 9px}
+  .bk-form .tin{display:block;width:100%;border:1.5px solid var(--line);border-radius:9px;padding:11px 13px;font:inherit;font-size:.95rem;background:#fff;margin-bottom:8px}
+  .bk-form .tin:focus{outline:none;border-color:var(--accent)}
+  .bk-msg{min-height:1.1em;font-size:.85rem;color:var(--muted);margin:2px 0 0;line-height:1.4}
+  .bk-msg.bad{color:#b23}
+  .bk-go{width:100%;background:var(--accent);color:#fff;border:none;border-radius:10px;font-weight:800;font-size:1rem;padding:14px;cursor:pointer;margin-top:4px}
+  .bk-go:hover:not(:disabled){background:var(--accent-d)}
+  .bk-go:disabled{opacity:.45;cursor:default}
+  .bk-go.ghost{background:none;color:var(--accent);border:1.5px solid var(--accent)}
+  .bk-note{color:var(--muted);font-size:.8rem;text-align:center;margin:9px 0 0;line-height:1.45}
+
+  .bk-done{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px 26px;gap:6px}
+  .bk-done[hidden]{display:none}
+  .bk-tick{width:52px;height:52px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.7rem;font-weight:800;margin-bottom:6px}
+  .bk-done h3{font-family:Lora,Georgia,serif;font-size:1.35rem;color:var(--accent-d);font-weight:600}
+  .bk-done p{color:var(--muted);font-size:.93rem;line-height:1.5;margin-bottom:14px}
+  .bk-done .bk-go{width:auto;padding:11px 26px}
+
+  /* prototype notice */
+  .protobar{background:#7a2f22;color:#fff;text-align:center;font-size:.83rem;font-weight:600;padding:8px 16px;line-height:1.4}
+  .protobar b{font-weight:800}
+
+  /* capacity */
+  .tixcap{font-size:.86rem;font-weight:700;color:var(--accent);margin:4px 0 0;padding-left:13px}
+  .tixcap.low{color:#a8551f}
+  .tixcap.full{color:#b23}
+  .tixcap:empty{display:none}
+  .trow.soldout{opacity:.5}
+  .trow.soldout .tprice{text-decoration:line-through}
+  .dc2-spots{margin-left:0}
+  .dc2-spots:empty{display:none}
+  .dc2-spots.low{color:#a8551f}
+  .dc2-spots.full{color:#b23}
+
+</style>
+</head>
+<body>
+  <div class="protobar"><b>Prototype</b> &mdash; a design draft for feedback. Registration isn&rsquo;t live; please don&rsquo;t enter real card details.</div>
+  <div class="stickytop">
+    <div class="top">
+      <a class="brand" href="/v3/" style="text-decoration:none">Waterbear Field School<small>Hands-on learning &amp; building, near Lincoln, MA</small></a>
+      <button class="cartbtn" id="cartBtn" hidden>Cart <span class="cnum" id="cartNum">0</span></button>
+    </div>
+  </div>
+
+  <div class="backbar"><a href="/v3/">&larr; All Field Days</a></div>
+
+  <div class="wdetail">
+    <div class="whero">
+      <img src="/v6img/ws-solar.jpg" alt="Solar Power &amp; Electronics Bench">
+      <div class="wband" style="background:linear-gradient(transparent,#2f5a92f2)"><h1>Solar Power &amp; Electronics Bench</h1></div>
+    </div>
+
+    <p class="wblurb">Wed · Aug 26 · 10 AM–1 PM · Lincoln Park, Somerville</p>
+
+    <div class="wsec">
+      <p>We start from the very beginning — what a volt is, what a battery actually does — and build up, part by part, hooking up small solar panels, lights, batteries, and motors.</p><p>Along the way you&#39;ll get comfortable with a multimeter, measuring voltage, current, and resistance for yourself. Nothing is a black box: by the end you&#39;ll understand every wire.</p>
+    </div>
+
+    <dl class="dc-facts">
+      <div><dt>When</dt><dd>Wed · Aug 26 · 10 AM–1 PM</dd></div>
+      <div><dt>Where</dt><dd>Lincoln Park, Somerville<br><span class="muted">Exact address sent when you register.</span></dd></div>
+      <div><dt>Who</dt><dd>Adults and kids 6+ (an adult caregiver needs to accompany kids under 14)</dd></div>
+      <div><dt>Bring</dt><dd>Just yourself — tools and parts are provided.</dd></div>
+    </dl>
+
+    <div class="tix" id="tix" data-date="2026-08-26" data-title="Solar Power &amp; Electronics Bench" data-label="Wed · Aug 26 — Solar Power &amp; Electronics Bench">
+      <div class="tix-head">
+        <h2>Choose a Registration Type:</h2>
+        <p class="tixcap" id="tixCap"></p>
+      </div>
+      <div class="trow"
+           data-def="def-tix-2026-08-26-standard"
+           data-pid="tix-2026-08-26-standard"
+           data-unit="25"
+           data-kind="reg"
+           data-line="Solar Bench · Aug 26"
+           data-sub="Standard">
+        <span class="tinfo"><b>Standard</b><small>Covers materials and keeps the day running.</small></span>
+        <span class="tprice">$25</span>
+        <span class="qctl">
+          <button type="button" class="qbtn" data-step="-1" aria-label="one fewer">&minus;</button>
+          <output class="qnum">0</output>
+          <button type="button" class="qbtn" data-step="1" aria-label="one more">+</button>
+        </span>
+      </div>
+      <div class="trow"
+           data-def="def-tix-2026-08-26-supporter"
+           data-pid="tix-2026-08-26-supporter"
+           data-unit="50"
+           data-kind="reg"
+           data-line="Solar Bench · Aug 26"
+           data-sub="Supporter">
+        <span class="tinfo"><b>Supporter</b><small>Covers your spot and quietly pays for someone else&#39;s.</small></span>
+        <span class="tprice">$50</span>
+        <span class="qctl">
+          <button type="button" class="qbtn" data-step="-1" aria-label="one fewer">&minus;</button>
+          <output class="qnum">0</output>
+          <button type="button" class="qbtn" data-step="1" aria-label="one more">+</button>
+        </span>
+      </div>
+      <div class="trow tfree"
+           data-def="def-tix-2026-08-26-free"
+           data-pid="tix-2026-08-26-free"
+           data-unit="0"
+           data-kind="reg"
+           data-line="Solar Bench · Aug 26"
+           data-sub="Pay what you can">
+        <span class="tinfo"><b>Pay what you can</b><small>No questions asked. Please take this one if the cost would keep you away.</small></span>
+        <span class="tprice">Free</span>
+        <span class="qctl">
+          <button type="button" class="qbtn" data-step="-1" aria-label="one fewer">&minus;</button>
+          <output class="qnum">0</output>
+          <button type="button" class="qbtn" data-step="1" aria-label="one more">+</button>
+        </span>
+      </div>
+      <div class="tsub">Take-home kit (optional):</div>
+      <div class="trow tkit"
+           data-def="def-kit-2026-08-26"
+           data-pid="kit-2026-08-26"
+           data-unit="25"
+           data-kind="kit"
+           data-line="Solar Bench · Aug 26"
+           data-sub="Take-home kit — Solar panel + motor kit">
+        <span class="tinfo"><b>Solar panel + motor kit</b><small>Pre-paid so we can prepare yours. Add one per thing you&rsquo;d like to take home.</small></span>
+        <span class="tprice">$25<small>each</small></span>
+        <span class="qctl">
+          <button type="button" class="qbtn" data-step="-1" aria-label="one fewer">&minus;</button>
+          <output class="qnum">0</output>
+          <button type="button" class="qbtn" data-step="1" aria-label="one more">+</button>
+        </span>
+      </div>
+    </div>
+
+    <div class="tixbar">
+      <span class="tixsum" id="tixSum"><b>Nothing selected</b><small>Choose a registration above</small></span>
+      <button class="tixgo" id="tixGo" type="button" disabled>Add to my registrations</button>
+    </div>
+
+    <p class="tixnote">Add as many days as you like, then finish up in one go. <b>If nothing you picked costs money, there&rsquo;s no checkout and no card</b> &mdash; just your name and email.</p>
+
+    <div class="more-days">
+      <p style="color:var(--muted);margin:28px 0 10px;font-size:.92rem">Other Solar days:</p>
+      <div class="daynav"><a href="/v3/solar/2026-08-19/" class="daychip" style="border-color:#2f5a92">Wed · Aug 19 · Solar Power &amp; Electronics Bench</a></div>
+    </div>
+
+    <p style="margin:26px 0 0;color:var(--muted)">Want to teach or host a session? <a href="mailto:info@waterbearfieldschool.org?subject=Field%20Days" style="color:#2f5a92;font-weight:700;text-decoration:underline">Email us</a>.</p>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  
+<div hidden aria-hidden="true">
+  <button class="snipcart-add-item" id="def-tix-2026-08-19-standard"
+    data-item-id="tix-2026-08-19-standard"
+    data-item-name="Solar Bench · Aug 19 · Standard"
+    data-item-price="25.00"
+    data-item-url="https://waterbearfieldschool.org/v3/"
+    data-item-description="Covers materials and keeps the day running."
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-08-19-supporter"
+    data-item-id="tix-2026-08-19-supporter"
+    data-item-name="Solar Bench · Aug 19 · Supporter"
+    data-item-price="50.00"
+    data-item-url="https://waterbearfieldschool.org/v3/"
+    data-item-description="Covers your spot and quietly pays for someone else&#39;s."
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-kit-2026-08-19"
+    data-item-id="kit-2026-08-19"
+    data-item-name="Solar Bench · Aug 19 · Take-home kit"
+    data-item-price="25.00"
+    data-item-url="https://waterbearfieldschool.org/v3/"
+    data-item-description="Materials for solar panel + motor kit, reserved for you on Wed · Aug 19."
+    data-item-quantity="1">kit</button>
+  <button class="snipcart-add-item" id="def-tix-2026-08-20-standard"
+    data-item-id="tix-2026-08-20-standard"
+    data-item-name="Toolbox · Aug 20 · Standard"
+    data-item-price="25.00"
+    data-item-url="https://waterbearfieldschool.org/v3/"
+    data-item-description="Covers materials and keeps the day running."
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-08-20-supporter"
+    data-item-id="tix-2026-08-20-supporter"
+    data-item-name="Toolbox · Aug 20 · Supporter"
+    data-item-price="50.00"
+    data-item-url="https://waterbearfieldschool.org/v3/"
+    data-item-description="Covers your spot and quietly pays for someone else&#39;s."
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-kit-2026-08-20"
+    data-item-id="kit-2026-08-20"
+    data-item-name="Toolbox · Aug 20 · Take-home kit"
+    data-item-price="35.00"
+    data-item-url="https://waterbearfieldschool.org/v3/"
+    data-item-description="Materials for a toolbox, reserved for you on Thu · Aug 20."
+    data-item-quantity="1">kit</button>
+  <button class="snipcart-add-item" id="def-tix-2026-08-21-standard"
+    data-item-id="tix-2026-08-21-standard"
+    data-item-name="Instrument Making · Aug 21 · Standard"
+    data-item-price="25.00"
+    data-item-url="https://waterbearfieldschool.org/v3/"
+    data-item-description="Covers materials and keeps the day running."
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-08-21-supporter"
+    data-item-id="tix-2026-08-21-supporter"
+    data-item-name="Instrument Making · Aug 21 · Supporter"
+    data-item-price="50.00"
+    data-item-url="https://waterbearfieldschool.org/v3/"
+    data-item-description="Covers your spot and quietly pays for someone else&#39;s."
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-kit-2026-08-21"
+    data-item-id="kit-2026-08-21"
+    data-item-name="Instrument Making · Aug 21 · Take-home kit"
+    data-item-price="15.00"
+    data-item-url="https://waterbearfieldschool.org/v3/"
+    data-item-description="Materials for an instrument, reserved for you on Fri · Aug 21."
+    data-item-quantity="1">kit</button>
+  <button class="snipcart-add-item" id="def-tix-2026-08-25-standard"
+    data-item-id="tix-2026-08-25-standard"
+    data-item-name="Workbench · Aug 25 · Standard"
+    data-item-price="25.00"
+    data-item-url="https://waterbearfieldschool.org/v3/"
+    data-item-description="Covers materials and keeps the day running."
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-08-25-supporter"
+    data-item-id="tix-2026-08-25-supporter"
+    data-item-name="Workbench · Aug 25 · Supporter"
+    data-item-price="50.00"
+    data-item-url="https://waterbearfieldschool.org/v3/"
+    data-item-description="Covers your spot and quietly pays for someone else&#39;s."
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-kit-2026-08-25"
+    data-item-id="kit-2026-08-25"
+    data-item-name="Workbench · Aug 25 · Take-home kit"
+    data-item-price="35.00"
+    data-item-url="https://waterbearfieldschool.org/v3/"
+    data-item-description="Materials for a workbench, reserved for you on Tue · Aug 25."
+    data-item-quantity="1">kit</button>
+  <button class="snipcart-add-item" id="def-tix-2026-08-26-standard"
+    data-item-id="tix-2026-08-26-standard"
+    data-item-name="Solar Bench · Aug 26 · Standard"
+    data-item-price="25.00"
+    data-item-url="https://waterbearfieldschool.org/v3/"
+    data-item-description="Covers materials and keeps the day running."
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-08-26-supporter"
+    data-item-id="tix-2026-08-26-supporter"
+    data-item-name="Solar Bench · Aug 26 · Supporter"
+    data-item-price="50.00"
+    data-item-url="https://waterbearfieldschool.org/v3/"
+    data-item-description="Covers your spot and quietly pays for someone else&#39;s."
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-kit-2026-08-26"
+    data-item-id="kit-2026-08-26"
+    data-item-name="Solar Bench · Aug 26 · Take-home kit"
+    data-item-price="25.00"
+    data-item-url="https://waterbearfieldschool.org/v3/"
+    data-item-description="Materials for solar panel + motor kit, reserved for you on Wed · Aug 26."
+    data-item-quantity="1">kit</button>
+  <button class="snipcart-add-item" id="def-tix-2026-08-27-standard"
+    data-item-id="tix-2026-08-27-standard"
+    data-item-name="Plant ID · Aug 27 · Standard"
+    data-item-price="25.00"
+    data-item-url="https://waterbearfieldschool.org/v3/"
+    data-item-description="Covers materials and keeps the day running."
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-08-27-supporter"
+    data-item-id="tix-2026-08-27-supporter"
+    data-item-name="Plant ID · Aug 27 · Supporter"
+    data-item-price="50.00"
+    data-item-url="https://waterbearfieldschool.org/v3/"
+    data-item-description="Covers your spot and quietly pays for someone else&#39;s."
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-08-28-standard"
+    data-item-id="tix-2026-08-28-standard"
+    data-item-name="Zines · Aug 28 · Standard"
+    data-item-price="25.00"
+    data-item-url="https://waterbearfieldschool.org/v3/"
+    data-item-description="Covers materials and keeps the day running."
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-08-28-supporter"
+    data-item-id="tix-2026-08-28-supporter"
+    data-item-name="Zines · Aug 28 · Supporter"
+    data-item-price="50.00"
+    data-item-url="https://waterbearfieldschool.org/v3/"
+    data-item-description="Covers your spot and quietly pays for someone else&#39;s."
+    data-item-quantity="1">tix</button>
+</div>
+
+
+<div id="snipcart" data-api-key="YWMwMTNjOGItODA1MS00YmFlLWE0MWYtNmYyNzU3YTg3Y2Y5NjM5MDczMTU2MTI1ODk3MDU1" data-config-modal-style="side" data-config-add-product-behavior="none" hidden></div>
+<script async src="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.js"></script>
+
+  
+<div class="bk-ovl" id="bkOvl" hidden></div>
+<aside class="bk" id="bk" hidden aria-label="Your registrations">
+  <header class="bk-top">
+    <h2>Your registrations</h2>
+    <button type="button" class="bk-x" id="bkClose" aria-label="Close">&times;</button>
+  </header>
+
+  <div class="bk-body" id="bkBody"><!-- lines, by JS --></div>
+
+  <div class="bk-foot" id="bkFoot">
+    <div class="bk-tot" id="bkTot"></div>
+
+    <form class="bk-form" id="bkForm" hidden>
+      <p class="bk-formlead" id="bkFormLead">Nothing to pay &mdash; just tell us who&rsquo;s coming.</p>
+      <input type="text"  id="bkName"  class="tin" placeholder="Your name" autocomplete="name">
+      <input type="email" id="bkEmail" class="tin" placeholder="you@example.com" autocomplete="email">
+      <p class="bk-msg" id="bkMsg"></p>
+    </form>
+
+    <button type="button" class="bk-go" id="bkGo">Check out</button>
+    <p class="bk-note" id="bkNote"></p>
+  </div>
+
+  <div class="bk-done" id="bkDone" hidden>
+    <div class="bk-tick">&check;</div>
+    <h3 id="bkDoneH">You&rsquo;re registered</h3>
+    <p id="bkDoneP"></p>
+    <button type="button" class="bk-go ghost" id="bkDoneClose">Close</button>
+  </div>
+</aside>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>/* /v3/ — the basket is ours, Snipcart is only a payment step.
+ *
+ * Every line the visitor picks lives in localStorage. At checkout we look at the
+ * total: a basket with no money in it is written straight to Supabase behind a
+ * two-field form, and Snipcart is never loaded into the flow. A basket with any
+ * money in it is mirrored into Snipcart, and the Supabase rows are written from
+ * our basket when the order completes — so free lines riding along in a paid
+ * basket are recorded too.
+ */
+(function(){
+  var sb = window.supabase
+    ? supabase.createClient('https://jhgcnqmzbphzpxgtojti.supabase.co',
+                            'sb_publishable_VjYvl7U-fWJO0st6R6W7gg_ep7SNTn6')
+    : null;
+
+  var SESSIONS={ "2026-08-19":"Wed · Aug 19 — Solar Power & Electronics Bench","2026-08-20":"Thu · Aug 20 — Build a Toolbox","2026-08-21":"Fri · Aug 21 — Music & Instrument Making","2026-08-25":"Tue · Aug 25 — Build a Workbench","2026-08-26":"Wed · Aug 26 — Solar Power & Electronics Bench","2026-08-27":"Thu · Aug 27 — Plant ID & Mapping","2026-08-28":"Fri · Aug 28 — Zines & Printmaking" };
+  var KEY='wfs.basket.v1', WHO='wfs.who.v1';
+
+  /* ---------------- capacity ----------------
+   * session_counts is a public view — capacity, how many are taken, how many
+   * remain. Read for display only; the real enforcement is inside register(),
+   * which counts and inserts atomically under a row lock. A number on a page
+   * can always be stale, so the UI treats this as a hint, not a gate.
+   */
+  var COUNTS={};
+  window.wfsCounts=function(){ return COUNTS; };
+  window.wfsRemaining=function(date){
+    var c=COUNTS[date];
+    return c ? c.remaining : null;      // null = unknown, don't block on it
+  };
+  window.wfsRefreshCounts=async function(){
+    if(!sb) return COUNTS;
+    try{
+      var r=await sb.from('session_counts').select('date,capacity,taken,remaining,min_to_run');
+      if(r.error){ console.error('[wfs] counts', r.error); return COUNTS; }
+      COUNTS={};
+      (r.data||[]).forEach(function(row){ COUNTS[row.date]=row; });
+      document.dispatchEvent(new CustomEvent('wfs.counts', {detail:COUNTS}));
+    }catch(e){ console.error('[wfs] counts threw', e); }
+    return COUNTS;
+  };
+
+  /* ---------------- store ---------------- */
+
+  function read(){
+    try{ var b=JSON.parse(localStorage.getItem(KEY)||'{}'); return (b && typeof b==='object') ? b : {}; }
+    catch(e){ return {}; }
+  }
+  function write(b){
+    try{ localStorage.setItem(KEY, JSON.stringify(b)); }catch(e){}
+    announce();
+  }
+  function announce(){
+    var b=read();
+    document.dispatchEvent(new CustomEvent('wfs.basket', {detail:{
+      lines: lines(b), count: count(b), total: total(b), qty: b
+    }}));
+  }
+
+  // basket is {lineId: {qty, kind, date, label, price, name}}
+  function lines(b){
+    b=b||read();
+    return Object.keys(b).map(function(k){ var l=b[k]; l.id=k; return l; })
+      .sort(function(x,y){ return (x.date+x.kind).localeCompare(y.date+y.kind); });
+  }
+  function count(b){ return lines(b).reduce(function(n,l){ return n+l.qty; },0); }
+  function total(b){ return lines(b).reduce(function(n,l){ return n+l.qty*l.price; },0); }
+
+  window.wfsBasket={
+    read:read, lines:lines, count:count, total:total,
+    qtyOf:function(id){ var l=read()[id]; return l?l.qty:0; },
+    set:function(id, qty, meta){
+      var b=read();
+      if(qty<=0) delete b[id];
+      else b[id]=Object.assign({}, meta||b[id]||{}, {qty:qty});
+      write(b);
+    },
+    clear:function(){ try{ localStorage.removeItem(KEY); }catch(e){} announce(); },
+    announce:announce
+  };
+
+  window.wfsWho=function(){
+    try{ return JSON.parse(localStorage.getItem(WHO)||'{}'); }catch(e){ return {}; }
+  };
+  function rememberWho(n,e){
+    try{ localStorage.setItem(WHO, JSON.stringify({name:n,email:e})); }catch(e){}
+  }
+
+  /* ---------------- writing the roster ---------------- */
+
+  // Registration goes through the register() function rather than a direct
+  // insert: it re-checks capacity and writes in one locked transaction, so two
+  // people can't both take the last spot. One call per day in the basket.
+  // "tix-2026-08-19-standard" -> "standard"
+  function tierOf(id){
+    var m=/^tix-\d{4}-\d{2}-\d{2}-(.+)$/.exec(id||'');
+    return m ? m[1] : null;
+  }
+
+  window.wfsCommit=async function(name, email, orderToken){
+    if(!sb) return {ok:false, error:'Supabase did not load.'};
+
+    // how many kits per day, not merely whether any
+    var kitCounts={};
+    lines().forEach(function(l){
+      if(l.kind==='kit' && l.qty>0) kitCounts[l.date]=(kitCounts[l.date]||0)+l.qty;
+    });
+
+    // per day: headcount, what the registrations cost, and which tier was picked
+    var byDate={}, amount={}, tier={};
+    lines().filter(function(l){ return l.kind==='reg'; })
+           .forEach(function(l){
+             byDate[l.date]=(byDate[l.date]||0)+l.qty;
+             amount[l.date]=(amount[l.date]||0)+l.qty*(l.price||0);
+             // if several tiers are mixed for one day, record the paid one
+             var tr=tierOf(l.id);
+             if(tr && (!tier[l.date] || l.price>0)) tier[l.date]=tr;
+           });
+    var kitAmount={};
+    lines().forEach(function(l){
+      if(l.kind==='kit' && l.qty>0)
+        kitAmount[l.date]=(kitAmount[l.date]||0)+l.qty*(l.price||0);
+    });
+
+    var dates=Object.keys(byDate).sort();
+    if(!dates.length) return {ok:true, placed:[], full:[], failed:[]};
+
+    var placed=[], full=[], failed=[];
+    for(var i=0;i<dates.length;i++){
+      var d=dates[i];
+      var res;
+      try{
+        res=await sb.rpc('register', {
+          p_date:d, p_name:name, p_email:email,
+          p_party:byDate[d],
+          p_kit:!!kitCounts[d],
+          p_kits:kitCounts[d]||0,
+          // mirrored so Supabase alone can answer "what is this person owed?"
+          p_meta:{
+            tier:        tier[d] || 'free',
+            amount:      amount[d] || 0,
+            kit_amount:  kitAmount[d] || 0,
+            order_token: orderToken || null
+          }
+        });
+      }catch(e){ failed.push({date:d, msg:String(e)}); continue; }
+
+      if(res.error){ failed.push({date:d, msg:res.error.message}); continue; }
+      var out=res.data||{};
+      if(out.ok) placed.push({date:d, party:byDate[d]});
+      else if(out.reason==='full') full.push({date:d, remaining:out.remaining});
+      else failed.push({date:d, msg:out.reason||'unknown'});
+    }
+
+    if(placed.length) rememberWho(name, email);
+    await window.wfsRefreshCounts();
+
+    return {
+      ok: placed.length>0 && !full.length && !failed.length,
+      placed: placed, full: full, failed: failed,
+      // lines to drop from the basket: the days that actually landed
+      placedDates: placed.map(function(p){ return p.date; })
+    };
+  };
+
+  /* ---------------- Snipcart, for paid baskets only ---------------- */
+
+  function snipItems(){
+    try{ return Snipcart.store.getState().cart.items.items || []; }catch(e){ return []; }
+  }
+  function defItem(defId){
+    var el=document.getElementById(defId);
+    if(!el) { console.error('[wfs] no product definition', defId); return null; }
+    var d=el.dataset;
+    return { id:d.itemId, name:d.itemName, price:parseFloat(d.itemPrice),
+             url:d.itemUrl, description:d.itemDescription||'', quantity:1 };
+  }
+  async function setSnipQty(defId, qty){
+    var item=defItem(defId); if(!item) return false;
+    var hit=snipItems().filter(function(i){ return i.id===item.id; })[0];
+    try{
+      if(qty<=0){ if(hit) await Snipcart.api.cart.items.remove(hit.uniqueId); }
+      else if(hit){ await Snipcart.api.cart.items.update({uniqueId:hit.uniqueId, quantity:qty}); }
+      else { item.quantity=qty; await Snipcart.api.cart.items.add(item); }
+      return true;
+    }catch(e){ console.error('[wfs] snipcart write failed', defId, qty, e); return false; }
+  }
+
+  // Push the paid half of the basket into Snipcart and open its checkout.
+  window.wfsPay=async function(){
+    if(!window.Snipcart || !Snipcart.api){ return {ok:false, error:'Payment is still loading — try again in a moment.'}; }
+    var paid=lines().filter(function(l){ return l.price>0; });
+    // clear anything stale first, then mirror exactly what's in our basket
+    var wanted={}; paid.forEach(function(l){ wanted[l.id]=l.qty; });
+    var existing=snipItems();
+    for(var i=0;i<existing.length;i++){
+      if(!wanted[existing[i].id]){
+        try{ await Snipcart.api.cart.items.remove(existing[i].uniqueId); }catch(e){}
+      }
+    }
+    for(var j=0;j<paid.length;j++){
+      if(!(await setSnipQty('def-'+paid[j].id, paid[j].qty))){
+        return {ok:false, error:'Could not hand that to the payment step.'};
+      }
+    }
+    try{ Snipcart.api.theme.cart.open(); }catch(e){}
+    return {ok:true};
+  };
+
+  document.addEventListener('snipcart.ready', function(){
+    if(!window.Snipcart) return;
+    // A paid order also carries whatever free lines were in the basket.
+    Snipcart.events.on('order.completed', async function(order){
+      try{
+        var email=(order && (order.email || (order.user && order.user.email))) || '';
+        var name='';
+        try{ name=(order.billingAddress && order.billingAddress.fullName) || order.cardHolderName || ''; }catch(e){}
+        if(!email) return;
+        var token=(order && (order.token || order.invoiceNumber)) || null;
+        var res=await window.wfsCommit(name, email, token);
+        if(res.placed && res.placed.length) window.wfsBasket.clear();
+        if(res.full && res.full.length){
+          console.warn('[wfs] paid order completed but these days were full:', res.full);
+        }
+      }catch(e){ console.error('[wfs] post-order commit threw', e); }
+    });
+  });
+
+  announce();
+  if(sb) window.wfsRefreshCounts();
+})();
+</script>
+  <script>/* The basket drawer: review, edit, and finish. Present on every /v3/ page. */
+(function(){
+  var ovl=document.getElementById('bkOvl'), bk=document.getElementById('bk');
+  if(!bk) return;
+  var body=document.getElementById('bkBody'), foot=document.getElementById('bkFoot');
+  var totEl=document.getElementById('bkTot'), goBtn=document.getElementById('bkGo');
+  var form=document.getElementById('bkForm'), formLead=document.getElementById('bkFormLead');
+  var nameEl=document.getElementById('bkName'), emailEl=document.getElementById('bkEmail');
+  var msg=document.getElementById('bkMsg'), note=document.getElementById('bkNote');
+  var done=document.getElementById('bkDone'), doneH=document.getElementById('bkDoneH'), doneP=document.getElementById('bkDoneP');
+  var cartBtn=document.getElementById('cartBtn'), cartNum=document.getElementById('cartNum');
+
+  function open(){
+    done.hidden=true; foot.hidden=false; body.hidden=false;
+    bk.hidden=false; ovl.hidden=false;
+    requestAnimationFrame(function(){ bk.classList.add('on'); ovl.classList.add('on'); });
+    render();
+  }
+  function close(){
+    bk.classList.remove('on'); ovl.classList.remove('on');
+    setTimeout(function(){ bk.hidden=true; ovl.hidden=true; }, 240);
+  }
+  window.wfsOpenBasket=open;
+  document.getElementById('bkClose').onclick=close;
+  document.getElementById('bkDoneClose').onclick=close;
+  ovl.onclick=close;
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && !bk.hidden) close(); });
+  if(cartBtn) cartBtn.onclick=open;
+
+  function money(n){ return '$'+n; }
+
+  function render(){
+    var B=window.wfsBasket, ls=B.lines(), tot=B.total();
+
+    if(cartBtn){ cartBtn.hidden = !(B.count()>0); }
+    if(cartNum){ cartNum.textContent = B.count(); }
+
+    if(!ls.length){
+      body.innerHTML='<p class="bk-empty">Nothing here yet.<br>Open a Field Day to register.</p>';
+      totEl.innerHTML=''; form.hidden=true; goBtn.disabled=true;
+      goBtn.textContent='Check out'; note.textContent='';
+      return;
+    }
+
+    // The drawer reviews and removes; quantities are only ever set on the day
+    // page, so there is no way to add from here.
+    body.innerHTML = ls.map(function(l){
+      var title = l.href
+        ? '<a href="'+esc(l.href)+'">'+esc(l.name)+'</a>'
+        : esc(l.name);
+      // quantity leads the title — on the sub-line it wrapped in the narrow drawer
+      var q = l.qty>1 ? '<span class="bkl-q">'+l.qty+' &times;</span> ' : '';
+      return '<div class="bkline" data-id="'+l.id+'">'+
+        '<span class="bkl-x"><b>'+q+title+'</b><small>'+esc(l.sub||'')+'</small></span>'+
+        '<span class="bkl-p'+(l.price?'':' free')+'">'+
+          (l.price ? money(l.price*l.qty) : 'Free')+'</span>'+
+        '<button type="button" class="bkl-rm" data-id="'+l.id+'" '+
+          'aria-label="Remove '+esc(l.name)+'" title="Remove">&times;</button>'+
+        '</div>';
+    }).join('');
+
+    var free = tot===0;
+    totEl.innerHTML = free
+      ? '<span>Nothing to pay</span><b>Free</b>'
+      : '<span>Total</span><b>'+money(tot)+'</b>';
+
+    form.hidden = !free;
+    formLead.textContent = 'Nothing to pay — just tell us who’s coming.';
+    goBtn.disabled=false;
+    goBtn.textContent = free ? 'Register — free' : 'Continue to payment';
+    note.textContent = free
+      ? 'No card, no checkout. We’ll email you the address. To change numbers, open the day.'
+      : 'You’ll be asked for card details on the next step. To change numbers, open the day.';
+
+    if(free){
+      var who=window.wfsWho();
+      if(who.name && !nameEl.value)  nameEl.value=who.name;
+      if(who.email && !emailEl.value) emailEl.value=who.email;
+    }
+  }
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+  body.addEventListener('click', function(e){
+    var rm=e.target.closest('.bkl-rm'); if(!rm) return;
+    window.wfsBasket.set(rm.dataset.id, 0);
+  });
+
+  function say(t, bad){ msg.textContent=t||''; msg.className='bk-msg'+(bad?' bad':''); }
+
+  goBtn.onclick=async function(){
+    var B=window.wfsBasket;
+    if(!B.lines().length) return;
+
+    if(B.total()>0){
+      goBtn.disabled=true; goBtn.textContent='One moment…';
+      var r=await window.wfsPay();
+      goBtn.disabled=false; goBtn.textContent='Continue to payment';
+      if(!r.ok) say(r.error, true);
+      return;
+    }
+
+    // free basket: two fields, straight into Supabase, no Snipcart at all
+    var name=nameEl.value.trim(), email=emailEl.value.trim();
+    if(!name){ say('Please add a name so we know who to expect.', true); nameEl.focus(); return; }
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){
+      say('That email doesn’t look right — we need it to send you the address.', true);
+      emailEl.focus(); return;
+    }
+    goBtn.disabled=true; goBtn.textContent='Registering…'; say('');
+    var res=await window.wfsCommit(name, email);
+    goBtn.disabled=false; goBtn.textContent='Register — free';
+
+    if(res.error){ say('Sorry — '+res.error, true); return; }
+
+    // A day can fill between loading the page and pressing the button, so this
+    // has to cope with some days landing and others not.
+    if(res.failed && res.failed.length && !res.placed.length){
+      say('Sorry — ' + res.failed[0].msg, true); return;
+    }
+    if(!res.placed.length && res.full.length){
+      say(res.full.length===1
+        ? 'That day filled up just now — nothing was taken.'
+        : 'Those days filled up just now — nothing was taken.', true);
+      render(); return;
+    }
+
+    // drop only what actually landed; anything full stays in the basket
+    res.placedDates.forEach(function(d){
+      B.lines().forEach(function(l){ if(l.date===d) B.set(l.id, 0); });
+    });
+
+    var people=res.placed.reduce(function(n,p){ return n+p.party; },0);
+    doneH.textContent = people>1 ? 'You’re registered — '+people+' people' : 'You’re registered';
+    var msg='Confirmation going to '+email+'. We’ll send the exact address before the day.';
+    if(res.full.length){
+      msg += ' ' + (res.full.length===1 ? 'One day' : res.full.length+' days') +
+             ' filled up before we got there and stayed in your basket.';
+    }
+    doneP.textContent=msg;
+    body.hidden=true; foot.hidden=true; done.hidden=false;
+  };
+
+  document.addEventListener('wfs.basket', function(){ if(!bk.hidden) render(); else render(); });
+  render();
+})();
+</script>
+  <script>/* The per-day panel on /v3/: same shape as /v2/, but it fills our basket
+   rather than Snipcart's cart. */
+(function(){
+  var panel=document.getElementById('tix');
+  if(!panel) return;
+  var rows=[].slice.call(panel.querySelectorAll('.trow'));
+  var sumEl=document.getElementById('tixSum'), goBtn=document.getElementById('tixGo');
+  var TITLE=panel.dataset.title, DATE=panel.dataset.date;
+
+  function qtyOf(r){ return parseInt(r.querySelector('.qnum').textContent,10)||0; }
+  function setQty(r,n){
+    n=Math.max(0,Math.min(30,n));
+    r.querySelector('.qnum').textContent=n;
+    r.classList.toggle('on', n>0);
+    r.querySelector('.qbtn[data-step="-1"]').disabled=(n===0);
+  }
+
+  function summarise(){
+    var regs=0, kits=0, money=0;
+    rows.forEach(function(r){
+      var n=qtyOf(r), unit=parseInt(r.dataset.unit,10)||0;
+      money+=n*unit;
+      if(r.dataset.kind==='kit') kits+=n; else regs+=n;
+    });
+    var bits=[];
+    if(regs) bits.push(regs+(regs===1?' registration':' registrations'));
+    if(kits) bits.push(kits+(kits===1?' kit':' kits'));
+    sumEl.innerHTML = (regs||kits)
+      ? '<b>'+bits.join(' · ')+' · '+(money>0?'$'+money:'Free')+'</b><small>Added to your registrations</small>'
+      : '<b>Nothing selected</b><small>Choose a registration above</small>';
+    goBtn.disabled = !regs && !kits;
+    return {regs:regs, kits:kits, money:money};
+  }
+
+  /* ---- capacity ----
+   * The number here is a hint from session_counts; register() re-checks it
+   * atomically at the moment of writing, so a stale page can't overbook.
+   */
+  var capEl=document.getElementById('tixCap');
+  function regRows(){ return rows.filter(function(r){ return r.dataset.kind!=='kit'; }); }
+  function regTotal(){ return regRows().reduce(function(n,r){ return n+qtyOf(r); },0); }
+
+  function showCapacity(){
+    var left=window.wfsRemaining(DATE);
+    if(!capEl) return left;
+    if(left===null){ capEl.textContent=''; capEl.className='tixcap'; return null; }
+    if(left<=0){
+      capEl.textContent='This day is full.';
+      capEl.className='tixcap full';
+    } else if(left<=3){
+      capEl.textContent='Only '+left+(left===1?' spot':' spots')+' left.';
+      capEl.className='tixcap low';
+    } else {
+      capEl.textContent=left+' spots left.';
+      capEl.className='tixcap';
+    }
+    rows.forEach(function(r){
+      if(r.dataset.kind==='kit') return;
+      r.classList.toggle('soldout', left<=0);
+      r.querySelector('.qbtn[data-step="1"]').disabled = (left<=0);
+    });
+    return left;
+  }
+  document.addEventListener('wfs.counts', function(){ showCapacity(); summarise(); });
+
+  panel.addEventListener('click', function(e){
+    var b=e.target.closest('.qbtn'); if(!b) return;
+    var r=b.closest('.trow');
+    var step=parseInt(b.dataset.step,10);
+
+    // don't let the page offer more spots than the day has left
+    if(step>0 && r.dataset.kind!=='kit'){
+      var left=window.wfsRemaining(DATE);
+      if(left!==null && regTotal()+1>left){
+        window.wfsToast && window.wfsToast(
+          left<=0 ? 'This day is full.' : 'Only '+left+' left for this day.');
+        return;
+      }
+    }
+    setQty(r, qtyOf(r)+step);
+    summarise();
+  });
+
+  goBtn.onclick=function(){
+    rows.forEach(function(r){
+      window.wfsBasket.set(r.dataset.pid, qtyOf(r), {
+        kind:  r.dataset.kind,
+        date:  DATE,
+        price: parseInt(r.dataset.unit,10)||0,
+        name:  r.dataset.line,
+        sub:   r.dataset.sub,
+        label: panel.dataset.label,
+        href:  location.pathname
+      });
+    });
+    window.wfsOpenBasket();
+  };
+
+  // reflect what the basket already holds for this day
+  function reflect(){
+    var b=window.wfsBasket.read();
+    var any=rows.some(function(r){ return (b[r.dataset.pid]||{}).qty>0; });
+    if(any) rows.forEach(function(r){ setQty(r, (b[r.dataset.pid]||{}).qty||0); });
+    summarise();
+  }
+  document.addEventListener('wfs.basket', reflect);
+
+  rows.forEach(function(r){ setQty(r,0); });
+  showCapacity();
+  reflect();
+})();
+</script>
+</body>
+</html>
