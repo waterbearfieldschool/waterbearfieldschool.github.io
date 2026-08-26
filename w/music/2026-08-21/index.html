@@ -435,13 +435,12 @@
   .tixcap:empty{display:none}
   .trow.soldout{opacity:.5}
   .trow.soldout .tprice{text-decoration:line-through}
-  .dc2-spots{margin-left:0}
-  .dc2-spots:empty{display:none}
-  .dc2-spots.low{color:#a8551f}
-  .dc2-spots.full{color:#b23}
-  .protobar .protoreset{margin-left:10px;background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.45);border-radius:6px;font:inherit;font-size:.78rem;font-weight:700;padding:3px 9px;cursor:pointer}
-  .protobar .protoreset:hover:not(:disabled){background:rgba(255,255,255,.28)}
-  .protobar .protoreset:disabled{opacity:.6;cursor:default}
+
+  /* a way back at the end of a day page, so returning doesn't mean scrolling
+     all the way up to the header link */
+  .backfoot{margin:30px 0 0;padding-top:18px;border-top:1px solid var(--line)}
+  .backfoot a{color:var(--muted);text-decoration:none;font-weight:700;font-size:.92rem}
+  .backfoot a:hover{color:var(--accent)}
 
 </style>
 </head>
@@ -466,13 +465,6 @@
     <div class="wsec">
       <p>Part jam session, part workshop: we build simple instruments from everyday materials, then play them together.</p><p>No musical background needed — the point is to make sound, make something, and have fun doing it as a group.</p>
     </div>
-
-    <dl class="dc-facts">
-      <div><dt>When</dt><dd>Fri · Aug 21 · 10 AM–1 PM</dd></div>
-      <div><dt>Where</dt><dd>Lincoln Park, Somerville<br><span class="muted">Exact address sent when you register.</span></dd></div>
-      <div><dt>Who</dt><dd>All ages welcome (an adult caregiver needs to accompany kids under 14).</dd></div>
-      <div><dt>Bring</dt><dd>An instrument if you have one — otherwise we&#39;ll make some.</dd></div>
-    </dl>
 
     <div class="tix" id="tix" data-date="2026-08-21" data-title="Music &amp; Instrument Making" data-label="Fri · Aug 21 — Music &amp; Instrument Making">
       <div class="tix-head">
@@ -547,14 +539,11 @@
       <button class="tixgo" id="tixGo" type="button" disabled>Add to my registrations</button>
     </div>
 
-    <p class="tixnote">Add as many days as you like, then finish up in one go. <b>If nothing you picked costs money, there&rsquo;s no checkout and no card</b> &mdash; just your name and email.</p>
 
-    <div class="more-days">
-      <p style="color:var(--muted);margin:28px 0 10px;font-size:.92rem">Other Music days:</p>
-      <div class="daynav"></div>
-    </div>
 
     <p style="margin:26px 0 0;color:var(--muted)">Want to teach or host a session? <a href="mailto:info@waterbearfieldschool.org?subject=Field%20Days" style="color:#7b6bb5;font-weight:700;text-decoration:underline">Email us</a>.</p>
+
+    <p class="backfoot"><a href="/">&larr; All Field Days</a></p>
   </div>
 
   <div class="toast" id="toast"></div>
@@ -1280,10 +1269,10 @@
       capEl.textContent='This day is full.';
       capEl.className='tixcap full';
     } else if(left<=3){
-      capEl.textContent='Only '+left+(left===1?' spot':' spots')+' left.';
+      capEl.textContent='Only '+left+(left===1?' spot':' spots')+' available.';
       capEl.className='tixcap low';
     } else {
-      capEl.textContent=left+' spots left.';
+      capEl.textContent=left+(left===1?' spot':' spots')+' available.';
       capEl.className='tixcap';
     }
     rows.forEach(function(r){

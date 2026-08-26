@@ -251,13 +251,13 @@
   .rvmsg{font-size:.9rem;font-weight:600;min-height:1.2em}
   /* ---- one card per day ---- */
   .daycards{display:flex;flex-direction:column;gap:14px;max-width:680px;margin:6px auto 0;text-align:left}
-  .daycard2{display:flex;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card);box-shadow:0 3px 12px rgba(0,0,0,.05);scroll-margin-top:84px}
+  .daycard2{display:flex;border:1px solid #cdb684;border-radius:14px;overflow:hidden;background:var(--card);box-shadow:0 3px 12px rgba(0,0,0,.05);scroll-margin-top:84px}
   .daycard2>img{width:150px;flex:none;object-fit:cover}
   .dc2-main{padding:14px 16px;flex:1;min-width:0}
-  .dc2-cat{font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#fff;padding:2px 9px;border-radius:999px;display:inline-block;margin-bottom:7px}
   .dc2-date{display:block;width:fit-content;font-weight:800;color:var(--accent-d);font-size:.96rem;margin-bottom:7px;text-decoration:none}
   .dc2-date:hover{text-decoration:underline}
-  .dc2-main h3{font-size:1.12rem;color:var(--accent-d);margin:0 0 3px}
+  .dc2-main h3{font-size:1.42rem;line-height:1.2;color:var(--accent-d);margin:2px 0 4px}
+  @media(max-width:560px){.dc2-main h3{font-size:1.28rem}}
   .dc2-meta{font-size:.85rem;color:var(--muted);font-weight:600;margin-bottom:8px}
   .dc2-blurb{font-size:.92rem;margin:0 0 9px}
   .dc2-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
@@ -269,6 +269,9 @@
   .dc2-details summary{cursor:pointer;color:var(--muted);font-weight:600;list-style:none}
   .dc2-details summary::-webkit-details-marker{display:none}
   .dc2-details[open] summary{color:var(--accent)}
+  .dc2-details summary .d-less{display:none}
+  .dc2-details[open] summary .d-more{display:none}
+  .dc2-details[open] summary .d-less{display:inline}
   .dc2-more{margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
   .dc2-more p{margin:0 0 9px;max-width:560px}
   .dc2-facts{display:grid;grid-template-columns:1fr 1fr;gap:9px 18px;margin-top:10px}
@@ -280,13 +283,17 @@
   .glance-wk:last-child{margin-bottom:0}
   .glance-month{display:block;text-align:center;font-size:1.24rem;font-weight:800;color:var(--accent-d);margin:0 0 8px}
   @media(max-width:560px){.glance-month{font-size:1.12rem}}
-  .glance-row{display:block;padding:8px 9px;border-radius:8px;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--line)}
-  .glance-row:last-child{border-bottom:none}
-  .glance-row:hover{background:#eef2ec}
-  .glance-row .g-main{display:flex;gap:9px;align-items:baseline;flex-wrap:wrap}
-  .glance-row .g-date{font-weight:700;color:var(--accent-d);white-space:nowrap;font-size:.84rem;flex:none}
-  .glance-row .g-proj{font-size:.86rem;font-weight:600;min-width:0}
-  .glance-row .g-when{display:block;font-size:.78rem;color:var(--muted);margin-top:1px}
+  .glance-row{display:block;padding:9px 12px;margin-bottom:8px;border:1px solid #cdb684;border-radius:10px;background:var(--card);text-decoration:none;color:var(--ink);transition:.12s}
+  .glance-row:last-child{margin-bottom:0}
+  .glance-row:hover{border-color:var(--accent);box-shadow:0 2px 8px rgba(0,0,0,.07)}
+  .glance-row .g-main{display:flex;gap:12px;align-items:baseline}
+  .glance-row .g-date{font-weight:600;color:var(--muted);white-space:nowrap;font-size:.82rem;flex:0 0 106px}
+  .glance-row .g-proj{font-size:.98rem;font-weight:800;color:var(--accent-d);min-width:0}
+  .glance-row .g-when{display:block;font-size:.78rem;color:var(--muted);margin-top:2px;padding-left:118px}
+  @media(max-width:520px){
+    .glance-row .g-date{flex-basis:92px}
+    .glance-row .g-when{padding-left:0}
+  }
   /* Registration panel + basket styling for the live site.
      (Renamed from wfs-tickets.css when /v2/ was retired — the word "ticket"
      left the interface a while before the filename caught up.) */
@@ -451,13 +458,12 @@
   .tixcap:empty{display:none}
   .trow.soldout{opacity:.5}
   .trow.soldout .tprice{text-decoration:line-through}
-  .dc2-spots{margin-left:0}
-  .dc2-spots:empty{display:none}
-  .dc2-spots.low{color:#a8551f}
-  .dc2-spots.full{color:#b23}
-  .protobar .protoreset{margin-left:10px;background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.45);border-radius:6px;font:inherit;font-size:.78rem;font-weight:700;padding:3px 9px;cursor:pointer}
-  .protobar .protoreset:hover:not(:disabled){background:rgba(255,255,255,.28)}
-  .protobar .protoreset:disabled{opacity:.6;cursor:default}
+
+  /* a way back at the end of a day page, so returning doesn't mean scrolling
+     all the way up to the header link */
+  .backfoot{margin:30px 0 0;padding-top:18px;border-top:1px solid var(--line)}
+  .backfoot a{color:var(--muted);text-decoration:none;font-weight:700;font-size:.92rem}
+  .backfoot a:hover{color:var(--accent)}
 
 </style>
 <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.css" />
@@ -516,36 +522,35 @@
     <div class="glance">
       <div class="glance-wk" data-month="August">
         <span class="glance-month">August</span>
-        <a class="glance-row" href="/w/solar/2026-08-19/">
+        <a class="glance-row" href="#day-2026-08-19">
           <span class="g-main"><span class="g-date">Wed · Aug 19</span><span class="g-proj">Solar</span></span>
           <span class="g-when">10 AM–1 PM · Lincoln Park, Somerville</span>
         </a>
-        <a class="glance-row" href="/w/woodworking/2026-08-20/">
+        <a class="glance-row" href="#day-2026-08-20">
           <span class="g-main"><span class="g-date">Thu · Aug 20</span><span class="g-proj">Woodworking</span></span>
           <span class="g-when">10 AM–1 PM · Lincoln Park, Somerville</span>
         </a>
-        <a class="glance-row" href="/w/music/2026-08-21/">
+        <a class="glance-row" href="#day-2026-08-21">
           <span class="g-main"><span class="g-date">Fri · Aug 21</span><span class="g-proj">Music</span></span>
           <span class="g-when">10 AM–1 PM · Lincoln Park, Somerville</span>
         </a>
-        <a class="glance-row" href="/w/woodworking/2026-08-25/">
+        <a class="glance-row" href="#day-2026-08-25">
           <span class="g-main"><span class="g-date">Tue · Aug 25</span><span class="g-proj">Woodworking</span></span>
           <span class="g-when">10 AM–1 PM · Lincoln Park, Somerville</span>
         </a>
-        <a class="glance-row" href="/w/solar/2026-08-26/">
+        <a class="glance-row" href="#day-2026-08-26">
           <span class="g-main"><span class="g-date">Wed · Aug 26</span><span class="g-proj">Solar</span></span>
           <span class="g-when">10 AM–1 PM · Lincoln Park, Somerville</span>
         </a>
-        <a class="glance-row" href="/w/plant-id/2026-08-27/">
+        <a class="glance-row" href="#day-2026-08-27">
           <span class="g-main"><span class="g-date">Thu · Aug 27</span><span class="g-proj">Plant ID</span></span>
           <span class="g-when">10 AM–1 PM · Umbrello Hay Field, Lincoln, MA</span>
         </a>
-        <a class="glance-row" href="/w/zines/2026-08-28/">
+        <a class="glance-row" href="#day-2026-08-28">
           <span class="g-main"><span class="g-date">Fri · Aug 28</span><span class="g-proj">Zines</span></span>
           <span class="g-when">10 AM–1 PM · Lincoln Park, Somerville</span>
         </a>
       </div>
-    </div>
     </div>
 
     <div class="daycards">
@@ -553,14 +558,12 @@
         <img src="/v6img/ws-solar.jpg" alt="">
         <div class="dc2-main">
           <a class="dc2-date" href="/w/solar/2026-08-19/">Wed · Aug 19 · 10 AM–1 PM</a>
-          <span class="dc2-cat" style="background:#2f5a92">Solar Power &amp; Electronics Bench</span>
           <h3><a href="/w/solar/2026-08-19/">Solar Power &amp; Electronics Bench</a></h3>
           <div class="dc2-meta">Lincoln Park, Somerville</div>
           <p class="dc2-blurb">Learn the basics of electricity by hooking up small solar panels, lights, batteries, and motors, and measuring voltage, current, and resistance with a multimeter.</p>
-          <span class="dc2-from dc2-spots" data-date="2026-08-19"></span>
           <div class="dc2-actions">
-            <a class="btn-reg" href="/w/solar/2026-08-19/">Register →</a>
-            <details class="dc2-details"><summary>More details ▾</summary>
+            <a class="btn-reg" href="/w/solar/2026-08-19/">Register</a>
+            <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
               <div class="dc2-more">
                 <p>We start from the very beginning — what a volt is, what a battery actually does — and build up, part by part, hooking up small solar panels, lights, batteries, and motors.</p><p>Along the way you&#39;ll get comfortable with a multimeter, measuring voltage, current, and resistance for yourself. Nothing is a black box: by the end you&#39;ll understand every wire.</p>
                 <dl class="dc2-facts">
@@ -578,14 +581,12 @@
         <img src="/v6img/ws-toolbox.jpg" alt="">
         <div class="dc2-main">
           <a class="dc2-date" href="/w/woodworking/2026-08-20/">Thu · Aug 20 · 10 AM–1 PM</a>
-          <span class="dc2-cat" style="background:#a86f28">Woodworking</span>
           <h3><a href="/w/woodworking/2026-08-20/">Build a Toolbox</a></h3>
           <div class="dc2-meta">Lincoln Park, Somerville</div>
           <p class="dc2-blurb">A friendly first build: a wooden toolbox to carry your tools. We&#39;ll cover measuring, sawing, drilling, and joining — the core hand-tool skills — on a project you can finish in a morning.</p>
-          <span class="dc2-from dc2-spots" data-date="2026-08-20"></span>
           <div class="dc2-actions">
-            <a class="btn-reg" href="/w/woodworking/2026-08-20/">Register →</a>
-            <details class="dc2-details"><summary>More details ▾</summary>
+            <a class="btn-reg" href="/w/woodworking/2026-08-20/">Register</a>
+            <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
               <div class="dc2-more">
                 <p>A friendly first build: a wooden toolbox to carry your tools. We&#39;ll cover measuring, sawing, drilling, and joining — the core hand-tool skills — on a project you can finish in a morning.</p><p>You&#39;ll take your finished toolbox home.</p>
                 <dl class="dc2-facts">
@@ -603,14 +604,12 @@
         <img src="/v6img/pg-music.jpg" alt="">
         <div class="dc2-main">
           <a class="dc2-date" href="/w/music/2026-08-21/">Fri · Aug 21 · 10 AM–1 PM</a>
-          <span class="dc2-cat" style="background:#7b6bb5">Music &amp; Instrument Making</span>
           <h3><a href="/w/music/2026-08-21/">Music &amp; Instrument Making</a></h3>
           <div class="dc2-meta">Lincoln Park, Somerville</div>
           <p class="dc2-blurb">Learn to build and play simple instruments together.</p>
-          <span class="dc2-from dc2-spots" data-date="2026-08-21"></span>
           <div class="dc2-actions">
-            <a class="btn-reg" href="/w/music/2026-08-21/">Register →</a>
-            <details class="dc2-details"><summary>More details ▾</summary>
+            <a class="btn-reg" href="/w/music/2026-08-21/">Register</a>
+            <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
               <div class="dc2-more">
                 <p>Part jam session, part workshop: we build simple instruments from everyday materials, then play them together.</p><p>No musical background needed — the point is to make sound, make something, and have fun doing it as a group.</p>
                 <dl class="dc2-facts">
@@ -628,14 +627,12 @@
         <img src="/v6img/ws-workbench.jpg" alt="">
         <div class="dc2-main">
           <a class="dc2-date" href="/w/woodworking/2026-08-25/">Tue · Aug 25 · 10 AM–1 PM</a>
-          <span class="dc2-cat" style="background:#a86f28">Woodworking</span>
           <h3><a href="/w/woodworking/2026-08-25/">Build a Workbench</a></h3>
           <div class="dc2-meta">Lincoln Park, Somerville</div>
           <p class="dc2-blurb">Step up to a sturdy, portable workbench for the mobile woodshop — we&#39;ll cut, assemble, and finish it together.</p>
-          <span class="dc2-from dc2-spots" data-date="2026-08-25"></span>
           <div class="dc2-actions">
-            <a class="btn-reg" href="/w/woodworking/2026-08-25/">Register →</a>
-            <details class="dc2-details"><summary>More details ▾</summary>
+            <a class="btn-reg" href="/w/woodworking/2026-08-25/">Register</a>
+            <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
               <div class="dc2-more">
                 <p>Step up to a sturdy, portable workbench for the mobile woodshop — we&#39;ll cut, assemble, and finish it together.</p><p>A bigger build; nice if you&#39;ve done a little woodworking before, but beginners are welcome too.</p>
                 <dl class="dc2-facts">
@@ -653,14 +650,12 @@
         <img src="/v6img/ws-solar.jpg" alt="">
         <div class="dc2-main">
           <a class="dc2-date" href="/w/solar/2026-08-26/">Wed · Aug 26 · 10 AM–1 PM</a>
-          <span class="dc2-cat" style="background:#2f5a92">Solar Power &amp; Electronics Bench</span>
           <h3><a href="/w/solar/2026-08-26/">Solar Power &amp; Electronics Bench</a></h3>
           <div class="dc2-meta">Lincoln Park, Somerville</div>
           <p class="dc2-blurb">Learn the basics of electricity by hooking up small solar panels, lights, batteries, and motors, and measuring voltage, current, and resistance with a multimeter.</p>
-          <span class="dc2-from dc2-spots" data-date="2026-08-26"></span>
           <div class="dc2-actions">
-            <a class="btn-reg" href="/w/solar/2026-08-26/">Register →</a>
-            <details class="dc2-details"><summary>More details ▾</summary>
+            <a class="btn-reg" href="/w/solar/2026-08-26/">Register</a>
+            <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
               <div class="dc2-more">
                 <p>We start from the very beginning — what a volt is, what a battery actually does — and build up, part by part, hooking up small solar panels, lights, batteries, and motors.</p><p>Along the way you&#39;ll get comfortable with a multimeter, measuring voltage, current, and resistance for yourself. Nothing is a black box: by the end you&#39;ll understand every wire.</p>
                 <dl class="dc2-facts">
@@ -678,14 +673,12 @@
         <img src="/v6img/pg-nature.jpg" alt="">
         <div class="dc2-main">
           <a class="dc2-date" href="/w/plant-id/2026-08-27/">Thu · Aug 27 · 10 AM–1 PM</a>
-          <span class="dc2-cat" style="background:#3f7d54">Plant ID &amp; Mapping</span>
           <h3><a href="/w/plant-id/2026-08-27/">Plant ID &amp; Mapping</a></h3>
           <div class="dc2-meta">Umbrello Hay Field, Lincoln, MA</div>
           <p class="dc2-blurb">Learn the names of some of the trees and plants around you, and how to read, use, and make maps.</p>
-          <span class="dc2-from dc2-spots" data-date="2026-08-27"></span>
           <div class="dc2-actions">
-            <a class="btn-reg" href="/w/plant-id/2026-08-27/">Register →</a>
-            <details class="dc2-details"><summary>More details ▾</summary>
+            <a class="btn-reg" href="/w/plant-id/2026-08-27/">Register</a>
+            <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
               <div class="dc2-more">
                 <p>A walking session: we learn the names of the trees and plants around us — how to tell them apart, and what people have used them for over time.</p><p>We&#39;ll also learn to read and use maps of where we are, and start making our own. Bring your curiosity and comfortable shoes.</p>
                 <dl class="dc2-facts">
@@ -703,14 +696,12 @@
         <img src="/v6img/ws-zines.png" alt="">
         <div class="dc2-main">
           <a class="dc2-date" href="/w/zines/2026-08-28/">Fri · Aug 28 · 10 AM–1 PM</a>
-          <span class="dc2-cat" style="background:#b0413e">Zines &amp; Printmaking</span>
           <h3><a href="/w/zines/2026-08-28/">Zines &amp; Printmaking</a></h3>
           <div class="dc2-meta">Lincoln Park, Somerville</div>
           <p class="dc2-blurb">Make small zines and booklets using simple needle-and-thread binding, and learn how to lay out your material so your zines are easy to print.</p>
-          <span class="dc2-from dc2-spots" data-date="2026-08-28"></span>
           <div class="dc2-actions">
-            <a class="btn-reg" href="/w/zines/2026-08-28/">Register →</a>
-            <details class="dc2-details"><summary>More details ▾</summary>
+            <a class="btn-reg" href="/w/zines/2026-08-28/">Register</a>
+            <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
               <div class="dc2-more">
                 <p>We&#39;ll use simple needle-and-thread binding techniques to make small zines and booklets you can take home.</p><p>Along the way you&#39;ll learn how to lay out your material so zines are easy to print — and easy to share.</p>
                 <dl class="dc2-facts">
@@ -1558,7 +1549,7 @@
       if(window.wfsIsPast(d)){ c.style.display='none'; hidden++; }
     });
     document.querySelectorAll('.glance-row').forEach(function(a){
-      var m=/\/(\d{4}-\d{2}-\d{2})\//.exec(a.getAttribute('href')||'');
+      var m=/(\d{4}-\d{2}-\d{2})/.exec(a.getAttribute('href')||'');
       if(m && window.wfsIsPast(m[1])) a.style.display='none';
     });
     document.querySelectorAll('.glance-wk').forEach(function(w){
@@ -1568,21 +1559,14 @@
   })();
 </script>
 <script>
-  // live "N spots left" on the Field Day cards
+  // The spot count is deliberately not shown on the homepage. A full day
+  // still says so on its button, so nobody clicks through to a dead end.
   document.addEventListener('wfs.counts', function(e){
     var counts=e.detail||{};
     document.querySelectorAll('.daycard2').forEach(function(c){
       var d=(c.id||'').replace('day-',''), row=counts[d];
       if(!row) return;
-      var el=c.querySelector('.dc2-spots');
-      if(!el) return;
       var left=row.remaining;
-      // spots bold, the pricing note muted — the treatment the price line had.
-      // "Full · sliding scale" would read oddly, so a full day just says Full.
-      el.innerHTML = left<=0
-        ? 'Full'
-        : left+(left===1?' spot left':' spots left')+'<span> · sliding scale</span>';
-      el.className='dc2-from dc2-spots'+(left<=0?' full':(left<=3?' low':''));
       var btn=c.querySelector('.btn-reg');
       if(btn && left<=0){ btn.textContent='Full'; btn.style.background='#8a8f88'; }
     });
