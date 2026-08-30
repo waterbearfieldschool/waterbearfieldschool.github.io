@@ -477,6 +477,12 @@
   .teachbox textarea{width:100%;font:inherit;font-size:.93rem;padding:9px 11px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);resize:vertical}
   .teachbox textarea:focus{outline:none;border-color:var(--accent)}
   .teachmsg{margin-top:7px;font-size:.86rem;font-weight:600;color:#a3402f}
+
+  .planbox{border:1.5px dashed #cdb684;background:#fdf9f1;border-radius:14px;padding:20px 22px;margin:22px 0 6px}
+  .planbox h2{font-size:1.15rem;color:#8a5a2b;margin:0 0 6px}
+  .planbox p{margin:0;color:var(--ink);font-size:.95rem;line-height:1.55}
+  .planacts{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+  .planacts .btn-reg,.planacts .btn-info{flex:1;min-width:170px;text-decoration:none;display:block;text-align:center}
 </style>
 </head>
 <body>
@@ -500,7 +506,6 @@
     <div class="wsec">
       <p>A friendly first build: a wooden toolbox to carry your tools. We&#39;ll cover measuring, sawing, drilling, and joining — the core hand-tool skills — on a project you can finish in a morning.</p><p>You&#39;ll take your finished toolbox home.</p>
     </div>
-
     <div class="tix" id="tix" data-date="2026-08-20" data-title="Build a Toolbox" data-label="Thu · Aug 20 — Build a Toolbox">
       <div class="tix-head">
         <h2>Choose a Registration Type:</h2>
@@ -581,7 +586,7 @@
     </div>
 
     <dl class="dc-facts">
-      <div><dt>When</dt><dd>Thu · Aug 20 · 10 AM–1 PM</dd></div>
+      <div><dt>When</dt><dd>Thu · Aug 20 &middot; 10 AM–1 PM</dd></div>
       <div><dt>Where</dt><dd>Lincoln Park, Somerville<br><span class="muted">Exact address sent when you register.</span></dd></div>
       <div><dt>Who</dt><dd>Adults and kids 6+ (an adult caregiver needs to accompany kids under 14). Good for first‑timers.</dd></div>
       <div><dt>Bring</dt><dd>Closed‑toe shoes. Tools and wood are provided.</dd></div>
@@ -764,6 +769,22 @@
     data-item-description="Covers your spot and quietly pays for someone else&#39;s."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-09-15-standard"
+    data-item-id="tix-2026-09-15-standard"
+    data-item-name="Rain Barrels · Date TBA · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers materials and keeps the day running."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-09-15-supporter"
+    data-item-id="tix-2026-09-15-supporter"
+    data-item-name="Rain Barrels · Date TBA · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your spot and quietly pays for someone else&#39;s."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
 </div>
 
 
@@ -828,7 +849,7 @@
                             'sb_publishable_VjYvl7U-fWJO0st6R6W7gg_ep7SNTn6')
     : null;
 
-  var SESSIONS={ "2026-08-19":"Wed · Aug 19 — Solar Power & Electronics Bench","2026-08-20":"Thu · Aug 20 — Build a Toolbox","2026-08-21":"Fri · Aug 21 — Music & Instrument Making","2026-08-25":"Tue · Aug 25 — Build a Workbench","2026-08-26":"Wed · Aug 26 — Solar Power & Electronics Bench","2026-08-27":"Thu · Aug 27 — Plant ID & Mapping","2026-08-28":"Fri · Aug 28 — Zines & Printmaking","2026-09-03":"Thu · Sep 3 — Plant ID & Mapping" };
+  var SESSIONS={ "2026-08-19":"Wed · Aug 19 — Solar Power & Electronics Bench","2026-08-20":"Thu · Aug 20 — Build a Toolbox","2026-08-21":"Fri · Aug 21 — Music & Instrument Making","2026-08-25":"Tue · Aug 25 — Build a Workbench","2026-08-26":"Wed · Aug 26 — Solar Power & Electronics Bench","2026-08-27":"Thu · Aug 27 — Plant ID & Mapping","2026-08-28":"Fri · Aug 28 — Zines & Printmaking","2026-09-03":"Thu · Sep 3 — Plant ID & Mapping","2026-09-15":"Date TBA — Intro to Rain Barrel Installation" };
   var KEY='wfs.basket.v1', WHO='wfs.who.v1', UPD='wfs.updates.v1', TEACH='wfs.teach.v1', LEARN='wfs.learn.v1';
 
   /* The updates checkbox lives in our drawer, but on the paid path the
