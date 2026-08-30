@@ -280,6 +280,7 @@
   .daycard-body h2 a:hover{text-decoration:underline}
   .dc2-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
   .dc2-actions .btn-reg{margin:0;flex:none}
+  .pastmark{opacity:.75;font-weight:600}
 </style>
 </head>
 <body>
@@ -296,18 +297,17 @@
       <img src="/v6img/ws-solar.jpg" alt="Solar Power &amp; Electronics Bench">
       <div class="wband" style="background:linear-gradient(transparent,#2f5a92f2)"><h1>Solar Power &amp; Electronics Bench</h1></div>
     </div>
-
     <p class="wblurb">Learn the basics of electricity by hooking up small solar panels, lights, batteries, and motors, and measuring voltage, current, and resistance with a multimeter.</p>
-    <p style="color:var(--muted);margin:-10px 0 22px;font-size:.92rem">2 upcoming days — each is its own project. Jump to the one you want:</p>
+    <p style="color:var(--muted);margin:-10px 0 22px;font-size:.92rem"><span id="dayCount">2</span> day<span id="dayCountS">s</span> — each is its own project. Jump to the one you want:</p>
 
     <div class="daynav">
-      <a href="/w/solar/2026-08-19/" class="daychip" style="border-color:#2f5a92">Wed · Aug 19 · Solar Power &amp; Electronics Bench</a><a href="/w/solar/2026-08-26/" class="daychip" style="border-color:#2f5a92">Wed · Aug 26 · Solar Power &amp; Electronics Bench</a>
+      <a href="/w/solar/2026-08-19/" class="daychip" data-date="2026-08-19" style="border-color:#2f5a92"><span class="pastmark">(Past) </span>Wed · Aug 19 · Solar Power &amp; Electronics Bench</a><a href="/w/solar/2026-08-26/" class="daychip" data-date="2026-08-26" style="border-color:#2f5a92"><span class="pastmark">(Past) </span>Wed · Aug 26 · Solar Power &amp; Electronics Bench</a>
     </div>
 
     
     <section class="daycard" id="day-2026-08-19">
       <div class="daycard-band" style="background:#2f5a92">
-        <a class="dc-when" href="/w/solar/2026-08-19/">Wed · Aug 19 · 10 AM–1 PM</a>
+        <a class="dc-when" href="/w/solar/2026-08-19/" data-date="2026-08-19"><span class="pastmark">(Past) </span>Wed · Aug 19 · 10 AM–1 PM</a>
         <a class="btn-reg dc-reg" href="/w/solar/2026-08-19/">View &amp; register →</a>
       </div>
       <div class="daycard-body">
@@ -334,7 +334,7 @@
     
     <section class="daycard" id="day-2026-08-26">
       <div class="daycard-band" style="background:#2f5a92">
-        <a class="dc-when" href="/w/solar/2026-08-26/">Wed · Aug 26 · 10 AM–1 PM</a>
+        <a class="dc-when" href="/w/solar/2026-08-26/" data-date="2026-08-26"><span class="pastmark">(Past) </span>Wed · Aug 26 · 10 AM–1 PM</a>
         <a class="btn-reg dc-reg" href="/w/solar/2026-08-26/">View &amp; register →</a>
       </div>
       <div class="daycard-body">
@@ -363,5 +363,24 @@
     <p style="margin:26px 0 0;color:var(--muted)"><b>Registration is always free.</b> If you'd like to take home a finished kit, we ask you to cover the materials and register in advance so we can have it ready for you.</p>
     <p style="margin:10px 0 0;color:var(--muted)">Want to teach or host a session? <a href="mailto:info@waterbearfieldschool.org?subject=Field%20Days" style="color:#2f5a92;font-weight:700;text-decoration:underline">Email us</a>.</p>
   </div>
+<script>
+  // A static build only knows the date it was built on, so the (Past) markers
+  // are re-decided here against the visitor's clock — and the day count with
+  // them, since a page listing two days one of which has gone should not
+  // announce two.
+  (function(){
+    var n=new Date();
+    var today=n.getFullYear()+'-'+String(n.getMonth()+1).padStart(2,'0')+'-'+String(n.getDate()).padStart(2,'0');
+    var upcoming=0, seen={};
+    document.querySelectorAll('[data-date] > .pastmark').forEach(function(m){
+      var d=m.parentNode.dataset.date, past=d<today;
+      m.hidden=!past;
+      if(!past && !seen[d]){ seen[d]=1; upcoming++; }
+    });
+    var c=document.getElementById('dayCount'), s=document.getElementById('dayCountS');
+    if(c){ c.textContent=upcoming; }
+    if(s){ s.textContent = upcoming===1 ? '' : 's'; }
+  })();
+</script>
 </body>
 </html>

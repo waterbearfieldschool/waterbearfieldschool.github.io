@@ -280,6 +280,7 @@
   .daycard-body h2 a:hover{text-decoration:underline}
   .dc2-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
   .dc2-actions .btn-reg{margin:0;flex:none}
+  .pastmark{opacity:.75;font-weight:600}
 </style>
 </head>
 <body>
@@ -296,18 +297,17 @@
       <img src="/v6img/pg-nature.jpg" alt="Plant ID &amp; Mapping">
       <div class="wband" style="background:linear-gradient(transparent,#3f7d54f2)"><h1>Plant ID &amp; Mapping</h1></div>
     </div>
-
     <p class="wblurb">Learn the names of some of the trees and plants around you, and how to read, use, and make maps.</p>
-    <p style="color:var(--muted);margin:-10px 0 22px;font-size:.92rem">1 upcoming day — each is its own project. Jump to the one you want:</p>
+    <p style="color:var(--muted);margin:-10px 0 22px;font-size:.92rem"><span id="dayCount">2</span> day<span id="dayCountS">s</span> — each is its own project. Jump to the one you want:</p>
 
     <div class="daynav">
-      <a href="/w/plant-id/2026-08-27/" class="daychip" style="border-color:#3f7d54">Thu · Aug 27 · Plant ID &amp; Mapping</a>
+      <a href="/w/plant-id/2026-08-27/" class="daychip" data-date="2026-08-27" style="border-color:#3f7d54"><span class="pastmark">(Past) </span>Thu · Aug 27 · Plant ID &amp; Mapping</a><a href="/w/plant-id/2026-09-03/" class="daychip" data-date="2026-09-03" style="border-color:#3f7d54"><span class="pastmark" hidden>(Past) </span>Thu · Sep 3 · Plant ID &amp; Mapping</a>
     </div>
 
     
     <section class="daycard" id="day-2026-08-27">
       <div class="daycard-band" style="background:#3f7d54">
-        <a class="dc-when" href="/w/plant-id/2026-08-27/">Thu · Aug 27 · 10 AM–1 PM</a>
+        <a class="dc-when" href="/w/plant-id/2026-08-27/" data-date="2026-08-27"><span class="pastmark">(Past) </span>Thu · Aug 27 · 10 AM–1 PM</a>
         <a class="btn-reg dc-reg" href="/w/plant-id/2026-08-27/">View &amp; register →</a>
       </div>
       <div class="daycard-body">
@@ -328,9 +328,51 @@
       </div>
     </section>
     
+    <section class="daycard" id="day-2026-09-03">
+      <div class="daycard-band" style="background:#3f7d54">
+        <a class="dc-when" href="/w/plant-id/2026-09-03/" data-date="2026-09-03"><span class="pastmark" hidden>(Past) </span>Thu · Sep 3 · 10 AM–1 PM</a>
+        <a class="btn-reg dc-reg" href="/w/plant-id/2026-09-03/">View &amp; register →</a>
+      </div>
+      <div class="daycard-body">
+        <h2><a href="/w/plant-id/2026-09-03/">Plant ID &amp; Mapping</a></h2>
+        
+        <p>A walking session: we learn the names of the trees and plants around us — how to tell them apart, and what people have used them for over time.</p><p>We&#39;ll also learn to read and use maps of where we are, and start making our own. Bring your curiosity and comfortable shoes.</p>
+
+        
+
+        <dl class="dc-facts">
+          <div><dt>When</dt><dd>Thu · Sep 3 · 10 AM–1 PM</dd></div>
+          <div><dt>Where</dt><dd>Umbrello Hay Field, Lincoln, MA<br><span class="muted">Meeting spot sent when you register.</span></dd></div>
+          <div><dt>Who</dt><dd>All ages welcome (an adult caregiver needs to accompany kids under 14).</dd></div>
+          <div><dt>Bring</dt><dd>A backpack, comfortable walking shoes, water, and weather-appropriate clothing.</dd></div>
+        </dl>
+
+        <a class="btn-reg" href="/w/plant-id/2026-09-03/">View &amp; register →</a>
+      </div>
+    </section>
+    
 
     <p style="margin:26px 0 0;color:var(--muted)"><b>Registration is always free.</b> If you'd like to take home a finished kit, we ask you to cover the materials and register in advance so we can have it ready for you.</p>
     <p style="margin:10px 0 0;color:var(--muted)">Want to teach or host a session? <a href="mailto:info@waterbearfieldschool.org?subject=Field%20Days" style="color:#3f7d54;font-weight:700;text-decoration:underline">Email us</a>.</p>
   </div>
+<script>
+  // A static build only knows the date it was built on, so the (Past) markers
+  // are re-decided here against the visitor's clock — and the day count with
+  // them, since a page listing two days one of which has gone should not
+  // announce two.
+  (function(){
+    var n=new Date();
+    var today=n.getFullYear()+'-'+String(n.getMonth()+1).padStart(2,'0')+'-'+String(n.getDate()).padStart(2,'0');
+    var upcoming=0, seen={};
+    document.querySelectorAll('[data-date] > .pastmark').forEach(function(m){
+      var d=m.parentNode.dataset.date, past=d<today;
+      m.hidden=!past;
+      if(!past && !seen[d]){ seen[d]=1; upcoming++; }
+    });
+    var c=document.getElementById('dayCount'), s=document.getElementById('dayCountS');
+    if(c){ c.textContent=upcoming; }
+    if(s){ s.textContent = upcoming===1 ? '' : 's'; }
+  })();
+</script>
 </body>
 </html>
