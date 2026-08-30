@@ -464,6 +464,10 @@
   .noday[hidden]{display:none}
   .seclead[hidden]{display:none}
 
+  .bk-learn{margin:6px 0 8px}
+  .bk-learn label{display:block;font-size:.86rem;font-weight:600;color:var(--muted);margin-bottom:5px}
+  .bk-learn textarea{width:100%;font:inherit;font-size:.9rem;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);resize:vertical}
+  .bk-learn textarea:focus{outline:none;border-color:var(--accent)}
   .bk-opt{display:flex;align-items:flex-start;gap:8px;margin:2px 0 4px;font-size:.86rem;color:var(--muted);line-height:1.35;cursor:pointer}
   .bk-opt input{width:16px;height:16px;flex:none;margin:1px 0 0;accent-color:var(--accent)}
 
@@ -771,6 +775,13 @@
     </form>
 
     
+    
+    <div class="bk-learn">
+      <label for="bkLearn">What would you like to learn next?</label>
+      <textarea id="bkLearn" rows="2" maxlength="600"
+                placeholder="Anything at all &mdash; we plan around these."></textarea>
+    </div>
+
     <label class="bk-opt" id="bkUpdatesWrap"><input type="checkbox" id="bkUpdates"> Email me when new Field Days are posted</label>
 
     <button type="button" class="bk-go" id="bkGo">Check out</button>
@@ -802,7 +813,7 @@
     : null;
 
   var SESSIONS={ "2026-08-19":"Wed · Aug 19 — Solar Power & Electronics Bench","2026-08-20":"Thu · Aug 20 — Build a Toolbox","2026-08-21":"Fri · Aug 21 — Music & Instrument Making","2026-08-25":"Tue · Aug 25 — Build a Workbench","2026-08-26":"Wed · Aug 26 — Solar Power & Electronics Bench","2026-08-27":"Thu · Aug 27 — Plant ID & Mapping","2026-08-28":"Fri · Aug 28 — Zines & Printmaking","2026-09-03":"Thu · Sep 3 — Plant ID & Mapping" };
-  var KEY='wfs.basket.v1', WHO='wfs.who.v1', UPD='wfs.updates.v1', TEACH='wfs.teach.v1';
+  var KEY='wfs.basket.v1', WHO='wfs.who.v1', UPD='wfs.updates.v1', TEACH='wfs.teach.v1', LEARN='wfs.learn.v1';
 
   /* The updates checkbox lives in our drawer, but on the paid path the
    * registration is written later, at cart.confirmed — by which point Snipcart
@@ -827,6 +838,19 @@
     try{ localStorage.setItem(TEACH, JSON.stringify(all)); }catch(e){}
   };
   window.wfsGetTeach=function(date){ return teachAll()[date] || ''; };
+
+  /* "What would you like to learn next?" — one answer per order, not per day.
+   * Persisted for the same reason as the teach offers: on the paid path the
+   * registration is written after Snipcart has been through the page. */
+  window.wfsSetLearn=function(text){
+    try{
+      if(text && text.trim()) localStorage.setItem(LEARN, text.trim());
+      else localStorage.removeItem(LEARN);
+    }catch(e){}
+  };
+  window.wfsGetLearn=function(){
+    try{ return localStorage.getItem(LEARN) || ''; }catch(e){ return ''; }
+  };
 
   /* ---------------- past days ----------------
    * A static build bakes in the date it was built, so it cannot be trusted to
@@ -970,7 +994,8 @@
             kit_amount:  kitAmount[d] || 0,
             order_token: orderToken || null,
             updates:     !!wantsUpdates,
-            teach:       window.wfsGetTeach(d) || null
+            teach:       window.wfsGetTeach(d) || null,
+            learn_next:  window.wfsGetLearn() || null
           }
         });
       }catch(e){ failed.push({date:d, msg:String(e)}); continue; }
@@ -996,6 +1021,7 @@
       }catch(e){ console.warn('[wfs] newsletter opt-in did not save', e); }
       try{ localStorage.removeItem(UPD); }catch(e){}
     }
+    if(placed.length){ try{ localStorage.removeItem(LEARN); }catch(e){} }
     if(placed.length){
       var left=teachAll();
       placed.forEach(function(p){ delete left[p.date]; });
@@ -1299,6 +1325,14 @@
 
   // remember the updates choice immediately; the paid path reads it back at
   // cart.confirmed, long after this drawer has gone
+  var learn0=document.getElementById('bkLearn');
+  if(learn0){
+    try{ learn0.value = localStorage.getItem('wfs.learn.v1') || ''; }catch(e){}
+    learn0.addEventListener('input', function(){
+      if(window.wfsSetLearn) window.wfsSetLearn(learn0.value);
+    });
+  }
+
   var upd0=document.getElementById('bkUpdates');
   if(upd0){
     // reflect a choice made before a reload, so the box does not silently
