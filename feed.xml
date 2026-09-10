@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Field Notes — Waterbear Field School</title>
+    <link>https://waterbearfieldschool.org/journal/</link>
+    <description>News, updates, and stories from Waterbear Field School.</description>
+    <language>en-us</language>
+    <atom:link href="https://waterbearfieldschool.org/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Aug 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Mesh radio with Rural Rivers</title>
+      <link>https://waterbearfieldschool.org/journal/2026-08-07-mesh-radio-rural-rivers/</link>
+      <guid isPermaLink="true">https://waterbearfieldschool.org/journal/2026-08-07-mesh-radio-rural-rivers/</guid>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 GMT</pubDate>
+      <description>A low-cost, off-grid water-level sensor for community flood monitoring — built with the Rural Rivers project in Vermont.</description>
+      <enclosure url="https://waterbearfieldschool.org/assets/images/journal/2026-08-07-mesh-radio-rural-rivers/mesh-radio-system-diagram.jpg" type="image/jpeg" length="0" />
+      <media:content url="https://waterbearfieldschool.org/assets/images/journal/2026-08-07-mesh-radio-rural-rivers/mesh-radio-system-diagram.jpg" medium="image" />
+      <category>communication</category>
+      <category>water</category>
+      <content:encoded><![CDATA[<p><img src="https://waterbearfieldschool.org/assets/images/journal/2026-08-07-mesh-radio-rural-rivers/mesh-radio-system-diagram.jpg" alt="System diagram — a Rook ultrasonic sender transmits over LoRa mesh radio to a Heltec V3 receiver, which relays the readings over WiFi to the Bayou cloud store"></p>
+<p>We're teaming up with the <strong><a href="https://sites.dartmouth.edu/mappingforresilience/">Rural Rivers / Mapping for Resilience</a></strong> project on low-cost, community-run flood monitoring.</p>
+<p>Rural Rivers is a research-for-resilience effort — led by researchers at Dartmouth College and the Colorado School of Mines, working alongside flood-impacted communities in the Black and White River Valleys of rural Vermont, which have weathered repeated major floods over the past fifteen years. The project studies how communities respond to overlapping crises, and how clearer communication and better information can strengthen local resilience.</p>
+<p>Timely information about <em>how high the water is getting</em> is a big part of that picture — and it's exactly what our water-level sensor is designed to provide.</p>
+<p>The sensor is a <strong>MeshCore-based ultrasonic water-level monitor</strong>: an ultrasonic rangefinder measures the distance down to the water's surface, and the reading is relayed over <strong>LoRa mesh radio</strong> — so it keeps reporting even where there's no cell service or internet. It's inexpensive to build, can run on solar, and is designed to be set up by anyone.</p>
+<p>If you'd like to build and configure one, everything you need is on the <strong><a href="https://waterbearfieldschool.org/water-mesh-config/">configuration page for the water-level sensor →</a></strong> — flash the firmware, pair the two devices, and connect to WiFi, right from your browser.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Meetup with Goodwin Hill Goats</title>
+      <link>https://waterbearfieldschool.org/journal/2026-05-23-goodwin-hill-goats/</link>
+      <guid isPermaLink="true">https://waterbearfieldschool.org/journal/2026-05-23-goodwin-hill-goats/</guid>
+      <pubDate>Sat, 23 May 2026 00:00:00 GMT</pubDate>
+      <description>A conversation about the ways kids learn with — and from — other animals.</description>
+      <enclosure url="https://waterbearfieldschool.org/assets/images/journal/2026-05-23-goodwin-hill-goats/pasture-with-goats.jpg" type="image/jpeg" length="0" />
+      <media:content url="https://waterbearfieldschool.org/assets/images/journal/2026-05-23-goodwin-hill-goats/pasture-with-goats.jpg" medium="image" />
+      <category>ecology</category>
+      <content:encoded><![CDATA[<p><img src="https://waterbearfieldschool.org/assets/images/journal/2026-05-23-goodwin-hill-goats/pasture-with-goats.jpg" alt="Two kids and Halé walking with a small herd of goats in a Lexington pasture, stone walls and forest line behind"></p>
+<p>Halé and I met up at pasture to talk about ways of weaving WFS curricula into activities that would support Goodwin Hill Goats: helping with feeding and care of the goats, foraging for supplemental goat greens, and helping with infrastructure upkeep and repair. Looking forward to more brainstorming soon!</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Toaster-oven reflow at Artisans Asylum</title>
+      <link>https://waterbearfieldschool.org/journal/2026-05-21-toaster-oven-reflow/</link>
+      <guid isPermaLink="true">https://waterbearfieldschool.org/journal/2026-05-21-toaster-oven-reflow/</guid>
+      <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
+      <description>Testing toaster-oven reflow-soldering techniques at Artisans Asylum.</description>
+      <enclosure url="https://waterbearfieldschool.org/assets/images/journal/2026-05-21-toaster-oven-reflow/reflow-station.jpg" type="image/jpeg" length="0" />
+      <media:content url="https://waterbearfieldschool.org/assets/images/journal/2026-05-21-toaster-oven-reflow/reflow-station.jpg" medium="image" />
+      <category>fabrication</category>
+      <content:encoded><![CDATA[<p><img src="https://waterbearfieldschool.org/assets/images/journal/2026-05-21-toaster-oven-reflow/reflow-station.jpg" alt="Testing toaster-oven reflow-soldering setup at Artisans Asylum — two ovens and a thermocouple controller on a workbench"></p>
+<p>Testing out toaster-oven soldering techniques at <a href="https://artisansasylum.com/">Artisans Asylum</a> with Mike; with a little bit of tweaking, we were able to get both ovens set up nicely, allowing for parallel surface mount soldering of small boards! Looking to use this technique to make more blinky boards and radio nodes soon …</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Sailing and STEM with the Edgewood Sailing School</title>
+      <link>https://waterbearfieldschool.org/journal/2026-05-20-sailing-stem-edgewood/</link>
+      <guid isPermaLink="true">https://waterbearfieldschool.org/journal/2026-05-20-sailing-stem-edgewood/</guid>
+      <pubDate>Wed, 20 May 2026 00:00:00 GMT</pubDate>
+      <description>Meeting with the Edgewood Sailing School to scope STEM workshops for 2026 — mesh radio, a dock-mounted water-level sensor, and more.</description>
+      <enclosure url="https://waterbearfieldschool.org/assets/images/journal/2026-05-20-sailing-stem-edgewood/at-edgewood-yacht-club.jpg" type="image/jpeg" length="0" />
+      <media:content url="https://waterbearfieldschool.org/assets/images/journal/2026-05-20-sailing-stem-edgewood/at-edgewood-yacht-club.jpg" medium="image" />
+      <category>libraries-learning</category>
+      <content:encoded><![CDATA[<p><img src="https://waterbearfieldschool.org/assets/images/journal/2026-05-20-sailing-stem-edgewood/at-edgewood-yacht-club.jpg" alt="Ben, Alex, and Craig under the Edgewood Yacht Club sign at the end of the dock, marina and partly cloudy sky behind"></p>
+<p>Craig and I met up with Ben and Alex of <a href="https://edgewoodsailing.org/">Edgewood Sailing School</a> to brainstorm about various STEM workshop ideas for their 2026 Sailing School, including an introduction to mesh radio. We're also planning on setting up a water level sensor on the dock, sending its data via mesh radio to the internet. More soon!</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Girl Scouts &quot;Intro to Solar Power&quot; at West Medford</title>
+      <link>https://waterbearfieldschool.org/journal/2026-05-16-girl-scouts-solar/</link>
+      <guid isPermaLink="true">https://waterbearfieldschool.org/journal/2026-05-16-girl-scouts-solar/</guid>
+      <pubDate>Sat, 16 May 2026 00:00:00 GMT</pubDate>
+      <description>An Intro to Solar Power workshop with a Girl Scout troop at the West Medford Community Center.</description>
+      <enclosure url="https://waterbearfieldschool.org/assets/images/journal/2026-05-16-girl-scouts-solar/workshop-on-the-tarp.jpg" type="image/jpeg" length="0" />
+      <media:content url="https://waterbearfieldschool.org/assets/images/journal/2026-05-16-girl-scouts-solar/workshop-on-the-tarp.jpg" medium="image" />
+      <category>energy</category>
+      <content:encoded><![CDATA[<p><img src="https://waterbearfieldschool.org/assets/images/journal/2026-05-16-girl-scouts-solar/workshop-on-the-tarp.jpg" alt="Girl Scouts gathered on a blue tarp outside the West Medford Community Center, working with small solar materials; troop leaders and visitors watching"></p>
+<p>An &quot;Intro to Solar Power&quot; workshop for a Girl Scout troop at the West Medford Community Center — what a fun day! We used simple voltmeters to measure solar panel voltages, and then wired up two solar panels in series to power a small motor. We also experimented with LEDs and coin cell batteries, and used a 'nibbler' (a drill with an attachment that can safely cut thin sheet material), powered by a larger solar panel, to cut custom shapes out of cardboard. We're planning more meetups soon!</p>
+<p><img src="https://waterbearfieldschool.org/assets/images/journal/2026-05-16-girl-scouts-solar/nibbler-cutting-cardboard.jpg" alt="Two Girl Scouts and an instructor crouched on the grass cutting a piece of cardboard with a solar-powered nibbler; a small solar panel propped behind them"></p>
+<p><img src="https://waterbearfieldschool.org/assets/images/journal/2026-05-16-girl-scouts-solar/assembling-small-project.jpg" alt="A young workshop participant in a brimmed hat sitting on the grass with an instructor, assembling a small electronics project together while two Girl Scouts look on"></p>
+<p><img src="https://waterbearfieldschool.org/assets/images/journal/2026-05-16-girl-scouts-solar/solar-cells-on-tarp.jpg" alt="A Girl Scout troop gathered around a blue tarp examining small solar cells; a workshop instructor sits with them, a cardboard box of materials on the grass alongside"></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>WFS mobile trailer is nearly finished!</title>
+      <link>https://waterbearfieldschool.org/journal/2026-05-10-wfs-mobile-trailer/</link>
+      <guid isPermaLink="true">https://waterbearfieldschool.org/journal/2026-05-10-wfs-mobile-trailer/</guid>
+      <pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate>
+      <description>Installing a window, upgrading the roof, and getting ready for solar — the WFS mobile trailer takes shape.</description>
+      <enclosure url="https://waterbearfieldschool.org/assets/images/journal/2026-05-10-wfs-mobile-trailer/trailer-in-the-lot.jpg" type="image/jpeg" length="0" />
+      <media:content url="https://waterbearfieldschool.org/assets/images/journal/2026-05-10-wfs-mobile-trailer/trailer-in-the-lot.jpg" medium="image" />
+      <category>transport</category>
+      <content:encoded><![CDATA[<p><img src="https://waterbearfieldschool.org/assets/images/journal/2026-05-10-wfs-mobile-trailer/trailer-in-the-lot.jpg" alt="The WFS mobile trailer parked outside, side door framing and a freshly cut window opening visible, wood shavings on the pavement"></p>
+<p>We're installing a window, upgrading the roof, and getting ready to add a solar panel; get ready for the WFS trailer to make an appearance at farms and parks in the Greater Boston area soon!</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Water Quality Jam Session</title>
+      <link>https://waterbearfieldschool.org/journal/2026-04-26-uv254-jam/</link>
+      <guid isPermaLink="true">https://waterbearfieldschool.org/journal/2026-04-26-uv254-jam/</guid>
+      <pubDate>Sun, 26 Apr 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://waterbearfieldschool.org/assets/images/journal/2026-04-26-uv254-jam/mike-bench.jpg" type="image/jpeg" length="0" />
+      <media:content url="https://waterbearfieldschool.org/assets/images/journal/2026-04-26-uv254-jam/mike-bench.jpg" medium="image" />
+      <category>water</category>
+      <content:encoded><![CDATA[<p><img src="https://waterbearfieldschool.org/assets/images/journal/2026-04-26-uv254-jam/mike-bench.jpg" alt="Mike at the picnic bench with the UV-254 setup"></p>
+<h2>What we worked on</h2>
+<p>…</p>
+<h2>The setup</h2>
+<p><img src="https://waterbearfieldschool.org/assets/images/journal/2026-04-26-uv254-jam/instrument.jpg" alt="UV-254 instrument prototype on the bench"></p>
+<p>…</p>
+<h2>Findings</h2>
+<p>…</p>
+<h2>Next steps</h2>
+<p>…</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>UV254 &#39;limits of detection&#39; with Mike</title>
+      <link>https://waterbearfieldschool.org/journal/2026-04-25-uv254-limits-of-detection/</link>
+      <guid isPermaLink="true">https://waterbearfieldschool.org/journal/2026-04-25-uv254-limits-of-detection/</guid>
+      <pubDate>Sat, 25 Apr 2026 00:00:00 GMT</pubDate>
+      <description>Picnic-table open science with the UV-254 instrument — making calibration curves to pin down its limits of detection.</description>
+      <enclosure url="https://waterbearfieldschool.org/assets/images/journal/2026-04-25-uv254-limits-of-detection/uv254-picnic-table.jpg" type="image/jpeg" length="0" />
+      <media:content url="https://waterbearfieldschool.org/assets/images/journal/2026-04-25-uv254-limits-of-detection/uv254-picnic-table.jpg" medium="image" />
+      <category>water</category>
+      <content:encoded><![CDATA[<p><img src="https://waterbearfieldschool.org/assets/images/journal/2026-04-25-uv254-limits-of-detection/uv254-picnic-table.jpg" alt="Mike at an outdoor picnic table covered in cuvettes, the open-source UV-254 instrument, a multimeter, sample bottles, and notebooks; a sunny day along a green-sided building"></p>
+<p>We spent the day trying to make some calibration curves with our open source UV-254 instrument. Picnic-table open science for the win!</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Working on the FarmBox design with Dorn, Craig, and Coleman</title>
+      <link>https://waterbearfieldschool.org/journal/2026-04-17-farmbox-design-with-dorn/</link>
+      <guid isPermaLink="true">https://waterbearfieldschool.org/journal/2026-04-17-farmbox-design-with-dorn/</guid>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 GMT</pubDate>
+      <description>A day at Artisans Asylum working on Dorn&#39;s design for a Raspberry-Pi-based, decentralized data storage and sharing platform for farmers.</description>
+      <enclosure url="https://waterbearfieldschool.org/assets/images/journal/2026-04-17-farmbox-design-with-dorn/farmbox-asylum.webp" type="image/jpeg" length="0" />
+      <media:content url="https://waterbearfieldschool.org/assets/images/journal/2026-04-17-farmbox-design-with-dorn/farmbox-asylum.webp" medium="image" />
+      <category>communication</category>
+      <content:encoded><![CDATA[<p><img src="https://waterbearfieldschool.org/assets/images/journal/2026-04-17-farmbox-design-with-dorn/farmbox-asylum.webp" alt="Dorn and Craig standing at the end of a long wooden table at Artisans Asylum, Coleman seated at the table drawing in a notebook; warehouse-style ceiling and plywood partitions behind"></p>
+<p>We spent a fun day at Artisans Asylum working with Dorn's design for a Raspberry-Pi-based, decentralized data storage and data sharing platform for farmers.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Designing a Supercapacitor Battery Model</title>
+      <link>https://waterbearfieldschool.org/journal/2026-02-21-supercapacitor-battery-model/</link>
+      <guid isPermaLink="true">https://waterbearfieldschool.org/journal/2026-02-21-supercapacitor-battery-model/</guid>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <description>Designing a simple supercapacitor circuit that models battery charging and discharging on a fast, observable timescale — and doubles as a crank-powered flashlight for workshops.</description>
+      <enclosure url="https://waterbearfieldschool.org/assets/images/journal/2026-02-21-supercapacitor-battery-model/superbatt-v0.1.webp" type="image/jpeg" length="0" />
+      <media:content url="https://waterbearfieldschool.org/assets/images/journal/2026-02-21-supercapacitor-battery-model/superbatt-v0.1.webp" medium="image" />
+      <category>energy</category>
+      <content:encoded><![CDATA[<p><img src="https://waterbearfieldschool.org/assets/images/journal/2026-02-21-supercapacitor-battery-model/superbatt-v0.1.webp" alt="Supercapacitor battery model"></p>
+<p>Mike suggested that we could make a simple circuit where a supercapacitor serves as a quick-to-charge, quick-to-discharge battery. This would let us easily measure changes in voltage and current during charging and discharging on a reasonable timescale — something that's hard to observe with conventional batteries, which take hours to cycle.</p>
+<p>Because supercapacitors can be charged and discharged virtually unlimited times without degradation, they make an ideal hands-on model for exploring how batteries work. The setup could also double as a practical device: a small crank-powered flashlight, using a DC motor as a generator to charge the supercapacitor.</p>
+<p>We'll be designing the circuit soon and using it in upcoming workshops.</p>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>
