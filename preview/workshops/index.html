@@ -2,19 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Building Bike Trailers — Waterbear Field School</title>
-<meta name="description" content="Build a cargo trailer for a bicycle out of electrical conduit and a pair of recycled kids&#39; bike wheels — about $40 of parts, and it carries real loads.">
-<link rel="canonical" href="https://waterbearfieldschool.org/w/biketrailer/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Building Bike Trailers — Waterbear Field School">
-<meta property="og:description" content="Build a cargo trailer for a bicycle out of electrical conduit and a pair of recycled kids&#39; bike wheels — about $40 of parts, and it carries real loads.">
-<meta property="og:url" content="https://waterbearfieldschool.org/w/biketrailer/">
-<meta property="og:image" content="https://waterbearfieldschool.org/v6img/pj-trailer.jpg">
-<meta property="og:site_name" content="Waterbear Field School">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Building Bike Trailers — Waterbear Field School">
-<meta name="twitter:description" content="Build a cargo trailer for a bicycle out of electrical conduit and a pair of recycled kids&#39; bike wheels — about $40 of parts, and it carries real loads.">
-<meta name="twitter:image" content="https://waterbearfieldschool.org/v6img/pj-trailer.jpg">
+<meta name="robots" content="noindex, nofollow">
+<title>Workshops — Waterbear Field School</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>  :root{--ink:#1f241f;--bg:#f7f7f2;--muted:#6b7168;--accent:#1c4d3a;--accent-d:#123526;--sun:#e0a92b;--line:#e5e6e0;--card:#fff}
@@ -280,99 +269,132 @@
   .daycard-body h2 a:hover{text-decoration:underline}
   .dc2-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
   .dc2-actions .btn-reg{margin:0;flex:none}
-  .pastmark{opacity:.75;font-weight:600}
+
+  /* ---- workshops card grid ---- */
+  .wgwrap{max-width:860px;margin:0 auto;padding:8px 20px 70px}
+  .wglead{color:var(--muted);margin:2px auto 22px;max-width:620px;text-align:center}
+  .wgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+  .wcard{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 3px 12px rgba(0,0,0,.05);text-decoration:none;color:var(--ink);transition:.15s ease}
+  .wcard:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.10)}
+  .wcard-band{height:6px}
+  .wcard>img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:#e5e6e0}
+  .wcard-body{display:flex;flex-direction:column;flex:1;padding:13px 15px 15px}
+  .wcard-body h2{font-size:1.05rem;color:var(--accent-d);margin:0 0 5px}
+  .wcard-body p{font-size:.87rem;color:var(--muted);margin:0 0 12px;flex:1}
+  .wcard-meta{display:flex;gap:8px;flex-wrap:wrap;font-size:.76rem;font-weight:700}
+  .wcard-meta span{background:#f3f6f1;border:1px solid var(--line);border-radius:999px;padding:3px 10px;color:var(--accent-d)}
+  .wcard-more{margin-top:11px;font-weight:700;font-size:.88rem;color:var(--accent)}
 </style>
 </head>
 <body>
-  <div class="stickytop">
-    <div class="top">
-      <a class="brand" href="/" style="text-decoration:none">Waterbear Field School<small>Hands-on learning &amp; building, near Lincoln, MA</small></a>
+  <div class="stickytop"><div class="top"><div class="brand">Waterbear Field School<small>Workshops</small></div></div></div>
+  <div class="backbar"><a href="/preview/#schedule">← Back to the schedule</a></div>
+
+  <div class="wgwrap">
+    <h1 style="font-size:1.6rem;color:var(--accent-d);margin:8px 0 6px;text-align:center">Workshops</h1>
+    <p class="wglead">Every Field Day is built from one of these workshops. Click through to see what each one covers, photos from past sessions, and upcoming days you can join.</p>
+
+    <div class="wgrid">
+      
+      <a class="wcard" href="/preview/w/water/">
+        <div class="wcard-band" style="background:#2c8299"></div>
+        <img src="/v6img/ws-rain.jpg" alt="Working with Water">
+        <div class="wcard-body">
+          <h2>Working with Water</h2>
+          <p>Catching rain, moving it, and cleaning it — the plumbing and practice of making water useful at home and on the farm.</p>
+          <div class="wcard-meta">
+            
+            
+          </div>
+          <div class="wcard-more">Learn more →</div>
+        </div>
+      </a>
+      
+      <a class="wcard" href="/preview/w/solar/">
+        <div class="wcard-band" style="background:#2f5a92"></div>
+        <img src="/v6img/ws-solar.jpg" alt="Solar Power &amp; Electronics Bench">
+        <div class="wcard-body">
+          <h2>Solar Power &amp; Electronics Bench</h2>
+          <p>Learn the basics of electricity by hooking up small solar panels, lights, batteries, and motors, and measuring voltage, current, and resistance with a multimeter.</p>
+          <div class="wcard-meta">
+            
+            
+          </div>
+          <div class="wcard-more">Learn more →</div>
+        </div>
+      </a>
+      
+      <a class="wcard" href="/preview/w/woodworking/">
+        <div class="wcard-band" style="background:#a86f28"></div>
+        <img src="/v6img/pg-wood.jpg" alt="Woodworking">
+        <div class="wcard-body">
+          <h2>Woodworking</h2>
+          <p>Use simple hand tools to build useful objects like a portable work bench, a toolbox, a birdbox, an easel, a bench.</p>
+          <div class="wcard-meta">
+            
+            
+          </div>
+          <div class="wcard-more">Learn more →</div>
+        </div>
+      </a>
+      
+      <a class="wcard" href="/preview/w/music/">
+        <div class="wcard-band" style="background:#7b6bb5"></div>
+        <img src="/v6img/pg-music.jpg" alt="Music &amp; Instrument Making">
+        <div class="wcard-body">
+          <h2>Music &amp; Instrument Making</h2>
+          <p>Learn to build and play simple instruments together.</p>
+          <div class="wcard-meta">
+            
+            
+          </div>
+          <div class="wcard-more">Learn more →</div>
+        </div>
+      </a>
+      
+      <a class="wcard" href="/preview/w/zines/">
+        <div class="wcard-band" style="background:#b0413e"></div>
+        <img src="/v6img/ws-zines.png" alt="Zines &amp; Printmaking">
+        <div class="wcard-body">
+          <h2>Zines &amp; Printmaking</h2>
+          <p>Make small zines and booklets using simple needle-and-thread binding, and learn how to lay out your material so your zines are easy to print.</p>
+          <div class="wcard-meta">
+            
+            
+          </div>
+          <div class="wcard-more">Learn more →</div>
+        </div>
+      </a>
+      
+      <a class="wcard" href="/preview/w/plant-id/">
+        <div class="wcard-band" style="background:#3f7d54"></div>
+        <img src="/v6img/pg-nature.jpg" alt="Plant ID &amp; Mapping">
+        <div class="wcard-body">
+          <h2>Plant ID &amp; Mapping</h2>
+          <p>Learn the names of some of the trees and plants around you, and how to read, use, and make maps.</p>
+          <div class="wcard-meta">
+            
+            
+          </div>
+          <div class="wcard-more">Learn more →</div>
+        </div>
+      </a>
+      
+      <a class="wcard" href="/preview/w/biketrailer/">
+        <div class="wcard-band" style="background:#55606b"></div>
+        <img src="/v6img/pj-trailer.jpg" alt="Building Bike Trailers">
+        <div class="wcard-body">
+          <h2>Building Bike Trailers</h2>
+          <p>Build a cargo trailer for a bicycle out of electrical conduit and a pair of recycled kids&#39; bike wheels — about $40 of parts, and it carries real loads.</p>
+          <div class="wcard-meta">
+            
+            
+          </div>
+          <div class="wcard-more">Learn more →</div>
+        </div>
+      </a>
+      
     </div>
   </div>
-
-  <div class="backbar"><a href="/#schedule">← All Field Days</a></div>
-
-  <div class="wdetail">
-    <div class="whero">
-      <img src="/v6img/pj-trailer.jpg" alt="Building Bike Trailers">
-      <div class="wband" style="background:linear-gradient(transparent,#55606bf2)"><h1>Building Bike Trailers</h1></div>
-    </div>
-    <p class="wblurb">Build a cargo trailer for a bicycle out of electrical conduit and a pair of recycled kids&#39; bike wheels — about $40 of parts, and it carries real loads.</p>
-    <p style="color:var(--muted);margin:-10px 0 22px;font-size:.92rem"><span id="dayCount">2</span> day<span id="dayCountS">s</span> — each is its own project. Jump to the one you want:</p>
-
-    <div class="daynav">
-      <a href="/w/biketrailer/2026-09-15/" class="daychip" data-date="2026-09-15" style="border-color:#55606b"><span class="pastmark">(Past) </span>Tue · Sep 15 · Building Bike Trailers</a><a href="/w/biketrailer/2026-09-22/" class="daychip" data-date="2026-09-22" style="border-color:#55606b"><span class="pastmark" hidden>(Past) </span>Tue · Sep 22 · Building Bike Trailers</a>
-    </div>
-
-    
-    <section class="daycard" id="day-2026-09-15">
-      <div class="daycard-band" style="background:#55606b">
-        <a class="dc-when" href="/w/biketrailer/2026-09-15/" data-date="2026-09-15"><span class="pastmark">(Past) </span>Tue · Sep 15 · 10 AM–1 PM</a>
-        <a class="btn-reg dc-reg" href="/w/biketrailer/2026-09-15/">View &amp; register →</a>
-      </div>
-      <div class="daycard-body">
-        <h2><a href="/w/biketrailer/2026-09-15/">Building Bike Trailers</a></h2>
-        
-        <p>Learn how to build a cargo trailer for a bicycle from two ten-foot lengths of half-inch electrical conduit, a pair of recycled 16″ children&#39;s bike wheels, four laser-cut steel dropouts and a handful of bolts — about $40 of parts, and it carries real loads.</p><p>We start with the one real skill in it: bending conduit, which is easy once someone shows you and unforgiving if nobody does. Then we drill, bolt and square up the frame, mount the wheels on the dropouts, and fit the hitch — a short length of braided vinyl tubing and a standard Burley hitch that clamps to the rear axle.</p><p>Note: for this workshop, we&#39;ll be building one bike trailer design together, and donating the bike trailer to the city. If you like the design, you can make arrangements with us at the workshop to purchase the materials to build your own.</p>
-
-        
-
-        <dl class="dc-facts">
-          <div><dt>When</dt><dd>Tue · Sep 15 · 10 AM–1 PM</dd></div>
-          <div><dt>Where</dt><dd>Lincoln Park, Somerville<br><span class="muted">Exact address sent when you register.</span></dd></div>
-          <div><dt>Who</dt><dd>Adults and kids 6+ (an adult caregiver needs to accompany kids under 14). No experience needed.</dd></div>
-          <div><dt>Bring</dt><dd>Closed‑toe shoes. Bring your bike if you&#39;d like to fit the hitch to it. Tools and parts are provided.</dd></div>
-        </dl>
-
-        <a class="btn-reg" href="/w/biketrailer/2026-09-15/">View &amp; register →</a>
-      </div>
-    </section>
-    
-    <section class="daycard" id="day-2026-09-22">
-      <div class="daycard-band" style="background:#55606b">
-        <a class="dc-when" href="/w/biketrailer/2026-09-22/" data-date="2026-09-22"><span class="pastmark" hidden>(Past) </span>Tue · Sep 22 · 10 AM–1 PM</a>
-        <a class="btn-reg dc-reg" href="/w/biketrailer/2026-09-22/">View &amp; register →</a>
-      </div>
-      <div class="daycard-body">
-        <h2><a href="/w/biketrailer/2026-09-22/">Building Bike Trailers</a></h2>
-        
-        <p>Learn how to build a cargo trailer for a bicycle from two ten-foot lengths of half-inch electrical conduit, a pair of recycled 16″ children&#39;s bike wheels, four laser-cut steel dropouts and a handful of bolts — about $40 of parts, and it carries real loads.</p><p>We start with the one real skill in it: bending conduit, which is easy once someone shows you and unforgiving if nobody does. Then we drill, bolt and square up the frame, mount the wheels on the dropouts, and fit the hitch — a short length of braided vinyl tubing and a standard Burley hitch that clamps to the rear axle.</p><p>Note: for this workshop, we&#39;ll be building one bike trailer design together, and donating the bike trailer to the city. If you like the design, you can make arrangements with us at the workshop to purchase the materials to build your own.</p>
-
-        
-
-        <dl class="dc-facts">
-          <div><dt>When</dt><dd>Tue · Sep 22 · 10 AM–1 PM</dd></div>
-          <div><dt>Where</dt><dd>Lincoln Park, Somerville<br><span class="muted">Exact address sent when you register.</span></dd></div>
-          <div><dt>Who</dt><dd>Adults and kids 6+ (an adult caregiver needs to accompany kids under 14). No experience needed.</dd></div>
-          <div><dt>Bring</dt><dd>Closed‑toe shoes. Bring your bike if you&#39;d like to fit the hitch to it. Tools and parts are provided.</dd></div>
-        </dl>
-
-        <a class="btn-reg" href="/w/biketrailer/2026-09-22/">View &amp; register →</a>
-      </div>
-    </section>
-    
-
-    <p style="margin:26px 0 0;color:var(--muted)"><b>Registration is always free.</b> If you'd like to take home a finished kit, we ask you to cover the materials and register in advance so we can have it ready for you.</p>
-    <p style="margin:10px 0 0;color:var(--muted)">Want to teach or host a session? <a href="mailto:info@waterbearfieldschool.org?subject=Field%20Days" style="color:#55606b;font-weight:700;text-decoration:underline">Email us</a>.</p>
-  </div>
-<script>
-  // A static build only knows the date it was built on, so the (Past) markers
-  // are re-decided here against the visitor's clock — and the day count with
-  // them, since a page listing two days one of which has gone should not
-  // announce two.
-  (function(){
-    var n=new Date();
-    var today=n.getFullYear()+'-'+String(n.getMonth()+1).padStart(2,'0')+'-'+String(n.getDate()).padStart(2,'0');
-    var upcoming=0, seen={};
-    document.querySelectorAll('[data-date] > .pastmark').forEach(function(m){
-      var d=m.parentNode.dataset.date, past=d<today;
-      m.hidden=!past;
-      if(!past && !seen[d]){ seen[d]=1; upcoming++; }
-    });
-    var c=document.getElementById('dayCount'), s=document.getElementById('dayCountS');
-    if(c){ c.textContent=upcoming; }
-    if(s){ s.textContent = upcoming===1 ? '' : 's'; }
-  })();
-</script>
 </body>
 </html>
