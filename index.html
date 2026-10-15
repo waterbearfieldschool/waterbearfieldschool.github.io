@@ -226,6 +226,7 @@
   .showcase{display:block;position:relative;max-width:680px;margin:12px auto 0;aspect-ratio:3/2;border-radius:16px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.16);text-decoration:none;background:#e9e5da}
   .sc-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity .9s ease;text-decoration:none;color:inherit;pointer-events:none}
   .sc-slide.on{opacity:1;pointer-events:auto}
+  .showcase:not(.js) .sc-slide:first-child{opacity:1;pointer-events:auto}
   .sc-label{position:absolute;left:0;right:0;bottom:0;white-space:nowrap;text-align:center;color:#1f241f;font-weight:500;font-size:.9rem;letter-spacing:.01em;padding:6px 16px;background:rgba(255,255,255,.5);backdrop-filter:blur(6px) saturate(1.2);-webkit-backdrop-filter:blur(6px) saturate(1.2);border-top:1px solid rgba(255,255,255,.45)}
   .hero{margin-bottom:20px}
   .hdrnav{display:flex;gap:8px;justify-content:center;align-items:center;max-width:600px;margin:0 auto;max-height:0;overflow-x:auto;overflow-y:hidden;opacity:0;transition:max-height .28s ease,opacity .22s ease,padding .28s ease;padding:0 12px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
@@ -590,55 +591,39 @@
 
   <div class="herowrap">
   <div class="showcase">
-    <a class="sc-slide on" href="/s/2026-10-27-solar/"
-       style="background-image:url(/v6img/ws-solar.jpg)">
-      <span class="sc-label">Solar Power &amp; Electronics Bench &middot; Oct 27</span>
+    <a class="sc-slide" href="/journal/2026-10-15-shed-solar-upgrade/"
+       style="background-image:url(/assets/images/journal/2026-10-15-shed-solar-upgrade/shed-power-board.jpg)">
+      <span class="sc-label">Upgrading an off-grid shed: bigger battery, bigger panels &middot; Oct 15</span>
     </a>
-    <a class="sc-slide" href="/s/2026-10-22-music/"
-       style="background-image:url(/v6img/pg-music.jpg)">
-      <span class="sc-label">Music &amp; Instrument Making &middot; Oct 22</span>
-    </a>
-    <a class="sc-slide" href="/s/2026-10-20-humanpower/"
-       style="background-image:url(/v6img/pj-humanpower.jpg)">
-      <span class="sc-label">Human-Powered Machines &middot; Oct 20</span>
-    </a>
-    <a class="sc-slide" href="/s/2026-10-15-zines/"
-       style="background-image:url(/v6img/ws-zines-press.jpg)">
-      <span class="sc-label">Zines &amp; Printmaking &middot; Oct 15</span>
-    </a>
-    <a class="sc-slide" href="/s/2026-10-13-workbench/"
-       style="background-image:url(/v6img/ws-foldingtable.jpg)">
-      <span class="sc-label">Build a Workbench &middot; Oct 13</span>
-    </a>
-    <a class="sc-slide" href="/s/2026-09-22-biketrailer/"
+    <a class="sc-slide" href="/s/2026-09-22-biketrailer/" data-date="2026-09-22"
        style="background-image:url(/assets/images/sessions/2026-09-22-biketrailer/01-riding.jpg)">
       <span class="sc-label">Building Bike Trailers &middot; Sep 22</span>
     </a>
-    <a class="sc-slide" href="/s/2026-09-15-biketrailer/"
+    <a class="sc-slide" href="/s/2026-09-15-biketrailer/" data-date="2026-09-15"
        style="background-image:url(/assets/images/sessions/2026-09-15-biketrailer/01-frame.jpg)">
       <span class="sc-label">Building Bike Trailers &middot; Sep 15</span>
     </a>
-    <a class="sc-slide" href="/s/2026-08-28-zines/"
+    <a class="sc-slide" href="/s/2026-08-28-zines/" data-date="2026-08-28"
        style="background-image:url(/assets/images/sessions/2026-08-28-zines/01-sign.jpg)">
       <span class="sc-label">Zines &amp; Printmaking &middot; Aug 28</span>
     </a>
-    <a class="sc-slide" href="/s/2026-08-27-plant-id/"
+    <a class="sc-slide" href="/s/2026-08-27-plant-id/" data-date="2026-08-27"
        style="background-image:url(/assets/images/sessions/2026-08-27-plant-id/01-guides.jpg)">
       <span class="sc-label">Plant ID &amp; Mapping &middot; Aug 27</span>
     </a>
-    <a class="sc-slide" href="/s/2026-08-26-solar/"
+    <a class="sc-slide" href="/s/2026-08-26-solar/" data-date="2026-08-26"
        style="background-image:url(/assets/images/sessions/2026-08-26-solar/01-bent.jpg)">
       <span class="sc-label">Solar Power &amp; Electronics Bench &middot; Aug 26</span>
     </a>
-    <a class="sc-slide" href="/s/2026-08-25-woodworking/"
+    <a class="sc-slide" href="/s/2026-08-25-woodworking/" data-date="2026-08-25"
        style="background-image:url(/assets/images/sessions/2026-08-25-woodworking/01-hauled.jpg)">
       <span class="sc-label">Build a Workbench &middot; Aug 25</span>
     </a>
-    <a class="sc-slide" href="/s/2026-08-20-woodworking/"
+    <a class="sc-slide" href="/s/2026-08-20-woodworking/" data-date="2026-08-20"
        style="background-image:url(/assets/images/sessions/2026-08-20-woodworking/01-carrying.jpg)">
       <span class="sc-label">Build a Toolbox &middot; Aug 20</span>
     </a>
-    <a class="sc-slide" href="/s/2026-08-19-solar/"
+    <a class="sc-slide" href="/s/2026-08-19-solar/" data-date="2026-08-19"
        style="background-image:url(/assets/images/sessions/2026-08-19-solar/03-bench.jpg)">
       <span class="sc-label">Solar Power &amp; Electronics Bench &middot; Aug 19</span>
     </a>
@@ -1198,13 +1183,13 @@
           <div class="foot"><a class="btn-reg" href="/s/2026-10-15-zines/">Read &rarr;</a></div>
         </div>
       </article>
-      <article class="card jcard pastday" data-date="2026-10-13" hidden>
-        <img class="cardimg" src="/v6img/ws-foldingtable.jpg" alt="" loading="lazy">
+      <article class="card jcard">
+        <img class="cardimg" src="/assets/images/journal/2026-10-15-shed-solar-upgrade/shed-power-board.jpg" alt="" loading="lazy">
         <div class="body">
-          <div class="when">Tue · Oct 13 &middot; Umbrello Hay Field, Lincoln, MA</div>
-          <h3>Build a Workbench</h3>
-          <div class="desc">Build a workbench you can carry to the work and put away afterwards — the one tool that makes every other tool usable.</div>
-          <div class="foot"><a class="btn-reg" href="/s/2026-10-13-workbench/">Read &rarr;</a></div>
+          <div class="when">Thu · Oct 15</div>
+          <h3>Upgrading an off-grid shed: bigger battery, bigger panels</h3>
+          <div class="desc">A small 12V solar setup in a shed gets a 200Ah battery and a pair of 260W panels — what&#39;s there now, what&#39;s changing, and why.</div>
+          <div class="foot"><a class="btn-reg" href="/journal/2026-10-15-shed-solar-upgrade/">Read &rarr;</a></div>
         </div>
       </article>
       <article class="card jcard pastday" data-date="2026-09-22">
@@ -1372,7 +1357,16 @@
 <script>
 (function(){
   var sc=document.querySelector(".showcase"); if(!sc) return;
-  var sl=sc.querySelectorAll(".sc-slide"); if(sl.length<2) return;
+  // drop Field Days that haven't happened yet (decided against the visitor's clock)
+  var today=new Date(), iso=today.getFullYear()+"-"+String(today.getMonth()+1).padStart(2,"0")+"-"+String(today.getDate()).padStart(2,"0");
+  sc.querySelectorAll(".sc-slide[data-date]").forEach(function(a){
+    var past=window.wfsIsPast?window.wfsIsPast(a.dataset.date):a.dataset.date<iso;
+    if(!past) a.remove();
+  });
+  sc.classList.add("js");
+  var sl=sc.querySelectorAll(".sc-slide"); if(!sl.length) return;
+  if(!sc.querySelector(".sc-slide.on")) sl[0].classList.add("on");
+  if(sl.length<2) return;
   if(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   var i=0;
   setInterval(function(){ if(document.hidden) return; sl[i].classList.remove("on"); i=(i+1)%sl.length; sl[i].classList.add("on"); },3400);

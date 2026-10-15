@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
+<meta name="theme-color" content="#1c4d3a">
+
+
+  <title>Upgrading an off-grid shed: bigger battery, bigger panels</title>
+  <meta name="description" content="Learning to live well, off-the-grid." />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://waterbearfieldschool.org/journal/2026-10-15-shed-solar-upgrade/">
+  <meta property="og:title" content="Upgrading an off-grid shed: bigger battery, bigger panels">
+  <meta property="og:description" content="Learning to live well, off-the-grid.">
+  <meta property="og:site_name" content="Waterbear Field School">
+  <meta property="og:image" content="https://waterbearfieldschool.org/assets/images/journal/2026-10-15-shed-solar-upgrade/shed-power-board.jpg">
+  
+  
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://waterbearfieldschool.org/journal/2026-10-15-shed-solar-upgrade/">
+  <meta property="twitter:title" content="Upgrading an off-grid shed: bigger battery, bigger panels">
+  <meta property="twitter:description" content="Learning to live well, off-the-grid.">
+  <meta property="twitter:image" content="https://waterbearfieldschool.org/assets/images/journal/2026-10-15-shed-solar-upgrade/shed-power-board.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="alternate" type="application/rss+xml" title="Field Notes — Waterbear Field School" href="/feed.xml">
+  <link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+  <div class="wrap">
+    <aside>
+      <div class="brand">
+        <!--<div class="dot" aria-hidden="true"></div>-->
+        <div class="brand-hero">
+          <h1><a class="brand-link" href="/">Waterbear Field School</a></h1>
+          <p class="brand-topics" style="color: #8B6914; font-size: 0.95rem;">Hands-on community workshops and projects focusing on energy, water, food, shelter, climate, communication, fabrication, transport, arts & crafts.</p>
+          <nav class="brand-nav brand-nav-inline">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/#journal">Field Notes</a></li>
+              <li><a href="/#workshops">Workshops</a></li>
+              <li><a href="/#recently">Recently</a></li>
+              <li><a href="/#projects">Projects</a></li>
+              <li><a href="/#foundations">Foundations</a></li>
+              <li><a href="/about/">About</a></li>
+            </ul>
+          </nav>
+          <p class="brand-tagline" style="margin: 12px 0 4px 0; font-size: 0.95rem; font-style: italic; color: var(--muted); text-align: center;">
+            We'd love to hear from you!
+          </p>
+          <p class="contact-email" style="margin: 12px 0 0 0; font-size: 0.95rem;">
+            <a href="mailto:info@waterbearfieldschool.org?subject=Waterbear%20Field%20School%20Inquiry">info@waterbearfieldschool.org</a>
+          </p>
+        </div>
+      </div>
+
+    </aside>
+
+    <main>
+      
+<article class="prose">
+  <h1>Upgrading an off-grid shed: bigger battery, bigger panels</h1>
+  <div class="meta">Thu Oct 15 2026</div>
+  <div class="float-figure float-left">
+  <a href="/assets/images/journal/2026-10-15-shed-solar-upgrade/shed-power-board.jpg" target="_blank">
+    <img src="/assets/images/journal/2026-10-15-shed-solar-upgrade/shed-power-board.jpg" alt="A plywood power board on a shed wall: Renogy Rover charge controller on the left, a blade fuse block and two USB outlets in the middle, red and black bus bars below, a Renogy 700W inverter on the right, and a separate yellow Sun King unit beside it">
+  </a>
+  <div class="float-caption">The shed's power board as it stands today. Left to right: charge controller, fuse block with two USB/12V outlets, bus bars, inverter. (The yellow Sun King on the right is its own separate system.)</div>
+</div>
+<p>We're upgrading a small off-grid solar setup in a shed: swapping in a much bigger battery and adding a pair of full-size solar panels. It's a nice example of how a simple 12V system is put together — and of what needs to change when you scale one up. Here's what's there now, what's changing, and the reasoning behind each choice.</p>
+<h2>The current setup</h2>
+<p>The system is a classic small 12V layout: a solar panel feeds a charge controller, the controller charges a battery, and the battery feeds a fuse block that supplies the loads — a couple of USB/12V outlets and an inverter for 110V AC.</p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>What it is</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Charge controller</td>
+<td>Renogy Rover 30A MPPT</td>
+<td>Takes power from the panel and charges the battery safely</td>
+</tr>
+<tr>
+<td>Battery</td>
+<td>Dakota Lithium 12V 23Ah LiFePO4 (295 Wh)</td>
+<td>Stores energy for nights and cloudy days</td>
+</tr>
+<tr>
+<td>Inverter</td>
+<td>Renogy 700W pure sine wave</td>
+<td>Turns 12V DC into 110V AC for ordinary plugs</td>
+</tr>
+<tr>
+<td>Fuse block</td>
+<td>6-way blade fuse block (5A, 7.5A, 30A fitted)</td>
+<td>Protects each circuit's wiring</td>
+</tr>
+<tr>
+<td>Outlets</td>
+<td>Two panel-mount USB/12V sockets</td>
+<td>Phone and device charging</td>
+</tr>
+</tbody>
+</table>
+<div class="float-figure float-left" style="max-width:420px">
+  <a href="/assets/images/journal/2026-10-15-shed-solar-upgrade/hand-drawn-circuit.jpg" target="_blank">
+    <img src="/assets/images/journal/2026-10-15-shed-solar-upgrade/hand-drawn-circuit.jpg" alt="A hand-drawn wiring diagram labeled 'The Circuits': a solar panel wired to a charge controller (CC), the controller wired to the battery, and the battery wired through a fuse block to a 12V USB outlet and a DC-to-AC inverter">
+  </a>
+  <div class="float-caption">The wiring diagram taped up next to the board — panel → charge controller → battery → fuses → loads. Every system should have one of these posted!</div>
+</div>
+<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(170px, 1fr)); gap:16px; margin:19px 0; align-items:start">
+<figure style="margin:0">
+  <a href="/assets/images/journal/2026-10-15-shed-solar-upgrade/renogy-rover-30a.jpg" target="_blank"><img src="/assets/images/journal/2026-10-15-shed-solar-upgrade/renogy-rover-30a.jpg" alt="Close-up of the Renogy Rover 30A MPPT charge controller, its display reading 13.8 volts" style="width:100%; max-width:100%; height:auto; margin:0; border-radius:8px"></a>
+  <figcaption style="font-size:0.95rem; color:var(--muted); margin-top:6px">The Renogy Rover 30A MPPT charge controller, showing 13.8V at the battery.</figcaption>
+</figure>
+<figure style="margin:0">
+  <a href="/assets/images/journal/2026-10-15-shed-solar-upgrade/dakota-lithium-23ah.jpg" target="_blank"><img src="/assets/images/journal/2026-10-15-shed-solar-upgrade/dakota-lithium-23ah.jpg" alt="A Dakota Lithium 12V 23Ah LiFePO4 battery mounted on the wall, its terminals marked with red and blue tape" style="width:100%; max-width:100%; height:auto; margin:0; border-radius:8px"></a>
+  <figcaption style="font-size:0.95rem; color:var(--muted); margin-top:6px">The current battery: a 12V 23Ah lithium iron phosphate (LiFePO4) pack, about 295 watt-hours.</figcaption>
+</figure>
+<figure style="margin:0">
+  <a href="/assets/images/journal/2026-10-15-shed-solar-upgrade/fuse-block-and-usb.jpg" target="_blank"><img src="/assets/images/journal/2026-10-15-shed-solar-upgrade/fuse-block-and-usb.jpg" alt="A clear-covered blade fuse block holding 5, 7.5 and 30 amp fuses, flanked by two panel-mount USB outlets with blue indicator lights" style="width:100%; max-width:100%; height:auto; margin:0; border-radius:8px"></a>
+  <figcaption style="font-size:0.95rem; color:var(--muted); margin-top:6px">The fuse block, with a USB/12V outlet on each side.</figcaption>
+</figure>
+<figure style="margin:0">
+  <a href="/assets/images/journal/2026-10-15-shed-solar-upgrade/renogy-700w-inverter.jpg" target="_blank"><img src="/assets/images/journal/2026-10-15-shed-solar-upgrade/renogy-700w-inverter.jpg" alt="A black Renogy 700W pure sine wave inverter, 12V DC to 110V AC, mounted on the board" style="width:100%; max-width:100%; height:auto; margin:0; border-radius:8px"></a>
+  <figcaption style="font-size:0.95rem; color:var(--muted); margin-top:6px">The 700W pure sine wave inverter, for ordinary household plugs.</figcaption>
+</figure>
+</div>
+<h2>The upgrade</h2>
+<h3>A much bigger battery: 200Ah AGM</h3>
+<div class="float-figure float-left">
+  <a href="/assets/images/journal/2026-10-15-shed-solar-upgrade/renogy-agm-200ah-box.jpg" target="_blank">
+    <img src="/assets/images/journal/2026-10-15-shed-solar-upgrade/renogy-agm-200ah-box.jpg" alt="Shipping box label for a Renogy 12V 200Ah AGM deep cycle battery, model RNG-BATT-AGM12-200">
+  </a>
+  <div class="float-caption">The new battery: a Renogy 12V 200Ah AGM deep-cycle battery.</div>
+</div>
+<p>The new battery is a <strong>Renogy 12V 200Ah AGM</strong> (absorbed glass mat — a sealed lead-acid battery). On paper it stores about 2,400 Wh, roughly eight times the old battery. In practice, lead-acid batteries last much longer if you only use about half their capacity, so the usable figure is closer to <strong>1,200 Wh — still about four times what the shed has now.</strong></p>
+<p>Switching from lithium to AGM changes a few things:</p>
+<ul>
+<li><strong>The charge controller needs new settings.</strong> Lithium and lead-acid batteries want different charging voltages, so the Rover gets switched from its lithium profile to its sealed/AGM profile (and the voltages checked against the battery's label).</li>
+<li><strong>It's heavy</strong> — around 130 lb. It lives on the floor or a solid shelf, not on the wall.</li>
+<li><strong>It's better in the cold.</strong> Lithium batteries shouldn't be charged below freezing; AGMs can be, which matters in an unheated New England shed.</li>
+<li><strong>It likes to be kept full.</strong> Lead-acid batteries wear out when they sit partly discharged, so it's worth protecting them from deep discharge with a low-voltage cutoff set around 12.0V.</li>
+<li><strong>Old and new don't mix.</strong> The lithium battery comes out of this system entirely, rather than being wired alongside the AGM.</li>
+</ul>
+<h3>Two 260W solar panels, in series</h3>
+<div class="float-figure float-left" style="max-width:420px">
+  <a href="/assets/images/journal/2026-10-15-shed-solar-upgrade/ja-solar-260w-label.jpg" target="_blank">
+    <img src="/assets/images/journal/2026-10-15-shed-solar-upgrade/ja-solar-260w-label.jpg" alt="Spec label on a JA Solar JAP6-60-260 panel: 260 watts peak, 37.98V open circuit, 30.63V at max power, 9.04A short circuit, 8.49A at max power">
+  </a>
+  <div class="float-caption">The new panels: JA Solar 260W, standard 60-cell modules.</div>
+</div>
+<p>The panels are <strong>JA Solar 260W</strong>, standard 60-cell modules (37.98V open-circuit, 30.63V at max power, about 8.5A). Two of them, wired <strong>in series</strong>, are a good match for this charge controller and battery:</p>
+<ul>
+<li><strong>Voltage stays safely under the controller's limit.</strong> Two in series is about 76V open-circuit. Panel voltage rises in cold weather — maybe to the high 80s on a frigid January morning — which still leaves headroom under the controller's 100V input limit. <em>Three</em> in series would exceed it.</li>
+<li><strong>Current stays low</strong> (about 9A), so ordinary 10 AWG PV wire works fine even on a longer run to the shed.</li>
+<li><strong>A little oversizing is a feature.</strong> 520W of panels is a bit more than a 30A controller can pass into a 12V battery (about 400–430W). On bright summer days it simply caps out; on gray winter days the extra panel area means more charging than a smaller array would give.</li>
+<li><strong>Rough winter budget:</strong> about 0.8–1.2 kWh per day in December from the pair — enough to refill the battery's usable capacity in a day or two of decent sun.</li>
+<li><strong>Tilt them steeply.</strong> Around 55–60°, facing south, favors the low winter sun and sheds snow.</li>
+</ul>
+<h2>Making it safer as it gets bigger</h2>
+<p>A bigger battery can deliver a <em>lot</em> more current into a short circuit, so the protection gets an upgrade along with everything else:</p>
+<ul>
+<li><strong>A main fuse right at the battery's positive terminal</strong>, sized to the main cable.</li>
+<li><strong>A fuse between the charge controller and the battery</strong> (about 40A for a 30A controller).</li>
+<li><strong>A disconnect between the panels and the controller</strong>, rated for DC and at least 100V, so the array can be safely switched off.</li>
+<li><strong>Its own heavy cable and fuse for the inverter.</strong> A 700W inverter can pull around 65A from a 12V battery. Right now it shares the fuse block's 30A circuit, which caps it at roughly 350W. With the new battery it gets a dedicated cable and fuse straight from the bus bar, sized per the inverter's manual.</li>
+<li><strong>Grounded panel frames and racking.</strong></li>
+</ul>
+<p>And when swapping the battery: with this kind of controller, <strong>disconnect the panels first and reconnect them last</strong> — the controller needs to see the battery before it sees solar power.</p>
+<h2>What's next</h2>
+<p>Mounting the panels, running the cable into the shed, and swapping the battery. We'll post photos of the finished setup — and if you'd like to learn to build a system like this yourself, this is exactly the kind of thing we cover at our solar workshops.</p>
+
+</article>
+
+    </main>
+  </div>
+
+  
+
+  <script>
+    // Slideshow functionality
+    var slideIndex = 1;
+
+    function currentSlide(n) {
+      showSlide(slideIndex = n);
+    }
+
+    function showSlide(n) {
+      var slides = document.getElementsByClassName("slide");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+      }
+      for (var i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+      }
+      if (slides[slideIndex-1]) slides[slideIndex-1].classList.add("active");
+      if (dots[slideIndex-1]) dots[slideIndex-1].classList.add("active");
+    }
+
+    // Auto advance slides every 4 seconds
+    setInterval(function() {
+      slideIndex++;
+      showSlide(slideIndex);
+    }, 4000);
+  </script>
+</body>
+</html>
