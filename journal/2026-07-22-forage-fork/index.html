@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
+<meta name="theme-color" content="#1c4d3a">
+
+
+  <title>Designing a forage fork for goats</title>
+  <meta name="description" content="Learning to live well, off-the-grid." />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://waterbearfieldschool.org/journal/2026-07-22-forage-fork/">
+  <meta property="og:title" content="Designing a forage fork for goats">
+  <meta property="og:description" content="Learning to live well, off-the-grid.">
+  <meta property="og:site_name" content="Waterbear Field School">
+  <meta property="og:image" content="https://waterbearfieldschool.org/assets/images/journal/2026-07-22-forage-fork/goatyard-precedent.jpg">
+  
+  
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://waterbearfieldschool.org/journal/2026-07-22-forage-fork/">
+  <meta property="twitter:title" content="Designing a forage fork for goats">
+  <meta property="twitter:description" content="Learning to live well, off-the-grid.">
+  <meta property="twitter:image" content="https://waterbearfieldschool.org/assets/images/journal/2026-07-22-forage-fork/goatyard-precedent.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="alternate" type="application/rss+xml" title="Field Notes — Waterbear Field School" href="/feed.xml">
+  <link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+  <div class="wrap">
+    <aside>
+      <div class="brand">
+        <!--<div class="dot" aria-hidden="true"></div>-->
+        <div class="brand-hero">
+          <h1><a class="brand-link" href="/">Waterbear Field School</a></h1>
+          <p class="brand-topics" style="color: #8B6914; font-size: 0.95rem;">Hands-on community workshops and projects focusing on energy, water, food, shelter, climate, communication, fabrication, transport, arts & crafts.</p>
+          <nav class="brand-nav brand-nav-inline">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/#journal">Field Notes</a></li>
+              <li><a href="/#workshops">Workshops</a></li>
+              <li><a href="/#recently">Recently</a></li>
+              <li><a href="/#projects">Projects</a></li>
+              <li><a href="/#foundations">Foundations</a></li>
+              <li><a href="/about/">About</a></li>
+            </ul>
+          </nav>
+          <p class="brand-tagline" style="margin: 12px 0 4px 0; font-size: 0.95rem; font-style: italic; color: var(--muted); text-align: center;">
+            We'd love to hear from you!
+          </p>
+          <p class="contact-email" style="margin: 12px 0 0 0; font-size: 0.95rem;">
+            <a href="mailto:info@waterbearfieldschool.org?subject=Waterbear%20Field%20School%20Inquiry">info@waterbearfieldschool.org</a>
+          </p>
+        </div>
+      </div>
+
+    </aside>
+
+    <main>
+      
+<article class="prose">
+  <h1>Designing a forage fork for goats</h1>
+  <div class="meta">Wed Jul 22 2026</div>
+  <div class="float-figure float-left" style="max-width:420px">
+  <a href="/assets/images/journal/2026-07-22-forage-fork/goatyard-precedent.jpg" target="_blank">
+    <img src="/assets/images/journal/2026-07-22-forage-fork/goatyard-precedent.jpg" alt="A wooden X-frame rack in a goatyard, with a goat standing on a cable-spool table behind it">
+  </a>
+  <div class="float-caption">The forage fork already in use in the Goodwin Hill Goats goatyard.</div>
+</div>
+<p>Goats like to eat with their heads up, stripping leaves and bark from branches. A <strong>forage fork</strong> is a simple rack that holds a bundle of cut brush off the ground at browsing height. That keeps the brush clean, and the herd can work at it from both sides.</p>
+<p>There's already one in the <a href="/journal/2026-05-23-goodwin-hill-goats/">Goodwin Hill Goats</a> goatyard: two sawbuck-style X-frames, rails along the inside of the arms to cradle the brush, and a board underneath to stop the whole thing folding up. It works nicely, so our plan is mostly to replicate it at LexFarm as part of getting ready for a bigger herd.</p>
+<h2>The design</h2>
+<p>We modelled it in OpenSCAD so the size can be adjusted. It comes down to two main settings: the <strong>angle of the X</strong> (wider means a shallower trough and a wider stance) and the <strong>height</strong> of the arms.</p>
+<p>The parts, all from ordinary lumber:</p>
+<ul>
+<li><strong>Four 2×4 legs</strong>, bolted face-to-face in pairs to make the two crosses</li>
+<li><strong>Four 1×4 cradle rails</strong> along the inside faces of the arms: an upper pair near the tops, and a lower pair down in the crook of the V</li>
+<li><strong>One 2×4 stop</strong> under the crossings, so the frame can't scissor shut</li>
+</ul>
+<p>At the default settings (a 60° X, 34″ tall, 60″ long), the model prints its own cut list: four legs at about 41¼″ with both ends cut 30° off square, two 60″ rails and two 57″ rails, and a 57″ stop.</p>
+<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:16px; margin:19px 0; align-items:start">
+<figure style="margin:0">
+  <a href="/assets/images/journal/2026-07-22-forage-fork/forage-fork.png" target="_blank"><img src="/assets/images/journal/2026-07-22-forage-fork/forage-fork.png" alt="3D model of the forage fork: two wooden X-frames joined by rails" style="width:100%; max-width:100%; height:auto; margin:0; border-radius:8px"></a>
+  <figcaption style="font-size:0.95rem; color:var(--muted); margin-top:6px">Three-quarter view of the model.</figcaption>
+</figure>
+<figure style="margin:0">
+  <a href="/assets/images/journal/2026-07-22-forage-fork/end-view.png" target="_blank"><img src="/assets/images/journal/2026-07-22-forage-fork/end-view.png" alt="End-on view of the forage fork showing the X shape and the trough" style="width:100%; max-width:100%; height:auto; margin:0; border-radius:8px"></a>
+  <figcaption style="font-size:0.95rem; color:var(--muted); margin-top:6px">End on: the X and its trough.</figcaption>
+</figure>
+<figure style="margin:0">
+  <a href="/assets/images/journal/2026-07-22-forage-fork/loaded.png" target="_blank"><img src="/assets/images/journal/2026-07-22-forage-fork/loaded.png" alt="3D model of the forage fork holding a bundle of green branches" style="width:100%; max-width:100%; height:auto; margin:0; border-radius:8px"></a>
+  <figcaption style="font-size:0.95rem; color:var(--muted); margin-top:6px">Loaded with brush.</figcaption>
+</figure>
+</div>
+<p>You can <a href="/lexfarm/fork/">turn the model around in 3D on the project page</a>. The OpenSCAD file, with sliders for every setting, is in the <a href="https://github.com/waterbearfieldschool/lexfarm/tree/main/fork">lexfarm repository</a>.</p>
+<p>Next step: build it at LexFarm, and see what the goats think.</p>
+
+</article>
+
+    </main>
+  </div>
+
+  
+
+  <script>
+    // Slideshow functionality
+    var slideIndex = 1;
+
+    function currentSlide(n) {
+      showSlide(slideIndex = n);
+    }
+
+    function showSlide(n) {
+      var slides = document.getElementsByClassName("slide");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+      }
+      for (var i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+      }
+      if (slides[slideIndex-1]) slides[slideIndex-1].classList.add("active");
+      if (dots[slideIndex-1]) dots[slideIndex-1].classList.add("active");
+    }
+
+    // Auto advance slides every 4 seconds
+    setInterval(function() {
+      slideIndex++;
+      showSlide(slideIndex);
+    }, 4000);
+  </script>
+</body>
+</html>
