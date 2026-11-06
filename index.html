@@ -522,6 +522,8 @@
   .subform{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
   .subform input{flex:1;min-width:190px;font:inherit;font-size:.95rem;padding:10px 13px;border:1px solid var(--line);border-radius:9px;background:#fff;color:var(--ink)}
   .subform input:focus{outline:none;border-color:var(--accent)}
+  /* honeypot: invisible to people, irresistible to form-filling bots */
+  .subform .hp{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
   .subform button{background:var(--accent);color:#fff;border:none;font:inherit;font-weight:700;font-size:.92rem;padding:10px 20px;border-radius:9px;cursor:pointer;white-space:nowrap}
   .subform button:hover{background:var(--accent-d)}
   .subform button:disabled{opacity:.6;cursor:default}
@@ -1431,6 +1433,7 @@
       <form class="subform" id="subForm" novalidate>
         <input id="subName" type="text" name="name" placeholder="Your name (optional)" autocomplete="name">
         <input id="subEmail" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+        <div class="hp" aria-hidden="true"><label>Leave this empty <input id="subWebsite" type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
         <button id="subBtn" type="submit">Sign up</button>
       </form>
       <p class="submsg" id="subMsg" hidden></p>
@@ -2705,6 +2708,13 @@
   var name  = document.getElementById('subName');
   var btn   = document.getElementById('subBtn');
   var msg   = document.getElementById('subMsg');
+  var trap  = document.getElementById('subWebsite');
+  // Bot filter, two cheap signals: a hidden field people never see (bots fill
+  // every input), and how long the page was open before submitting (bots post
+  // in well under a second). Either one gets a fake "you're on the list" and no
+  // signup — telling a bot it failed only teaches it to try again. Both values
+  // also go to subscribe(), which applies the same rules server-side.
+  var opened = Date.now();
 
   function say(text, kind) {
     msg.textContent = text;
@@ -2726,6 +2736,14 @@
       return;
     }
 
+    var hp = trap ? (trap.value || '') : '';
+    var ms = Date.now() - opened;
+    if (hp || ms < 3000) {
+      form.reset();
+      say('You’re on the list — we’ll write when new Field Days go up.', 'good');
+      return;
+    }
+
     btn.disabled = true;
     var was = btn.textContent;
     btn.textContent = 'Signing up…';
@@ -2733,7 +2751,7 @@
     sb.rpc('subscribe', {
       p_email: addr,
       p_name: (name.value || '').trim() || null,
-      p_meta: { source: 'homepage' }
+      p_meta: { source: 'homepage', hp: hp, ms: ms }
     }).then(function (res) {
       btn.disabled = false;
       btn.textContent = was;
