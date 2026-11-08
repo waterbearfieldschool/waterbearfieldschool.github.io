@@ -406,6 +406,36 @@
   .protobar .protoreset{margin-left:10px;background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.45);border-radius:6px;font:inherit;font-size:.78rem;font-weight:700;padding:3px 9px;cursor:pointer}
   .protobar .protoreset:hover:not(:disabled){background:rgba(255,255,255,.28)}
 
+  /* Two-step picker. Step 1 rows are radios (one per group, the whole row is
+     the target); step 2 rows are counters that stay greyed until step 1 is made. */
+  .tix-head .tixnote{margin:3px 0 0;font-size:.85rem}
+  .trow.tpick{cursor:pointer;user-select:none}
+  .trow.tpick:hover{background:#f9fbf8}
+  .trow.tpick.on{background:#eef6f0}
+  .trow.tpick:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+  .tdot{flex:none;width:20px;height:20px;border:2px solid var(--line);border-radius:50%;background:#fff;position:relative}
+  .trow.tpick:hover .tdot{border-color:var(--accent)}
+  .trow.tpick.on .tdot{border-color:var(--accent)}
+  .trow.tpick.on .tdot::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--accent)}
+  .tpplnote{font-size:.85rem;color:var(--muted);margin:0;padding:10px 18px 4px 36px}
+  .tpplnote .tpplwait{color:#a8551f;font-weight:600}
+  .tpplnote.open .tpplwait{display:none}
+  .trow.tppl.locked{opacity:.4}
+  @media(max-width:520px){
+    .trow.tpick .tdot{order:0}
+    .tpplnote{padding:10px 14px 4px 24px}
+  }
+  /* series: step 3, the dates */
+  .trow.tdate{cursor:pointer}
+  .trow.tdate.on{background:#eef6f0}
+  .trow.tdate .tdcheck{flex:none;width:20px;height:20px;accent-color:var(--accent);margin:0}
+  .trow.tdate .tixcap{flex:none;margin:0;padding:0;font-size:.82rem;color:var(--muted);font-weight:600}
+  .trow.tdate .tixcap.low{color:#a8551f}
+  .trow.tdate .tixcap.full{color:#b23}
+  .trow.tdate.past{opacity:.5;cursor:default}
+  .trow.tdate.soldout{opacity:.5}
+  .trow.tdate a{color:inherit}
+
   /* ---- /v3/ own basket ---- */
   .cartbtn{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:var(--sun);color:#123526;border:none;border-radius:999px;padding:8px 15px;font-weight:800;font-size:.84rem;cursor:pointer;display:inline-flex;gap:7px;align-items:center;box-shadow:0 3px 10px rgba(0,0,0,.24)}
   .cartbtn[hidden]{display:none}
@@ -1196,23 +1226,92 @@
           </div>
         </div>
       </article>
-      <article class="daycard2" id="day-2026-11-09-farmtryout" data-key="2026-11-09-farmtryout" data-date="2026-11-09" data-month="November">
+      <article class="daycard2" id="day-2026-11-09-winterplanting" data-key="2026-11-09-winterplanting" data-date="2026-11-09" data-month="November">
         <img src="/assets/images/sessions/2026-10-23-afterschool/lettuce-transplanting.jpg" style="object-position:72% 50%" alt="">
         <div class="dc2-main">
-          <a class="dc2-date" href="/w/farmtryout/2026-11-09/">Mon · Nov 9 · 10 AM to 2 PM</a>
-          <h3><a href="/w/farmtryout/2026-11-09/">Winter Lettuce Transplanting &amp; Farm Tour</a></h3>
+          <a class="dc2-date" href="/w/winterplanting/2026-11-09/">Mon · Nov 9 · 10 AM to 12 PM</a>
+          <h3><a href="/w/winterplanting/2026-11-09/">Winter Planting &amp; Trail Hike</a></h3>
           <div class="dc2-meta">Hannan Healthy Foods Farm, Lincoln, MA</div>
-          <p class="dc2-blurb">Help transplant the winter lettuce, tour the farm, and hear what we&#39;ll be building this winter. A good way to see if Winter Farm Days are a fit.</p>
+          <p class="dc2-blurb">Help plant winter crops in the hoop house, check on the lettuce, then come with us on a short plant identification hike in the woods. A good way to see if Winter Farm Days are a fit.</p>
           <div class="dc2-actions">
-            <a class="btn-reg" href="/w/farmtryout/2026-11-09/">Register</a>
+            <a class="btn-reg" href="/w/winterplanting/2026-11-09/">Register</a>
             <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
               <div class="dc2-more">
-                <p>We&#39;ve just cleared a hoop house at Hannan Healthy Foods to grow lettuce through the winter, and our lettuce starts are going in now. Come help transplant them, take a tour of the farm, and hear about the projects we&#39;ll be taking on.</p><p>It&#39;s a chance to get a feel for Winter Farm Days, coming soon: cold frames, rain barrels, solar, mapping the farm, and zines. And if you&#39;d like to watch the lettuce you transplanted grow, come back for Winter Farm Days and become its steward. Sign-ups open soon, by the day or by the month.</p>
+                <p>We&#39;ve just cleared a hoop house at Hannan Healthy Foods to grow some winter crops. Come help us plant, check on the lettuce, do a little watering. And it&#39;ll be fun to have you back during the next weeks to check on what you&#39;ve planted! We&#39;ll also be doing a short hike in the woods, looking to see what plants we can identify, and placing them on a map.</p><p>It&#39;s also a chance to get a feel for Winter Farm Days, coming soon: cold frames, rain barrels, solar, mapping the farm, and zines. So if you&#39;d like to watch what you planted grow, and try out some other fun activities, plan to come back for Winter Farm Days! Sign-ups will open soon, by the day or by the month.</p>
                 <dl class="dc2-facts">
                   <div><dt>Where</dt><dd>Hannan Healthy Foods Farm, Lincoln, MA<br><span style="color:var(--muted)">Exact address sent when you register.</span></dd></div>
                   <div><dt>Who</dt><dd>Ages 6 to adult. Kids should be interested in, and ready to be trained on, small hand tools. An adult caregiver needs to accompany kids under 14.</dd></div>
                   <div><dt>Bring</dt><dd>Closed‑toe shoes, warm layers and weather‑appropriate clothing. Tools and materials are provided.</dd></div>
-                  <div><dt>When</dt><dd>Mon · Nov 9 &middot; 10 AM to 2 PM</dd></div>
+                  <div><dt>When</dt><dd>Mon · Nov 9 &middot; 10 AM to 12 PM</dd></div>
+                </dl>
+              </div>
+            </details>
+          </div>
+        </div>
+      </article>
+      <article class="daycard2" id="day-2026-11-10-winterplanting" data-key="2026-11-10-winterplanting" data-date="2026-11-10" data-month="November">
+        <img src="/assets/images/sessions/2026-10-23-afterschool/lettuce-transplanting.jpg" style="object-position:72% 50%" alt="">
+        <div class="dc2-main">
+          <a class="dc2-date" href="/w/winterplanting/2026-11-10/">Tue · Nov 10 · 10 AM to 12 PM</a>
+          <h3><a href="/w/winterplanting/2026-11-10/">Winter Planting &amp; Trail Hike</a></h3>
+          <div class="dc2-meta">Hannan Healthy Foods Farm, Lincoln, MA</div>
+          <p class="dc2-blurb">Help plant winter crops in the hoop house, check on the lettuce, then come with us on a short plant identification hike in the woods. A good way to see if Winter Farm Days are a fit.</p>
+          <div class="dc2-actions">
+            <a class="btn-reg" href="/w/winterplanting/2026-11-10/">Register</a>
+            <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
+              <div class="dc2-more">
+                <p>We&#39;ve just cleared a hoop house at Hannan Healthy Foods to grow some winter crops. Come help us plant, check on the lettuce, do a little watering. And it&#39;ll be fun to have you back during the next weeks to check on what you&#39;ve planted! We&#39;ll also be doing a short hike in the woods, looking to see what plants we can identify, and placing them on a map.</p><p>It&#39;s also a chance to get a feel for Winter Farm Days, coming soon: cold frames, rain barrels, solar, mapping the farm, and zines. So if you&#39;d like to watch what you planted grow, and try out some other fun activities, plan to come back for Winter Farm Days! Sign-ups will open soon, by the day or by the month.</p>
+                <dl class="dc2-facts">
+                  <div><dt>Where</dt><dd>Hannan Healthy Foods Farm, Lincoln, MA<br><span style="color:var(--muted)">Exact address sent when you register.</span></dd></div>
+                  <div><dt>Who</dt><dd>Ages 6 to adult. Kids should be interested in, and ready to be trained on, small hand tools. An adult caregiver needs to accompany kids under 14.</dd></div>
+                  <div><dt>Bring</dt><dd>Closed‑toe shoes, warm layers and weather‑appropriate clothing. Tools and materials are provided.</dd></div>
+                  <div><dt>When</dt><dd>Tue · Nov 10 &middot; 10 AM to 12 PM</dd></div>
+                </dl>
+              </div>
+            </details>
+          </div>
+        </div>
+      </article>
+      <article class="daycard2" id="day-2026-11-11-winterplanting" data-key="2026-11-11-winterplanting" data-date="2026-11-11" data-month="November">
+        <img src="/assets/images/sessions/2026-10-23-afterschool/lettuce-transplanting.jpg" style="object-position:72% 50%" alt="">
+        <div class="dc2-main">
+          <a class="dc2-date" href="/w/winterplanting/2026-11-11/">Wed · Nov 11 · 10 AM to 12 PM</a>
+          <h3><a href="/w/winterplanting/2026-11-11/">Winter Planting &amp; Trail Hike</a></h3>
+          <div class="dc2-meta">Hannan Healthy Foods Farm, Lincoln, MA</div>
+          <p class="dc2-blurb">Help plant winter crops in the hoop house, check on the lettuce, then come with us on a short plant identification hike in the woods. A good way to see if Winter Farm Days are a fit.</p>
+          <div class="dc2-actions">
+            <a class="btn-reg" href="/w/winterplanting/2026-11-11/">Register</a>
+            <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
+              <div class="dc2-more">
+                <p>We&#39;ve just cleared a hoop house at Hannan Healthy Foods to grow some winter crops. Come help us plant, check on the lettuce, do a little watering. And it&#39;ll be fun to have you back during the next weeks to check on what you&#39;ve planted! We&#39;ll also be doing a short hike in the woods, looking to see what plants we can identify, and placing them on a map.</p><p>It&#39;s also a chance to get a feel for Winter Farm Days, coming soon: cold frames, rain barrels, solar, mapping the farm, and zines. So if you&#39;d like to watch what you planted grow, and try out some other fun activities, plan to come back for Winter Farm Days! Sign-ups will open soon, by the day or by the month.</p>
+                <dl class="dc2-facts">
+                  <div><dt>Where</dt><dd>Hannan Healthy Foods Farm, Lincoln, MA<br><span style="color:var(--muted)">Exact address sent when you register.</span></dd></div>
+                  <div><dt>Who</dt><dd>Ages 6 to adult. Kids should be interested in, and ready to be trained on, small hand tools. An adult caregiver needs to accompany kids under 14.</dd></div>
+                  <div><dt>Bring</dt><dd>Closed‑toe shoes, warm layers and weather‑appropriate clothing. Tools and materials are provided.</dd></div>
+                  <div><dt>When</dt><dd>Wed · Nov 11 &middot; 10 AM to 12 PM</dd></div>
+                </dl>
+              </div>
+            </details>
+          </div>
+        </div>
+      </article>
+      <article class="daycard2" id="day-2026-11-13-winterplanting" data-key="2026-11-13-winterplanting" data-date="2026-11-13" data-month="November">
+        <img src="/assets/images/sessions/2026-10-23-afterschool/lettuce-transplanting.jpg" style="object-position:72% 50%" alt="">
+        <div class="dc2-main">
+          <a class="dc2-date" href="/w/winterplanting/2026-11-13/">Fri · Nov 13 · 10 AM to 12 PM</a>
+          <h3><a href="/w/winterplanting/2026-11-13/">Winter Planting &amp; Trail Hike</a></h3>
+          <div class="dc2-meta">Hannan Healthy Foods Farm, Lincoln, MA</div>
+          <p class="dc2-blurb">Help plant winter crops in the hoop house, check on the lettuce, then come with us on a short plant identification hike in the woods. A good way to see if Winter Farm Days are a fit.</p>
+          <div class="dc2-actions">
+            <a class="btn-reg" href="/w/winterplanting/2026-11-13/">Register</a>
+            <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
+              <div class="dc2-more">
+                <p>We&#39;ve just cleared a hoop house at Hannan Healthy Foods to grow some winter crops. Come help us plant, check on the lettuce, do a little watering. And it&#39;ll be fun to have you back during the next weeks to check on what you&#39;ve planted! We&#39;ll also be doing a short hike in the woods, looking to see what plants we can identify, and placing them on a map.</p><p>It&#39;s also a chance to get a feel for Winter Farm Days, coming soon: cold frames, rain barrels, solar, mapping the farm, and zines. So if you&#39;d like to watch what you planted grow, and try out some other fun activities, plan to come back for Winter Farm Days! Sign-ups will open soon, by the day or by the month.</p>
+                <dl class="dc2-facts">
+                  <div><dt>Where</dt><dd>Hannan Healthy Foods Farm, Lincoln, MA<br><span style="color:var(--muted)">Exact address sent when you register.</span></dd></div>
+                  <div><dt>Who</dt><dd>Ages 6 to adult. Kids should be interested in, and ready to be trained on, small hand tools. An adult caregiver needs to accompany kids under 14.</dd></div>
+                  <div><dt>Bring</dt><dd>Closed‑toe shoes, warm layers and weather‑appropriate clothing. Tools and materials are provided.</dd></div>
+                  <div><dt>When</dt><dd>Fri · Nov 13 &middot; 10 AM to 12 PM</dd></div>
                 </dl>
               </div>
             </details>
@@ -1582,7 +1681,7 @@
     data-item-name="Solar Bench · Aug 19 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-08-19-solar-supporter"
@@ -1590,7 +1689,7 @@
     data-item-name="Solar Bench · Aug 19 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-kit-2026-08-19-solar"
@@ -1606,7 +1705,7 @@
     data-item-name="Toolbox · Aug 20 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-08-20-woodworking-supporter"
@@ -1614,7 +1713,7 @@
     data-item-name="Toolbox · Aug 20 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-kit-2026-08-20-woodworking"
@@ -1630,7 +1729,7 @@
     data-item-name="Instrument Making · Aug 21 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-08-21-music-supporter"
@@ -1638,7 +1737,7 @@
     data-item-name="Instrument Making · Aug 21 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-kit-2026-08-21-music"
@@ -1654,7 +1753,7 @@
     data-item-name="Workbench · Aug 25 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-08-25-woodworking-supporter"
@@ -1662,7 +1761,7 @@
     data-item-name="Workbench · Aug 25 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-kit-2026-08-25-woodworking"
@@ -1678,7 +1777,7 @@
     data-item-name="Solar Bench · Aug 26 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-08-26-solar-supporter"
@@ -1686,7 +1785,7 @@
     data-item-name="Solar Bench · Aug 26 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-kit-2026-08-26-solar"
@@ -1702,7 +1801,7 @@
     data-item-name="Plant ID · Aug 27 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-08-27-plant-id-supporter"
@@ -1710,7 +1809,7 @@
     data-item-name="Plant ID · Aug 27 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-08-28-zines-standard"
@@ -1718,7 +1817,7 @@
     data-item-name="Zines · Aug 28 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-08-28-zines-supporter"
@@ -1726,7 +1825,7 @@
     data-item-name="Zines · Aug 28 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-09-10-plant-id-standard"
@@ -1734,7 +1833,7 @@
     data-item-name="Plant ID · Sep 10 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-09-10-plant-id-supporter"
@@ -1742,7 +1841,7 @@
     data-item-name="Plant ID · Sep 10 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-09-15-biketrailer-standard"
@@ -1750,7 +1849,7 @@
     data-item-name="Bike Trailer · Sep 15 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-09-15-biketrailer-supporter"
@@ -1758,7 +1857,7 @@
     data-item-name="Bike Trailer · Sep 15 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-09-22-biketrailer-standard"
@@ -1766,7 +1865,7 @@
     data-item-name="Bike Trailer · Sep 22 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-09-22-biketrailer-supporter"
@@ -1774,7 +1873,7 @@
     data-item-name="Bike Trailer · Sep 22 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-09-24-solar-standard"
@@ -1782,7 +1881,7 @@
     data-item-name="Solar Bench · Sep 24 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-09-24-solar-supporter"
@@ -1790,7 +1889,7 @@
     data-item-name="Solar Bench · Sep 24 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-kit-2026-09-24-solar"
@@ -1806,7 +1905,7 @@
     data-item-name="Cold Frames — Design Review &amp; Build · Sep 30 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-09-30-coldframe-supporter"
@@ -1814,7 +1913,7 @@
     data-item-name="Cold Frames — Design Review &amp; Build · Sep 30 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-01-plant-id-standard"
@@ -1822,7 +1921,7 @@
     data-item-name="Plant ID · Oct 1 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-01-plant-id-supporter"
@@ -1830,7 +1929,7 @@
     data-item-name="Plant ID · Oct 1 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-02-biketrailer-standard"
@@ -1838,7 +1937,7 @@
     data-item-name="Bike Trailer · Oct 2 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-02-biketrailer-supporter"
@@ -1846,7 +1945,7 @@
     data-item-name="Bike Trailer · Oct 2 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-13-workbench-standard"
@@ -1854,7 +1953,7 @@
     data-item-name="Workbench · Oct 13 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-13-workbench-supporter"
@@ -1862,7 +1961,7 @@
     data-item-name="Workbench · Oct 13 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-kit-2026-10-13-workbench"
@@ -1878,7 +1977,7 @@
     data-item-name="Zines · Oct 15 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-15-zines-supporter"
@@ -1886,7 +1985,7 @@
     data-item-name="Zines · Oct 15 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-16-offgrid-standard"
@@ -1894,7 +1993,7 @@
     data-item-name="Off-Grid Friday · Oct 16 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-16-offgrid-supporter"
@@ -1902,7 +2001,7 @@
     data-item-name="Off-Grid Friday · Oct 16 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-22-afterschool-standard"
@@ -1910,7 +2009,7 @@
     data-item-name="Farm Afterschool · Oct 22 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-22-afterschool-supporter"
@@ -1918,7 +2017,7 @@
     data-item-name="Farm Afterschool · Oct 22 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-23-afterschool-standard"
@@ -1926,7 +2025,7 @@
     data-item-name="Farm Afterschool · Oct 23 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-23-afterschool-supporter"
@@ -1934,7 +2033,7 @@
     data-item-name="Farm Afterschool · Oct 23 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-23-offgrid-standard"
@@ -1942,7 +2041,7 @@
     data-item-name="Off-Grid Friday · Oct 23 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-23-offgrid-supporter"
@@ -1950,7 +2049,7 @@
     data-item-name="Off-Grid Friday · Oct 23 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-04-farmtryout-standard"
@@ -1958,7 +2057,7 @@
     data-item-name="Lettuce Transplanting &amp; Farm Tour · Nov 4 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-04-farmtryout-supporter"
@@ -1966,7 +2065,7 @@
     data-item-name="Lettuce Transplanting &amp; Farm Tour · Nov 4 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-05-farmtryout-standard"
@@ -1974,7 +2073,7 @@
     data-item-name="Lettuce Transplanting &amp; Farm Tour · Nov 5 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-05-farmtryout-supporter"
@@ -1982,7 +2081,7 @@
     data-item-name="Lettuce Transplanting &amp; Farm Tour · Nov 5 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-06-farmtryout-standard"
@@ -1990,7 +2089,7 @@
     data-item-name="Lettuce Transplanting &amp; Farm Tour · Nov 6 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-06-farmtryout-supporter"
@@ -1998,7 +2097,7 @@
     data-item-name="Lettuce Transplanting &amp; Farm Tour · Nov 6 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-06-offgrid-standard"
@@ -2006,7 +2105,7 @@
     data-item-name="Off-Grid Friday · Nov 6 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-06-offgrid-supporter"
@@ -2014,23 +2113,71 @@
     data-item-name="Off-Grid Friday · Nov 6 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-09-farmtryout-standard"
-    data-item-id="tix-2026-11-09-farmtryout-standard"
-    data-item-name="Lettuce Transplanting &amp; Farm Tour · Nov 9 · Standard"
+  <button class="snipcart-add-item" id="def-tix-2026-11-09-winterplanting-standard"
+    data-item-id="tix-2026-11-09-winterplanting-standard"
+    data-item-name="Winter Planting &amp; Trail Hike · Nov 9 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-09-farmtryout-supporter"
-    data-item-id="tix-2026-11-09-farmtryout-supporter"
-    data-item-name="Lettuce Transplanting &amp; Farm Tour · Nov 9 · Supporter"
+  <button class="snipcart-add-item" id="def-tix-2026-11-09-winterplanting-supporter"
+    data-item-id="tix-2026-11-09-winterplanting-supporter"
+    data-item-name="Winter Planting &amp; Trail Hike · Nov 9 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-10-winterplanting-standard"
+    data-item-id="tix-2026-11-10-winterplanting-standard"
+    data-item-name="Winter Planting &amp; Trail Hike · Nov 10 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your whole group for the day."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-10-winterplanting-supporter"
+    data-item-id="tix-2026-11-10-winterplanting-supporter"
+    data-item-name="Winter Planting &amp; Trail Hike · Nov 10 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-11-winterplanting-standard"
+    data-item-id="tix-2026-11-11-winterplanting-standard"
+    data-item-name="Winter Planting &amp; Trail Hike · Nov 11 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your whole group for the day."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-11-winterplanting-supporter"
+    data-item-id="tix-2026-11-11-winterplanting-supporter"
+    data-item-name="Winter Planting &amp; Trail Hike · Nov 11 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-13-winterplanting-standard"
+    data-item-id="tix-2026-11-13-winterplanting-standard"
+    data-item-name="Winter Planting &amp; Trail Hike · Nov 13 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your whole group for the day."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-13-winterplanting-supporter"
+    data-item-id="tix-2026-11-13-winterplanting-supporter"
+    data-item-name="Winter Planting &amp; Trail Hike · Nov 13 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
 </div>
@@ -2054,7 +2201,7 @@
 
     <form class="bk-form" id="bkForm" hidden>
       <p class="bk-formlead" id="bkFormLead">Nothing to pay &mdash; just tell us who&rsquo;s coming.</p>
-      <input type="text"  id="bkName"  class="tin" placeholder="Your name" autocomplete="name">
+      <input type="text"  id="bkName"  class="tin" placeholder="Your name (the adult bringing the group)" autocomplete="name">
       <input type="email" id="bkEmail" class="tin" placeholder="you@example.com" autocomplete="email">
       <p class="bk-msg" id="bkMsg"></p>
     </form>
@@ -2100,7 +2247,7 @@
   /* Every session by its KEY — the session file's name, "2026-11-06-farmtryout".
    * Two events can share a date, so anything that counts, registers or stores
    * per session is keyed by this; only "has it happened yet" goes by the date. */
-  var SESSIONS={ "2026-08-19-solar":{date:"2026-08-19",label:"Wed · Aug 19 — Solar Power & Electronics Bench"},"2026-08-20-woodworking":{date:"2026-08-20",label:"Thu · Aug 20 — Build a Toolbox"},"2026-08-21-music":{date:"2026-08-21",label:"Fri · Aug 21 — Music & Instrument Making"},"2026-08-25-woodworking":{date:"2026-08-25",label:"Tue · Aug 25 — Build a Workbench"},"2026-08-26-solar":{date:"2026-08-26",label:"Wed · Aug 26 — Solar Power & Electronics Bench"},"2026-08-27-plant-id":{date:"2026-08-27",label:"Thu · Aug 27 — Plant ID & Mapping"},"2026-08-28-zines":{date:"2026-08-28",label:"Fri · Aug 28 — Zines & Printmaking"},"2026-09-10-plant-id":{date:"2026-09-10",label:"Thu · Sep 10 — Plant ID & Mapping"},"2026-09-15-biketrailer":{date:"2026-09-15",label:"Tue · Sep 15 — Building Bike Trailers"},"2026-09-22-biketrailer":{date:"2026-09-22",label:"Tue · Sep 22 — Building Bike Trailers"},"2026-09-24-solar":{date:"2026-09-24",label:"Thu · Sep 24 — Solar Power & Electronics Bench"},"2026-09-30-coldframe":{date:"2026-09-30",label:"Wed · Sep 30 — Cold Frames & Winter Growing"},"2026-10-01-plant-id":{date:"2026-10-01",label:"Thu · Oct 1 — Plant ID & Mapping"},"2026-10-02-biketrailer":{date:"2026-10-02",label:"Fri · Oct 2 — Building Bike Trailers"},"2026-10-13-workbench":{date:"2026-10-13",label:"Tue · Oct 13 — Build a Workbench"},"2026-10-15-zines":{date:"2026-10-15",label:"Thu · Oct 15 — Zines & Printmaking"},"2026-10-16-offgrid":{date:"2026-10-16",label:"Fri · Oct 16 — Off-Grid Fridays"},"2026-10-22-afterschool":{date:"2026-10-22",label:"Thu · Oct 22 — Farm Afterschool"},"2026-10-23-afterschool":{date:"2026-10-23",label:"Fri · Oct 23 — Farm Afterschool"},"2026-10-23-offgrid":{date:"2026-10-23",label:"Fri · Oct 23 — Off-Grid Fridays"},"2026-11-04-farmtryout":{date:"2026-11-04",label:"Wed · Nov 4 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-05-farmtryout":{date:"2026-11-05",label:"Thu · Nov 5 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-06-farmtryout":{date:"2026-11-06",label:"Fri · Nov 6 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-06-offgrid":{date:"2026-11-06",label:"Fri · Nov 6 — Off-Grid Fridays"},"2026-11-09-farmtryout":{date:"2026-11-09",label:"Mon · Nov 9 — Winter Lettuce Transplanting & Farm Tour"} };
+  var SESSIONS={ "2026-08-19-solar":{date:"2026-08-19",label:"Wed · Aug 19 — Solar Power & Electronics Bench"},"2026-08-20-woodworking":{date:"2026-08-20",label:"Thu · Aug 20 — Build a Toolbox"},"2026-08-21-music":{date:"2026-08-21",label:"Fri · Aug 21 — Music & Instrument Making"},"2026-08-25-woodworking":{date:"2026-08-25",label:"Tue · Aug 25 — Build a Workbench"},"2026-08-26-solar":{date:"2026-08-26",label:"Wed · Aug 26 — Solar Power & Electronics Bench"},"2026-08-27-plant-id":{date:"2026-08-27",label:"Thu · Aug 27 — Plant ID & Mapping"},"2026-08-28-zines":{date:"2026-08-28",label:"Fri · Aug 28 — Zines & Printmaking"},"2026-09-10-plant-id":{date:"2026-09-10",label:"Thu · Sep 10 — Plant ID & Mapping"},"2026-09-15-biketrailer":{date:"2026-09-15",label:"Tue · Sep 15 — Building Bike Trailers"},"2026-09-22-biketrailer":{date:"2026-09-22",label:"Tue · Sep 22 — Building Bike Trailers"},"2026-09-24-solar":{date:"2026-09-24",label:"Thu · Sep 24 — Solar Power & Electronics Bench"},"2026-09-30-coldframe":{date:"2026-09-30",label:"Wed · Sep 30 — Cold Frames & Winter Growing"},"2026-10-01-plant-id":{date:"2026-10-01",label:"Thu · Oct 1 — Plant ID & Mapping"},"2026-10-02-biketrailer":{date:"2026-10-02",label:"Fri · Oct 2 — Building Bike Trailers"},"2026-10-13-workbench":{date:"2026-10-13",label:"Tue · Oct 13 — Build a Workbench"},"2026-10-15-zines":{date:"2026-10-15",label:"Thu · Oct 15 — Zines & Printmaking"},"2026-10-16-offgrid":{date:"2026-10-16",label:"Fri · Oct 16 — Off-Grid Fridays"},"2026-10-22-afterschool":{date:"2026-10-22",label:"Thu · Oct 22 — Farm Afterschool"},"2026-10-23-afterschool":{date:"2026-10-23",label:"Fri · Oct 23 — Farm Afterschool"},"2026-10-23-offgrid":{date:"2026-10-23",label:"Fri · Oct 23 — Off-Grid Fridays"},"2026-11-04-farmtryout":{date:"2026-11-04",label:"Wed · Nov 4 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-05-farmtryout":{date:"2026-11-05",label:"Thu · Nov 5 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-06-farmtryout":{date:"2026-11-06",label:"Fri · Nov 6 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-06-offgrid":{date:"2026-11-06",label:"Fri · Nov 6 — Off-Grid Fridays"},"2026-11-09-winterplanting":{date:"2026-11-09",label:"Mon · Nov 9 — Winter Planting & Trail Hike"},"2026-11-10-winterplanting":{date:"2026-11-10",label:"Tue · Nov 10 — Winter Planting & Trail Hike"},"2026-11-11-winterplanting":{date:"2026-11-11",label:"Wed · Nov 11 — Winter Planting & Trail Hike"},"2026-11-13-winterplanting":{date:"2026-11-13",label:"Fri · Nov 13 — Winter Planting & Trail Hike"} };
   window.wfsSessions=function(){ return SESSIONS; };
   // the one session on a date, or null when there are none or several
   function soleKeyOn(date){
@@ -2300,7 +2447,7 @@
     });
 
     // per session: headcount, what the registrations cost, which tier was picked
-    var byKey={}, amount={}, tier={}, dateOf={};
+    var byKey={}, amount={}, tier={}, dateOf={}, kids={}, adults={};
     lines().filter(function(l){ return l.kind==='reg'; })
            .forEach(function(l){
              var k=keyOf(l);
@@ -2308,8 +2455,11 @@
              dateOf[k]=(SESSIONS[k] && SESSIONS[k].date) || l.date;
              byKey[k]=(byKey[k]||0)+l.qty;
              amount[k]=(amount[k]||0)+l.qty*(l.price||0);
-             // if several tiers are mixed for one session, record the paid one
              var tr=tierOf(l.id);
+             // the people coming along are counted, not a tier of their own
+             if(tr==='kids'){ kids[k]=(kids[k]||0)+l.qty; return; }
+             if(tr==='adults'){ adults[k]=(adults[k]||0)+l.qty; return; }
+             // if several tiers are mixed for one session, record the paid one
              if(tr && (!tier[k] || l.price>0)) tier[k]=tr;
            });
 
@@ -2333,6 +2483,8 @@
             kit_amount:  kitAmount[k] || 0,
             order_token: orderToken || null,
             updates:     !!wantsUpdates,
+            kids:        kids[k] || 0,
+            adults:      adults[k] || 0,
             teach:       window.wfsGetTeach(k) || null,
             learn_next:  window.wfsGetLearn() || null
           }

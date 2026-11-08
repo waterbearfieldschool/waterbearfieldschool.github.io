@@ -394,6 +394,36 @@
   .protobar .protoreset{margin-left:10px;background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.45);border-radius:6px;font:inherit;font-size:.78rem;font-weight:700;padding:3px 9px;cursor:pointer}
   .protobar .protoreset:hover:not(:disabled){background:rgba(255,255,255,.28)}
 
+  /* Two-step picker. Step 1 rows are radios (one per group, the whole row is
+     the target); step 2 rows are counters that stay greyed until step 1 is made. */
+  .tix-head .tixnote{margin:3px 0 0;font-size:.85rem}
+  .trow.tpick{cursor:pointer;user-select:none}
+  .trow.tpick:hover{background:#f9fbf8}
+  .trow.tpick.on{background:#eef6f0}
+  .trow.tpick:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+  .tdot{flex:none;width:20px;height:20px;border:2px solid var(--line);border-radius:50%;background:#fff;position:relative}
+  .trow.tpick:hover .tdot{border-color:var(--accent)}
+  .trow.tpick.on .tdot{border-color:var(--accent)}
+  .trow.tpick.on .tdot::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--accent)}
+  .tpplnote{font-size:.85rem;color:var(--muted);margin:0;padding:10px 18px 4px 36px}
+  .tpplnote .tpplwait{color:#a8551f;font-weight:600}
+  .tpplnote.open .tpplwait{display:none}
+  .trow.tppl.locked{opacity:.4}
+  @media(max-width:520px){
+    .trow.tpick .tdot{order:0}
+    .tpplnote{padding:10px 14px 4px 24px}
+  }
+  /* series: step 3, the dates */
+  .trow.tdate{cursor:pointer}
+  .trow.tdate.on{background:#eef6f0}
+  .trow.tdate .tdcheck{flex:none;width:20px;height:20px;accent-color:var(--accent);margin:0}
+  .trow.tdate .tixcap{flex:none;margin:0;padding:0;font-size:.82rem;color:var(--muted);font-weight:600}
+  .trow.tdate .tixcap.low{color:#a8551f}
+  .trow.tdate .tixcap.full{color:#b23}
+  .trow.tdate.past{opacity:.5;cursor:default}
+  .trow.tdate.soldout{opacity:.5}
+  .trow.tdate a{color:inherit}
+
   /* ---- /v3/ own basket ---- */
   .cartbtn{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:var(--sun);color:#123526;border:none;border-radius:999px;padding:8px 15px;font-weight:800;font-size:.84rem;cursor:pointer;display:inline-flex;gap:7px;align-items:center;box-shadow:0 3px 10px rgba(0,0,0,.24)}
   .cartbtn[hidden]{display:none}
@@ -515,68 +545,52 @@
     </div>
     <div class="tix" id="tix" data-date="2026-10-13" data-key="2026-10-13-workbench" data-title="Build a Workbench" data-label="Tue · Oct 13 — Build a Workbench">
       <div class="tix-head">
-        <h2>Choose a Registration Type:</h2>
+        <h2>1. How would you like to register?</h2>
+        <p class="tixnote">One registration per group. Pick one.</p>
         <p class="tixcap" id="tixCap"></p>
       </div>
-      <div class="trow"
+      <div role="radiogroup" aria-label="Registration type">
+      <div class="trow tpick"
+           role="radio" aria-checked="false" tabindex="0"
+           data-tier="standard"
            data-def="def-tix-2026-10-13-workbench-standard"
            data-pid="tix-2026-10-13-workbench-standard"
            data-unit="20"
            data-kind="reg"
            data-line="Workbench · Oct 13"
            data-sub="Standard">
-        <span class="tinfo"><b>Standard</b><small>One registration covers your household for the day. Add everyone coming below.</small></span>
+        <span class="tdot" aria-hidden="true"></span>
+        <span class="tinfo"><b>Standard</b><small>Covers your whole group for the day.</small></span>
         <span class="tprice">$20</span>
-        <span class="qctl">
-          <button type="button" class="qbtn" data-step="-1" aria-label="one fewer">&minus;</button>
-          <output class="qnum">0</output>
-          <button type="button" class="qbtn" data-step="1" aria-label="one more">+</button>
-        </span>
+        <output class="qnum" hidden>0</output>
       </div>
-      <div class="trow"
+      <div class="trow tpick"
+           role="radio" aria-checked="false" tabindex="0"
+           data-tier="supporter"
            data-def="def-tix-2026-10-13-workbench-supporter"
            data-pid="tix-2026-10-13-workbench-supporter"
            data-unit="40"
            data-kind="reg"
            data-line="Workbench · Oct 13"
            data-sub="Supporter">
-        <span class="tinfo"><b>Supporter</b><small>Covers your household and quietly pays for another family&#39;s spot.</small></span>
+        <span class="tdot" aria-hidden="true"></span>
+        <span class="tinfo"><b>Supporter</b><small>Covers your group and quietly pays for another family&#39;s spot.</small></span>
         <span class="tprice">$40</span>
-        <span class="qctl">
-          <button type="button" class="qbtn" data-step="-1" aria-label="one fewer">&minus;</button>
-          <output class="qnum">0</output>
-          <button type="button" class="qbtn" data-step="1" aria-label="one more">+</button>
-        </span>
+        <output class="qnum" hidden>0</output>
       </div>
-      <div class="trow tfree"
-           data-def="def-tix-2026-10-13-workbench-household"
-           data-pid="tix-2026-10-13-workbench-household"
-           data-unit="0"
-           data-kind="reg"
-           data-line="Workbench · Oct 13"
-           data-sub="Each additional person">
-        <span class="tinfo"><b>Each additional person</b><small>Coming together under one registration? Add one for each extra person, adult or child, so we know how many to expect. No extra cost.</small></span>
-        <span class="tprice">Free</span>
-        <span class="qctl">
-          <button type="button" class="qbtn" data-step="-1" aria-label="one fewer">&minus;</button>
-          <output class="qnum">0</output>
-          <button type="button" class="qbtn" data-step="1" aria-label="one more">+</button>
-        </span>
-      </div>
-      <div class="trow tfree"
+      <div class="trow tpick tfree"
+           role="radio" aria-checked="false" tabindex="0"
+           data-tier="teach"
            data-def="def-tix-2026-10-13-workbench-teach"
            data-pid="tix-2026-10-13-workbench-teach"
            data-unit="0"
            data-kind="reg"
            data-line="Workbench · Oct 13"
            data-sub="Teach a Future Session">
+        <span class="tdot" aria-hidden="true"></span>
         <span class="tinfo"><b>Teach a Future Session</b><small>Share some skill or idea with us sometime soon.</small></span>
         <span class="tprice">Free</span>
-        <span class="qctl">
-          <button type="button" class="qbtn" data-step="-1" aria-label="one fewer">&minus;</button>
-          <output class="qnum">0</output>
-          <button type="button" class="qbtn" data-step="1" aria-label="one more">+</button>
-        </span>
+        <output class="qnum" hidden>0</output>
       </div>
       <div class="teachbox" id="teachBox" hidden>
         <label for="teachWhat">What might you share? A sentence or two is plenty &mdash; we&rsquo;ll follow up by email or have a chat on the day.</label>
@@ -584,7 +598,53 @@
                   placeholder="e.g. sourdough from a starter, basic bike repair, mushroom identification&hellip;"></textarea>
         <p class="teachmsg" id="teachMsg" hidden>Tell us roughly what you&rsquo;d share and we&rsquo;ll take it from there.</p>
       </div>
-      <div class="tsub">Take-home kit (optional):</div>
+      <div class="trow tpick tfree"
+           role="radio" aria-checked="false" tabindex="0"
+           data-tier="free"
+           data-def="def-tix-2026-10-13-workbench-free"
+           data-pid="tix-2026-10-13-workbench-free"
+           data-unit="0"
+           data-kind="reg"
+           data-line="Workbench · Oct 13"
+           data-sub="Free">
+        <span class="tdot" aria-hidden="true"></span>
+        <span class="tinfo"><b>Free</b><small>If you&#39;d like to try things out first, and maybe chip in later, feel free to choose this option!</small></span>
+        <span class="tprice">Free</span>
+        <output class="qnum" hidden>0</output>
+      </div>
+      </div>
+
+      <div class="tsub">2. Who&rsquo;s coming with you?</div>
+      <p class="tpplnote" id="tPplNote">You, plus anyone you&rsquo;re bringing. No extra cost. <span class="tpplwait">Choose a registration above first.</span></p>
+      <div class="trow tppl tfree locked"
+           data-tier="kids"
+           data-pid="tix-2026-10-13-workbench-kids"
+           data-unit="0"
+           data-kind="reg"
+           data-line="Workbench · Oct 13"
+           data-sub="Kids">
+        <span class="tinfo"><b>Kids</b><small>Under 14 need a caregiver present.</small></span>
+        <span class="qctl">
+          <button type="button" class="qbtn" data-step="-1" aria-label="one fewer kids">&minus;</button>
+          <output class="qnum">0</output>
+          <button type="button" class="qbtn" data-step="1" aria-label="one more kids">+</button>
+        </span>
+      </div>
+      <div class="trow tppl tfree locked"
+           data-tier="adults"
+           data-pid="tix-2026-10-13-workbench-adults"
+           data-unit="0"
+           data-kind="reg"
+           data-line="Workbench · Oct 13"
+           data-sub="Adults">
+        <span class="tinfo"><b>Adults</b><small>Other grown-ups coming along.</small></span>
+        <span class="qctl">
+          <button type="button" class="qbtn" data-step="-1" aria-label="one fewer adults">&minus;</button>
+          <output class="qnum">0</output>
+          <button type="button" class="qbtn" data-step="1" aria-label="one more adults">+</button>
+        </span>
+      </div>
+      <div class="tsub">3. Take-home kit (optional)</div>
       <div class="trow tkit"
            data-def="def-kit-2026-10-13-workbench"
            data-pid="kit-2026-10-13-workbench"
@@ -628,7 +688,7 @@
     data-item-name="Solar Bench · Aug 19 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-08-19-solar-supporter"
@@ -636,7 +696,7 @@
     data-item-name="Solar Bench · Aug 19 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-kit-2026-08-19-solar"
@@ -652,7 +712,7 @@
     data-item-name="Toolbox · Aug 20 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-08-20-woodworking-supporter"
@@ -660,7 +720,7 @@
     data-item-name="Toolbox · Aug 20 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-kit-2026-08-20-woodworking"
@@ -676,7 +736,7 @@
     data-item-name="Instrument Making · Aug 21 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-08-21-music-supporter"
@@ -684,7 +744,7 @@
     data-item-name="Instrument Making · Aug 21 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-kit-2026-08-21-music"
@@ -700,7 +760,7 @@
     data-item-name="Workbench · Aug 25 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-08-25-woodworking-supporter"
@@ -708,7 +768,7 @@
     data-item-name="Workbench · Aug 25 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-kit-2026-08-25-woodworking"
@@ -724,7 +784,7 @@
     data-item-name="Solar Bench · Aug 26 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-08-26-solar-supporter"
@@ -732,7 +792,7 @@
     data-item-name="Solar Bench · Aug 26 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-kit-2026-08-26-solar"
@@ -748,7 +808,7 @@
     data-item-name="Plant ID · Aug 27 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-08-27-plant-id-supporter"
@@ -756,7 +816,7 @@
     data-item-name="Plant ID · Aug 27 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-08-28-zines-standard"
@@ -764,7 +824,7 @@
     data-item-name="Zines · Aug 28 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-08-28-zines-supporter"
@@ -772,7 +832,7 @@
     data-item-name="Zines · Aug 28 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-09-10-plant-id-standard"
@@ -780,7 +840,7 @@
     data-item-name="Plant ID · Sep 10 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-09-10-plant-id-supporter"
@@ -788,7 +848,7 @@
     data-item-name="Plant ID · Sep 10 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-09-15-biketrailer-standard"
@@ -796,7 +856,7 @@
     data-item-name="Bike Trailer · Sep 15 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-09-15-biketrailer-supporter"
@@ -804,7 +864,7 @@
     data-item-name="Bike Trailer · Sep 15 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-09-22-biketrailer-standard"
@@ -812,7 +872,7 @@
     data-item-name="Bike Trailer · Sep 22 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-09-22-biketrailer-supporter"
@@ -820,7 +880,7 @@
     data-item-name="Bike Trailer · Sep 22 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-09-24-solar-standard"
@@ -828,7 +888,7 @@
     data-item-name="Solar Bench · Sep 24 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-09-24-solar-supporter"
@@ -836,7 +896,7 @@
     data-item-name="Solar Bench · Sep 24 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-kit-2026-09-24-solar"
@@ -852,7 +912,7 @@
     data-item-name="Cold Frames — Design Review &amp; Build · Sep 30 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-09-30-coldframe-supporter"
@@ -860,7 +920,7 @@
     data-item-name="Cold Frames — Design Review &amp; Build · Sep 30 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-01-plant-id-standard"
@@ -868,7 +928,7 @@
     data-item-name="Plant ID · Oct 1 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-01-plant-id-supporter"
@@ -876,7 +936,7 @@
     data-item-name="Plant ID · Oct 1 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-02-biketrailer-standard"
@@ -884,7 +944,7 @@
     data-item-name="Bike Trailer · Oct 2 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-02-biketrailer-supporter"
@@ -892,7 +952,7 @@
     data-item-name="Bike Trailer · Oct 2 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-13-workbench-standard"
@@ -900,7 +960,7 @@
     data-item-name="Workbench · Oct 13 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-13-workbench-supporter"
@@ -908,7 +968,7 @@
     data-item-name="Workbench · Oct 13 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-kit-2026-10-13-workbench"
@@ -924,7 +984,7 @@
     data-item-name="Zines · Oct 15 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-15-zines-supporter"
@@ -932,7 +992,7 @@
     data-item-name="Zines · Oct 15 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-16-offgrid-standard"
@@ -940,7 +1000,7 @@
     data-item-name="Off-Grid Friday · Oct 16 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-16-offgrid-supporter"
@@ -948,7 +1008,7 @@
     data-item-name="Off-Grid Friday · Oct 16 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-22-afterschool-standard"
@@ -956,7 +1016,7 @@
     data-item-name="Farm Afterschool · Oct 22 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-22-afterschool-supporter"
@@ -964,7 +1024,7 @@
     data-item-name="Farm Afterschool · Oct 22 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-23-afterschool-standard"
@@ -972,7 +1032,7 @@
     data-item-name="Farm Afterschool · Oct 23 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-23-afterschool-supporter"
@@ -980,7 +1040,7 @@
     data-item-name="Farm Afterschool · Oct 23 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-23-offgrid-standard"
@@ -988,7 +1048,7 @@
     data-item-name="Off-Grid Friday · Oct 23 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-23-offgrid-supporter"
@@ -996,7 +1056,7 @@
     data-item-name="Off-Grid Friday · Oct 23 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-04-farmtryout-standard"
@@ -1004,7 +1064,7 @@
     data-item-name="Lettuce Transplanting &amp; Farm Tour · Nov 4 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-04-farmtryout-supporter"
@@ -1012,7 +1072,7 @@
     data-item-name="Lettuce Transplanting &amp; Farm Tour · Nov 4 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-05-farmtryout-standard"
@@ -1020,7 +1080,7 @@
     data-item-name="Lettuce Transplanting &amp; Farm Tour · Nov 5 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-05-farmtryout-supporter"
@@ -1028,7 +1088,7 @@
     data-item-name="Lettuce Transplanting &amp; Farm Tour · Nov 5 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-06-farmtryout-standard"
@@ -1036,7 +1096,7 @@
     data-item-name="Lettuce Transplanting &amp; Farm Tour · Nov 6 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-06-farmtryout-supporter"
@@ -1044,7 +1104,7 @@
     data-item-name="Lettuce Transplanting &amp; Farm Tour · Nov 6 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-06-offgrid-standard"
@@ -1052,7 +1112,7 @@
     data-item-name="Off-Grid Friday · Nov 6 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-06-offgrid-supporter"
@@ -1060,23 +1120,71 @@
     data-item-name="Off-Grid Friday · Nov 6 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-09-farmtryout-standard"
-    data-item-id="tix-2026-11-09-farmtryout-standard"
-    data-item-name="Lettuce Transplanting &amp; Farm Tour · Nov 9 · Standard"
+  <button class="snipcart-add-item" id="def-tix-2026-11-09-winterplanting-standard"
+    data-item-id="tix-2026-11-09-winterplanting-standard"
+    data-item-name="Winter Planting &amp; Trail Hike · Nov 9 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="One registration covers your household for the day. Add everyone coming below."
+    data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-09-farmtryout-supporter"
-    data-item-id="tix-2026-11-09-farmtryout-supporter"
-    data-item-name="Lettuce Transplanting &amp; Farm Tour · Nov 9 · Supporter"
+  <button class="snipcart-add-item" id="def-tix-2026-11-09-winterplanting-supporter"
+    data-item-id="tix-2026-11-09-winterplanting-supporter"
+    data-item-name="Winter Planting &amp; Trail Hike · Nov 9 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your household and quietly pays for another family&#39;s spot."
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-10-winterplanting-standard"
+    data-item-id="tix-2026-11-10-winterplanting-standard"
+    data-item-name="Winter Planting &amp; Trail Hike · Nov 10 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your whole group for the day."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-10-winterplanting-supporter"
+    data-item-id="tix-2026-11-10-winterplanting-supporter"
+    data-item-name="Winter Planting &amp; Trail Hike · Nov 10 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-11-winterplanting-standard"
+    data-item-id="tix-2026-11-11-winterplanting-standard"
+    data-item-name="Winter Planting &amp; Trail Hike · Nov 11 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your whole group for the day."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-11-winterplanting-supporter"
+    data-item-id="tix-2026-11-11-winterplanting-supporter"
+    data-item-name="Winter Planting &amp; Trail Hike · Nov 11 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-13-winterplanting-standard"
+    data-item-id="tix-2026-11-13-winterplanting-standard"
+    data-item-name="Winter Planting &amp; Trail Hike · Nov 13 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your whole group for the day."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-13-winterplanting-supporter"
+    data-item-id="tix-2026-11-13-winterplanting-supporter"
+    data-item-name="Winter Planting &amp; Trail Hike · Nov 13 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
 </div>
@@ -1100,7 +1208,7 @@
 
     <form class="bk-form" id="bkForm" hidden>
       <p class="bk-formlead" id="bkFormLead">Nothing to pay &mdash; just tell us who&rsquo;s coming.</p>
-      <input type="text"  id="bkName"  class="tin" placeholder="Your name" autocomplete="name">
+      <input type="text"  id="bkName"  class="tin" placeholder="Your name (the adult bringing the group)" autocomplete="name">
       <input type="email" id="bkEmail" class="tin" placeholder="you@example.com" autocomplete="email">
       <p class="bk-msg" id="bkMsg"></p>
     </form>
@@ -1146,7 +1254,7 @@
   /* Every session by its KEY — the session file's name, "2026-11-06-farmtryout".
    * Two events can share a date, so anything that counts, registers or stores
    * per session is keyed by this; only "has it happened yet" goes by the date. */
-  var SESSIONS={ "2026-08-19-solar":{date:"2026-08-19",label:"Wed · Aug 19 — Solar Power & Electronics Bench"},"2026-08-20-woodworking":{date:"2026-08-20",label:"Thu · Aug 20 — Build a Toolbox"},"2026-08-21-music":{date:"2026-08-21",label:"Fri · Aug 21 — Music & Instrument Making"},"2026-08-25-woodworking":{date:"2026-08-25",label:"Tue · Aug 25 — Build a Workbench"},"2026-08-26-solar":{date:"2026-08-26",label:"Wed · Aug 26 — Solar Power & Electronics Bench"},"2026-08-27-plant-id":{date:"2026-08-27",label:"Thu · Aug 27 — Plant ID & Mapping"},"2026-08-28-zines":{date:"2026-08-28",label:"Fri · Aug 28 — Zines & Printmaking"},"2026-09-10-plant-id":{date:"2026-09-10",label:"Thu · Sep 10 — Plant ID & Mapping"},"2026-09-15-biketrailer":{date:"2026-09-15",label:"Tue · Sep 15 — Building Bike Trailers"},"2026-09-22-biketrailer":{date:"2026-09-22",label:"Tue · Sep 22 — Building Bike Trailers"},"2026-09-24-solar":{date:"2026-09-24",label:"Thu · Sep 24 — Solar Power & Electronics Bench"},"2026-09-30-coldframe":{date:"2026-09-30",label:"Wed · Sep 30 — Cold Frames & Winter Growing"},"2026-10-01-plant-id":{date:"2026-10-01",label:"Thu · Oct 1 — Plant ID & Mapping"},"2026-10-02-biketrailer":{date:"2026-10-02",label:"Fri · Oct 2 — Building Bike Trailers"},"2026-10-13-workbench":{date:"2026-10-13",label:"Tue · Oct 13 — Build a Workbench"},"2026-10-15-zines":{date:"2026-10-15",label:"Thu · Oct 15 — Zines & Printmaking"},"2026-10-16-offgrid":{date:"2026-10-16",label:"Fri · Oct 16 — Off-Grid Fridays"},"2026-10-22-afterschool":{date:"2026-10-22",label:"Thu · Oct 22 — Farm Afterschool"},"2026-10-23-afterschool":{date:"2026-10-23",label:"Fri · Oct 23 — Farm Afterschool"},"2026-10-23-offgrid":{date:"2026-10-23",label:"Fri · Oct 23 — Off-Grid Fridays"},"2026-11-04-farmtryout":{date:"2026-11-04",label:"Wed · Nov 4 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-05-farmtryout":{date:"2026-11-05",label:"Thu · Nov 5 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-06-farmtryout":{date:"2026-11-06",label:"Fri · Nov 6 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-06-offgrid":{date:"2026-11-06",label:"Fri · Nov 6 — Off-Grid Fridays"},"2026-11-09-farmtryout":{date:"2026-11-09",label:"Mon · Nov 9 — Winter Lettuce Transplanting & Farm Tour"} };
+  var SESSIONS={ "2026-08-19-solar":{date:"2026-08-19",label:"Wed · Aug 19 — Solar Power & Electronics Bench"},"2026-08-20-woodworking":{date:"2026-08-20",label:"Thu · Aug 20 — Build a Toolbox"},"2026-08-21-music":{date:"2026-08-21",label:"Fri · Aug 21 — Music & Instrument Making"},"2026-08-25-woodworking":{date:"2026-08-25",label:"Tue · Aug 25 — Build a Workbench"},"2026-08-26-solar":{date:"2026-08-26",label:"Wed · Aug 26 — Solar Power & Electronics Bench"},"2026-08-27-plant-id":{date:"2026-08-27",label:"Thu · Aug 27 — Plant ID & Mapping"},"2026-08-28-zines":{date:"2026-08-28",label:"Fri · Aug 28 — Zines & Printmaking"},"2026-09-10-plant-id":{date:"2026-09-10",label:"Thu · Sep 10 — Plant ID & Mapping"},"2026-09-15-biketrailer":{date:"2026-09-15",label:"Tue · Sep 15 — Building Bike Trailers"},"2026-09-22-biketrailer":{date:"2026-09-22",label:"Tue · Sep 22 — Building Bike Trailers"},"2026-09-24-solar":{date:"2026-09-24",label:"Thu · Sep 24 — Solar Power & Electronics Bench"},"2026-09-30-coldframe":{date:"2026-09-30",label:"Wed · Sep 30 — Cold Frames & Winter Growing"},"2026-10-01-plant-id":{date:"2026-10-01",label:"Thu · Oct 1 — Plant ID & Mapping"},"2026-10-02-biketrailer":{date:"2026-10-02",label:"Fri · Oct 2 — Building Bike Trailers"},"2026-10-13-workbench":{date:"2026-10-13",label:"Tue · Oct 13 — Build a Workbench"},"2026-10-15-zines":{date:"2026-10-15",label:"Thu · Oct 15 — Zines & Printmaking"},"2026-10-16-offgrid":{date:"2026-10-16",label:"Fri · Oct 16 — Off-Grid Fridays"},"2026-10-22-afterschool":{date:"2026-10-22",label:"Thu · Oct 22 — Farm Afterschool"},"2026-10-23-afterschool":{date:"2026-10-23",label:"Fri · Oct 23 — Farm Afterschool"},"2026-10-23-offgrid":{date:"2026-10-23",label:"Fri · Oct 23 — Off-Grid Fridays"},"2026-11-04-farmtryout":{date:"2026-11-04",label:"Wed · Nov 4 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-05-farmtryout":{date:"2026-11-05",label:"Thu · Nov 5 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-06-farmtryout":{date:"2026-11-06",label:"Fri · Nov 6 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-06-offgrid":{date:"2026-11-06",label:"Fri · Nov 6 — Off-Grid Fridays"},"2026-11-09-winterplanting":{date:"2026-11-09",label:"Mon · Nov 9 — Winter Planting & Trail Hike"},"2026-11-10-winterplanting":{date:"2026-11-10",label:"Tue · Nov 10 — Winter Planting & Trail Hike"},"2026-11-11-winterplanting":{date:"2026-11-11",label:"Wed · Nov 11 — Winter Planting & Trail Hike"},"2026-11-13-winterplanting":{date:"2026-11-13",label:"Fri · Nov 13 — Winter Planting & Trail Hike"} };
   window.wfsSessions=function(){ return SESSIONS; };
   // the one session on a date, or null when there are none or several
   function soleKeyOn(date){
@@ -1346,7 +1454,7 @@
     });
 
     // per session: headcount, what the registrations cost, which tier was picked
-    var byKey={}, amount={}, tier={}, dateOf={};
+    var byKey={}, amount={}, tier={}, dateOf={}, kids={}, adults={};
     lines().filter(function(l){ return l.kind==='reg'; })
            .forEach(function(l){
              var k=keyOf(l);
@@ -1354,8 +1462,11 @@
              dateOf[k]=(SESSIONS[k] && SESSIONS[k].date) || l.date;
              byKey[k]=(byKey[k]||0)+l.qty;
              amount[k]=(amount[k]||0)+l.qty*(l.price||0);
-             // if several tiers are mixed for one session, record the paid one
              var tr=tierOf(l.id);
+             // the people coming along are counted, not a tier of their own
+             if(tr==='kids'){ kids[k]=(kids[k]||0)+l.qty; return; }
+             if(tr==='adults'){ adults[k]=(adults[k]||0)+l.qty; return; }
+             // if several tiers are mixed for one session, record the paid one
              if(tr && (!tier[k] || l.price>0)) tier[k]=tr;
            });
 
@@ -1379,6 +1490,8 @@
             kit_amount:  kitAmount[k] || 0,
             order_token: orderToken || null,
             updates:     !!wantsUpdates,
+            kids:        kids[k] || 0,
+            adults:      adults[k] || 0,
             teach:       window.wfsGetTeach(k) || null,
             learn_next:  window.wfsGetLearn() || null
           }
@@ -1749,11 +1862,18 @@
   })();
   </script>
   <script>/* The per-day panel on /v3/: same shape as /v2/, but it fills our basket
-   rather than Snipcart's cart. */
+   rather than Snipcart's cart.
+   Step 1 (.tpick) is one choice per group, a radio; step 2 (.tppl) counts the
+   kids and adults coming along and stays locked until step 1 is made. Every
+   row is still a basket line with a quantity, so the basket and register()
+   don't need to know the difference. */
 (function(){
   var panel=document.getElementById('tix');
   if(!panel) return;
   var rows=[].slice.call(panel.querySelectorAll('.trow'));
+  var picks=rows.filter(function(r){ return r.classList.contains('tpick'); });
+  var people=rows.filter(function(r){ return r.classList.contains('tppl'); });
+  var pplNote=document.getElementById('tPplNote');
   var sumEl=document.getElementById('tixSum'), goBtn=document.getElementById('tixGo');
   var TITLE=panel.dataset.title, DATE=panel.dataset.date;
   // capacity, teach offers and basket lines are per session; two can share DATE
@@ -1761,11 +1881,14 @@
 
   function qtyOf(r){ return parseInt(r.querySelector('.qnum').textContent,10)||0; }
   function setQty(r,n){
-    n=Math.max(0,Math.min(30,n));
+    n=Math.max(0,Math.min(r.classList.contains('tpick')?1:30,n));
     r.querySelector('.qnum').textContent=n;
     r.classList.toggle('on', n>0);
-    r.querySelector('.qbtn[data-step="-1"]').disabled=(n===0);
+    if(r.classList.contains('tpick')) r.setAttribute('aria-checked', n>0?'true':'false');
+    var minus=r.querySelector('.qbtn[data-step="-1"]');
+    if(minus) minus.disabled=(n===0);
   }
+  function picked(){ return picks.filter(function(r){ return qtyOf(r)>0; })[0]||null; }
 
   /* The teach option asks for something in place of money, so the box appears
      with the first place chosen and the answer is remembered per session. */
@@ -1788,21 +1911,38 @@
     });
   }
 
+  // step 2 opens once step 1 is made; clearing step 1 clears step 2 with it
+  function syncPeople(){
+    var open=!!picked();
+    if(!open) people.forEach(function(r){ setQty(r,0); });
+    people.forEach(function(r){ r.classList.toggle('locked', !open); });
+    if(pplNote) pplNote.classList.toggle('open', open);
+    showCapacity();
+  }
+
+  function plural(n, one, many){ return n+' '+(n===1?one:many); }
+
   function summarise(){
-    var regs=0, kits=0, money=0;
+    var p=picked(), kits=0, money=0, n={};
     rows.forEach(function(r){
-      var n=qtyOf(r), unit=parseInt(r.dataset.unit,10)||0;
-      money+=n*unit;
-      if(r.dataset.kind==='kit') kits+=n; else regs+=n;
+      var q=qtyOf(r), unit=parseInt(r.dataset.unit,10)||0;
+      money+=q*unit;
+      if(r.dataset.kind==='kit') kits+=q;
+      else if(r.classList.contains('tppl')) n[r.dataset.tier]=q;
     });
     var bits=[];
-    if(regs) bits.push(regs+(regs===1?' registration':' registrations'));
-    if(kits) bits.push(kits+(kits===1?' kit':' kits'));
-    sumEl.innerHTML = (regs||kits)
+    if(p){
+      var extra=[];
+      if(n.kids)   extra.push(plural(n.kids, 'kid', 'kids'));
+      if(n.adults) extra.push(plural(n.adults, 'adult', 'adults'));
+      bits.push(p.dataset.sub);
+      bits.push(extra.length ? 'you + '+extra.join(', ') : 'just you');
+    }
+    if(kits) bits.push(plural(kits, 'kit', 'kits'));
+    sumEl.innerHTML = (p||kits)
       ? '<b>'+bits.join(' · ')+' · '+(money>0?'$'+money:'Free')+'</b><small>Added to your registrations</small>'
       : '<b>Nothing selected</b><small>Choose a registration above</small>';
-    goBtn.disabled = !regs && !kits;
-    return {regs:regs, kits:kits, money:money};
+    goBtn.disabled = !p && !kits;
   }
 
   /* ---- capacity ----
@@ -1815,44 +1955,57 @@
 
   function showCapacity(){
     var left=window.wfsRemaining(KEY);
-    if(!capEl) return left;
-    if(left===null){ capEl.textContent=''; capEl.className='tixcap'; return null; }
-    if(left<=0){
-      capEl.textContent='This day is full.';
-      capEl.className='tixcap full';
-    } else if(left<=3){
-      capEl.textContent='Only '+left+(left===1?' spot':' spots')+' available.';
-      capEl.className='tixcap low';
-    } else {
-      capEl.textContent=left+(left===1?' spot':' spots')+' available.';
-      capEl.className='tixcap';
+    if(capEl){
+      if(left===null){ capEl.textContent=''; capEl.className='tixcap'; }
+      else if(left<=0){ capEl.textContent='This day is full.'; capEl.className='tixcap full'; }
+      else if(left<=3){ capEl.textContent='Only '+left+(left===1?' spot':' spots')+' available.'; capEl.className='tixcap low'; }
+      else { capEl.textContent=left+(left===1?' spot':' spots')+' available.'; capEl.className='tixcap'; }
     }
-    rows.forEach(function(r){
-      if(r.dataset.kind==='kit') return;
-      r.classList.toggle('soldout', left<=0);
-      r.querySelector('.qbtn[data-step="1"]').disabled = (left<=0);
+    var full=(left!==null && left<=0);
+    picks.forEach(function(r){ r.classList.toggle('soldout', full && !qtyOf(r)); });
+    people.forEach(function(r){
+      r.classList.toggle('soldout', full);
+      r.querySelector('.qbtn[data-step="1"]').disabled = full || r.classList.contains('locked');
     });
     return left;
   }
   document.addEventListener('wfs.counts', function(){ showCapacity(); summarise(); });
 
+  function changed(){ syncTeach(); syncPeople(); summarise(); }
+
+  // don't let the page offer more spots than the day has left
+  function roomFor(more){
+    var left=window.wfsRemaining(KEY);
+    if(left!==null && regTotal()+more>left){
+      window.wfsToast && window.wfsToast(
+        left<=0 ? 'This day is full.' : 'Only '+left+' left for this day.');
+      return false;
+    }
+    return true;
+  }
+
+  function choose(r){
+    var was=qtyOf(r)>0;
+    if(!was && !picked() && !roomFor(1)) return;
+    picks.forEach(function(o){ setQty(o, 0); });
+    if(!was) setQty(r, 1);
+    changed();
+  }
+
   panel.addEventListener('click', function(e){
+    var pick=e.target.closest('.tpick');
+    if(pick){ if(!e.target.closest('.teachbox')) choose(pick); return; }
     var b=e.target.closest('.qbtn'); if(!b) return;
     var r=b.closest('.trow');
+    if(r.classList.contains('locked')) return;
     var step=parseInt(b.dataset.step,10);
-
-    // don't let the page offer more spots than the day has left
-    if(step>0 && r.dataset.kind!=='kit'){
-      var left=window.wfsRemaining(KEY);
-      if(left!==null && regTotal()+1>left){
-        window.wfsToast && window.wfsToast(
-          left<=0 ? 'This day is full.' : 'Only '+left+' left for this day.');
-        return;
-      }
-    }
+    if(step>0 && r.dataset.kind!=='kit' && !roomFor(1)) return;
     setQty(r, qtyOf(r)+step);
-    syncTeach();
-    summarise();
+    changed();
+  });
+  panel.addEventListener('keydown', function(e){
+    var pick=e.target.closest('.tpick');
+    if(pick && (e.key===' ' || e.key==='Enter')){ e.preventDefault(); choose(pick); }
   });
 
   goBtn.onclick=function(){
@@ -1886,14 +2039,11 @@
     var b=window.wfsBasket.read();
     var any=rows.some(function(r){ return (b[r.dataset.pid]||{}).qty>0; });
     if(any) rows.forEach(function(r){ setQty(r, (b[r.dataset.pid]||{}).qty||0); });
-    syncTeach();
-    summarise();
+    changed();
   }
   document.addEventListener('wfs.basket', reflect);
 
   rows.forEach(function(r){ setQty(r,0); });
-  syncTeach();
-  showCapacity();
   reflect();
 })();
 </script>
