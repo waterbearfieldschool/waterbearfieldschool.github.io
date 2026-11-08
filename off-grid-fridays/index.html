@@ -425,6 +425,38 @@
   .trow.tdate.soldout{opacity:.5}
   .trow.tdate a{color:inherit}
 
+  /* series calendar (step 3 when series.calendar): month grid, Monday first */
+  .tcal{padding:6px 18px 14px 36px}
+  .tcmonth{margin:8px 0 14px}
+  .tcmhead{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:4px 0 8px}
+  .tcmhead b{font:600 1.08rem Lora,Georgia,serif;color:var(--accent-d)}
+  .tccap{font-size:.78rem;font-weight:700;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 9px}
+  .tccap.on{color:#fff;background:var(--accent);border-color:var(--accent)}
+  .tcshorts{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+  .tcshort{font:700 .8rem Inter,system-ui,sans-serif;border:1.5px solid var(--line);background:#fff;color:var(--accent);border-radius:999px;padding:5px 11px;cursor:pointer}
+  .tcshort:hover{border-color:var(--accent)}
+  .tcshort.all{background:#f2f7f3}
+  .tcgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+  .tch{font-size:.7rem;font-weight:800;color:var(--muted);text-align:center;padding-bottom:2px}
+  .tcnum{min-height:58px;border-radius:8px;font-size:.78rem;color:#b9bbb3;padding:4px 6px}
+  .tcday{min-height:58px;border:1.5px solid #d9cfae;background:#fffaf0;border-radius:8px;padding:4px 5px;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:1px;font:inherit;color:var(--ink);overflow:hidden}
+  .tcday:hover:not(:disabled){border-color:var(--accent)}
+  .tcday.on{background:var(--accent);border-color:var(--accent);color:#fff}
+  .tcday.on .tcf,.tcday.on .tcl{color:#e7f1ea}
+  .tcday.past,.tcday.full{opacity:.45;cursor:default;background:#f3f3ee;border-color:var(--line)}
+  .tcn{font-weight:800;font-size:.86rem;line-height:1.1}
+  .tcf{font-size:.64rem;line-height:1.2;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .tcl{font-size:.62rem;font-weight:800;color:#a8551f;margin-top:auto}
+  .tclist{list-style:none;margin:10px 0 0;padding:0;font-size:.84rem;color:var(--muted)}
+  .tclist li{padding:3px 0;border-bottom:1px dotted var(--line)}
+  .tclist b{color:var(--ink)}
+  @media(max-width:520px){
+    .tcal{padding:6px 10px 12px 14px}
+    .tcgrid{gap:3px}
+    .tcday,.tcnum{min-height:46px}
+    .tcf{display:none}
+  }
+
   /* ---- /v3/ own basket ---- */
   .cartbtn{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:var(--sun);color:#123526;border:none;border-radius:999px;padding:8px 15px;font-weight:800;font-size:.84rem;cursor:pointer;display:inline-flex;gap:7px;align-items:center;box-shadow:0 3px 10px rgba(0,0,0,.24)}
   .cartbtn[hidden]{display:none}
@@ -607,7 +639,8 @@
 
       <div class="tsub">3. Which Fridays?</div>
       <p class="tpplnote">As many as you like.</p>
-      <label class="trow tdate" data-date="2026-10-16" data-key="2026-10-16-offgrid" data-title="Off-Grid Fridays" data-label="Fri · Oct 16 — Off-Grid Fridays" data-path="/w/offgrid/2026-10-16/">
+      <div class="tdates" id="tDates">
+      <label class="trow tdate" id="d-2026-10-16-offgrid" data-date="2026-10-16" data-key="2026-10-16-offgrid" data-title="Off-Grid Fridays" data-label="Fri · Oct 16 — Off-Grid Fridays" data-path="/w/offgrid/2026-10-16/" data-focus="" data-time="10 AM to 2 PM">
         <input type="checkbox" class="tdcheck">
         <span class="tinfo"><b>Fri · Oct 16</b><small>10 AM to 2 PM &middot; <a href="/w/offgrid/2026-10-16/">details</a></small></span>
         <span class="tixcap"></span>
@@ -660,7 +693,7 @@
               data-line="Off-Grid Friday · Oct 16"
               data-sub="Adults"></span>
       </label>
-      <label class="trow tdate" data-date="2026-10-23" data-key="2026-10-23-offgrid" data-title="Off-Grid Fridays" data-label="Fri · Oct 23 — Off-Grid Fridays" data-path="/w/offgrid/2026-10-23/">
+      <label class="trow tdate" id="d-2026-10-23-offgrid" data-date="2026-10-23" data-key="2026-10-23-offgrid" data-title="Off-Grid Fridays" data-label="Fri · Oct 23 — Off-Grid Fridays" data-path="/w/offgrid/2026-10-23/" data-focus="" data-time="10 AM to 2 PM">
         <input type="checkbox" class="tdcheck">
         <span class="tinfo"><b>Fri · Oct 23</b><small>10 AM to 2 PM &middot; <a href="/w/offgrid/2026-10-23/">details</a></small></span>
         <span class="tixcap"></span>
@@ -713,7 +746,7 @@
               data-line="Off-Grid Friday · Oct 23"
               data-sub="Adults"></span>
       </label>
-      <label class="trow tdate" data-date="2026-11-06" data-key="2026-11-06-offgrid" data-title="Off-Grid Fridays" data-label="Fri · Nov 6 — Off-Grid Fridays" data-path="/w/offgrid/2026-11-06/">
+      <label class="trow tdate" id="d-2026-11-06-offgrid" data-date="2026-11-06" data-key="2026-11-06-offgrid" data-title="Off-Grid Fridays" data-label="Fri · Nov 6 — Off-Grid Fridays" data-path="/w/offgrid/2026-11-06/" data-focus="" data-time="3:30 PM to 5:30 PM">
         <input type="checkbox" class="tdcheck">
         <span class="tinfo"><b>Fri · Nov 6</b><small>3:30 PM to 5:30 PM &middot; <a href="/w/offgrid/2026-11-06/">details</a></small></span>
         <span class="tixcap"></span>
@@ -766,6 +799,7 @@
               data-line="Off-Grid Friday · Nov 6"
               data-sub="Adults"></span>
       </label>
+      </div>
     </div>
 
     <div class="tixbar">
@@ -1229,70 +1263,262 @@
     data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-09-winterplanting-standard"
-    data-item-id="tix-2026-11-09-winterplanting-standard"
-    data-item-name="Winter Planting &amp; Trail Hike · Nov 9 · Standard"
+  <button class="snipcart-add-item" id="def-tix-2026-11-09-transition-standard"
+    data-item-id="tix-2026-11-09-transition-standard"
+    data-item-name="TE: Mesh Radio · Nov 9 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
     data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-09-winterplanting-supporter"
-    data-item-id="tix-2026-11-09-winterplanting-supporter"
-    data-item-name="Winter Planting &amp; Trail Hike · Nov 9 · Supporter"
+  <button class="snipcart-add-item" id="def-tix-2026-11-09-transition-supporter"
+    data-item-id="tix-2026-11-09-transition-supporter"
+    data-item-name="TE: Mesh Radio · Nov 9 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
     data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-10-winterplanting-standard"
-    data-item-id="tix-2026-11-10-winterplanting-standard"
-    data-item-name="Winter Planting &amp; Trail Hike · Nov 10 · Standard"
+  <button class="snipcart-add-item" id="def-tix-2026-11-09-winterfarm-standard"
+    data-item-id="tix-2026-11-09-winterfarm-standard"
+    data-item-name="Winter Farm Day · Nov 9 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
     data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-10-winterplanting-supporter"
-    data-item-id="tix-2026-11-10-winterplanting-supporter"
-    data-item-name="Winter Planting &amp; Trail Hike · Nov 10 · Supporter"
+  <button class="snipcart-add-item" id="def-tix-2026-11-09-winterfarm-supporter"
+    data-item-id="tix-2026-11-09-winterfarm-supporter"
+    data-item-name="Winter Farm Day · Nov 9 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
     data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-11-winterplanting-standard"
-    data-item-id="tix-2026-11-11-winterplanting-standard"
-    data-item-name="Winter Planting &amp; Trail Hike · Nov 11 · Standard"
+  <button class="snipcart-add-item" id="def-tix-2026-11-10-winterfarm-standard"
+    data-item-id="tix-2026-11-10-winterfarm-standard"
+    data-item-name="Winter Farm Day · Nov 10 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
     data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-11-winterplanting-supporter"
-    data-item-id="tix-2026-11-11-winterplanting-supporter"
-    data-item-name="Winter Planting &amp; Trail Hike · Nov 11 · Supporter"
+  <button class="snipcart-add-item" id="def-tix-2026-11-10-winterfarm-supporter"
+    data-item-id="tix-2026-11-10-winterfarm-supporter"
+    data-item-name="Winter Farm Day · Nov 10 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
     data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-13-winterplanting-standard"
-    data-item-id="tix-2026-11-13-winterplanting-standard"
-    data-item-name="Winter Planting &amp; Trail Hike · Nov 13 · Standard"
+  <button class="snipcart-add-item" id="def-tix-2026-11-12-winterfarm-standard"
+    data-item-id="tix-2026-11-12-winterfarm-standard"
+    data-item-name="Winter Farm Day · Nov 12 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
     data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-13-winterplanting-supporter"
-    data-item-id="tix-2026-11-13-winterplanting-supporter"
-    data-item-name="Winter Planting &amp; Trail Hike · Nov 13 · Supporter"
+  <button class="snipcart-add-item" id="def-tix-2026-11-12-winterfarm-supporter"
+    data-item-id="tix-2026-11-12-winterfarm-supporter"
+    data-item-name="Winter Farm Day · Nov 12 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
     data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-13-transition-standard"
+    data-item-id="tix-2026-11-13-transition-standard"
+    data-item-name="TE: Mesh Radio · Nov 13 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your whole group for the day."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-13-transition-supporter"
+    data-item-id="tix-2026-11-13-transition-supporter"
+    data-item-name="TE: Mesh Radio · Nov 13 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-13-winterfarm-standard"
+    data-item-id="tix-2026-11-13-winterfarm-standard"
+    data-item-name="Winter Farm Day · Nov 13 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your whole group for the day."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-13-winterfarm-supporter"
+    data-item-id="tix-2026-11-13-winterfarm-supporter"
+    data-item-name="Winter Farm Day · Nov 13 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-14-transition-standard"
+    data-item-id="tix-2026-11-14-transition-standard"
+    data-item-name="TE: Mesh Radio · Nov 14 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your whole group for the day."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-14-transition-supporter"
+    data-item-id="tix-2026-11-14-transition-supporter"
+    data-item-name="TE: Mesh Radio · Nov 14 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-16-transition-standard"
+    data-item-id="tix-2026-11-16-transition-standard"
+    data-item-name="TE: Mesh Radio · Nov 16 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your whole group for the day."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-16-transition-supporter"
+    data-item-id="tix-2026-11-16-transition-supporter"
+    data-item-name="TE: Mesh Radio · Nov 16 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-16-winterfarm-standard"
+    data-item-id="tix-2026-11-16-winterfarm-standard"
+    data-item-name="Winter Farm Day · Nov 16 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your whole group for the day."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-16-winterfarm-supporter"
+    data-item-id="tix-2026-11-16-winterfarm-supporter"
+    data-item-name="Winter Farm Day · Nov 16 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-17-winterfarm-standard"
+    data-item-id="tix-2026-11-17-winterfarm-standard"
+    data-item-name="Winter Farm Day · Nov 17 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your whole group for the day."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-17-winterfarm-supporter"
+    data-item-id="tix-2026-11-17-winterfarm-supporter"
+    data-item-name="Winter Farm Day · Nov 17 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-19-winterfarm-standard"
+    data-item-id="tix-2026-11-19-winterfarm-standard"
+    data-item-name="Winter Farm Day · Nov 19 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your whole group for the day."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-19-winterfarm-supporter"
+    data-item-id="tix-2026-11-19-winterfarm-supporter"
+    data-item-name="Winter Farm Day · Nov 19 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-20-transition-standard"
+    data-item-id="tix-2026-11-20-transition-standard"
+    data-item-name="TE: Mesh Radio · Nov 20 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your whole group for the day."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-20-transition-supporter"
+    data-item-id="tix-2026-11-20-transition-supporter"
+    data-item-name="TE: Mesh Radio · Nov 20 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-20-winterfarm-standard"
+    data-item-id="tix-2026-11-20-winterfarm-standard"
+    data-item-name="Winter Farm Day · Nov 20 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your whole group for the day."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-20-winterfarm-supporter"
+    data-item-id="tix-2026-11-20-winterfarm-supporter"
+    data-item-name="Winter Farm Day · Nov 20 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-21-transition-standard"
+    data-item-id="tix-2026-11-21-transition-standard"
+    data-item-name="TE: Mesh Radio · Nov 21 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your whole group for the day."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-21-transition-supporter"
+    data-item-id="tix-2026-11-21-transition-supporter"
+    data-item-name="TE: Mesh Radio · Nov 21 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-pass-winterfarm-2026-11-standard"
+    data-item-id="pass-winterfarm-2026-11-standard"
+    data-item-name="Winter Farm Days: Planting &amp; Hiking · November · month (standard)"
+    data-item-price="50.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Every Winter Farm Days: Planting &amp; Hiking date you chose in November, at the month price."
+    data-item-shippable="false"
+    data-item-quantity="1">pass</button>
+  <button class="snipcart-add-item" id="def-pass-winterfarm-2026-11-supporter"
+    data-item-id="pass-winterfarm-2026-11-supporter"
+    data-item-name="Winter Farm Days: Planting &amp; Hiking · November · month (supporter)"
+    data-item-price="100.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Every Winter Farm Days: Planting &amp; Hiking date you chose in November, at the month price."
+    data-item-shippable="false"
+    data-item-quantity="1">pass</button>
+  <button class="snipcart-add-item" id="def-pass-transition-2026-11-standard"
+    data-item-id="pass-transition-2026-11-standard"
+    data-item-name="Transition Engineering: Mesh Radio · November · month (standard)"
+    data-item-price="50.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Every Transition Engineering: Mesh Radio date you chose in November, at the month price."
+    data-item-shippable="false"
+    data-item-quantity="1">pass</button>
+  <button class="snipcart-add-item" id="def-pass-transition-2026-11-supporter"
+    data-item-id="pass-transition-2026-11-supporter"
+    data-item-name="Transition Engineering: Mesh Radio · November · month (supporter)"
+    data-item-price="100.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Every Transition Engineering: Mesh Radio date you chose in November, at the month price."
+    data-item-shippable="false"
+    data-item-quantity="1">pass</button>
 </div>
 
 
@@ -1360,7 +1586,7 @@
   /* Every session by its KEY — the session file's name, "2026-11-06-farmtryout".
    * Two events can share a date, so anything that counts, registers or stores
    * per session is keyed by this; only "has it happened yet" goes by the date. */
-  var SESSIONS={ "2026-08-19-solar":{date:"2026-08-19",label:"Wed · Aug 19 — Solar Power & Electronics Bench"},"2026-08-20-woodworking":{date:"2026-08-20",label:"Thu · Aug 20 — Build a Toolbox"},"2026-08-21-music":{date:"2026-08-21",label:"Fri · Aug 21 — Music & Instrument Making"},"2026-08-25-woodworking":{date:"2026-08-25",label:"Tue · Aug 25 — Build a Workbench"},"2026-08-26-solar":{date:"2026-08-26",label:"Wed · Aug 26 — Solar Power & Electronics Bench"},"2026-08-27-plant-id":{date:"2026-08-27",label:"Thu · Aug 27 — Plant ID & Mapping"},"2026-08-28-zines":{date:"2026-08-28",label:"Fri · Aug 28 — Zines & Printmaking"},"2026-09-10-plant-id":{date:"2026-09-10",label:"Thu · Sep 10 — Plant ID & Mapping"},"2026-09-15-biketrailer":{date:"2026-09-15",label:"Tue · Sep 15 — Building Bike Trailers"},"2026-09-22-biketrailer":{date:"2026-09-22",label:"Tue · Sep 22 — Building Bike Trailers"},"2026-09-24-solar":{date:"2026-09-24",label:"Thu · Sep 24 — Solar Power & Electronics Bench"},"2026-09-30-coldframe":{date:"2026-09-30",label:"Wed · Sep 30 — Cold Frames & Winter Growing"},"2026-10-01-plant-id":{date:"2026-10-01",label:"Thu · Oct 1 — Plant ID & Mapping"},"2026-10-02-biketrailer":{date:"2026-10-02",label:"Fri · Oct 2 — Building Bike Trailers"},"2026-10-13-workbench":{date:"2026-10-13",label:"Tue · Oct 13 — Build a Workbench"},"2026-10-15-zines":{date:"2026-10-15",label:"Thu · Oct 15 — Zines & Printmaking"},"2026-10-16-offgrid":{date:"2026-10-16",label:"Fri · Oct 16 — Off-Grid Fridays"},"2026-10-22-afterschool":{date:"2026-10-22",label:"Thu · Oct 22 — Farm Afterschool"},"2026-10-23-afterschool":{date:"2026-10-23",label:"Fri · Oct 23 — Farm Afterschool"},"2026-10-23-offgrid":{date:"2026-10-23",label:"Fri · Oct 23 — Off-Grid Fridays"},"2026-11-04-farmtryout":{date:"2026-11-04",label:"Wed · Nov 4 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-05-farmtryout":{date:"2026-11-05",label:"Thu · Nov 5 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-06-farmtryout":{date:"2026-11-06",label:"Fri · Nov 6 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-06-offgrid":{date:"2026-11-06",label:"Fri · Nov 6 — Off-Grid Fridays"},"2026-11-09-winterplanting":{date:"2026-11-09",label:"Mon · Nov 9 — Winter Planting & Trail Hike"},"2026-11-10-winterplanting":{date:"2026-11-10",label:"Tue · Nov 10 — Winter Planting & Trail Hike"},"2026-11-11-winterplanting":{date:"2026-11-11",label:"Wed · Nov 11 — Winter Planting & Trail Hike"},"2026-11-13-winterplanting":{date:"2026-11-13",label:"Fri · Nov 13 — Winter Planting & Trail Hike"} };
+  var SESSIONS={ "2026-08-19-solar":{date:"2026-08-19",label:"Wed · Aug 19 — Solar Power & Electronics Bench"},"2026-08-20-woodworking":{date:"2026-08-20",label:"Thu · Aug 20 — Build a Toolbox"},"2026-08-21-music":{date:"2026-08-21",label:"Fri · Aug 21 — Music & Instrument Making"},"2026-08-25-woodworking":{date:"2026-08-25",label:"Tue · Aug 25 — Build a Workbench"},"2026-08-26-solar":{date:"2026-08-26",label:"Wed · Aug 26 — Solar Power & Electronics Bench"},"2026-08-27-plant-id":{date:"2026-08-27",label:"Thu · Aug 27 — Plant ID & Mapping"},"2026-08-28-zines":{date:"2026-08-28",label:"Fri · Aug 28 — Zines & Printmaking"},"2026-09-10-plant-id":{date:"2026-09-10",label:"Thu · Sep 10 — Plant ID & Mapping"},"2026-09-15-biketrailer":{date:"2026-09-15",label:"Tue · Sep 15 — Building Bike Trailers"},"2026-09-22-biketrailer":{date:"2026-09-22",label:"Tue · Sep 22 — Building Bike Trailers"},"2026-09-24-solar":{date:"2026-09-24",label:"Thu · Sep 24 — Solar Power & Electronics Bench"},"2026-09-30-coldframe":{date:"2026-09-30",label:"Wed · Sep 30 — Cold Frames & Winter Growing"},"2026-10-01-plant-id":{date:"2026-10-01",label:"Thu · Oct 1 — Plant ID & Mapping"},"2026-10-02-biketrailer":{date:"2026-10-02",label:"Fri · Oct 2 — Building Bike Trailers"},"2026-10-13-workbench":{date:"2026-10-13",label:"Tue · Oct 13 — Build a Workbench"},"2026-10-15-zines":{date:"2026-10-15",label:"Thu · Oct 15 — Zines & Printmaking"},"2026-10-16-offgrid":{date:"2026-10-16",label:"Fri · Oct 16 — Off-Grid Fridays"},"2026-10-22-afterschool":{date:"2026-10-22",label:"Thu · Oct 22 — Farm Afterschool"},"2026-10-23-afterschool":{date:"2026-10-23",label:"Fri · Oct 23 — Farm Afterschool"},"2026-10-23-offgrid":{date:"2026-10-23",label:"Fri · Oct 23 — Off-Grid Fridays"},"2026-11-04-farmtryout":{date:"2026-11-04",label:"Wed · Nov 4 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-05-farmtryout":{date:"2026-11-05",label:"Thu · Nov 5 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-06-farmtryout":{date:"2026-11-06",label:"Fri · Nov 6 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-06-offgrid":{date:"2026-11-06",label:"Fri · Nov 6 — Off-Grid Fridays"},"2026-11-09-transition":{date:"2026-11-09",label:"Mon · Nov 9 — Transition Engineering: Mesh Radio"},"2026-11-09-winterfarm":{date:"2026-11-09",label:"Mon · Nov 9 — Winter Farm Days: Planting & Hiking"},"2026-11-10-winterfarm":{date:"2026-11-10",label:"Tue · Nov 10 — Winter Farm Days: Planting & Hiking"},"2026-11-12-winterfarm":{date:"2026-11-12",label:"Thu · Nov 12 — Winter Farm Days: Planting & Hiking"},"2026-11-13-transition":{date:"2026-11-13",label:"Fri · Nov 13 — Transition Engineering: Mesh Radio"},"2026-11-13-winterfarm":{date:"2026-11-13",label:"Fri · Nov 13 — Winter Farm Days: Planting & Hiking"},"2026-11-14-transition":{date:"2026-11-14",label:"Sat · Nov 14 — Transition Engineering: Mesh Radio"},"2026-11-16-transition":{date:"2026-11-16",label:"Mon · Nov 16 — Transition Engineering: Mesh Radio"},"2026-11-16-winterfarm":{date:"2026-11-16",label:"Mon · Nov 16 — Winter Farm Days: Planting & Hiking"},"2026-11-17-winterfarm":{date:"2026-11-17",label:"Tue · Nov 17 — Winter Farm Days: Planting & Hiking"},"2026-11-19-winterfarm":{date:"2026-11-19",label:"Thu · Nov 19 — Winter Farm Days: Planting & Hiking"},"2026-11-20-transition":{date:"2026-11-20",label:"Fri · Nov 20 — Transition Engineering: Mesh Radio"},"2026-11-20-winterfarm":{date:"2026-11-20",label:"Fri · Nov 20 — Winter Farm Days: Planting & Hiking"},"2026-11-21-transition":{date:"2026-11-21",label:"Sat · Nov 21 — Transition Engineering: Mesh Radio"} };
   window.wfsSessions=function(){ return SESSIONS; };
   // the one session on a date, or null when there are none or several
   function soleKeyOn(date){
@@ -1560,7 +1786,7 @@
     });
 
     // per session: headcount, what the registrations cost, which tier was picked
-    var byKey={}, amount={}, tier={}, dateOf={}, kids={}, adults={};
+    var byKey={}, amount={}, tier={}, dateOf={}, kids={}, adults={}, passPaid={};
     lines().filter(function(l){ return l.kind==='reg'; })
            .forEach(function(l){
              var k=keyOf(l);
@@ -1572,6 +1798,17 @@
              // the people coming along are counted, not a tier of their own
              if(tr==='kids'){ kids[k]=(kids[k]||0)+l.qty; return; }
              if(tr==='adults'){ adults[k]=(adults[k]||0)+l.qty; return; }
+             // a day covered by a month line ("pass-SLUG-YYYY-MM-TYPE") is
+             // recorded as "month-TYPE"; the month's money goes on its first day
+             if(tr==='pass' && l.pass){
+               var pl=read()[l.pass];
+               tier[k]='month-'+l.pass.split('-').pop();
+               if(pl && pl.qty>0 && !passPaid[l.pass]){
+                 passPaid[l.pass]=1;
+                 amount[k]=(amount[k]||0)+pl.qty*(pl.price||0);
+               }
+               return;
+             }
              // if several tiers are mixed for one session, record the paid one
              if(tr && (!tier[k] || l.price>0)) tier[k]=tr;
            });
@@ -1662,13 +1899,15 @@
              shippable: d.itemShippable !== 'false',
              quantity:1 };
   }
-  async function setSnipQty(defId, qty){
+  async function setSnipQty(defId, qty, meta){
     var item=defItem(defId); if(!item) return false;
     var hit=snipItems().filter(function(i){ return i.id===item.id; })[0];
     try{
+      // metadata can't be changed in place, so an item carrying it is re-added
+      if(hit && meta && qty>0){ await Snipcart.api.cart.items.remove(hit.uniqueId); hit=null; }
       if(qty<=0){ if(hit) await Snipcart.api.cart.items.remove(hit.uniqueId); }
       else if(hit){ await Snipcart.api.cart.items.update({uniqueId:hit.uniqueId, quantity:qty}); }
-      else { item.quantity=qty; await Snipcart.api.cart.items.add(item); }
+      else { item.quantity=qty; if(meta) item.metadata=meta; await Snipcart.api.cart.items.add(item); }
       return true;
     }catch(e){ console.error('[wfs] snipcart write failed', defId, qty, e); return false; }
   }
@@ -1688,8 +1927,29 @@
         try{ await Snipcart.api.cart.items.remove(existing[i].uniqueId); }catch(e){}
       }
     }
+    /* The $0 lines (kids, adults, days under a month line) never reach
+     * Snipcart, so the order would lose them. Each paid line carries them as
+     * metadata, which the webhook backstop reads (snipcart-webhook/items.ts). */
+    var all=lines();
+    function peopleOn(k){
+      var n={kids:0, adults:0};
+      all.forEach(function(l){
+        if(keyOf(l)!==k) return;
+        var t=tierOf(l.id); if(t in n) n[t]+=l.qty;
+      });
+      return n;
+    }
+    function metaFor(l){
+      if(l.kind==='pass'){
+        var days=all.filter(function(x){ return x.pass===l.id; }).map(keyOf).filter(Boolean);
+        var n=days.length ? peopleOn(days[0]) : {kids:0, adults:0};
+        return {days:days, kids:n.kids, adults:n.adults};
+      }
+      if(l.kind==='reg') return peopleOn(keyOf(l));
+      return null;
+    }
     for(var j=0;j<paid.length;j++){
-      if(!(await setSnipQty('def-'+paid[j].id, paid[j].qty))){
+      if(!(await setSnipQty('def-'+paid[j].id, paid[j].qty, metaFor(paid[j])))){
         return {ok:false, error:'Could not hand that to the payment step.'};
       }
     }
@@ -1852,7 +2112,15 @@
 
   body.addEventListener('click', function(e){
     var rm=e.target.closest('.bkl-rm'); if(!rm) return;
-    window.wfsBasket.set(rm.dataset.id, 0);
+    var B=window.wfsBasket, id=rm.dataset.id;
+    // a month line takes the $0 days it was paying for with it, or they would
+    // stay behind as free places
+    // (and the kids/adults lines riding along on those days)
+    var keys={};
+    B.lines().forEach(function(l){ if(l.pass===id) keys[l.key]=1; });
+    B.lines().filter(function(l){ return l.kind==='reg' && keys[l.key]; })
+             .forEach(function(l){ B.set(l.id, 0); });
+    B.set(id, 0);
   });
 
   function say(t, bad){ msg.textContent=t||''; msg.className='bk-msg'+(bad?' bad':''); }
@@ -1953,17 +2221,31 @@
   }
 })();
 </script>
-  <script>window.WFS_SERIES_UNIT="Friday";</script>
+  <script>window.WFS_SERIES_UNIT="Friday";
+  window.WFS_SERIES={slug:"offgrid", title:"Off-Grid Fridays", cap:{}, capFor:{}, aheadHours:0, calendar:false};</script>
   <script>/* The series sign-up page: the same job as wfs-day-panel.js, but for several
    dates at once. Steps 1 (one registration type, a radio) and 2 (kids and
    adults coming along) are chosen once in #seriesChoose and apply to every
    date ticked in step 3. Each date carries hidden per-type rows (.tcarrier)
    with its own ids and prices, so the basket still gets one line per date and
-   type and each date is checked against its own capacity. */
+   type and each date is checked against its own capacity.
+
+   Two optional extras, from the series config (window.WFS_SERIES):
+   - calendar: step 3 is drawn as month grids with shortcut buttons ("Every
+     Mon", "All of November"). The .tdate rows stay the source of truth; the
+     calendar only ticks and reads their checkboxes.
+   - cap (monthCap): per type, the most a group pays for one calendar month.
+     Once a month's days would cost at least that, those days go in the basket
+     as $0 "-pass" lines and the money goes on one month line
+     ("pass-SLUG-YYYY-MM-TYPE"), which has its own Snipcart product. */
 (function(){
   var box=document.getElementById('seriesChoose');
   if(!box) return;
   var UNIT=window.WFS_SERIES_UNIT||'day';   // e.g. "Friday", set by series.njk
+  var CFG=window.WFS_SERIES||{};
+  var CAP=CFG.cap||{};
+  // the month price for month m ("2026-11") and type t; a month can override
+  function capOf(m, t){ return ((CFG.capFor||{})[m] || CAP)[t] || null; }
   var picks=[].slice.call(box.querySelectorAll('.tpick'));
   var people=[].slice.call(box.querySelectorAll('.tppl'));
   var dates=[].slice.call(box.querySelectorAll('.tdate'));
@@ -1972,6 +2254,7 @@
   var teachBox=document.getElementById('teachBox');
   var teachWhat=document.getElementById('teachWhat');
   var teachMsg=document.getElementById('teachMsg');
+  var cal=document.getElementById('tCal');
 
   var tier=null;                       // the step-1 choice, e.g. "standard"
   var count={kids:0, adults:0};        // step 2
@@ -1980,15 +2263,37 @@
   function ticked(){ return dates.filter(function(d){ return checkOf(d).checked; }); }
   function carrier(d, t){ return d.querySelector('.tcarrier[data-tier="'+t+'"]'); }
   function carriers(d){ return [].slice.call(d.querySelectorAll('.tcarrier')); }
+  function nameOf(d){ return d.querySelector('b').textContent; }
 
-  // A date that has passed keeps its heading but can't be chosen.
+  var MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var WD=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  function ym(d){ return d.dataset.date.slice(0,7); }
+  function monthName(m){ return MONTHS[parseInt(m.slice(5,7),10)-1]; }
+  function dow(d){ var p=d.dataset.date.split('-'); return new Date(Date.UTC(+p[0],+p[1]-1,+p[2])).getUTCDay(); }
+
+  /* Registration closes aheadHours before a day starts ("10 AM to 12 PM" ->
+     10:00 on its date, visitor's clock). The page enforces it; register()
+     itself only refuses dates already past. */
+  function startOf(d){
+    var p=d.dataset.date.split('-'), m=/^(\d{1,2})(?::(\d\d))?\s*(AM|PM)/i.exec(d.dataset.time||'');
+    var h=m ? (+m[1]%12)+(/pm/i.test(m[3])?12:0) : 0, mi=m && m[2] ? +m[2] : 0;
+    return new Date(+p[0], +p[1]-1, +p[2], h, mi);
+  }
+  function closed(d){
+    return !!CFG.aheadHours && Date.now() > startOf(d).getTime()-CFG.aheadHours*3600e3;
+  }
+
+  // A date that has passed, or closed for booking, keeps its heading but can't be chosen.
   dates.forEach(function(d){
-    if(window.wfsIsPast && window.wfsIsPast(d.dataset.date)){
+    var past=window.wfsIsPast && window.wfsIsPast(d.dataset.date);
+    if(past || closed(d)){
       d.classList.add('past');
+      if(!past) d.classList.add('closed');
       checkOf(d).disabled=true;
-      d.querySelector('.tixcap').textContent='This '+UNIT+' has passed.';
+      d.querySelector('.tixcap').textContent = past ? 'This '+UNIT+' has passed.' : 'Registration closed';
     }
   });
+  var allDates=dates;
   dates=dates.filter(function(d){ return !d.classList.contains('past'); });
 
   if(teachWhat){
@@ -2000,6 +2305,26 @@
     teachWhat.addEventListener('input', function(){
       if(teachMsg && teachWhat.value.trim()) teachMsg.hidden=true;
     });
+  }
+
+  /* ---- money: per day, capped per month ---- */
+  function unitOf(d, t){ var c=carrier(d, t); return c ? (parseInt(c.dataset.unit,10)||0) : 0; }
+  // {ym: {days:[...], full:$, cap:$|null, capped:bool, pay:$}} for the ticked dates
+  function months(){
+    var out={};
+    if(!tier) return out;
+    ticked().forEach(function(d){
+      var m=ym(d);
+      (out[m]=out[m]||{days:[], full:0}).days.push(d);
+      out[m].full+=unitOf(d, tier);
+    });
+    Object.keys(out).forEach(function(m){
+      var o=out[m], cap=capOf(m, tier);
+      o.cap = cap ? cap : null;
+      o.capped = !!cap && o.full>=cap && !!carrier(o.days[0], 'pass');
+      o.pay = o.capped ? cap : o.full;
+    });
+    return out;
   }
 
   function draw(){
@@ -2023,15 +2348,19 @@
       if(tier!=='teach' && teachMsg) teachMsg.hidden=true;
     }
     dates.forEach(function(d){ d.classList.toggle('on', checkOf(d).checked); });
+    drawCal();
     summarise();
   }
 
   function plural(n, one, many){ return n+' '+(n===1?one:many); }
 
   function summarise(){
-    var ds=ticked(), money=0;
-    if(tier) ds.forEach(function(d){
-      var c=carrier(d, tier); money+=c ? (parseInt(c.dataset.unit,10)||0) : 0;
+    var ds=ticked(), ms=months(), money=0, capNote=[];
+    Object.keys(ms).sort().forEach(function(m){
+      var o=ms[m]; money+=o.pay;
+      if(o.capped && o.full>o.pay) capNote.push(monthName(m)+': $'+o.full+' → $'+o.pay+' month price');
+      else if(o.capped) capNote.push(monthName(m)+' at the month price');
+      else if(o.cap && o.full>0) capNote.push('$'+(o.cap-o.full)+' more in '+monthName(m)+' and it caps at $'+o.cap);
     });
     var ready=!!tier && ds.length>0;
     if(ready){
@@ -2040,7 +2369,8 @@
       if(count.adults) extra.push(plural(count.adults, 'adult', 'adults'));
       var sub=box.querySelector('.tpick[data-tier="'+tier+'"]').dataset.sub;
       sumEl.innerHTML='<b>'+sub+' · '+(extra.length?'you + '+extra.join(', '):'just you')+' · '
-        +plural(ds.length, UNIT, UNIT+'s')+' · '+(money>0?'$'+money:'Free')+'</b><small>Added to your registrations</small>';
+        +plural(ds.length, UNIT, UNIT+'s')+' · '+(money>0?'$'+money:'Free')+'</b><small>'
+        +(capNote.length ? capNote.join(' · ') : 'Added to your registrations')+'</small>';
     } else {
       sumEl.innerHTML='<b>Nothing selected</b><small>'
         +(tier ? 'Choose the '+UNIT+'s you’d like to come to' : 'Choose a registration above')+'</small>';
@@ -2052,6 +2382,7 @@
   function showCapacity(){
     dates.forEach(function(d){
       var left=window.wfsRemaining(d.dataset.key), cap=d.querySelector('.tixcap');
+      d.dataset.left = (left===null ? '' : left);
       if(left===null){ cap.textContent=''; cap.className='tixcap'; return; }
       if(left<=0){ cap.textContent='Full'; cap.className='tixcap full'; }
       else if(left<=3){ cap.textContent='Only '+left+' left'; cap.className='tixcap low'; }
@@ -2060,21 +2391,31 @@
       d.classList.toggle('soldout', full);
       checkOf(d).disabled=full;
     });
+    drawCal();
   }
   document.addEventListener('wfs.counts', function(){ showCapacity(); summarise(); });
 
   // would a group of n fit on every date in ds? names the first that wouldn't
-  function fits(ds, n){
+  function fits(ds, n, quiet){
     for(var i=0;i<ds.length;i++){
       var left=window.wfsRemaining(ds[i].dataset.key);
       if(left!==null && n>left){
-        window.wfsToast && window.wfsToast(left<=0
-          ? ds[i].querySelector('b').textContent+' is full.'
-          : 'Only '+left+' left on '+ds[i].querySelector('b').textContent+'.');
+        if(!quiet) window.wfsToast && window.wfsToast(left<=0
+          ? nameOf(ds[i])+' is full.'
+          : 'Only '+left+' left on '+nameOf(ds[i])+'.');
         return false;
       }
     }
     return true;
+  }
+  // can this date be ticked right now? (quiet: for the shortcut buttons)
+  function tickable(d, quiet){
+    if(checkOf(d).disabled) return false;
+    if(tier && !carrier(d, tier)){
+      if(!quiet) window.wfsToast && window.wfsToast('That registration type isn’t offered on '+nameOf(d)+'.');
+      return false;
+    }
+    return fits([d], party(), quiet);
   }
 
   function choose(r){
@@ -2089,6 +2430,10 @@
   box.addEventListener('click', function(e){
     var pick=e.target.closest('.tpick');
     if(pick){ choose(pick); return; }
+    var day=e.target.closest('.tcday[data-key]');
+    if(day){ toggleDay(day.dataset.key); return; }
+    var sc=e.target.closest('.tcshort');
+    if(sc){ shortcut(sc); return; }
     var b=e.target.closest('.qbtn'); if(!b) return;
     var r=b.closest('.trow');
     if(!tier) return;
@@ -2104,16 +2449,97 @@
   box.addEventListener('change', function(e){
     var cb=e.target.closest('.tdcheck'); if(!cb) return;
     var d=cb.closest('.tdate');
-    if(cb.checked){
-      if(tier && !carrier(d, tier)){
-        cb.checked=false;
-        window.wfsToast && window.wfsToast('That registration type isn’t offered on '+d.querySelector('b').textContent+'.');
-      } else if(!fits([d], party())){
-        cb.checked=false;
-      }
-    }
+    if(cb.checked && !tickable(d)) cb.checked=false;
     draw();
   });
+
+  /* ---- calendar ---- */
+  function byKey(k){ return dates.filter(function(d){ return d.dataset.key===k; })[0]; }
+  function toggleDay(k){
+    var d=byKey(k); if(!d) return;
+    var cb=checkOf(d);
+    if(!cb.checked && !tickable(d)) return;
+    cb.checked=!cb.checked;
+    draw();
+  }
+  // a shortcut ticks every open date it covers; pressed again, it unticks them
+  function shortcut(btn){
+    var m=btn.dataset.month, wd=btn.dataset.dow;
+    var set=dates.filter(function(d){
+      return ym(d)===m && (wd==null || wd==='' || dow(d)===+wd);
+    });
+    var allOn=set.length && set.every(function(d){ return checkOf(d).checked; });
+    var skipped=[];
+    set.forEach(function(d){
+      if(allOn){ checkOf(d).checked=false; return; }
+      if(checkOf(d).checked) return;
+      if(tickable(d, true)) checkOf(d).checked=true; else skipped.push(nameOf(d));
+    });
+    if(skipped.length) window.wfsToast && window.wfsToast('Skipped (full): '+skipped.join(', '));
+    draw();
+  }
+
+  function drawCal(){
+    if(!cal || !CFG.calendar) return;
+    cal.hidden=false;
+    document.getElementById('tDates').hidden=true;
+    var ms={};
+    allDates.forEach(function(d){ (ms[ym(d)]=ms[ym(d)]||[]).push(d); });
+    var ss=months();
+    var html='';
+    Object.keys(ms).sort().forEach(function(m){
+      var ds=ms[m], open=ds.filter(function(d){ return !d.classList.contains('past'); });
+      var y=+m.slice(0,4), mo=+m.slice(5,7)-1;
+      var first=new Date(Date.UTC(y,mo,1)).getUTCDay();          // 0 = Sunday
+      var lead=(first+6)%7;                                      // Monday-first grid
+      var len=new Date(Date.UTC(y,mo+1,0)).getUTCDate();
+      var at={}; ds.forEach(function(d){ at[+d.dataset.date.slice(8,10)]=d; });
+      var o=ss[m];
+      html+='<div class="tcmonth"><div class="tcmhead"><b>'+monthName(m)+'</b>';
+      if(o && o.capped) html+='<span class="tccap on">Month price ✓</span>';
+      else if(capOf(m, tier)) html+='<span class="tccap">Month price $'+capOf(m, tier)+'</span>';
+      html+='</div>';
+      if(open.length){
+        // one shortcut per weekday this program meets, then the whole month
+        var wds={}; open.forEach(function(d){ wds[dow(d)]=1; });
+        html+='<div class="tcshorts">';
+        [1,2,3,4,5,6,0].forEach(function(w){
+          if(wds[w]) html+='<button type="button" class="tcshort" data-month="'+m+'" data-dow="'+w+'">Every '+WD[w]+'</button>';
+        });
+        html+='<button type="button" class="tcshort all" data-month="'+m+'" data-dow="">All of '+monthName(m)+'</button></div>';
+      }
+      html+='<div class="tcgrid">';
+      ['M','T','W','T','F','S','S'].forEach(function(h){ html+='<div class="tch">'+h+'</div>'; });
+      for(var i=0;i<lead;i++) html+='<div class="tcblank"></div>';
+      for(var n=1;n<=len;n++){
+        var d=at[n];
+        if(!d){ html+='<div class="tcnum">'+n+'</div>'; continue; }
+        var past=d.classList.contains('past'), on=checkOf(d).checked;
+        var left=d.dataset.left, full=(left!=='' && left!=null && +left<=0 && !on);
+        var cls='tcday'+(on?' on':'')+(past?' past':'')+(full?' full':'');
+        var note = d.classList.contains('closed') ? 'closed' : past ? 'past' : full ? 'full' : (left!=='' && left!=null && +left<=3) ? left+' left' : '';
+        html+='<button type="button" class="'+cls+'"'+(past||full?' disabled':' data-key="'+d.dataset.key+'"')
+          +' aria-pressed="'+(on?'true':'false')+'" title="'+esc(nameOf(d)+(d.dataset.focus?' — '+d.dataset.focus:''))+'">'
+          +'<span class="tcn">'+n+'</span>'
+          +(d.dataset.focus?'<span class="tcf">'+esc(d.dataset.focus)+'</span>':'')
+          +(note?'<span class="tcl">'+note+'</span>':'')
+          +'</button>';
+      }
+      html+='</div>';
+      // the chosen days' focus, spelled out (the squares are too small on a phone)
+      var on=ds.filter(function(d){ return checkOf(d).checked; });
+      if(on.length) html+='<ul class="tclist">'+on.map(function(d){
+        return '<li><b>'+esc(nameOf(d))+'</b> · '+esc(d.dataset.time||'')+(d.dataset.focus?' · '+esc(d.dataset.focus):'')+'</li>';
+      }).join('')+'</ul>';
+      html+='</div>';
+    });
+    cal.innerHTML=html;
+  }
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+  /* ---- into the basket ---- */
+  function passId(m, t){ return 'pass-'+CFG.slug+'-'+m+'-'+t; }
 
   goBtn.onclick=function(){
     if(tier==='teach' && teachWhat && !teachWhat.value.trim()){
@@ -2121,15 +2547,39 @@
       teachWhat.focus();
       return;
     }
+    var ms=months();
     // Work out every quantity before writing any: each set() announces the
     // basket, and reflect() then redraws from it — so lines not yet written
     // would be read back as zero before their turn.
     var plan=dates.map(function(d){
-      var on=checkOf(d).checked;
+      var on=checkOf(d).checked, capped=on && ms[ym(d)] && ms[ym(d)].capped;
       return carriers(d).map(function(c){
         if(!on) return 0;
-        if(c.dataset.tier===tier) return 1;
-        return count[c.dataset.tier]||0;   // kids / adults; other types 0
+        var t=c.dataset.tier;
+        if(t==='pass') return capped ? 1 : 0;
+        if(t===tier) return capped ? 0 : 1;
+        return count[t]||0;   // kids / adults; other types 0
+      });
+    });
+    // month lines: one per capped month, none for the rest
+    var passes=[];
+    var monthsHere={}; allDates.forEach(function(d){ monthsHere[ym(d)]=d; });
+    Object.keys(monthsHere).forEach(function(m){
+      Object.keys(CAP).forEach(function(t){
+        var on=!!(ms[m] && ms[m].capped && t===tier);
+        passes.push({id:passId(m,t), qty:on?1:0, m:m, t:t, price:capOf(m,t), first:(ms[m]||{days:[monthsHere[m]]}).days[0]});
+      });
+    });
+    passes.forEach(function(p){
+      window.wfsBasket.set(p.id, p.qty, {
+        kind:  'pass',
+        key:   null,
+        date:  p.first.dataset.date,
+        price: p.price,
+        name:  CFG.title+' · '+monthName(p.m),
+        sub:   'Month price · every '+UNIT+' you chose in '+monthName(p.m),
+        month: p.m,
+        href:  location.pathname
       });
     });
     dates.forEach(function(d, di){
@@ -2146,7 +2596,9 @@
           name:  c.dataset.line,
           sub:   c.dataset.sub,
           label: d.dataset.label,
-          href:  location.pathname
+          href:  location.pathname,
+          // a $0 day under a month line: removing that line removes these too
+          pass:  c.dataset.tier==='pass' ? passId(ym(d), tier) : undefined
         });
       });
     });
@@ -2162,10 +2614,16 @@
       carriers(d).forEach(function(c){
         var q=(b[c.dataset.pid]||{}).qty||0;
         if(!q) return;
-        if(c.dataset.tier in n) n[c.dataset.tier]=q; else main=c.dataset.tier;
+        if(c.dataset.tier in n) n[c.dataset.tier]=q;
+        else if(c.dataset.tier==='pass'){
+          // the type is on the month line that covers this day
+          var t=Object.keys(CAP).filter(function(t){ return (b[passId(ym(d),t)]||{}).qty>0; })[0];
+          main=t||'pass';
+        }
+        else main=c.dataset.tier;
       });
       checkOf(d).checked=!!main;
-      if(main && !seen){ seen=true; tier=main; count=n; }
+      if(main && main!=='pass' && !seen){ seen=true; tier=main; count=n; }
     });
     showCapacity();
     draw();
@@ -2174,6 +2632,14 @@
 
   showCapacity();
   reflect();
+
+  // a date chip on the homepage links here as #d-KEY: start with that day ticked
+  var want=/^#d-(.+)$/.exec(location.hash||'');
+  if(want){
+    var d=byKey(want[1]);
+    if(d && !checkOf(d).checked && tickable(d, true)){ checkOf(d).checked=true; draw(); }
+    box.scrollIntoView({block:'start'});
+  }
 })();
 </script>
 </body>

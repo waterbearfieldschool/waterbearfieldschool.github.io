@@ -290,6 +290,11 @@
   .dc2-blurb{font-size:.92rem;margin:0 0 9px}
   .dc2-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
   .dc2-actions .btn-reg{margin:0}
+  .dc2-focus{font-size:.84rem;color:#8a6d1f;margin:-2px 0 6px}
+  .dc2-cardfocus b{color:var(--accent-d)}
+  .dc2-chips{display:flex;flex-wrap:wrap;gap:5px;margin:-2px 0 12px}
+  .dc2-chip{font-size:.76rem;font-weight:700;color:var(--accent-d);text-decoration:none;border:1.5px solid #e2d6b6;background:#fffaf0;border-radius:7px;padding:3px 8px}
+  .dc2-chip:hover{border-color:var(--accent)}
   .dc2-main h3 a{color:inherit;text-decoration:none}
   .dc2-main h3 a:hover{text-decoration:underline}
   .daycard2.target{outline:2px solid #c8901f;box-shadow:0 0 0 4px #fdf3d6,0 3px 12px rgba(0,0,0,.05)}
@@ -435,6 +440,38 @@
   .trow.tdate.past{opacity:.5;cursor:default}
   .trow.tdate.soldout{opacity:.5}
   .trow.tdate a{color:inherit}
+
+  /* series calendar (step 3 when series.calendar): month grid, Monday first */
+  .tcal{padding:6px 18px 14px 36px}
+  .tcmonth{margin:8px 0 14px}
+  .tcmhead{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:4px 0 8px}
+  .tcmhead b{font:600 1.08rem Lora,Georgia,serif;color:var(--accent-d)}
+  .tccap{font-size:.78rem;font-weight:700;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 9px}
+  .tccap.on{color:#fff;background:var(--accent);border-color:var(--accent)}
+  .tcshorts{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+  .tcshort{font:700 .8rem Inter,system-ui,sans-serif;border:1.5px solid var(--line);background:#fff;color:var(--accent);border-radius:999px;padding:5px 11px;cursor:pointer}
+  .tcshort:hover{border-color:var(--accent)}
+  .tcshort.all{background:#f2f7f3}
+  .tcgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+  .tch{font-size:.7rem;font-weight:800;color:var(--muted);text-align:center;padding-bottom:2px}
+  .tcnum{min-height:58px;border-radius:8px;font-size:.78rem;color:#b9bbb3;padding:4px 6px}
+  .tcday{min-height:58px;border:1.5px solid #d9cfae;background:#fffaf0;border-radius:8px;padding:4px 5px;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:1px;font:inherit;color:var(--ink);overflow:hidden}
+  .tcday:hover:not(:disabled){border-color:var(--accent)}
+  .tcday.on{background:var(--accent);border-color:var(--accent);color:#fff}
+  .tcday.on .tcf,.tcday.on .tcl{color:#e7f1ea}
+  .tcday.past,.tcday.full{opacity:.45;cursor:default;background:#f3f3ee;border-color:var(--line)}
+  .tcn{font-weight:800;font-size:.86rem;line-height:1.1}
+  .tcf{font-size:.64rem;line-height:1.2;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .tcl{font-size:.62rem;font-weight:800;color:#a8551f;margin-top:auto}
+  .tclist{list-style:none;margin:10px 0 0;padding:0;font-size:.84rem;color:var(--muted)}
+  .tclist li{padding:3px 0;border-bottom:1px dotted var(--line)}
+  .tclist b{color:var(--ink)}
+  @media(max-width:520px){
+    .tcal{padding:6px 10px 12px 14px}
+    .tcgrid{gap:3px}
+    .tcday,.tcnum{min-height:46px}
+    .tcf{display:none}
+  }
 
   /* ---- /v3/ own basket ---- */
   .cartbtn{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:var(--sun);color:#123526;border:none;border-radius:999px;padding:8px 15px;font-weight:800;font-size:.84rem;cursor:pointer;display:inline-flex;gap:7px;align-items:center;box-shadow:0 3px 10px rgba(0,0,0,.24)}
@@ -728,7 +765,7 @@
             <a class="btn-reg" href="/w/solar/2026-08-19/">Register</a>
             <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
               <div class="dc2-more">
-                <p>We start from the very beginning — what a volt is, what a battery actually does — and build up, part by part, hooking up small solar panels, lights, batteries, and motors.</p><p>Along the way you&#39;ll get comfortable with a multimeter, measuring voltage, current, and resistance for yourself. Nothing is a black box: by the end you&#39;ll understand every wire.</p>
+                <p>We start from the very beginning — what a volt is, what a battery actually does — and build up, part by part, hooking up small solar panels, lights, batteries, and motors.</p><p>Along the way you'll get comfortable with a multimeter, measuring voltage, current, and resistance for yourself. Nothing is a black box: by the end you'll understand every wire.</p>
                 <dl class="dc2-facts">
                   <div><dt>Where</dt><dd>Lincoln Park, Somerville<br><span style="color:var(--muted)">Exact address sent when you register.</span></dd></div>
                   <div><dt>Who</dt><dd>Adults and kids 6+ (an adult caregiver needs to accompany kids under 14)</dd></div>
@@ -751,7 +788,7 @@
             <a class="btn-reg" href="/w/woodworking/2026-08-20/">Register</a>
             <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
               <div class="dc2-more">
-                <p>A friendly first build: a wooden toolbox to carry your tools. We&#39;ll cover measuring, sawing, drilling, and joining — the core hand-tool skills — on a project you can finish in a morning.</p><p>You&#39;ll take your finished toolbox home.</p>
+                <p>A friendly first build: a wooden toolbox to carry your tools. We'll cover measuring, sawing, drilling, and joining — the core hand-tool skills — on a project you can finish in a morning.</p><p>You'll take your finished toolbox home.</p>
                 <dl class="dc2-facts">
                   <div><dt>Where</dt><dd>Lincoln Park, Somerville<br><span style="color:var(--muted)">Exact address sent when you register.</span></dd></div>
                   <div><dt>Who</dt><dd>Adults and kids 6+ (an adult caregiver needs to accompany kids under 14). Good for first‑timers.</dd></div>
@@ -797,7 +834,7 @@
             <a class="btn-reg" href="/w/woodworking/2026-08-25/">Register</a>
             <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
               <div class="dc2-more">
-                <p>Step up to a sturdy, portable workbench for the mobile woodshop — we&#39;ll cut, assemble, and finish it together.</p><p>A bigger build; nice if you&#39;ve done a little woodworking before, but beginners are welcome too.</p>
+                <p>Step up to a sturdy, portable workbench for the mobile woodshop — we'll cut, assemble, and finish it together.</p><p>A bigger build; nice if you've done a little woodworking before, but beginners are welcome too.</p>
                 <dl class="dc2-facts">
                   <div><dt>Where</dt><dd>Lincoln Park, Somerville<br><span style="color:var(--muted)">Exact address sent when you register.</span></dd></div>
                   <div><dt>Who</dt><dd>Adults and kids 6+ (an adult caregiver needs to accompany kids under 14). Good for first‑timers.</dd></div>
@@ -820,7 +857,7 @@
             <a class="btn-reg" href="/w/solar/2026-08-26/">Register</a>
             <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
               <div class="dc2-more">
-                <p>We start from the very beginning — what a volt is, what a battery actually does — and build up, part by part, hooking up small solar panels, lights, batteries, and motors.</p><p>Along the way you&#39;ll get comfortable with a multimeter, measuring voltage, current, and resistance for yourself. Nothing is a black box: by the end you&#39;ll understand every wire.</p>
+                <p>We start from the very beginning — what a volt is, what a battery actually does — and build up, part by part, hooking up small solar panels, lights, batteries, and motors.</p><p>Along the way you'll get comfortable with a multimeter, measuring voltage, current, and resistance for yourself. Nothing is a black box: by the end you'll understand every wire.</p>
                 <dl class="dc2-facts">
                   <div><dt>Where</dt><dd>Lincoln Park, Somerville<br><span style="color:var(--muted)">Exact address sent when you register.</span></dd></div>
                   <div><dt>Who</dt><dd>Adults and kids 6+ (an adult caregiver needs to accompany kids under 14)</dd></div>
@@ -843,7 +880,7 @@
             <a class="btn-reg" href="/w/plant-id/2026-08-27/">Register</a>
             <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
               <div class="dc2-more">
-                <p>A walking session: we learn the names of the trees and plants around us — how to tell them apart, and what people have used them for over time.</p><p>We&#39;ll also learn to read and use maps of where we are, and start making our own. Bring your curiosity and comfortable shoes.</p>
+                <p>A walking session: we learn the names of the trees and plants around us — how to tell them apart, and what people have used them for over time.</p><p>We'll also learn to read and use maps of where we are, and start making our own. Bring your curiosity and comfortable shoes.</p>
                 <dl class="dc2-facts">
                   <div><dt>Where</dt><dd>Umbrello Hay Field, Lincoln, MA<br><span style="color:var(--muted)">Meeting spot sent when you register.</span></dd></div>
                   <div><dt>Who</dt><dd>All ages welcome (an adult caregiver needs to accompany kids under 14).</dd></div>
@@ -866,7 +903,7 @@
             <a class="btn-reg" href="/w/zines/2026-08-28/">Register</a>
             <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
               <div class="dc2-more">
-                <p>We&#39;ll use simple needle-and-thread binding techniques to make small zines and booklets you can take home.</p><p>Along the way you&#39;ll learn how to lay out your material so zines are easy to print — and easy to share.</p>
+                <p>We'll use simple needle-and-thread binding techniques to make small zines and booklets you can take home.</p><p>Along the way you'll learn how to lay out your material so zines are easy to print — and easy to share.</p>
                 <dl class="dc2-facts">
                   <div><dt>Where</dt><dd>Lincoln Park, Somerville<br><span style="color:var(--muted)">Exact address sent when you register.</span></dd></div>
                   <div><dt>Who</dt><dd>All ages welcome (an adult caregiver needs to accompany kids under 14). No experience needed.</dd></div>
@@ -890,7 +927,7 @@
             <a class="btn-reg" href="/w/plant-id/2026-09-10/">Register</a>
             <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
               <div class="dc2-more">
-                <p>A walking session: we learn the names of the trees and plants around us — how to tell them apart, and what people have used them for over time.</p><p>We&#39;ll also learn to read and use maps of where we are, and start making our own. Bring your curiosity and comfortable shoes.</p>
+                <p>A walking session: we learn the names of the trees and plants around us — how to tell them apart, and what people have used them for over time.</p><p>We'll also learn to read and use maps of where we are, and start making our own. Bring your curiosity and comfortable shoes.</p>
                 <dl class="dc2-facts">
                   <div><dt>Where</dt><dd>Umbrello Hay Field, Lincoln, MA<br><span style="color:var(--muted)">Meeting spot sent when you register.</span></dd></div>
                   <div><dt>Who</dt><dd>All ages welcome (an adult caregiver needs to accompany kids under 14).</dd></div>
@@ -913,7 +950,7 @@
             <a class="btn-reg" href="/w/biketrailer/2026-09-15/">Register</a>
             <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
               <div class="dc2-more">
-                <p>Learn how to build a cargo trailer for a bicycle from two ten-foot lengths of half-inch electrical conduit, a pair of recycled 16″ children&#39;s bike wheels, four laser-cut steel dropouts and a handful of bolts — about $40 of parts, and it carries real loads.</p><p>We start with the one real skill in it: bending conduit, which is easy once someone shows you and unforgiving if nobody does. Then we drill, bolt and square up the frame, mount the wheels on the dropouts, and fit the hitch — a short length of braided vinyl tubing and a standard Burley hitch that clamps to the rear axle.</p><p>Note: for this workshop, we&#39;ll be building one bike trailer design together, and donating the bike trailer to the city. If you like the design, you can make arrangements with us at the workshop to purchase the materials to build your own.</p>
+                <p>Learn how to build a cargo trailer for a bicycle from two ten-foot lengths of half-inch electrical conduit, a pair of recycled 16″ children's bike wheels, four laser-cut steel dropouts and a handful of bolts — about $40 of parts, and it carries real loads.</p><p>We start with the one real skill in it: bending conduit, which is easy once someone shows you and unforgiving if nobody does. Then we drill, bolt and square up the frame, mount the wheels on the dropouts, and fit the hitch — a short length of braided vinyl tubing and a standard Burley hitch that clamps to the rear axle.</p><p>Note: for this workshop, we'll be building one bike trailer design together, and donating the bike trailer to the city. If you like the design, you can make arrangements with us at the workshop to purchase the materials to build your own.</p>
                 <dl class="dc2-facts">
                   <div><dt>Where</dt><dd>Lincoln Park, Somerville<br><span style="color:var(--muted)">Exact address sent when you register.</span></dd></div>
                   <div><dt>Who</dt><dd>Adults and kids 6+ (an adult caregiver needs to accompany kids under 14). No experience needed.</dd></div>
@@ -936,7 +973,7 @@
             <a class="btn-reg" href="/w/biketrailer/2026-09-22/">Register</a>
             <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
               <div class="dc2-more">
-                <p>Learn how to build a cargo trailer for a bicycle from two ten-foot lengths of half-inch electrical conduit, a pair of recycled 16″ children&#39;s bike wheels, four laser-cut steel dropouts and a handful of bolts — about $40 of parts, and it carries real loads.</p><p>We start with the one real skill in it: bending conduit, which is easy once someone shows you and unforgiving if nobody does. Then we drill, bolt and square up the frame, mount the wheels on the dropouts, and fit the hitch — a short length of braided vinyl tubing and a standard Burley hitch that clamps to the rear axle.</p><p>Note: for this workshop, we&#39;ll be building one bike trailer design together, and donating the bike trailer to the city. If you like the design, you can make arrangements with us at the workshop to purchase the materials to build your own.</p>
+                <p>Learn how to build a cargo trailer for a bicycle from two ten-foot lengths of half-inch electrical conduit, a pair of recycled 16″ children's bike wheels, four laser-cut steel dropouts and a handful of bolts — about $40 of parts, and it carries real loads.</p><p>We start with the one real skill in it: bending conduit, which is easy once someone shows you and unforgiving if nobody does. Then we drill, bolt and square up the frame, mount the wheels on the dropouts, and fit the hitch — a short length of braided vinyl tubing and a standard Burley hitch that clamps to the rear axle.</p><p>Note: for this workshop, we'll be building one bike trailer design together, and donating the bike trailer to the city. If you like the design, you can make arrangements with us at the workshop to purchase the materials to build your own.</p>
                 <dl class="dc2-facts">
                   <div><dt>Where</dt><dd>Lincoln Park, Somerville<br><span style="color:var(--muted)">Exact address sent when you register.</span></dd></div>
                   <div><dt>Who</dt><dd>Adults and kids 6+ (an adult caregiver needs to accompany kids under 14). No experience needed.</dd></div>
@@ -959,7 +996,7 @@
             <a class="btn-reg" href="/w/solar/2026-09-24/">Register</a>
             <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
               <div class="dc2-more">
-                <p>We start from the very beginning — what a volt is, what a battery actually does — and build up, part by part, hooking up small solar panels, lights, batteries, and motors.</p><p>Along the way you&#39;ll get comfortable with a multimeter, measuring voltage, current, and resistance for yourself. Nothing is a black box: by the end you&#39;ll understand every wire.</p>
+                <p>We start from the very beginning — what a volt is, what a battery actually does — and build up, part by part, hooking up small solar panels, lights, batteries, and motors.</p><p>Along the way you'll get comfortable with a multimeter, measuring voltage, current, and resistance for yourself. Nothing is a black box: by the end you'll understand every wire.</p>
                 <dl class="dc2-facts">
                   <div><dt>Where</dt><dd>Lincoln Park, Somerville<br><span style="color:var(--muted)">Exact address sent when you register.</span></dd></div>
                   <div><dt>Who</dt><dd>Adults and kids 6+ (an adult caregiver needs to accompany kids under 14)</dd></div>
@@ -1006,7 +1043,7 @@
             <a class="btn-reg" href="/w/plant-id/2026-10-01/">Register</a>
             <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
               <div class="dc2-more">
-                <p>A walking session: we learn the names of the trees and plants around us — how to tell them apart, and what people have used them for over time.</p><p>We&#39;ll also learn to read and use maps of where we are, and start making our own. Bring your curiosity and comfortable shoes.</p>
+                <p>A walking session: we learn the names of the trees and plants around us — how to tell them apart, and what people have used them for over time.</p><p>We'll also learn to read and use maps of where we are, and start making our own. Bring your curiosity and comfortable shoes.</p>
                 <dl class="dc2-facts">
                   <div><dt>Where</dt><dd>Umbrello Hay Field, Lincoln, MA<br><span style="color:var(--muted)">Meeting spot sent when you register.</span></dd></div>
                   <div><dt>Who</dt><dd>All ages welcome (an adult caregiver needs to accompany kids under 14).</dd></div>
@@ -1029,7 +1066,7 @@
             <a class="btn-reg" href="/w/biketrailer/2026-10-02/">Register</a>
             <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
               <div class="dc2-more">
-                <p>A bike trailer is the cheapest cargo capacity there is, and you can make one in a morning. Ours uses two ten‑foot lengths of half‑inch electrical conduit, a pair of recycled 16″ children&#39;s bicycle wheels, four laser‑cut steel dropouts, and a handful of bolts — about $40 all in.</p><p>You&#39;ll learn to bend conduit, which is the one real skill in it, and then drill, bolt and hitch the frame together. The design comes from Edge Collective and the Somerville Bike Kitchen, and the files are open — so you can make another one, or a bigger one, after you go home.</p>
+                <p>A bike trailer is the cheapest cargo capacity there is, and you can make one in a morning. Ours uses two ten‑foot lengths of half‑inch electrical conduit, a pair of recycled 16″ children's bicycle wheels, four laser‑cut steel dropouts, and a handful of bolts — about $40 all in.</p><p>You'll learn to bend conduit, which is the one real skill in it, and then drill, bolt and hitch the frame together. The design comes from Edge Collective and the Somerville Bike Kitchen, and the files are open — so you can make another one, or a bigger one, after you go home.</p>
                 <dl class="dc2-facts">
                   <div><dt>Where</dt><dd>Lincoln Park, Somerville<br><span style="color:var(--muted)">Exact address sent when you register.</span></dd></div>
                   <div><dt>Who</dt><dd>Adults and kids 6+ (an adult caregiver needs to accompany kids under 14). No experience needed.</dd></div>
@@ -1075,7 +1112,7 @@
             <a class="btn-reg" href="/w/zines/2026-10-15/">Register</a>
             <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
               <div class="dc2-more">
-                <p>We&#39;ll use simple needle-and-thread binding techniques to make small zines and booklets you can take home.</p><p>Along the way you&#39;ll learn how to lay out your material so zines are easy to print — and easy to share.</p>
+                <p>We'll use simple needle-and-thread binding techniques to make small zines and booklets you can take home.</p><p>Along the way you'll learn how to lay out your material so zines are easy to print — and easy to share.</p>
                 <dl class="dc2-facts">
                   <div><dt>Where</dt><dd>Lincoln Park, Somerville<br><span style="color:var(--muted)">Exact address sent when you register.</span></dd></div>
                   <div><dt>Who</dt><dd>All ages welcome (an adult caregiver needs to accompany kids under 14). No experience needed.</dd></div>
@@ -1145,7 +1182,7 @@
             <a class="btn-reg" href="/w/farmtryout/2026-11-04/">Register</a>
             <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
               <div class="dc2-more">
-                <p>We&#39;ve just cleared a hoop house at Hannan Healthy Foods to grow lettuce through the winter, and our lettuce starts are going in now. Come help transplant them, take a tour of the farm, and hear about the projects we&#39;ll be taking on.</p><p>It&#39;s a chance to get a feel for Winter Farm Days, coming soon: cold frames, rain barrels, solar, mapping the farm, and zines. And if you&#39;d like to watch the lettuce you transplanted grow, come back for Winter Farm Days and become its steward. Sign-ups open soon, by the day or by the month.</p>
+                <p>We've just cleared a hoop house at Hannan Healthy Foods to grow lettuce through the winter, and our lettuce starts are going in now. Come help transplant them, take a tour of the farm, and hear about the projects we'll be taking on.</p><p>It's a chance to get a feel for Winter Farm Days, coming soon: cold frames, rain barrels, solar, mapping the farm, and zines. And if you'd like to watch the lettuce you transplanted grow, come back for Winter Farm Days and become its steward. Sign-ups open soon, by the day or by the month.</p>
                 <dl class="dc2-facts">
                   <div><dt>Where</dt><dd>Hannan Healthy Foods Farm, Lincoln, MA<br><span style="color:var(--muted)">Exact address sent when you register.</span></dd></div>
                   <div><dt>Who</dt><dd>Ages 6 to adult. Kids should be interested in, and ready to be trained on, small hand tools. An adult caregiver needs to accompany kids under 14.</dd></div>
@@ -1168,7 +1205,7 @@
             <a class="btn-reg" href="/w/farmtryout/2026-11-05/">Register</a>
             <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
               <div class="dc2-more">
-                <p>We&#39;ve just cleared a hoop house at Hannan Healthy Foods to grow lettuce through the winter, and our lettuce starts are going in now. Come help transplant them, take a tour of the farm, and hear about the projects we&#39;ll be taking on.</p><p>It&#39;s a chance to get a feel for Winter Farm Days, coming soon: cold frames, rain barrels, solar, mapping the farm, and zines. And if you&#39;d like to watch the lettuce you transplanted grow, come back for Winter Farm Days and become its steward. Sign-ups open soon, by the day or by the month.</p>
+                <p>We've just cleared a hoop house at Hannan Healthy Foods to grow lettuce through the winter, and our lettuce starts are going in now. Come help transplant them, take a tour of the farm, and hear about the projects we'll be taking on.</p><p>It's a chance to get a feel for Winter Farm Days, coming soon: cold frames, rain barrels, solar, mapping the farm, and zines. And if you'd like to watch the lettuce you transplanted grow, come back for Winter Farm Days and become its steward. Sign-ups open soon, by the day or by the month.</p>
                 <dl class="dc2-facts">
                   <div><dt>Where</dt><dd>Hannan Healthy Foods Farm, Lincoln, MA<br><span style="color:var(--muted)">Exact address sent when you register.</span></dd></div>
                   <div><dt>Who</dt><dd>Ages 6 to adult. Kids should be interested in, and ready to be trained on, small hand tools. An adult caregiver needs to accompany kids under 14.</dd></div>
@@ -1191,7 +1228,7 @@
             <a class="btn-reg" href="/w/farmtryout/2026-11-06/">Register</a>
             <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
               <div class="dc2-more">
-                <p>We&#39;ve just cleared a hoop house at Hannan Healthy Foods to grow lettuce through the winter, and our lettuce starts are going in now. Come help transplant them, take a tour of the farm, and hear about the projects we&#39;ll be taking on.</p><p>It&#39;s a chance to get a feel for Winter Farm Days, coming soon: cold frames, rain barrels, solar, mapping the farm, and zines. And if you&#39;d like to watch the lettuce you transplanted grow, come back for Winter Farm Days and become its steward. Sign-ups open soon, by the day or by the month.</p>
+                <p>We've just cleared a hoop house at Hannan Healthy Foods to grow lettuce through the winter, and our lettuce starts are going in now. Come help transplant them, take a tour of the farm, and hear about the projects we'll be taking on.</p><p>It's a chance to get a feel for Winter Farm Days, coming soon: cold frames, rain barrels, solar, mapping the farm, and zines. And if you'd like to watch the lettuce you transplanted grow, come back for Winter Farm Days and become its steward. Sign-ups open soon, by the day or by the month.</p>
                 <dl class="dc2-facts">
                   <div><dt>Where</dt><dd>Hannan Healthy Foods Farm, Lincoln, MA<br><span style="color:var(--muted)">Exact address sent when you register.</span></dd></div>
                   <div><dt>Who</dt><dd>Ages 6 to adult. Kids should be interested in, and ready to be trained on, small hand tools. An adult caregiver needs to accompany kids under 14.</dd></div>
@@ -1226,92 +1263,64 @@
           </div>
         </div>
       </article>
-      <article class="daycard2" id="day-2026-11-09-winterplanting" data-key="2026-11-09-winterplanting" data-date="2026-11-09" data-month="November">
+      <article class="daycard2" id="day-2026-11-20-winterfarm" data-key="2026-11-20-winterfarm" data-date="2026-11-20" data-month="November">
         <img src="/assets/images/sessions/2026-10-23-afterschool/lettuce-transplanting.jpg" style="object-position:72% 50%" alt="">
         <div class="dc2-main">
-          <a class="dc2-date" href="/w/winterplanting/2026-11-09/">Mon · Nov 9 · 10 AM to 12 PM</a>
-          <h3><a href="/w/winterplanting/2026-11-09/">Winter Planting &amp; Trail Hike</a></h3>
+          <a class="dc2-date" href="/winter-farm-days/">Mon · Tue · Thu · Fri · 10 AM to 12 PM</a>
+          <h3><a href="/winter-farm-days/">Winter Farm Days: Planting &amp; Hiking</a></h3>
           <div class="dc2-meta">Hannan Healthy Foods Farm, Lincoln, MA</div>
-          <p class="dc2-blurb">Help plant winter crops in the hoop house, check on the lettuce, then come with us on a short plant identification hike in the woods. A good way to see if Winter Farm Days are a fit.</p>
+          <p class="dc2-blurb">Mornings on the farm for kids and their grown-ups: planting, cold frames, rain barrels, solar, mapping, zines. Come for a day, a few, or the whole month.</p><p class="dc2-blurb dc2-cardfocus"><b>November focus:</b> Planting winter crops in the hoop house, and going for short plant identification walks in the woods.</p>
+          <div class="dc2-chips">
+            <a class="dc2-chip" href="/winter-farm-days/#d-2026-11-09-winterfarm" data-date="2026-11-09" data-focus="Winter Planting &amp; Trail Hike">Mon Nov 9</a>
+            <a class="dc2-chip" href="/winter-farm-days/#d-2026-11-10-winterfarm" data-date="2026-11-10" data-focus="Winter Planting &amp; Trail Hike">Tue Nov 10</a>
+            <a class="dc2-chip" href="/winter-farm-days/#d-2026-11-12-winterfarm" data-date="2026-11-12" data-focus="Winter Planting &amp; Trail Hike">Thu Nov 12</a>
+            <a class="dc2-chip" href="/winter-farm-days/#d-2026-11-13-winterfarm" data-date="2026-11-13" data-focus="Winter Planting &amp; Trail Hike">Fri Nov 13</a>
+            <a class="dc2-chip" href="/winter-farm-days/#d-2026-11-16-winterfarm" data-date="2026-11-16" data-focus="Winter Planting &amp; Trail Hike">Mon Nov 16</a>
+            <a class="dc2-chip" href="/winter-farm-days/#d-2026-11-17-winterfarm" data-date="2026-11-17" data-focus="Winter Planting &amp; Trail Hike">Tue Nov 17</a>
+            <a class="dc2-chip" href="/winter-farm-days/#d-2026-11-19-winterfarm" data-date="2026-11-19" data-focus="Winter Planting &amp; Trail Hike">Thu Nov 19</a>
+            <a class="dc2-chip" href="/winter-farm-days/#d-2026-11-20-winterfarm" data-date="2026-11-20" data-focus="Winter Planting &amp; Trail Hike">Fri Nov 20</a>
+          </div>
           <div class="dc2-actions">
-            <a class="btn-reg" href="/w/winterplanting/2026-11-09/">Register</a>
+            <a class="btn-reg" href="/winter-farm-days/">Choose your days</a>
             <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
               <div class="dc2-more">
-                <p>We&#39;ve just cleared a hoop house at Hannan Healthy Foods to grow some winter crops. Come help us plant, check on the lettuce, do a little watering. And it&#39;ll be fun to have you back during the next weeks to check on what you&#39;ve planted! We&#39;ll also be doing a short hike in the woods, looking to see what plants we can identify, and placing them on a map.</p><p>It&#39;s also a chance to get a feel for Winter Farm Days, coming soon: cold frames, rain barrels, solar, mapping the farm, and zines. So if you&#39;d like to watch what you planted grow, and try out some other fun activities, plan to come back for Winter Farm Days! Sign-ups will open soon, by the day or by the month.</p>
+                <p>We've just cleared a hoop house at Hannan Healthy Foods to grow some winter crops. Come help us plant, check on the lettuce, do a little watering. And it'll be fun to have you back during the next weeks to check on what you've planted! We'll also be doing a short hike in the woods, looking to see what plants we can identify, and placing them on a map.</p>
                 <dl class="dc2-facts">
                   <div><dt>Where</dt><dd>Hannan Healthy Foods Farm, Lincoln, MA<br><span style="color:var(--muted)">Exact address sent when you register.</span></dd></div>
                   <div><dt>Who</dt><dd>Ages 6 to adult. Kids should be interested in, and ready to be trained on, small hand tools. An adult caregiver needs to accompany kids under 14.</dd></div>
                   <div><dt>Bring</dt><dd>Closed‑toe shoes, warm layers and weather‑appropriate clothing. Tools and materials are provided.</dd></div>
-                  <div><dt>When</dt><dd>Mon · Nov 9 &middot; 10 AM to 12 PM</dd></div>
+                  <div><dt>When</dt><dd>Mon · Tue · Thu · Fri &middot; 10 AM to 12 PM</dd></div>
                 </dl>
               </div>
             </details>
           </div>
         </div>
       </article>
-      <article class="daycard2" id="day-2026-11-10-winterplanting" data-key="2026-11-10-winterplanting" data-date="2026-11-10" data-month="November">
-        <img src="/assets/images/sessions/2026-10-23-afterschool/lettuce-transplanting.jpg" style="object-position:72% 50%" alt="">
+      <article class="daycard2" id="day-2026-11-21-transition" data-key="2026-11-21-transition" data-date="2026-11-21" data-month="November">
+        <img src="/v6img/ws-mesh.jpg" alt="">
         <div class="dc2-main">
-          <a class="dc2-date" href="/w/winterplanting/2026-11-10/">Tue · Nov 10 · 10 AM to 12 PM</a>
-          <h3><a href="/w/winterplanting/2026-11-10/">Winter Planting &amp; Trail Hike</a></h3>
+          <a class="dc2-date" href="/transition-engineering/">Mon &amp; Fri 6–8 PM · Sat 10 AM–12 PM</a>
+          <h3><a href="/transition-engineering/">Transition Engineering: Mesh Radio</a></h3>
           <div class="dc2-meta">Hannan Healthy Foods Farm, Lincoln, MA</div>
-          <p class="dc2-blurb">Help plant winter crops in the hoop house, check on the lettuce, then come with us on a short plant identification hike in the woods. A good way to see if Winter Farm Days are a fit.</p>
-          <div class="dc2-actions">
-            <a class="btn-reg" href="/w/winterplanting/2026-11-10/">Register</a>
-            <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
-              <div class="dc2-more">
-                <p>We&#39;ve just cleared a hoop house at Hannan Healthy Foods to grow some winter crops. Come help us plant, check on the lettuce, do a little watering. And it&#39;ll be fun to have you back during the next weeks to check on what you&#39;ve planted! We&#39;ll also be doing a short hike in the woods, looking to see what plants we can identify, and placing them on a map.</p><p>It&#39;s also a chance to get a feel for Winter Farm Days, coming soon: cold frames, rain barrels, solar, mapping the farm, and zines. So if you&#39;d like to watch what you planted grow, and try out some other fun activities, plan to come back for Winter Farm Days! Sign-ups will open soon, by the day or by the month.</p>
-                <dl class="dc2-facts">
-                  <div><dt>Where</dt><dd>Hannan Healthy Foods Farm, Lincoln, MA<br><span style="color:var(--muted)">Exact address sent when you register.</span></dd></div>
-                  <div><dt>Who</dt><dd>Ages 6 to adult. Kids should be interested in, and ready to be trained on, small hand tools. An adult caregiver needs to accompany kids under 14.</dd></div>
-                  <div><dt>Bring</dt><dd>Closed‑toe shoes, warm layers and weather‑appropriate clothing. Tools and materials are provided.</dd></div>
-                  <div><dt>When</dt><dd>Tue · Nov 10 &middot; 10 AM to 12 PM</dd></div>
-                </dl>
-              </div>
-            </details>
+          <p class="dc2-blurb">Transition engineering: resilient, decentralized approaches to food, water, energy, communications, heating and cooling.</p><p class="dc2-blurb dc2-cardfocus"><b>November focus: Mesh Radio.</b> Learn to use and build inexpensive radios that allow for local, secure communication even if the grid is down.</p>
+          <div class="dc2-chips">
+            <a class="dc2-chip" href="/transition-engineering/#d-2026-11-09-transition" data-date="2026-11-09" data-focus="">Mon Nov 9</a>
+            <a class="dc2-chip" href="/transition-engineering/#d-2026-11-13-transition" data-date="2026-11-13" data-focus="">Fri Nov 13</a>
+            <a class="dc2-chip" href="/transition-engineering/#d-2026-11-14-transition" data-date="2026-11-14" data-focus="">Sat Nov 14</a>
+            <a class="dc2-chip" href="/transition-engineering/#d-2026-11-16-transition" data-date="2026-11-16" data-focus="">Mon Nov 16</a>
+            <a class="dc2-chip" href="/transition-engineering/#d-2026-11-20-transition" data-date="2026-11-20" data-focus="">Fri Nov 20</a>
+            <a class="dc2-chip" href="/transition-engineering/#d-2026-11-21-transition" data-date="2026-11-21" data-focus="">Sat Nov 21</a>
           </div>
-        </div>
-      </article>
-      <article class="daycard2" id="day-2026-11-11-winterplanting" data-key="2026-11-11-winterplanting" data-date="2026-11-11" data-month="November">
-        <img src="/assets/images/sessions/2026-10-23-afterschool/lettuce-transplanting.jpg" style="object-position:72% 50%" alt="">
-        <div class="dc2-main">
-          <a class="dc2-date" href="/w/winterplanting/2026-11-11/">Wed · Nov 11 · 10 AM to 12 PM</a>
-          <h3><a href="/w/winterplanting/2026-11-11/">Winter Planting &amp; Trail Hike</a></h3>
-          <div class="dc2-meta">Hannan Healthy Foods Farm, Lincoln, MA</div>
-          <p class="dc2-blurb">Help plant winter crops in the hoop house, check on the lettuce, then come with us on a short plant identification hike in the woods. A good way to see if Winter Farm Days are a fit.</p>
           <div class="dc2-actions">
-            <a class="btn-reg" href="/w/winterplanting/2026-11-11/">Register</a>
+            <a class="btn-reg" href="/transition-engineering/">Choose your days</a>
             <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
               <div class="dc2-more">
-                <p>We&#39;ve just cleared a hoop house at Hannan Healthy Foods to grow some winter crops. Come help us plant, check on the lettuce, do a little watering. And it&#39;ll be fun to have you back during the next weeks to check on what you&#39;ve planted! We&#39;ll also be doing a short hike in the woods, looking to see what plants we can identify, and placing them on a map.</p><p>It&#39;s also a chance to get a feel for Winter Farm Days, coming soon: cold frames, rain barrels, solar, mapping the farm, and zines. So if you&#39;d like to watch what you planted grow, and try out some other fun activities, plan to come back for Winter Farm Days! Sign-ups will open soon, by the day or by the month.</p>
+                <p><b>Transition Engineering:</b> How do we work on resilient technologies that allow us to work off grid in a decentralized way, across food, water, energy, communications, heating and cooling? Every month, we learn to build and repair working, decentralized systems in each of these areas.</p><p>November's focus is on <a href="https://www.youtube.com/watch?v=AsKzbXKYMOk"><b>mesh radio</b></a>: small, inexpensive radio devices (around $30) that are able to send and relay messages <em>without</em> relying on cellular towers or the internet. These devices connect to your smartphone via Bluetooth, then use LoRa (Long Range) radio technology to communicate with other mesh nodes up to several miles away, even if the cellular network or power grid is down.</p><p>In our meetings, we'll be learning to use pre-built mesh radio devices, how to build our own, and how to deploy mesh radio repeaters to extend the network.</p>
                 <dl class="dc2-facts">
                   <div><dt>Where</dt><dd>Hannan Healthy Foods Farm, Lincoln, MA<br><span style="color:var(--muted)">Exact address sent when you register.</span></dd></div>
-                  <div><dt>Who</dt><dd>Ages 6 to adult. Kids should be interested in, and ready to be trained on, small hand tools. An adult caregiver needs to accompany kids under 14.</dd></div>
-                  <div><dt>Bring</dt><dd>Closed‑toe shoes, warm layers and weather‑appropriate clothing. Tools and materials are provided.</dd></div>
-                  <div><dt>When</dt><dd>Wed · Nov 11 &middot; 10 AM to 12 PM</dd></div>
-                </dl>
-              </div>
-            </details>
-          </div>
-        </div>
-      </article>
-      <article class="daycard2" id="day-2026-11-13-winterplanting" data-key="2026-11-13-winterplanting" data-date="2026-11-13" data-month="November">
-        <img src="/assets/images/sessions/2026-10-23-afterschool/lettuce-transplanting.jpg" style="object-position:72% 50%" alt="">
-        <div class="dc2-main">
-          <a class="dc2-date" href="/w/winterplanting/2026-11-13/">Fri · Nov 13 · 10 AM to 12 PM</a>
-          <h3><a href="/w/winterplanting/2026-11-13/">Winter Planting &amp; Trail Hike</a></h3>
-          <div class="dc2-meta">Hannan Healthy Foods Farm, Lincoln, MA</div>
-          <p class="dc2-blurb">Help plant winter crops in the hoop house, check on the lettuce, then come with us on a short plant identification hike in the woods. A good way to see if Winter Farm Days are a fit.</p>
-          <div class="dc2-actions">
-            <a class="btn-reg" href="/w/winterplanting/2026-11-13/">Register</a>
-            <details class="dc2-details"><summary><span class="d-more">More details ▾</span><span class="d-less">Fewer details ▴</span></summary>
-              <div class="dc2-more">
-                <p>We&#39;ve just cleared a hoop house at Hannan Healthy Foods to grow some winter crops. Come help us plant, check on the lettuce, do a little watering. And it&#39;ll be fun to have you back during the next weeks to check on what you&#39;ve planted! We&#39;ll also be doing a short hike in the woods, looking to see what plants we can identify, and placing them on a map.</p><p>It&#39;s also a chance to get a feel for Winter Farm Days, coming soon: cold frames, rain barrels, solar, mapping the farm, and zines. So if you&#39;d like to watch what you planted grow, and try out some other fun activities, plan to come back for Winter Farm Days! Sign-ups will open soon, by the day or by the month.</p>
-                <dl class="dc2-facts">
-                  <div><dt>Where</dt><dd>Hannan Healthy Foods Farm, Lincoln, MA<br><span style="color:var(--muted)">Exact address sent when you register.</span></dd></div>
-                  <div><dt>Who</dt><dd>Ages 6 to adult. Kids should be interested in, and ready to be trained on, small hand tools. An adult caregiver needs to accompany kids under 14.</dd></div>
-                  <div><dt>Bring</dt><dd>Closed‑toe shoes, warm layers and weather‑appropriate clothing. Tools and materials are provided.</dd></div>
-                  <div><dt>When</dt><dd>Fri · Nov 13 &middot; 10 AM to 12 PM</dd></div>
+                  <div><dt>Who</dt><dd>Adults and teens 14+.</dd></div>
+                  <div><dt>Bring</dt><dd>A laptop if you have one, and a phone. Radios and parts are provided.</dd></div>
+                  <div><dt>When</dt><dd>Mon &amp; Fri 6–8 PM · Sat 10 AM–12 PM</dd></div>
                 </dl>
               </div>
             </details>
@@ -2116,70 +2125,262 @@
     data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-09-winterplanting-standard"
-    data-item-id="tix-2026-11-09-winterplanting-standard"
-    data-item-name="Winter Planting &amp; Trail Hike · Nov 9 · Standard"
+  <button class="snipcart-add-item" id="def-tix-2026-11-09-transition-standard"
+    data-item-id="tix-2026-11-09-transition-standard"
+    data-item-name="TE: Mesh Radio · Nov 9 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
     data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-09-winterplanting-supporter"
-    data-item-id="tix-2026-11-09-winterplanting-supporter"
-    data-item-name="Winter Planting &amp; Trail Hike · Nov 9 · Supporter"
+  <button class="snipcart-add-item" id="def-tix-2026-11-09-transition-supporter"
+    data-item-id="tix-2026-11-09-transition-supporter"
+    data-item-name="TE: Mesh Radio · Nov 9 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
     data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-10-winterplanting-standard"
-    data-item-id="tix-2026-11-10-winterplanting-standard"
-    data-item-name="Winter Planting &amp; Trail Hike · Nov 10 · Standard"
+  <button class="snipcart-add-item" id="def-tix-2026-11-09-winterfarm-standard"
+    data-item-id="tix-2026-11-09-winterfarm-standard"
+    data-item-name="Winter Farm Day · Nov 9 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
     data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-10-winterplanting-supporter"
-    data-item-id="tix-2026-11-10-winterplanting-supporter"
-    data-item-name="Winter Planting &amp; Trail Hike · Nov 10 · Supporter"
+  <button class="snipcart-add-item" id="def-tix-2026-11-09-winterfarm-supporter"
+    data-item-id="tix-2026-11-09-winterfarm-supporter"
+    data-item-name="Winter Farm Day · Nov 9 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
     data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-11-winterplanting-standard"
-    data-item-id="tix-2026-11-11-winterplanting-standard"
-    data-item-name="Winter Planting &amp; Trail Hike · Nov 11 · Standard"
+  <button class="snipcart-add-item" id="def-tix-2026-11-10-winterfarm-standard"
+    data-item-id="tix-2026-11-10-winterfarm-standard"
+    data-item-name="Winter Farm Day · Nov 10 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
     data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-11-winterplanting-supporter"
-    data-item-id="tix-2026-11-11-winterplanting-supporter"
-    data-item-name="Winter Planting &amp; Trail Hike · Nov 11 · Supporter"
+  <button class="snipcart-add-item" id="def-tix-2026-11-10-winterfarm-supporter"
+    data-item-id="tix-2026-11-10-winterfarm-supporter"
+    data-item-name="Winter Farm Day · Nov 10 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
     data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-13-winterplanting-standard"
-    data-item-id="tix-2026-11-13-winterplanting-standard"
-    data-item-name="Winter Planting &amp; Trail Hike · Nov 13 · Standard"
+  <button class="snipcart-add-item" id="def-tix-2026-11-12-winterfarm-standard"
+    data-item-id="tix-2026-11-12-winterfarm-standard"
+    data-item-name="Winter Farm Day · Nov 12 · Standard"
     data-item-price="20.00"
     data-item-url="https://waterbearfieldschool.org/"
     data-item-description="Covers your whole group for the day."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-13-winterplanting-supporter"
-    data-item-id="tix-2026-11-13-winterplanting-supporter"
-    data-item-name="Winter Planting &amp; Trail Hike · Nov 13 · Supporter"
+  <button class="snipcart-add-item" id="def-tix-2026-11-12-winterfarm-supporter"
+    data-item-id="tix-2026-11-12-winterfarm-supporter"
+    data-item-name="Winter Farm Day · Nov 12 · Supporter"
     data-item-price="40.00"
     data-item-url="https://waterbearfieldschool.org/"
     data-item-description="Covers your group and quietly pays for another family&#39;s spot."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-13-transition-standard"
+    data-item-id="tix-2026-11-13-transition-standard"
+    data-item-name="TE: Mesh Radio · Nov 13 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your whole group for the day."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-13-transition-supporter"
+    data-item-id="tix-2026-11-13-transition-supporter"
+    data-item-name="TE: Mesh Radio · Nov 13 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-13-winterfarm-standard"
+    data-item-id="tix-2026-11-13-winterfarm-standard"
+    data-item-name="Winter Farm Day · Nov 13 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your whole group for the day."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-13-winterfarm-supporter"
+    data-item-id="tix-2026-11-13-winterfarm-supporter"
+    data-item-name="Winter Farm Day · Nov 13 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-14-transition-standard"
+    data-item-id="tix-2026-11-14-transition-standard"
+    data-item-name="TE: Mesh Radio · Nov 14 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your whole group for the day."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-14-transition-supporter"
+    data-item-id="tix-2026-11-14-transition-supporter"
+    data-item-name="TE: Mesh Radio · Nov 14 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-16-transition-standard"
+    data-item-id="tix-2026-11-16-transition-standard"
+    data-item-name="TE: Mesh Radio · Nov 16 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your whole group for the day."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-16-transition-supporter"
+    data-item-id="tix-2026-11-16-transition-supporter"
+    data-item-name="TE: Mesh Radio · Nov 16 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-16-winterfarm-standard"
+    data-item-id="tix-2026-11-16-winterfarm-standard"
+    data-item-name="Winter Farm Day · Nov 16 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your whole group for the day."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-16-winterfarm-supporter"
+    data-item-id="tix-2026-11-16-winterfarm-supporter"
+    data-item-name="Winter Farm Day · Nov 16 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-17-winterfarm-standard"
+    data-item-id="tix-2026-11-17-winterfarm-standard"
+    data-item-name="Winter Farm Day · Nov 17 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your whole group for the day."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-17-winterfarm-supporter"
+    data-item-id="tix-2026-11-17-winterfarm-supporter"
+    data-item-name="Winter Farm Day · Nov 17 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-19-winterfarm-standard"
+    data-item-id="tix-2026-11-19-winterfarm-standard"
+    data-item-name="Winter Farm Day · Nov 19 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your whole group for the day."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-19-winterfarm-supporter"
+    data-item-id="tix-2026-11-19-winterfarm-supporter"
+    data-item-name="Winter Farm Day · Nov 19 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-20-transition-standard"
+    data-item-id="tix-2026-11-20-transition-standard"
+    data-item-name="TE: Mesh Radio · Nov 20 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your whole group for the day."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-20-transition-supporter"
+    data-item-id="tix-2026-11-20-transition-supporter"
+    data-item-name="TE: Mesh Radio · Nov 20 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-20-winterfarm-standard"
+    data-item-id="tix-2026-11-20-winterfarm-standard"
+    data-item-name="Winter Farm Day · Nov 20 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your whole group for the day."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-20-winterfarm-supporter"
+    data-item-id="tix-2026-11-20-winterfarm-supporter"
+    data-item-name="Winter Farm Day · Nov 20 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-21-transition-standard"
+    data-item-id="tix-2026-11-21-transition-standard"
+    data-item-name="TE: Mesh Radio · Nov 21 · Standard"
+    data-item-price="20.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your whole group for the day."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-tix-2026-11-21-transition-supporter"
+    data-item-id="tix-2026-11-21-transition-supporter"
+    data-item-name="TE: Mesh Radio · Nov 21 · Supporter"
+    data-item-price="40.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-shippable="false"
+    data-item-quantity="1">tix</button>
+  <button class="snipcart-add-item" id="def-pass-winterfarm-2026-11-standard"
+    data-item-id="pass-winterfarm-2026-11-standard"
+    data-item-name="Winter Farm Days: Planting &amp; Hiking · November · month (standard)"
+    data-item-price="50.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Every Winter Farm Days: Planting &amp; Hiking date you chose in November, at the month price."
+    data-item-shippable="false"
+    data-item-quantity="1">pass</button>
+  <button class="snipcart-add-item" id="def-pass-winterfarm-2026-11-supporter"
+    data-item-id="pass-winterfarm-2026-11-supporter"
+    data-item-name="Winter Farm Days: Planting &amp; Hiking · November · month (supporter)"
+    data-item-price="100.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Every Winter Farm Days: Planting &amp; Hiking date you chose in November, at the month price."
+    data-item-shippable="false"
+    data-item-quantity="1">pass</button>
+  <button class="snipcart-add-item" id="def-pass-transition-2026-11-standard"
+    data-item-id="pass-transition-2026-11-standard"
+    data-item-name="Transition Engineering: Mesh Radio · November · month (standard)"
+    data-item-price="50.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Every Transition Engineering: Mesh Radio date you chose in November, at the month price."
+    data-item-shippable="false"
+    data-item-quantity="1">pass</button>
+  <button class="snipcart-add-item" id="def-pass-transition-2026-11-supporter"
+    data-item-id="pass-transition-2026-11-supporter"
+    data-item-name="Transition Engineering: Mesh Radio · November · month (supporter)"
+    data-item-price="100.00"
+    data-item-url="https://waterbearfieldschool.org/"
+    data-item-description="Every Transition Engineering: Mesh Radio date you chose in November, at the month price."
+    data-item-shippable="false"
+    data-item-quantity="1">pass</button>
 </div>
 
 
@@ -2247,7 +2448,7 @@
   /* Every session by its KEY — the session file's name, "2026-11-06-farmtryout".
    * Two events can share a date, so anything that counts, registers or stores
    * per session is keyed by this; only "has it happened yet" goes by the date. */
-  var SESSIONS={ "2026-08-19-solar":{date:"2026-08-19",label:"Wed · Aug 19 — Solar Power & Electronics Bench"},"2026-08-20-woodworking":{date:"2026-08-20",label:"Thu · Aug 20 — Build a Toolbox"},"2026-08-21-music":{date:"2026-08-21",label:"Fri · Aug 21 — Music & Instrument Making"},"2026-08-25-woodworking":{date:"2026-08-25",label:"Tue · Aug 25 — Build a Workbench"},"2026-08-26-solar":{date:"2026-08-26",label:"Wed · Aug 26 — Solar Power & Electronics Bench"},"2026-08-27-plant-id":{date:"2026-08-27",label:"Thu · Aug 27 — Plant ID & Mapping"},"2026-08-28-zines":{date:"2026-08-28",label:"Fri · Aug 28 — Zines & Printmaking"},"2026-09-10-plant-id":{date:"2026-09-10",label:"Thu · Sep 10 — Plant ID & Mapping"},"2026-09-15-biketrailer":{date:"2026-09-15",label:"Tue · Sep 15 — Building Bike Trailers"},"2026-09-22-biketrailer":{date:"2026-09-22",label:"Tue · Sep 22 — Building Bike Trailers"},"2026-09-24-solar":{date:"2026-09-24",label:"Thu · Sep 24 — Solar Power & Electronics Bench"},"2026-09-30-coldframe":{date:"2026-09-30",label:"Wed · Sep 30 — Cold Frames & Winter Growing"},"2026-10-01-plant-id":{date:"2026-10-01",label:"Thu · Oct 1 — Plant ID & Mapping"},"2026-10-02-biketrailer":{date:"2026-10-02",label:"Fri · Oct 2 — Building Bike Trailers"},"2026-10-13-workbench":{date:"2026-10-13",label:"Tue · Oct 13 — Build a Workbench"},"2026-10-15-zines":{date:"2026-10-15",label:"Thu · Oct 15 — Zines & Printmaking"},"2026-10-16-offgrid":{date:"2026-10-16",label:"Fri · Oct 16 — Off-Grid Fridays"},"2026-10-22-afterschool":{date:"2026-10-22",label:"Thu · Oct 22 — Farm Afterschool"},"2026-10-23-afterschool":{date:"2026-10-23",label:"Fri · Oct 23 — Farm Afterschool"},"2026-10-23-offgrid":{date:"2026-10-23",label:"Fri · Oct 23 — Off-Grid Fridays"},"2026-11-04-farmtryout":{date:"2026-11-04",label:"Wed · Nov 4 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-05-farmtryout":{date:"2026-11-05",label:"Thu · Nov 5 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-06-farmtryout":{date:"2026-11-06",label:"Fri · Nov 6 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-06-offgrid":{date:"2026-11-06",label:"Fri · Nov 6 — Off-Grid Fridays"},"2026-11-09-winterplanting":{date:"2026-11-09",label:"Mon · Nov 9 — Winter Planting & Trail Hike"},"2026-11-10-winterplanting":{date:"2026-11-10",label:"Tue · Nov 10 — Winter Planting & Trail Hike"},"2026-11-11-winterplanting":{date:"2026-11-11",label:"Wed · Nov 11 — Winter Planting & Trail Hike"},"2026-11-13-winterplanting":{date:"2026-11-13",label:"Fri · Nov 13 — Winter Planting & Trail Hike"} };
+  var SESSIONS={ "2026-08-19-solar":{date:"2026-08-19",label:"Wed · Aug 19 — Solar Power & Electronics Bench"},"2026-08-20-woodworking":{date:"2026-08-20",label:"Thu · Aug 20 — Build a Toolbox"},"2026-08-21-music":{date:"2026-08-21",label:"Fri · Aug 21 — Music & Instrument Making"},"2026-08-25-woodworking":{date:"2026-08-25",label:"Tue · Aug 25 — Build a Workbench"},"2026-08-26-solar":{date:"2026-08-26",label:"Wed · Aug 26 — Solar Power & Electronics Bench"},"2026-08-27-plant-id":{date:"2026-08-27",label:"Thu · Aug 27 — Plant ID & Mapping"},"2026-08-28-zines":{date:"2026-08-28",label:"Fri · Aug 28 — Zines & Printmaking"},"2026-09-10-plant-id":{date:"2026-09-10",label:"Thu · Sep 10 — Plant ID & Mapping"},"2026-09-15-biketrailer":{date:"2026-09-15",label:"Tue · Sep 15 — Building Bike Trailers"},"2026-09-22-biketrailer":{date:"2026-09-22",label:"Tue · Sep 22 — Building Bike Trailers"},"2026-09-24-solar":{date:"2026-09-24",label:"Thu · Sep 24 — Solar Power & Electronics Bench"},"2026-09-30-coldframe":{date:"2026-09-30",label:"Wed · Sep 30 — Cold Frames & Winter Growing"},"2026-10-01-plant-id":{date:"2026-10-01",label:"Thu · Oct 1 — Plant ID & Mapping"},"2026-10-02-biketrailer":{date:"2026-10-02",label:"Fri · Oct 2 — Building Bike Trailers"},"2026-10-13-workbench":{date:"2026-10-13",label:"Tue · Oct 13 — Build a Workbench"},"2026-10-15-zines":{date:"2026-10-15",label:"Thu · Oct 15 — Zines & Printmaking"},"2026-10-16-offgrid":{date:"2026-10-16",label:"Fri · Oct 16 — Off-Grid Fridays"},"2026-10-22-afterschool":{date:"2026-10-22",label:"Thu · Oct 22 — Farm Afterschool"},"2026-10-23-afterschool":{date:"2026-10-23",label:"Fri · Oct 23 — Farm Afterschool"},"2026-10-23-offgrid":{date:"2026-10-23",label:"Fri · Oct 23 — Off-Grid Fridays"},"2026-11-04-farmtryout":{date:"2026-11-04",label:"Wed · Nov 4 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-05-farmtryout":{date:"2026-11-05",label:"Thu · Nov 5 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-06-farmtryout":{date:"2026-11-06",label:"Fri · Nov 6 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-06-offgrid":{date:"2026-11-06",label:"Fri · Nov 6 — Off-Grid Fridays"},"2026-11-09-transition":{date:"2026-11-09",label:"Mon · Nov 9 — Transition Engineering: Mesh Radio"},"2026-11-09-winterfarm":{date:"2026-11-09",label:"Mon · Nov 9 — Winter Farm Days: Planting & Hiking"},"2026-11-10-winterfarm":{date:"2026-11-10",label:"Tue · Nov 10 — Winter Farm Days: Planting & Hiking"},"2026-11-12-winterfarm":{date:"2026-11-12",label:"Thu · Nov 12 — Winter Farm Days: Planting & Hiking"},"2026-11-13-transition":{date:"2026-11-13",label:"Fri · Nov 13 — Transition Engineering: Mesh Radio"},"2026-11-13-winterfarm":{date:"2026-11-13",label:"Fri · Nov 13 — Winter Farm Days: Planting & Hiking"},"2026-11-14-transition":{date:"2026-11-14",label:"Sat · Nov 14 — Transition Engineering: Mesh Radio"},"2026-11-16-transition":{date:"2026-11-16",label:"Mon · Nov 16 — Transition Engineering: Mesh Radio"},"2026-11-16-winterfarm":{date:"2026-11-16",label:"Mon · Nov 16 — Winter Farm Days: Planting & Hiking"},"2026-11-17-winterfarm":{date:"2026-11-17",label:"Tue · Nov 17 — Winter Farm Days: Planting & Hiking"},"2026-11-19-winterfarm":{date:"2026-11-19",label:"Thu · Nov 19 — Winter Farm Days: Planting & Hiking"},"2026-11-20-transition":{date:"2026-11-20",label:"Fri · Nov 20 — Transition Engineering: Mesh Radio"},"2026-11-20-winterfarm":{date:"2026-11-20",label:"Fri · Nov 20 — Winter Farm Days: Planting & Hiking"},"2026-11-21-transition":{date:"2026-11-21",label:"Sat · Nov 21 — Transition Engineering: Mesh Radio"} };
   window.wfsSessions=function(){ return SESSIONS; };
   // the one session on a date, or null when there are none or several
   function soleKeyOn(date){
@@ -2447,7 +2648,7 @@
     });
 
     // per session: headcount, what the registrations cost, which tier was picked
-    var byKey={}, amount={}, tier={}, dateOf={}, kids={}, adults={};
+    var byKey={}, amount={}, tier={}, dateOf={}, kids={}, adults={}, passPaid={};
     lines().filter(function(l){ return l.kind==='reg'; })
            .forEach(function(l){
              var k=keyOf(l);
@@ -2459,6 +2660,17 @@
              // the people coming along are counted, not a tier of their own
              if(tr==='kids'){ kids[k]=(kids[k]||0)+l.qty; return; }
              if(tr==='adults'){ adults[k]=(adults[k]||0)+l.qty; return; }
+             // a day covered by a month line ("pass-SLUG-YYYY-MM-TYPE") is
+             // recorded as "month-TYPE"; the month's money goes on its first day
+             if(tr==='pass' && l.pass){
+               var pl=read()[l.pass];
+               tier[k]='month-'+l.pass.split('-').pop();
+               if(pl && pl.qty>0 && !passPaid[l.pass]){
+                 passPaid[l.pass]=1;
+                 amount[k]=(amount[k]||0)+pl.qty*(pl.price||0);
+               }
+               return;
+             }
              // if several tiers are mixed for one session, record the paid one
              if(tr && (!tier[k] || l.price>0)) tier[k]=tr;
            });
@@ -2549,13 +2761,15 @@
              shippable: d.itemShippable !== 'false',
              quantity:1 };
   }
-  async function setSnipQty(defId, qty){
+  async function setSnipQty(defId, qty, meta){
     var item=defItem(defId); if(!item) return false;
     var hit=snipItems().filter(function(i){ return i.id===item.id; })[0];
     try{
+      // metadata can't be changed in place, so an item carrying it is re-added
+      if(hit && meta && qty>0){ await Snipcart.api.cart.items.remove(hit.uniqueId); hit=null; }
       if(qty<=0){ if(hit) await Snipcart.api.cart.items.remove(hit.uniqueId); }
       else if(hit){ await Snipcart.api.cart.items.update({uniqueId:hit.uniqueId, quantity:qty}); }
-      else { item.quantity=qty; await Snipcart.api.cart.items.add(item); }
+      else { item.quantity=qty; if(meta) item.metadata=meta; await Snipcart.api.cart.items.add(item); }
       return true;
     }catch(e){ console.error('[wfs] snipcart write failed', defId, qty, e); return false; }
   }
@@ -2575,8 +2789,29 @@
         try{ await Snipcart.api.cart.items.remove(existing[i].uniqueId); }catch(e){}
       }
     }
+    /* The $0 lines (kids, adults, days under a month line) never reach
+     * Snipcart, so the order would lose them. Each paid line carries them as
+     * metadata, which the webhook backstop reads (snipcart-webhook/items.ts). */
+    var all=lines();
+    function peopleOn(k){
+      var n={kids:0, adults:0};
+      all.forEach(function(l){
+        if(keyOf(l)!==k) return;
+        var t=tierOf(l.id); if(t in n) n[t]+=l.qty;
+      });
+      return n;
+    }
+    function metaFor(l){
+      if(l.kind==='pass'){
+        var days=all.filter(function(x){ return x.pass===l.id; }).map(keyOf).filter(Boolean);
+        var n=days.length ? peopleOn(days[0]) : {kids:0, adults:0};
+        return {days:days, kids:n.kids, adults:n.adults};
+      }
+      if(l.kind==='reg') return peopleOn(keyOf(l));
+      return null;
+    }
     for(var j=0;j<paid.length;j++){
-      if(!(await setSnipQty('def-'+paid[j].id, paid[j].qty))){
+      if(!(await setSnipQty('def-'+paid[j].id, paid[j].qty, metaFor(paid[j])))){
         return {ok:false, error:'Could not hand that to the payment step.'};
       }
     }
@@ -2739,7 +2974,15 @@
 
   body.addEventListener('click', function(e){
     var rm=e.target.closest('.bkl-rm'); if(!rm) return;
-    window.wfsBasket.set(rm.dataset.id, 0);
+    var B=window.wfsBasket, id=rm.dataset.id;
+    // a month line takes the $0 days it was paying for with it, or they would
+    // stay behind as free places
+    // (and the kids/adults lines riding along on those days)
+    var keys={};
+    B.lines().forEach(function(l){ if(l.pass===id) keys[l.key]=1; });
+    B.lines().filter(function(l){ return l.kind==='reg' && keys[l.key]; })
+             .forEach(function(l){ B.set(l.id, 0); });
+    B.set(id, 0);
   });
 
   function say(t, bad){ msg.textContent=t||''; msg.className='bk-msg'+(bad?' bad':''); }
@@ -3000,5 +3243,20 @@
   });
 </script>
 
+<script>
+/* calendar-series cards: drop dates already past (the build only knows the day
+   it was built) and name the focus of the first one still ahead */
+(function(){
+  var n=new Date(), today=n.getFullYear()+'-'+String(n.getMonth()+1).padStart(2,'0')+'-'+String(n.getDate()).padStart(2,'0');
+  document.querySelectorAll('.dc2-chips').forEach(function(box){
+    var next=null;
+    box.querySelectorAll('.dc2-chip[data-date]').forEach(function(c){
+      if(c.dataset.date<today) c.remove(); else if(!next) next=c;
+    });
+    var f=box.parentNode.querySelector('[data-focus] b');
+    if(f && next && next.dataset.focus) f.textContent=next.dataset.focus;
+  });
+})();
+</script>
 </body>
 </html>
