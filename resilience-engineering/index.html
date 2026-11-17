@@ -445,6 +445,8 @@
   .tcday.on .tcf,.tcday.on .tcl{color:#e7f1ea}
   .tcday.past,.tcday.full{opacity:.45;cursor:default;background:#f3f3ee;border-color:var(--line)}
   .tcn{font-weight:800;font-size:.86rem;line-height:1.1}
+  .tct{font-size:.66rem;font-weight:700;line-height:1.15;white-space:nowrap}
+  .tcday.on .tct{color:#fff}
   .tcf{font-size:.64rem;line-height:1.2;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
   .tcl{font-size:.62rem;font-weight:800;color:#a8551f;margin-top:auto}
   .tclist{list-style:none;margin:10px 0 0;padding:0;font-size:.84rem;color:var(--muted)}
@@ -455,6 +457,7 @@
     .tcgrid{gap:3px}
     .tcday,.tcnum{min-height:46px}
     .tcf{display:none}
+    .tct{font-size:.58rem}
   }
 
   /* ---- /v3/ own basket ---- */
@@ -571,7 +574,7 @@
       <div class="wband" style="background:linear-gradient(transparent,#3f6b2ff2)"><h1>Resilience Engineering: Mesh Radio</h1></div>
     </div>
 
-    <p class="wblurb">Mon &amp; Fri 6–8 PM · Sat 10 AM–12 PM · Hannan Healthy Foods Farm, Lincoln, MA</p>
+    <p class="wblurb">Hannan Healthy Foods Farm, Lincoln, MA</p>
 
     <div class="wsec">
       <p><b>Resilience Engineering:</b> How do we work on resilient technologies that allow us to work off grid in a decentralized way, across food, water, energy, communications, heating and cooling? Every month, we learn to build and repair working, decentralized systems in each of these areas.</p><p>November's focus is on <a href="https://www.youtube.com/watch?v=AsKzbXKYMOk"><b>mesh radio</b></a>: small, inexpensive radio devices (around $30) that are able to send and relay messages <em>without</em> relying on cellular towers or the internet. These devices connect to your smartphone via Bluetooth, then use LoRa (Long Range) radio technology to communicate with other mesh nodes up to several miles away, even if the cellular network or power grid is down.</p><p>In our meetings, we'll be learning to use pre-built mesh radio devices, how to build our own, and how to deploy mesh radio repeaters to extend the network.</p>
@@ -582,39 +585,19 @@
         <p class="tixnote">One registration per group, for every session you choose below. Pick one.</p>
       </div>
       <div role="radiogroup" aria-label="Registration type">
-      <div class="trow tpick"
-           role="radio" aria-checked="false" tabindex="0"
-           data-tier="standard" data-sub="Standard">
-        <span class="tdot" aria-hidden="true"></span>
-        <span class="tinfo"><b>Standard</b><small>Covers your whole group for the day.</small></span>
-        <span class="tprice">$20<small>per session</small></span>
-      </div>
-      <div class="trow tpick"
-           role="radio" aria-checked="false" tabindex="0"
-           data-tier="supporter" data-sub="Supporter">
-        <span class="tdot" aria-hidden="true"></span>
-        <span class="tinfo"><b>Supporter</b><small>Covers your group and quietly pays for another family&#39;s spot.</small></span>
-        <span class="tprice">$40<small>per session</small></span>
-      </div>
-      <div class="trow tpick tfree"
-           role="radio" aria-checked="false" tabindex="0"
-           data-tier="teach" data-sub="Teach a Future Session">
-        <span class="tdot" aria-hidden="true"></span>
-        <span class="tinfo"><b>Teach a Future Session</b><small>Share some skill or idea with us sometime soon.</small></span>
-        <span class="tprice">Free</span>
-      </div>
-      <div class="teachbox" id="teachBox" hidden>
-        <label for="teachWhat">What might you share? A sentence or two is plenty &mdash; we&rsquo;ll follow up by email or have a chat on the day.</label>
-        <textarea id="teachWhat" rows="3" maxlength="600"
-                  placeholder="e.g. sourdough from a starter, basic bike repair, mushroom identification&hellip;"></textarea>
-        <p class="teachmsg" id="teachMsg" hidden>Tell us roughly what you&rsquo;d share and we&rsquo;ll take it from there.</p>
-      </div>
       <div class="trow tpick tfree"
            role="radio" aria-checked="false" tabindex="0"
            data-tier="free" data-sub="Free">
         <span class="tdot" aria-hidden="true"></span>
         <span class="tinfo"><b>Free</b><small>If you&#39;d like to try things out first, and maybe chip in later, feel free to choose this option!</small></span>
         <span class="tprice">Free</span>
+      </div>
+      <div class="trow tpick"
+           role="radio" aria-checked="false" tabindex="0"
+           data-tier="supporter" data-sub="Supporter">
+        <span class="tdot" aria-hidden="true"></span>
+        <span class="tinfo"><b>Supporter</b><small>Chip in to cover your group and help keep the sessions running.</small></span>
+        <span class="tprice">$15<small>per session</small></span>
       </div>
       </div>
 
@@ -645,30 +628,6 @@
         <span class="tinfo"><b>Mon · Nov 9</b><small>6 PM to 8 PM &middot; <a href="/w/resilience/2026-11-09/">details</a></small></span>
         <span class="tixcap"></span>
         <span class="tcarrier" hidden
-              data-tier="standard"
-              data-def="def-tix-2026-11-09-resilience-standard"
-              data-pid="tix-2026-11-09-resilience-standard"
-              data-unit="20"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 9"
-              data-sub="Standard"></span>
-        <span class="tcarrier" hidden
-              data-tier="supporter"
-              data-def="def-tix-2026-11-09-resilience-supporter"
-              data-pid="tix-2026-11-09-resilience-supporter"
-              data-unit="40"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 9"
-              data-sub="Supporter"></span>
-        <span class="tcarrier" hidden
-              data-tier="teach"
-              data-def="def-tix-2026-11-09-resilience-teach"
-              data-pid="tix-2026-11-09-resilience-teach"
-              data-unit="0"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 9"
-              data-sub="Teach a Future Session"></span>
-        <span class="tcarrier" hidden
               data-tier="free"
               data-def="def-tix-2026-11-09-resilience-free"
               data-pid="tix-2026-11-09-resilience-free"
@@ -676,6 +635,14 @@
               data-kind="reg"
               data-line="RE: Mesh Radio · Nov 9"
               data-sub="Free"></span>
+        <span class="tcarrier" hidden
+              data-tier="supporter"
+              data-def="def-tix-2026-11-09-resilience-supporter"
+              data-pid="tix-2026-11-09-resilience-supporter"
+              data-unit="15"
+              data-kind="reg"
+              data-line="RE: Mesh Radio · Nov 9"
+              data-sub="Supporter"></span>
         <span class="tcarrier" hidden
               data-tier="kids"
               data-def="def-tix-2026-11-09-resilience-kids"
@@ -704,30 +671,6 @@
         <span class="tinfo"><b>Fri · Nov 13</b><small>6 PM to 8 PM &middot; <a href="/w/resilience/2026-11-13/">details</a></small></span>
         <span class="tixcap"></span>
         <span class="tcarrier" hidden
-              data-tier="standard"
-              data-def="def-tix-2026-11-13-resilience-standard"
-              data-pid="tix-2026-11-13-resilience-standard"
-              data-unit="20"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 13"
-              data-sub="Standard"></span>
-        <span class="tcarrier" hidden
-              data-tier="supporter"
-              data-def="def-tix-2026-11-13-resilience-supporter"
-              data-pid="tix-2026-11-13-resilience-supporter"
-              data-unit="40"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 13"
-              data-sub="Supporter"></span>
-        <span class="tcarrier" hidden
-              data-tier="teach"
-              data-def="def-tix-2026-11-13-resilience-teach"
-              data-pid="tix-2026-11-13-resilience-teach"
-              data-unit="0"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 13"
-              data-sub="Teach a Future Session"></span>
-        <span class="tcarrier" hidden
               data-tier="free"
               data-def="def-tix-2026-11-13-resilience-free"
               data-pid="tix-2026-11-13-resilience-free"
@@ -735,6 +678,14 @@
               data-kind="reg"
               data-line="RE: Mesh Radio · Nov 13"
               data-sub="Free"></span>
+        <span class="tcarrier" hidden
+              data-tier="supporter"
+              data-def="def-tix-2026-11-13-resilience-supporter"
+              data-pid="tix-2026-11-13-resilience-supporter"
+              data-unit="15"
+              data-kind="reg"
+              data-line="RE: Mesh Radio · Nov 13"
+              data-sub="Supporter"></span>
         <span class="tcarrier" hidden
               data-tier="kids"
               data-def="def-tix-2026-11-13-resilience-kids"
@@ -763,30 +714,6 @@
         <span class="tinfo"><b>Sat · Nov 14</b><small>10 AM to 12 PM &middot; <a href="/w/resilience/2026-11-14/">details</a></small></span>
         <span class="tixcap"></span>
         <span class="tcarrier" hidden
-              data-tier="standard"
-              data-def="def-tix-2026-11-14-resilience-standard"
-              data-pid="tix-2026-11-14-resilience-standard"
-              data-unit="20"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 14"
-              data-sub="Standard"></span>
-        <span class="tcarrier" hidden
-              data-tier="supporter"
-              data-def="def-tix-2026-11-14-resilience-supporter"
-              data-pid="tix-2026-11-14-resilience-supporter"
-              data-unit="40"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 14"
-              data-sub="Supporter"></span>
-        <span class="tcarrier" hidden
-              data-tier="teach"
-              data-def="def-tix-2026-11-14-resilience-teach"
-              data-pid="tix-2026-11-14-resilience-teach"
-              data-unit="0"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 14"
-              data-sub="Teach a Future Session"></span>
-        <span class="tcarrier" hidden
               data-tier="free"
               data-def="def-tix-2026-11-14-resilience-free"
               data-pid="tix-2026-11-14-resilience-free"
@@ -794,6 +721,14 @@
               data-kind="reg"
               data-line="RE: Mesh Radio · Nov 14"
               data-sub="Free"></span>
+        <span class="tcarrier" hidden
+              data-tier="supporter"
+              data-def="def-tix-2026-11-14-resilience-supporter"
+              data-pid="tix-2026-11-14-resilience-supporter"
+              data-unit="15"
+              data-kind="reg"
+              data-line="RE: Mesh Radio · Nov 14"
+              data-sub="Supporter"></span>
         <span class="tcarrier" hidden
               data-tier="kids"
               data-def="def-tix-2026-11-14-resilience-kids"
@@ -817,183 +752,6 @@
               data-line="RE: Mesh Radio · Nov 14"
               data-sub="Covered by month price"></span>
       </label>
-      <label class="trow tdate" id="d-2026-11-16-resilience" data-date="2026-11-16" data-key="2026-11-16-resilience" data-title="Resilience Engineering: Mesh Radio" data-label="Mon · Nov 16 — Resilience Engineering: Mesh Radio" data-path="/w/resilience/2026-11-16/" data-focus="" data-time="6 PM to 8 PM">
-        <input type="checkbox" class="tdcheck">
-        <span class="tinfo"><b>Mon · Nov 16</b><small>6 PM to 8 PM &middot; <a href="/w/resilience/2026-11-16/">details</a></small></span>
-        <span class="tixcap"></span>
-        <span class="tcarrier" hidden
-              data-tier="standard"
-              data-def="def-tix-2026-11-16-resilience-standard"
-              data-pid="tix-2026-11-16-resilience-standard"
-              data-unit="20"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 16"
-              data-sub="Standard"></span>
-        <span class="tcarrier" hidden
-              data-tier="supporter"
-              data-def="def-tix-2026-11-16-resilience-supporter"
-              data-pid="tix-2026-11-16-resilience-supporter"
-              data-unit="40"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 16"
-              data-sub="Supporter"></span>
-        <span class="tcarrier" hidden
-              data-tier="teach"
-              data-def="def-tix-2026-11-16-resilience-teach"
-              data-pid="tix-2026-11-16-resilience-teach"
-              data-unit="0"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 16"
-              data-sub="Teach a Future Session"></span>
-        <span class="tcarrier" hidden
-              data-tier="free"
-              data-def="def-tix-2026-11-16-resilience-free"
-              data-pid="tix-2026-11-16-resilience-free"
-              data-unit="0"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 16"
-              data-sub="Free"></span>
-        <span class="tcarrier" hidden
-              data-tier="kids"
-              data-def="def-tix-2026-11-16-resilience-kids"
-              data-pid="tix-2026-11-16-resilience-kids"
-              data-unit="0"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 16"
-              data-sub="Kids"></span>
-        <span class="tcarrier" hidden
-              data-tier="adults"
-              data-def="def-tix-2026-11-16-resilience-adults"
-              data-pid="tix-2026-11-16-resilience-adults"
-              data-unit="0"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 16"
-              data-sub="Adults"></span><span class="tcarrier" hidden
-              data-tier="pass"
-              data-pid="tix-2026-11-16-resilience-pass"
-              data-unit="0"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 16"
-              data-sub="Covered by month price"></span>
-      </label>
-      <label class="trow tdate" id="d-2026-11-20-resilience" data-date="2026-11-20" data-key="2026-11-20-resilience" data-title="Resilience Engineering: Mesh Radio" data-label="Fri · Nov 20 — Resilience Engineering: Mesh Radio" data-path="/w/resilience/2026-11-20/" data-focus="" data-time="6 PM to 8 PM">
-        <input type="checkbox" class="tdcheck">
-        <span class="tinfo"><b>Fri · Nov 20</b><small>6 PM to 8 PM &middot; <a href="/w/resilience/2026-11-20/">details</a></small></span>
-        <span class="tixcap"></span>
-        <span class="tcarrier" hidden
-              data-tier="standard"
-              data-def="def-tix-2026-11-20-resilience-standard"
-              data-pid="tix-2026-11-20-resilience-standard"
-              data-unit="20"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 20"
-              data-sub="Standard"></span>
-        <span class="tcarrier" hidden
-              data-tier="supporter"
-              data-def="def-tix-2026-11-20-resilience-supporter"
-              data-pid="tix-2026-11-20-resilience-supporter"
-              data-unit="40"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 20"
-              data-sub="Supporter"></span>
-        <span class="tcarrier" hidden
-              data-tier="teach"
-              data-def="def-tix-2026-11-20-resilience-teach"
-              data-pid="tix-2026-11-20-resilience-teach"
-              data-unit="0"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 20"
-              data-sub="Teach a Future Session"></span>
-        <span class="tcarrier" hidden
-              data-tier="free"
-              data-def="def-tix-2026-11-20-resilience-free"
-              data-pid="tix-2026-11-20-resilience-free"
-              data-unit="0"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 20"
-              data-sub="Free"></span>
-        <span class="tcarrier" hidden
-              data-tier="kids"
-              data-def="def-tix-2026-11-20-resilience-kids"
-              data-pid="tix-2026-11-20-resilience-kids"
-              data-unit="0"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 20"
-              data-sub="Kids"></span>
-        <span class="tcarrier" hidden
-              data-tier="adults"
-              data-def="def-tix-2026-11-20-resilience-adults"
-              data-pid="tix-2026-11-20-resilience-adults"
-              data-unit="0"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 20"
-              data-sub="Adults"></span><span class="tcarrier" hidden
-              data-tier="pass"
-              data-pid="tix-2026-11-20-resilience-pass"
-              data-unit="0"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 20"
-              data-sub="Covered by month price"></span>
-      </label>
-      <label class="trow tdate" id="d-2026-11-21-resilience" data-date="2026-11-21" data-key="2026-11-21-resilience" data-title="Resilience Engineering: Mesh Radio" data-label="Sat · Nov 21 — Resilience Engineering: Mesh Radio" data-path="/w/resilience/2026-11-21/" data-focus="" data-time="10 AM to 12 PM">
-        <input type="checkbox" class="tdcheck">
-        <span class="tinfo"><b>Sat · Nov 21</b><small>10 AM to 12 PM &middot; <a href="/w/resilience/2026-11-21/">details</a></small></span>
-        <span class="tixcap"></span>
-        <span class="tcarrier" hidden
-              data-tier="standard"
-              data-def="def-tix-2026-11-21-resilience-standard"
-              data-pid="tix-2026-11-21-resilience-standard"
-              data-unit="20"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 21"
-              data-sub="Standard"></span>
-        <span class="tcarrier" hidden
-              data-tier="supporter"
-              data-def="def-tix-2026-11-21-resilience-supporter"
-              data-pid="tix-2026-11-21-resilience-supporter"
-              data-unit="40"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 21"
-              data-sub="Supporter"></span>
-        <span class="tcarrier" hidden
-              data-tier="teach"
-              data-def="def-tix-2026-11-21-resilience-teach"
-              data-pid="tix-2026-11-21-resilience-teach"
-              data-unit="0"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 21"
-              data-sub="Teach a Future Session"></span>
-        <span class="tcarrier" hidden
-              data-tier="free"
-              data-def="def-tix-2026-11-21-resilience-free"
-              data-pid="tix-2026-11-21-resilience-free"
-              data-unit="0"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 21"
-              data-sub="Free"></span>
-        <span class="tcarrier" hidden
-              data-tier="kids"
-              data-def="def-tix-2026-11-21-resilience-kids"
-              data-pid="tix-2026-11-21-resilience-kids"
-              data-unit="0"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 21"
-              data-sub="Kids"></span>
-        <span class="tcarrier" hidden
-              data-tier="adults"
-              data-def="def-tix-2026-11-21-resilience-adults"
-              data-pid="tix-2026-11-21-resilience-adults"
-              data-unit="0"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 21"
-              data-sub="Adults"></span><span class="tcarrier" hidden
-              data-tier="pass"
-              data-pid="tix-2026-11-21-resilience-pass"
-              data-unit="0"
-              data-kind="reg"
-              data-line="RE: Mesh Radio · Nov 21"
-              data-sub="Covered by month price"></span>
-      </label>
       </div>
     </div>
 
@@ -1003,7 +761,7 @@
     </div>
 
     <dl class="dc-facts">
-      <div><dt>When</dt><dd>Mon &amp; Fri 6–8 PM · Sat 10 AM–12 PM</dd></div>
+      <div><dt>When</dt><dd>Times vary by day: see the calendar above</dd></div>
       <div><dt>Where</dt><dd>Hannan Healthy Foods Farm, Lincoln, MA<br><span class="muted">Exact address sent when you register.</span></dd></div>
       <div><dt>Who</dt><dd>Adults and teens 14+.</dd></div>
       <div><dt>Bring</dt><dd>A laptop if you have one, and a phone. Radios and parts are provided.</dd></div>
@@ -1018,20 +776,12 @@
 
   
 <div hidden aria-hidden="true">
-  <button class="snipcart-add-item" id="def-tix-2026-08-19-solar-standard"
-    data-item-id="tix-2026-08-19-solar-standard"
-    data-item-name="Solar Bench · Aug 19 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-08-19-solar-supporter"
     data-item-id="tix-2026-08-19-solar-supporter"
     data-item-name="Solar Bench · Aug 19 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-kit-2026-08-19-solar"
@@ -1042,20 +792,12 @@
     data-item-description="Materials for solar panel + motor kit, reserved for you on Wed · Aug 19."
     data-item-shippable="false"
     data-item-quantity="1">kit</button>
-  <button class="snipcart-add-item" id="def-tix-2026-08-20-woodworking-standard"
-    data-item-id="tix-2026-08-20-woodworking-standard"
-    data-item-name="Toolbox · Aug 20 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-08-20-woodworking-supporter"
     data-item-id="tix-2026-08-20-woodworking-supporter"
     data-item-name="Toolbox · Aug 20 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-kit-2026-08-20-woodworking"
@@ -1066,20 +808,12 @@
     data-item-description="Materials for a toolbox, reserved for you on Thu · Aug 20."
     data-item-shippable="false"
     data-item-quantity="1">kit</button>
-  <button class="snipcart-add-item" id="def-tix-2026-08-21-music-standard"
-    data-item-id="tix-2026-08-21-music-standard"
-    data-item-name="Instrument Making · Aug 21 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-08-21-music-supporter"
     data-item-id="tix-2026-08-21-music-supporter"
     data-item-name="Instrument Making · Aug 21 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-kit-2026-08-21-music"
@@ -1090,20 +824,12 @@
     data-item-description="Materials for an instrument, reserved for you on Fri · Aug 21."
     data-item-shippable="false"
     data-item-quantity="1">kit</button>
-  <button class="snipcart-add-item" id="def-tix-2026-08-25-woodworking-standard"
-    data-item-id="tix-2026-08-25-woodworking-standard"
-    data-item-name="Workbench · Aug 25 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-08-25-woodworking-supporter"
     data-item-id="tix-2026-08-25-woodworking-supporter"
     data-item-name="Workbench · Aug 25 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-kit-2026-08-25-woodworking"
@@ -1114,20 +840,12 @@
     data-item-description="Materials for a workbench, reserved for you on Tue · Aug 25."
     data-item-shippable="false"
     data-item-quantity="1">kit</button>
-  <button class="snipcart-add-item" id="def-tix-2026-08-26-solar-standard"
-    data-item-id="tix-2026-08-26-solar-standard"
-    data-item-name="Solar Bench · Aug 26 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-08-26-solar-supporter"
     data-item-id="tix-2026-08-26-solar-supporter"
     data-item-name="Solar Bench · Aug 26 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-kit-2026-08-26-solar"
@@ -1138,100 +856,52 @@
     data-item-description="Materials for solar panel + motor kit, reserved for you on Wed · Aug 26."
     data-item-shippable="false"
     data-item-quantity="1">kit</button>
-  <button class="snipcart-add-item" id="def-tix-2026-08-27-plant-id-standard"
-    data-item-id="tix-2026-08-27-plant-id-standard"
-    data-item-name="Plant ID · Aug 27 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-08-27-plant-id-supporter"
     data-item-id="tix-2026-08-27-plant-id-supporter"
     data-item-name="Plant ID · Aug 27 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-08-28-zines-standard"
-    data-item-id="tix-2026-08-28-zines-standard"
-    data-item-name="Zines · Aug 28 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-08-28-zines-supporter"
     data-item-id="tix-2026-08-28-zines-supporter"
     data-item-name="Zines · Aug 28 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-09-10-plant-id-standard"
-    data-item-id="tix-2026-09-10-plant-id-standard"
-    data-item-name="Plant ID · Sep 10 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-09-10-plant-id-supporter"
     data-item-id="tix-2026-09-10-plant-id-supporter"
     data-item-name="Plant ID · Sep 10 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-09-15-biketrailer-standard"
-    data-item-id="tix-2026-09-15-biketrailer-standard"
-    data-item-name="Bike Trailer · Sep 15 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-09-15-biketrailer-supporter"
     data-item-id="tix-2026-09-15-biketrailer-supporter"
     data-item-name="Bike Trailer · Sep 15 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-09-22-biketrailer-standard"
-    data-item-id="tix-2026-09-22-biketrailer-standard"
-    data-item-name="Bike Trailer · Sep 22 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-09-22-biketrailer-supporter"
     data-item-id="tix-2026-09-22-biketrailer-supporter"
     data-item-name="Bike Trailer · Sep 22 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-09-24-solar-standard"
-    data-item-id="tix-2026-09-24-solar-standard"
-    data-item-name="Solar Bench · Sep 24 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-09-24-solar-supporter"
     data-item-id="tix-2026-09-24-solar-supporter"
     data-item-name="Solar Bench · Sep 24 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-kit-2026-09-24-solar"
@@ -1242,68 +912,36 @@
     data-item-description="Materials for solar panel + motor kit, reserved for you on Thu · Sep 24."
     data-item-shippable="false"
     data-item-quantity="1">kit</button>
-  <button class="snipcart-add-item" id="def-tix-2026-09-30-coldframe-standard"
-    data-item-id="tix-2026-09-30-coldframe-standard"
-    data-item-name="Cold Frames — Design Review &amp; Build · Sep 30 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-09-30-coldframe-supporter"
     data-item-id="tix-2026-09-30-coldframe-supporter"
     data-item-name="Cold Frames — Design Review &amp; Build · Sep 30 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-10-01-plant-id-standard"
-    data-item-id="tix-2026-10-01-plant-id-standard"
-    data-item-name="Plant ID · Oct 1 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-01-plant-id-supporter"
     data-item-id="tix-2026-10-01-plant-id-supporter"
     data-item-name="Plant ID · Oct 1 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-10-02-biketrailer-standard"
-    data-item-id="tix-2026-10-02-biketrailer-standard"
-    data-item-name="Bike Trailer · Oct 2 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-02-biketrailer-supporter"
     data-item-id="tix-2026-10-02-biketrailer-supporter"
     data-item-name="Bike Trailer · Oct 2 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-10-13-workbench-standard"
-    data-item-id="tix-2026-10-13-workbench-standard"
-    data-item-name="Workbench · Oct 13 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-13-workbench-supporter"
     data-item-id="tix-2026-10-13-workbench-supporter"
     data-item-name="Workbench · Oct 13 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-kit-2026-10-13-workbench"
@@ -1314,386 +952,154 @@
     data-item-description="Materials for workbench materials, reserved for you on Tue · Oct 13."
     data-item-shippable="false"
     data-item-quantity="1">kit</button>
-  <button class="snipcart-add-item" id="def-tix-2026-10-15-zines-standard"
-    data-item-id="tix-2026-10-15-zines-standard"
-    data-item-name="Zines · Oct 15 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-15-zines-supporter"
     data-item-id="tix-2026-10-15-zines-supporter"
     data-item-name="Zines · Oct 15 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-10-16-offgrid-standard"
-    data-item-id="tix-2026-10-16-offgrid-standard"
-    data-item-name="Off-Grid Friday · Oct 16 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-16-offgrid-supporter"
     data-item-id="tix-2026-10-16-offgrid-supporter"
     data-item-name="Off-Grid Friday · Oct 16 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-10-22-afterschool-standard"
-    data-item-id="tix-2026-10-22-afterschool-standard"
-    data-item-name="Farm Afterschool · Oct 22 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-22-afterschool-supporter"
     data-item-id="tix-2026-10-22-afterschool-supporter"
     data-item-name="Farm Afterschool · Oct 22 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-10-23-afterschool-standard"
-    data-item-id="tix-2026-10-23-afterschool-standard"
-    data-item-name="Farm Afterschool · Oct 23 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-23-afterschool-supporter"
     data-item-id="tix-2026-10-23-afterschool-supporter"
     data-item-name="Farm Afterschool · Oct 23 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-10-23-offgrid-standard"
-    data-item-id="tix-2026-10-23-offgrid-standard"
-    data-item-name="Off-Grid Friday · Oct 23 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-10-23-offgrid-supporter"
     data-item-id="tix-2026-10-23-offgrid-supporter"
     data-item-name="Off-Grid Friday · Oct 23 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-04-farmtryout-standard"
-    data-item-id="tix-2026-11-04-farmtryout-standard"
-    data-item-name="Lettuce Transplanting &amp; Farm Tour · Nov 4 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-04-farmtryout-supporter"
     data-item-id="tix-2026-11-04-farmtryout-supporter"
     data-item-name="Lettuce Transplanting &amp; Farm Tour · Nov 4 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-05-farmtryout-standard"
-    data-item-id="tix-2026-11-05-farmtryout-standard"
-    data-item-name="Lettuce Transplanting &amp; Farm Tour · Nov 5 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-05-farmtryout-supporter"
     data-item-id="tix-2026-11-05-farmtryout-supporter"
     data-item-name="Lettuce Transplanting &amp; Farm Tour · Nov 5 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-06-farmtryout-standard"
-    data-item-id="tix-2026-11-06-farmtryout-standard"
-    data-item-name="Lettuce Transplanting &amp; Farm Tour · Nov 6 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-06-farmtryout-supporter"
     data-item-id="tix-2026-11-06-farmtryout-supporter"
     data-item-name="Lettuce Transplanting &amp; Farm Tour · Nov 6 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-06-offgrid-standard"
-    data-item-id="tix-2026-11-06-offgrid-standard"
-    data-item-name="Off-Grid Friday · Nov 6 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-06-offgrid-supporter"
     data-item-id="tix-2026-11-06-offgrid-supporter"
     data-item-name="Off-Grid Friday · Nov 6 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-09-resilience-standard"
-    data-item-id="tix-2026-11-09-resilience-standard"
-    data-item-name="RE: Mesh Radio · Nov 9 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-09-resilience-supporter"
     data-item-id="tix-2026-11-09-resilience-supporter"
     data-item-name="RE: Mesh Radio · Nov 9 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-09-winterfarm-standard"
-    data-item-id="tix-2026-11-09-winterfarm-standard"
-    data-item-name="Winter Farm Day · Nov 9 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-09-winterfarm-supporter"
     data-item-id="tix-2026-11-09-winterfarm-supporter"
     data-item-name="Winter Farm Day · Nov 9 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-10-winterfarm-standard"
-    data-item-id="tix-2026-11-10-winterfarm-standard"
-    data-item-name="Winter Farm Day · Nov 10 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-10-winterfarm-supporter"
     data-item-id="tix-2026-11-10-winterfarm-supporter"
     data-item-name="Winter Farm Day · Nov 10 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-13-resilience-standard"
-    data-item-id="tix-2026-11-13-resilience-standard"
-    data-item-name="RE: Mesh Radio · Nov 13 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-13-resilience-supporter"
     data-item-id="tix-2026-11-13-resilience-supporter"
     data-item-name="RE: Mesh Radio · Nov 13 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-13-winterfarm-standard"
-    data-item-id="tix-2026-11-13-winterfarm-standard"
-    data-item-name="Winter Farm Day · Nov 13 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-13-winterfarm-supporter"
     data-item-id="tix-2026-11-13-winterfarm-supporter"
     data-item-name="Winter Farm Day · Nov 13 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-14-resilience-standard"
-    data-item-id="tix-2026-11-14-resilience-standard"
-    data-item-name="RE: Mesh Radio · Nov 14 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-14-resilience-supporter"
     data-item-id="tix-2026-11-14-resilience-supporter"
     data-item-name="RE: Mesh Radio · Nov 14 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-16-resilience-standard"
-    data-item-id="tix-2026-11-16-resilience-standard"
-    data-item-name="RE: Mesh Radio · Nov 16 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-16-resilience-supporter"
-    data-item-id="tix-2026-11-16-resilience-supporter"
-    data-item-name="RE: Mesh Radio · Nov 16 · Supporter"
-    data-item-price="40.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-16-winterfarm-standard"
-    data-item-id="tix-2026-11-16-winterfarm-standard"
-    data-item-name="Winter Farm Day · Nov 16 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-16-winterfarm-supporter"
-    data-item-id="tix-2026-11-16-winterfarm-supporter"
-    data-item-name="Winter Farm Day · Nov 16 · Supporter"
-    data-item-price="40.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-17-winterfarm-standard"
-    data-item-id="tix-2026-11-17-winterfarm-standard"
-    data-item-name="Winter Farm Day · Nov 17 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-17-winterfarm-supporter"
-    data-item-id="tix-2026-11-17-winterfarm-supporter"
-    data-item-name="Winter Farm Day · Nov 17 · Supporter"
-    data-item-price="40.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-19-winterfarm-standard"
-    data-item-id="tix-2026-11-19-winterfarm-standard"
-    data-item-name="Winter Farm Day · Nov 19 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-19-winterfarm-supporter"
     data-item-id="tix-2026-11-19-winterfarm-supporter"
     data-item-name="Winter Farm Day · Nov 19 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-20-resilience-standard"
-    data-item-id="tix-2026-11-20-resilience-standard"
-    data-item-name="RE: Mesh Radio · Nov 20 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-20-resilience-supporter"
-    data-item-id="tix-2026-11-20-resilience-supporter"
-    data-item-name="RE: Mesh Radio · Nov 20 · Supporter"
-    data-item-price="40.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-20-winterfarm-standard"
-    data-item-id="tix-2026-11-20-winterfarm-standard"
-    data-item-name="Winter Farm Day · Nov 20 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
   <button class="snipcart-add-item" id="def-tix-2026-11-20-winterfarm-supporter"
     data-item-id="tix-2026-11-20-winterfarm-supporter"
     data-item-name="Winter Farm Day · Nov 20 · Supporter"
-    data-item-price="40.00"
+    data-item-price="15.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
+    data-item-description="Chip in to cover your group and help keep the sessions running."
     data-item-shippable="false"
     data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-21-resilience-standard"
-    data-item-id="tix-2026-11-21-resilience-standard"
-    data-item-name="RE: Mesh Radio · Nov 21 · Standard"
-    data-item-price="20.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your whole group for the day."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-tix-2026-11-21-resilience-supporter"
-    data-item-id="tix-2026-11-21-resilience-supporter"
-    data-item-name="RE: Mesh Radio · Nov 21 · Supporter"
-    data-item-price="40.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Covers your group and quietly pays for another family&#39;s spot."
-    data-item-shippable="false"
-    data-item-quantity="1">tix</button>
-  <button class="snipcart-add-item" id="def-pass-winterfarm-2026-11-standard"
-    data-item-id="pass-winterfarm-2026-11-standard"
-    data-item-name="Winter Farm Days: Planting &amp; Hiking · November · month (standard)"
-    data-item-price="50.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Every Winter Farm Days: Planting &amp; Hiking date you chose in November, at the month price."
-    data-item-shippable="false"
-    data-item-quantity="1">pass</button>
   <button class="snipcart-add-item" id="def-pass-winterfarm-2026-11-supporter"
     data-item-id="pass-winterfarm-2026-11-supporter"
     data-item-name="Winter Farm Days: Planting &amp; Hiking · November · month (supporter)"
-    data-item-price="100.00"
-    data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Every Winter Farm Days: Planting &amp; Hiking date you chose in November, at the month price."
-    data-item-shippable="false"
-    data-item-quantity="1">pass</button>
-  <button class="snipcart-add-item" id="def-pass-resilience-2026-11-standard"
-    data-item-id="pass-resilience-2026-11-standard"
-    data-item-name="Resilience Engineering: Mesh Radio · November · month (standard)"
     data-item-price="50.00"
     data-item-url="https://waterbearfieldschool.org/"
-    data-item-description="Every Resilience Engineering: Mesh Radio date you chose in November, at the month price."
+    data-item-description="Every Winter Farm Days: Planting &amp; Hiking date you chose in November, at the month price."
     data-item-shippable="false"
     data-item-quantity="1">pass</button>
   <button class="snipcart-add-item" id="def-pass-resilience-2026-11-supporter"
     data-item-id="pass-resilience-2026-11-supporter"
     data-item-name="Resilience Engineering: Mesh Radio · November · month (supporter)"
-    data-item-price="100.00"
+    data-item-price="50.00"
     data-item-url="https://waterbearfieldschool.org/"
     data-item-description="Every Resilience Engineering: Mesh Radio date you chose in November, at the month price."
     data-item-shippable="false"
@@ -1765,7 +1171,7 @@
   /* Every session by its KEY — the session file's name, "2026-11-06-farmtryout".
    * Two events can share a date, so anything that counts, registers or stores
    * per session is keyed by this; only "has it happened yet" goes by the date. */
-  var SESSIONS={ "2026-08-19-solar":{date:"2026-08-19",label:"Wed · Aug 19 — Solar Power & Electronics Bench"},"2026-08-20-woodworking":{date:"2026-08-20",label:"Thu · Aug 20 — Build a Toolbox"},"2026-08-21-music":{date:"2026-08-21",label:"Fri · Aug 21 — Music & Instrument Making"},"2026-08-25-woodworking":{date:"2026-08-25",label:"Tue · Aug 25 — Build a Workbench"},"2026-08-26-solar":{date:"2026-08-26",label:"Wed · Aug 26 — Solar Power & Electronics Bench"},"2026-08-27-plant-id":{date:"2026-08-27",label:"Thu · Aug 27 — Plant ID & Mapping"},"2026-08-28-zines":{date:"2026-08-28",label:"Fri · Aug 28 — Zines & Printmaking"},"2026-09-10-plant-id":{date:"2026-09-10",label:"Thu · Sep 10 — Plant ID & Mapping"},"2026-09-15-biketrailer":{date:"2026-09-15",label:"Tue · Sep 15 — Building Bike Trailers"},"2026-09-22-biketrailer":{date:"2026-09-22",label:"Tue · Sep 22 — Building Bike Trailers"},"2026-09-24-solar":{date:"2026-09-24",label:"Thu · Sep 24 — Solar Power & Electronics Bench"},"2026-09-30-coldframe":{date:"2026-09-30",label:"Wed · Sep 30 — Cold Frames & Winter Growing"},"2026-10-01-plant-id":{date:"2026-10-01",label:"Thu · Oct 1 — Plant ID & Mapping"},"2026-10-02-biketrailer":{date:"2026-10-02",label:"Fri · Oct 2 — Building Bike Trailers"},"2026-10-13-workbench":{date:"2026-10-13",label:"Tue · Oct 13 — Build a Workbench"},"2026-10-15-zines":{date:"2026-10-15",label:"Thu · Oct 15 — Zines & Printmaking"},"2026-10-16-offgrid":{date:"2026-10-16",label:"Fri · Oct 16 — Off-Grid Fridays"},"2026-10-22-afterschool":{date:"2026-10-22",label:"Thu · Oct 22 — Farm Afterschool"},"2026-10-23-afterschool":{date:"2026-10-23",label:"Fri · Oct 23 — Farm Afterschool"},"2026-10-23-offgrid":{date:"2026-10-23",label:"Fri · Oct 23 — Off-Grid Fridays"},"2026-11-04-farmtryout":{date:"2026-11-04",label:"Wed · Nov 4 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-05-farmtryout":{date:"2026-11-05",label:"Thu · Nov 5 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-06-farmtryout":{date:"2026-11-06",label:"Fri · Nov 6 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-06-offgrid":{date:"2026-11-06",label:"Fri · Nov 6 — Off-Grid Fridays"},"2026-11-09-resilience":{date:"2026-11-09",label:"Mon · Nov 9 — Resilience Engineering: Mesh Radio"},"2026-11-09-winterfarm":{date:"2026-11-09",label:"Mon · Nov 9 — Winter Farm Days: Planting & Hiking"},"2026-11-10-winterfarm":{date:"2026-11-10",label:"Tue · Nov 10 — Winter Farm Days: Planting & Hiking"},"2026-11-13-resilience":{date:"2026-11-13",label:"Fri · Nov 13 — Resilience Engineering: Mesh Radio"},"2026-11-13-winterfarm":{date:"2026-11-13",label:"Fri · Nov 13 — Winter Farm Days: Planting & Hiking"},"2026-11-14-resilience":{date:"2026-11-14",label:"Sat · Nov 14 — Resilience Engineering: Mesh Radio"},"2026-11-16-resilience":{date:"2026-11-16",label:"Mon · Nov 16 — Resilience Engineering: Mesh Radio"},"2026-11-16-winterfarm":{date:"2026-11-16",label:"Mon · Nov 16 — Winter Farm Days: Planting & Hiking"},"2026-11-17-winterfarm":{date:"2026-11-17",label:"Tue · Nov 17 — Winter Farm Days: Planting & Hiking"},"2026-11-19-winterfarm":{date:"2026-11-19",label:"Thu · Nov 19 — Winter Farm Days: Planting & Hiking"},"2026-11-20-resilience":{date:"2026-11-20",label:"Fri · Nov 20 — Resilience Engineering: Mesh Radio"},"2026-11-20-winterfarm":{date:"2026-11-20",label:"Fri · Nov 20 — Winter Farm Days: Planting & Hiking"},"2026-11-21-resilience":{date:"2026-11-21",label:"Sat · Nov 21 — Resilience Engineering: Mesh Radio"} };
+  var SESSIONS={ "2026-08-19-solar":{date:"2026-08-19",label:"Wed · Aug 19 — Solar Power & Electronics Bench"},"2026-08-20-woodworking":{date:"2026-08-20",label:"Thu · Aug 20 — Build a Toolbox"},"2026-08-21-music":{date:"2026-08-21",label:"Fri · Aug 21 — Music & Instrument Making"},"2026-08-25-woodworking":{date:"2026-08-25",label:"Tue · Aug 25 — Build a Workbench"},"2026-08-26-solar":{date:"2026-08-26",label:"Wed · Aug 26 — Solar Power & Electronics Bench"},"2026-08-27-plant-id":{date:"2026-08-27",label:"Thu · Aug 27 — Plant ID & Mapping"},"2026-08-28-zines":{date:"2026-08-28",label:"Fri · Aug 28 — Zines & Printmaking"},"2026-09-10-plant-id":{date:"2026-09-10",label:"Thu · Sep 10 — Plant ID & Mapping"},"2026-09-15-biketrailer":{date:"2026-09-15",label:"Tue · Sep 15 — Building Bike Trailers"},"2026-09-22-biketrailer":{date:"2026-09-22",label:"Tue · Sep 22 — Building Bike Trailers"},"2026-09-24-solar":{date:"2026-09-24",label:"Thu · Sep 24 — Solar Power & Electronics Bench"},"2026-09-30-coldframe":{date:"2026-09-30",label:"Wed · Sep 30 — Cold Frames & Winter Growing"},"2026-10-01-plant-id":{date:"2026-10-01",label:"Thu · Oct 1 — Plant ID & Mapping"},"2026-10-02-biketrailer":{date:"2026-10-02",label:"Fri · Oct 2 — Building Bike Trailers"},"2026-10-13-workbench":{date:"2026-10-13",label:"Tue · Oct 13 — Build a Workbench"},"2026-10-15-zines":{date:"2026-10-15",label:"Thu · Oct 15 — Zines & Printmaking"},"2026-10-16-offgrid":{date:"2026-10-16",label:"Fri · Oct 16 — Off-Grid Fridays"},"2026-10-22-afterschool":{date:"2026-10-22",label:"Thu · Oct 22 — Farm Afterschool"},"2026-10-23-afterschool":{date:"2026-10-23",label:"Fri · Oct 23 — Farm Afterschool"},"2026-10-23-offgrid":{date:"2026-10-23",label:"Fri · Oct 23 — Off-Grid Fridays"},"2026-11-04-farmtryout":{date:"2026-11-04",label:"Wed · Nov 4 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-05-farmtryout":{date:"2026-11-05",label:"Thu · Nov 5 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-06-farmtryout":{date:"2026-11-06",label:"Fri · Nov 6 — Winter Lettuce Transplanting & Farm Tour"},"2026-11-06-offgrid":{date:"2026-11-06",label:"Fri · Nov 6 — Off-Grid Fridays"},"2026-11-09-resilience":{date:"2026-11-09",label:"Mon · Nov 9 — Resilience Engineering: Mesh Radio"},"2026-11-09-winterfarm":{date:"2026-11-09",label:"Mon · Nov 9 — Winter Farm Days: Planting & Hiking"},"2026-11-10-winterfarm":{date:"2026-11-10",label:"Tue · Nov 10 — Winter Farm Days: Planting & Hiking"},"2026-11-13-resilience":{date:"2026-11-13",label:"Fri · Nov 13 — Resilience Engineering: Mesh Radio"},"2026-11-13-winterfarm":{date:"2026-11-13",label:"Fri · Nov 13 — Winter Farm Days: Planting & Hiking"},"2026-11-14-resilience":{date:"2026-11-14",label:"Sat · Nov 14 — Resilience Engineering: Mesh Radio"},"2026-11-19-winterfarm":{date:"2026-11-19",label:"Thu · Nov 19 — Winter Farm Days: Planting & Hiking"},"2026-11-20-winterfarm":{date:"2026-11-20",label:"Fri · Nov 20 — Winter Farm Days: Planting & Hiking"} };
   window.wfsSessions=function(){ return SESSIONS; };
   // the one session on a date, or null when there are none or several
   function soleKeyOn(date){
@@ -2401,7 +1807,7 @@
 })();
 </script>
   <script>window.WFS_SERIES_UNIT="session";
-  window.WFS_SERIES={slug:"resilience", title:"Resilience Engineering: Mesh Radio", cap:{"standard":100,"supporter":200}, capFor:{"2026-11":{"standard":50,"supporter":100}}, aheadHours:24, calendar:true};</script>
+  window.WFS_SERIES={slug:"resilience", title:"Resilience Engineering: Mesh Radio", cap:{"supporter":100}, capFor:{"2026-11":{"supporter":50}}, aheadHours:24, calendar:true};</script>
   <script>/* The series sign-up page: the same job as wfs-day-panel.js, but for several
    dates at once. Steps 1 (one registration type, a radio) and 2 (kids and
    adults coming along) are chosen once in #seriesChoose and apply to every
@@ -2700,6 +2106,7 @@
         html+='<button type="button" class="'+cls+'"'+(past||full?' disabled':' data-key="'+d.dataset.key+'"')
           +' aria-pressed="'+(on?'true':'false')+'" title="'+esc(nameOf(d)+(d.dataset.focus?' — '+d.dataset.focus:''))+'">'
           +'<span class="tcn">'+n+'</span>'
+          +'<span class="tct">'+esc(shortTime(d.dataset.time))+'</span>'
           +(d.dataset.focus?'<span class="tcf">'+esc(d.dataset.focus)+'</span>':'')
           +(note?'<span class="tcl">'+note+'</span>':'')
           +'</button>';
@@ -2714,6 +2121,8 @@
     });
     cal.innerHTML=html;
   }
+  // "10 AM to 12 PM" -> "10am–12pm", small enough for a calendar square
+  function shortTime(t){ return String(t||'').replace(' to ','–').replace(/ AM/g,'am').replace(/ PM/g,'pm'); }
   function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){
     return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
 
