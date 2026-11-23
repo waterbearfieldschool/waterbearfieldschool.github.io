@@ -163,6 +163,9 @@
   .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
   @media(max-width:820px){.cards{grid-template-columns:1fr 1fr}}
   @media(max-width:560px){.cards{grid-template-columns:1fr}.top nav{display:none}}
+  .jdates{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+  .jdate{font-size:.74rem;font-weight:700;color:#4f6675;text-decoration:none;border:1.5px solid #d6dee5;background:#f6f8fa;border-radius:7px;padding:3px 8px}
+  .jdate:hover{border-color:#4f6675;text-decoration:underline}
   .card{background:var(--card);border:1px solid var(--line);border-radius:15px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 4px 14px rgba(0,0,0,.05)}
   .card .band{color:#fff;padding:12px 16px 10px;text-align:center}
   .card .band .day{font-size:1.28rem;font-weight:800;line-height:1.05}
@@ -1379,58 +1382,38 @@
   <section class="sec sec-journal" id="journal" data-name="Journal" data-blurb="Field Day write-ups and project updates, with photos." data-accent="#4f6675" data-tint="#eef1f4" data-bd="#d6dee5">
     <h2 class="grp">Journal</h2>
     <div class="cards">
-      <article class="card jcard pastday" data-date="2026-11-06">
+      <article class="card jcard jgroup">
         <img class="cardimg" src="/assets/images/sessions/2026-08-19-solar/04-panel.jpg" alt="" loading="lazy">
-        <div class="body">
-          <div class="when">Fri · Nov 6 &middot; Hannan Healthy Foods Farm, Lincoln, MA</div>
+        <div class="body"><div class="when">Hannan Healthy Foods Farm, Lincoln, MA</div>
           <h3>Off-Grid Fridays</h3>
           <div class="desc">On Fridays we meet at a farm to work on real projects that help us depend less on the grid: energy, water, growing, heat and cooling, comms, transport, and clothing.</div>
-          <div class="foot"><a class="btn-reg" href="/s/2026-11-06-offgrid/">Read &rarr;</a></div>
+          <div class="jdates">
+            <a class="jdate pastdate" href="/s/2026-10-16-offgrid/" data-date="2026-10-16">Fri · Oct 16</a>
+            <a class="jdate pastdate" href="/s/2026-10-23-offgrid/" data-date="2026-10-23">Fri · Oct 23</a>
+            <a class="jdate pastdate" href="/s/2026-11-06-offgrid/" data-date="2026-11-06">Fri · Nov 6</a>
+          </div>
         </div>
       </article>
-      <article class="card jcard pastday" data-date="2026-10-23">
+      <article class="card jcard jgroup">
         <img class="cardimg" src="/assets/images/sessions/2026-10-23-afterschool/03-hoop-house-crew.jpg" alt="" loading="lazy">
-        <div class="body">
-          <div class="when">Fri · Oct 23 &middot; Hannan Healthy Foods Farm, Lincoln, MA</div>
+        <div class="body"><div class="when">Hannan Healthy Foods Farm, Lincoln, MA</div>
           <h3>Farm Afterschool</h3>
           <div class="desc">We cleared out the summer tomatoes from a hoop house at Hannan Healthy Foods, hauled the vines to the compost by wagon, and dug a fresh bed to grow lettuce through the winter.</div>
-          <div class="foot"><a class="btn-reg" href="/s/2026-10-23-afterschool/">Read &rarr;</a></div>
+          <div class="jdates">
+            <a class="jdate pastdate" href="/s/2026-10-22-afterschool/" data-date="2026-10-22">Thu · Oct 22</a>
+            <a class="jdate pastdate" href="/s/2026-10-23-afterschool/" data-date="2026-10-23">Fri · Oct 23</a>
+          </div>
         </div>
       </article>
-      <article class="card jcard pastday" data-date="2026-10-23">
-        <img class="cardimg" src="/assets/images/sessions/2026-08-19-solar/04-panel.jpg" alt="" loading="lazy">
-        <div class="body">
-          <div class="when">Fri · Oct 23 &middot; Hannan Healthy Foods Farm, Lincoln, MA</div>
-          <h3>Off-Grid Fridays</h3>
-          <div class="desc">On Fridays we meet at a farm to work on real projects that help us depend less on the grid: energy, water, growing, heat and cooling, comms, transport, and clothing.</div>
-          <div class="foot"><a class="btn-reg" href="/s/2026-10-23-offgrid/">Read &rarr;</a></div>
-        </div>
-      </article>
-      <article class="card jcard pastday" data-date="2026-10-22">
-        <img class="cardimg" src="/assets/images/series/waterbear-zines.png" alt="" loading="lazy">
-        <div class="body">
-          <div class="when">Thu · Oct 22 &middot; Hannan Healthy Foods Farm, Lincoln, MA</div>
-          <h3>Farm Afterschool</h3>
-          <div class="desc">Short hikes on the trails, harvesting acorns, checking on what’s growing at the farm, making zines, and small carpentry projects like building toolboxes.</div>
-          <div class="foot"><a class="btn-reg" href="/s/2026-10-22-afterschool/">Read &rarr;</a></div>
-        </div>
-      </article>
-      <article class="card jcard pastday" data-date="2026-10-16">
-        <img class="cardimg" src="/assets/images/sessions/2026-08-19-solar/04-panel.jpg" alt="" loading="lazy">
-        <div class="body">
-          <div class="when">Fri · Oct 16 &middot; Hannan Healthy Foods Farm, Lincoln, MA</div>
-          <h3>Off-Grid Fridays</h3>
-          <div class="desc">On Fridays we meet at a farm to work on real projects that help us depend less on the grid: energy, water, growing, heat and cooling, comms, transport, and clothing.</div>
-          <div class="foot"><a class="btn-reg" href="/s/2026-10-16-offgrid/">Read &rarr;</a></div>
-        </div>
-      </article>
-      <article class="card jcard pastday" data-date="2026-10-15">
-        <img class="cardimg" src="/v6img/ws-zines-press.jpg" alt="" loading="lazy">
-        <div class="body">
-          <div class="when">Thu · Oct 15 &middot; Lincoln Park, Somerville</div>
+      <article class="card jcard jgroup">
+        <img class="cardimg" src="/assets/images/sessions/2026-08-28-zines/01-sign.jpg" alt="" loading="lazy">
+        <div class="body"><div class="when">Lincoln Park, Somerville</div>
           <h3>Zines &amp; Printmaking</h3>
           <div class="desc">Make small zines and booklets using simple needle-and-thread binding, and learn how to lay out your material so your zines are easy to print.</div>
-          <div class="foot"><a class="btn-reg" href="/s/2026-10-15-zines/">Read &rarr;</a></div>
+          <div class="jdates">
+            <a class="jdate pastdate" href="/s/2026-08-28-zines/" data-date="2026-08-28">Fri · Aug 28</a>
+            <a class="jdate pastdate" href="/s/2026-10-15-zines/" data-date="2026-10-15">Thu · Oct 15</a>
+          </div>
         </div>
       </article>
       <article class="card jcard">
@@ -1442,31 +1425,15 @@
           <div class="foot"><a class="btn-reg" href="/journal/2026-10-15-shed-solar-upgrade/">Read &rarr;</a></div>
         </div>
       </article>
-      <article class="card jcard pastday" data-date="2026-09-22">
+      <article class="card jcard jgroup">
         <img class="cardimg" src="/assets/images/sessions/2026-09-22-biketrailer/01-riding.jpg" alt="" loading="lazy">
-        <div class="body">
-          <div class="when">Tue · Sep 22 &middot; Lincoln Park, Somerville</div>
+        <div class="body"><div class="when">Lincoln Park, Somerville</div>
           <h3>Building Bike Trailers</h3>
           <div class="desc">Our second bike trailer session was spent adding a plywood platform, and beginning to design a hitch for attaching the trailer to a popular city rental bike.</div>
-          <div class="foot"><a class="btn-reg" href="/s/2026-09-22-biketrailer/">Read &rarr;</a></div>
-        </div>
-      </article>
-      <article class="card jcard pastday" data-date="2026-09-15">
-        <img class="cardimg" src="/assets/images/sessions/2026-09-15-biketrailer/01-frame.jpg" alt="" loading="lazy">
-        <div class="body">
-          <div class="when">Tue · Sep 15 &middot; Artisans Asylum, Allston</div>
-          <h3>Building Bike Trailers</h3>
-          <div class="desc">The first cargo trailer build, at Artisans Asylum — conduit bent by hand into a frame, plywood cut for the deck, and wheels fitted by the end of the session.</div>
-          <div class="foot"><a class="btn-reg" href="/s/2026-09-15-biketrailer/">Read &rarr;</a></div>
-        </div>
-      </article>
-      <article class="card jcard pastday" data-date="2026-08-28">
-        <img class="cardimg" src="/assets/images/sessions/2026-08-28-zines/01-sign.jpg" alt="" loading="lazy">
-        <div class="body">
-          <div class="when">Fri · Aug 28 &middot; Lincoln Park, Somerville</div>
-          <h3>Zines &amp; Printmaking</h3>
-          <div class="desc">Needle-and-thread bookbinding in Lincoln Park — small zines and booklets made, printed and stitched on a picnic table.</div>
-          <div class="foot"><a class="btn-reg" href="/s/2026-08-28-zines/">Read &rarr;</a></div>
+          <div class="jdates">
+            <a class="jdate pastdate" href="/s/2026-09-15-biketrailer/" data-date="2026-09-15">Tue · Sep 15</a>
+            <a class="jdate pastdate" href="/s/2026-09-22-biketrailer/" data-date="2026-09-22">Tue · Sep 22</a>
+          </div>
         </div>
       </article>
       <article class="card jcard">
@@ -1478,49 +1445,45 @@
           <div class="foot"><a class="btn-reg" href="/journal/2026-08-28-goatyard-benches/">Read &rarr;</a></div>
         </div>
       </article>
-      <article class="card jcard pastday" data-date="2026-08-27">
+      <article class="card jcard jgroup">
         <img class="cardimg" src="/assets/images/sessions/2026-08-27-plant-id/01-guides.jpg" alt="" loading="lazy">
-        <div class="body">
-          <div class="when">Thu · Aug 27 &middot; Umbrello Hay Field, Lincoln, MA</div>
+        <div class="body"><div class="when">Umbrello Hay Field, Lincoln, MA</div>
           <h3>Plant ID &amp; Mapping</h3>
           <div class="desc">A plant walk out from the hay field and into the woods, with field guides, notebooks, and a very large fallen tree to climb on the way back.</div>
-          <div class="foot"><a class="btn-reg" href="/s/2026-08-27-plant-id/">Read &rarr;</a></div>
+          <div class="jdates">
+            <a class="jdate pastdate" href="/s/2026-08-27-plant-id/" data-date="2026-08-27">Thu · Aug 27</a>
+          </div>
         </div>
       </article>
-      <article class="card jcard pastday" data-date="2026-08-26">
+      <article class="card jcard jgroup">
         <img class="cardimg" src="/assets/images/sessions/2026-08-26-solar/01-bent.jpg" alt="" loading="lazy">
-        <div class="body">
-          <div class="when">Wed · Aug 26 &middot; Lincoln Park, Somerville</div>
+        <div class="body"><div class="when">Lincoln Park, Somerville</div>
           <h3>Solar Power &amp; Electronics Bench</h3>
           <div class="desc">Small solar panels wired to motors in Lincoln Park, and the cars they drove running loose across the deck and the basketball court.</div>
-          <div class="foot"><a class="btn-reg" href="/s/2026-08-26-solar/">Read &rarr;</a></div>
+          <div class="jdates">
+            <a class="jdate pastdate" href="/s/2026-08-19-solar/" data-date="2026-08-19">Wed · Aug 19</a>
+            <a class="jdate pastdate" href="/s/2026-08-26-solar/" data-date="2026-08-26">Wed · Aug 26</a>
+          </div>
         </div>
       </article>
-      <article class="card jcard pastday" data-date="2026-08-25">
+      <article class="card jcard jgroup">
         <img class="cardimg" src="/assets/images/sessions/2026-08-25-woodworking/01-hauled.jpg" alt="" loading="lazy">
-        <div class="body">
-          <div class="when">Tue · Aug 25 &middot; Lincoln Park, Somerville</div>
+        <div class="body"><div class="when">Lincoln Park, Somerville</div>
           <h3>Build a Workbench</h3>
           <div class="desc">Lumber hauled into Lincoln Park by bike trailer and cut down on the grass — the start of a portable workbench for the mobile woodshop.</div>
-          <div class="foot"><a class="btn-reg" href="/s/2026-08-25-woodworking/">Read &rarr;</a></div>
+          <div class="jdates">
+            <a class="jdate pastdate" href="/s/2026-08-25-woodworking/" data-date="2026-08-25">Tue · Aug 25</a>
+          </div>
         </div>
       </article>
-      <article class="card jcard pastday" data-date="2026-08-20">
+      <article class="card jcard jgroup">
         <img class="cardimg" src="/assets/images/sessions/2026-08-20-woodworking/01-carrying.jpg" alt="" loading="lazy">
-        <div class="body">
-          <div class="when">Thu · Aug 20 &middot; Lincoln Park, Somerville</div>
+        <div class="body"><div class="when">Lincoln Park, Somerville</div>
           <h3>Build a Toolbox</h3>
           <div class="desc">A morning in Lincoln Park building wooden toolboxes — measuring, sawing, drilling and joining, and everyone carried theirs home at the end.</div>
-          <div class="foot"><a class="btn-reg" href="/s/2026-08-20-woodworking/">Read &rarr;</a></div>
-        </div>
-      </article>
-      <article class="card jcard pastday" data-date="2026-08-19">
-        <img class="cardimg" src="/assets/images/sessions/2026-08-19-solar/03-bench.jpg" alt="" loading="lazy">
-        <div class="body">
-          <div class="when">Wed · Aug 19 &middot; Lincoln Park, Somerville</div>
-          <h3>Solar Power &amp; Electronics Bench</h3>
-          <div class="desc">A morning in Lincoln Park wiring small solar panels to motors and lights — everything arrived by bike!</div>
-          <div class="foot"><a class="btn-reg" href="/s/2026-08-19-solar/">Read &rarr;</a></div>
+          <div class="jdates">
+            <a class="jdate pastdate" href="/s/2026-08-20-woodworking/" data-date="2026-08-20">Thu · Aug 20</a>
+          </div>
         </div>
       </article>
       <article class="card jcard">
@@ -2813,6 +2776,15 @@
     if(!window.wfsIsPast) return;
     document.querySelectorAll('.pastday').forEach(function(c){
       c.hidden=!window.wfsIsPast(c.dataset.date);
+    });
+    // grouped workshop cards: show the dates that have passed; hide a card
+    // until at least one of its dates has
+    document.querySelectorAll('.jgroup').forEach(function(card){
+      var any=false;
+      card.querySelectorAll('.pastdate').forEach(function(a){
+        var past=window.wfsIsPast(a.dataset.date); a.hidden=!past; any=any||past;
+      });
+      card.hidden=!any;
     });
     // journal posts are always shown; hide the section only if nothing is
     var shown=document.querySelectorAll('.jcard:not([hidden])').length;
